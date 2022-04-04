@@ -1,0 +1,153 @@
+---
+sidebar: sidebar 
+permalink: reference-new.html 
+keywords: 'what"s new, new, features, release notes, enhancements' 
+summary: Cloud Volumes ONTAP 9.10.1 提供了几项新功能和增强功能。 
+---
+= Cloud Volumes ONTAP 9.10.1 中的新增功能
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Cloud Volumes ONTAP 9.10.1 提供了几项新功能和增强功能。
+
+最新版本的 Cloud Manager 还引入了其他功能和增强功能。请参见 https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/whats-new.html["Cloud Manager 发行说明"^] 了解详细信息。
+
+
+
+== 许可更新（ 2022 年 2 月 9 日）
+
+我们对 Cloud Volumes ONTAP 进行了以下市场变更：
+
+* 现在， AWS 和 Google Cloud MarketPlaces 中提供了 Essentials 软件包和 Professional 软件包。
++
+通过这些按容量付费方法，您可以按小时付费，也可以直接从云提供商购买年度合同。您仍然可以选择直接从 NetApp 购买按容量许可证。
+
++
+如果您已在云市场订阅，则也会自动订阅这些新产品。在部署新的 Cloud Volumes ONTAP 工作环境时，您可以选择按容量收费。
+
++
+如果您是新客户， Cloud Manager 将在您创建新的工作环境时提示您订阅。
+
+* 已弃用通过 AWS 和 Google Cloud MarketPlaces 进行的节点间许可，新订阅者将无法再使用此许可。其中包括年度合同和每小时订阅（ Explore ， Standard 和 Premium ）。
++
+现有订阅有效的客户仍可使用此收费方法。
+
+
+
+link:concept-licensing.html["详细了解 Cloud Volumes ONTAP 的许可选项"]。
+
+
+
+== 9.10.1 GA （ 2022 年 1 月 31 日）
+
+Cloud Volumes ONTAP 9.10.1 的通用版本（ GA ）现已推出。GA 版本包含错误修复。
+
+Cloud Manager 将提示您升级运行以下任一版本的现有系统： 9.10.1 RC1 ， 9.10.0 或 9.9.1 。
+
+
+
+== 支持更多 VM 类型（ 2021 年 1 月 2 日）
+
+在 Cloud Manager 3.9.14 版本中，从 9.10.1 版本开始， Microsoft Azure 中的以下 VM 类型现在支持 Cloud Volumes ONTAP ：
+
+* E4ds_v4
+* E8ds_v4
+* E32ds_v4
+* E48ds_v4
+
+
+转至 link:reference-configs-azure.html["支持的配置页面"^] 有关详细信息：
+
+
+
+== 9.10.1 RC1 （ 2021 年 11 月 28 日）
+
+Cloud Volumes ONTAP 9.10.1 候选版本 1 现已在 AWS ， Azure 和 Google Cloud 中推出。此版本包含以下新增功能和增强功能：
+
+
+
+=== Microsoft Azure 中的 HA 增强功能
+
+* 我们缩短了在 Microsoft Azure 中运行的 Cloud Volumes ONTAP HA 对的计划外故障转移时间。
+* 现在支持 NFSv4 。
+
+
+要使这些增强功能可供 Cloud Volumes ONTAP 使用，您需要在 Azure 订阅上启用一项功能。拥有 " 所有者 " 权限的 Azure 用户可以从 Azure 命令行界面启用此功能：
+
+[source, azurecli]
+----
+az account set -s AZURE_SUBSCRIPTION_NAME_OR_ID
+az feature register --name EnableHighAvailabilityMode --namespace Microsoft.Network
+az provider register -n Microsoft.Network
+----
+对于需要在 Azure 订阅上启用此功能的 Cloud Volumes ONTAP 9.10.1 系统， Cloud Manager 将在 " 需要操作 " 消息中提示您提供这些详细信息。
+
+请注意以下事项：
+
+* Cloud Volumes ONTAP HA 对的高可用性没有问题。此 Azure 功能可与 ONTAP 配合使用，以减少客户端观察到的 NFS 协议因计划外故障转移事件而发生的应用程序中断时间。
+* 启用此功能不会对 Cloud Volumes ONTAP HA 对造成中断。
+* 在 Azure 订阅上启用此功能不会将问题发生原因给其他 VM 。
+
+
+
+
+=== 安全性增强功能
+
+我们增强了 ONTAP 映像创建的安全性以及 Cloud Volumes ONTAP 启动磁盘的安全性。
+
+
+
+=== 支持 Keystone Flex 订阅
+
+在 Cloud Manager 3.9.13 版本中，您现在可以对 Cloud Volumes ONTAP HA 对使用 Keystone Flex 订阅。Keystone Flex 订阅是一种按需购买，基于订阅的服务，可为优先采用运营支出消费模式而不是前期资本支出或租赁模式的客户提供无缝的混合云体验。
+
+您可以从 Cloud Manager 部署的所有新版本的 Cloud Volumes ONTAP 均支持 Keystone Flex 订阅。
+
+
+
+=== 加密密钥管理
+
+ONTAP 9.10.1 版提供了一项增强功能，可用于使用 Azure 密钥存储（ AKV ）或 Google 云密钥管理服务来保护 ONTAP 加密密钥。
+
+https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/concept-security.html["了解有关 Cloud Volumes ONTAP 加密支持的更多信息"^]。
+
+
+
+== 所需版本的 Cloud Manager Connector
+
+要部署新的 Cloud Volumes ONTAP 9.10.1 系统并将现有系统升级到 9.10.1 ， Cloud Manager Connector 必须运行版本 3.9.13 或更高版本。
+
+
+TIP: 默认情况下，连接器会自动升级，因此您应运行最新版本。
+
+
+
+== 升级说明
+
+* Cloud Volumes ONTAP 升级必须从 Cloud Manager 完成。您不应使用 System Manager 或命令行界面升级 Cloud Volumes ONTAP 。这样做可能会影响系统稳定性。
+* 您可以从 9.10.0 版和 9.9.1 版升级到 Cloud Volumes ONTAP 9.10.1 。Cloud Manager 将提示您将符合条件的 Cloud Volumes ONTAP 系统升级到 9.10.1 版。
++
+http://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-updating-ontap-cloud.html["了解在 Cloud Manager 通知您时如何升级"^]。
+
+* 升级单节点系统会使系统脱机长达 25 分钟，在此期间 I/O 会中断。
+* 升级 HA 对无中断， I/O 不会中断。在此无中断升级过程中，每个节点会同时进行升级，以继续为客户端提供 I/O 。
+
+
+
+
+=== c4 ， m4 和 r4 实例类型
+
+从 9.8 版开始，新的 Cloud Volumes ONTAP 系统不支持 C4 ， M4 和 r4 实例类型。如果您的现有 Cloud Volumes ONTAP 系统运行的是 C4 ， M4 或 r4 实例类型，则仍可升级到此版本。
+
+建议更改为 c5 ， m5 或 R5 实例系列中的实例类型。
+
+
+
+=== DS3_v2
+
+从 9.9.1 版开始，新的和现有的 Cloud Volumes ONTAP 系统不再支持 DS3_v2 VM 类型。如果您的现有系统在此 VM 类型上运行，则需要在升级到 9.10.1 之前更改 VM 类型。

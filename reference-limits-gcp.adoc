@@ -1,0 +1,209 @@
+---
+sidebar: sidebar 
+permalink: reference-limits-gcp.html 
+keywords: limits, maximum, storage, aggregates, disks, volumes, capacity, luns, size, storage virtual machine, SVM 
+summary: Cloud Volumes ONTAP 在 Google Cloud 中设置了存储配置限制，以提供可靠的操作。为获得最佳性能，请勿将系统配置为最大值。 
+---
+= Google Cloud 中的存储限制
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Cloud Volumes ONTAP 具有存储配置限制，可提供可靠的操作。为获得最佳性能，请勿将系统配置为最大值。
+
+
+
+== 按许可证计算的最大系统容量
+
+Cloud Volumes ONTAP 系统的最大系统容量取决于其许可证。最大系统容量包括基于磁盘的存储以及用于数据分层的对象存储。
+
+NetApp 不支持超过系统容量限制。如果您达到许可的容量限制， Cloud Manager 将显示一条需要执行操作消息，并且不再允许您添加其他磁盘。
+
+对于某些配置，磁盘限制会阻止您单独使用磁盘来达到容量限制。您可以通过达到容量限制 https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/concept-data-tiering.html["将非活动数据分层到对象存储"^]。有关详细信息，请参见以下磁盘限制。
+
+[cols="25,75"]
+|===
+| 许可证 | 最大系统容量（磁盘 + 对象存储） 
+
+
+| 免费 | 500 GB 
+
+
+| PAYGO 探索 | 2 TB （ Explore 不支持数据分层） 
+
+
+| PAYGO 标准 | 10 TB 
+
+
+| PAYGO 高级版 | 368 TB 
+
+
+| 基于节点的许可证 | 每个许可证 368 TB 
+
+
+| 基于容量的许可证 | 2 个 PIB 
+|===
+
+
+===== 对于 HA 对，是每个节点的许可容量限制还是整个 HA 对的许可容量限制？
+
+容量限制适用于整个 HA 对。不是每个节点。例如，如果使用高级版许可证，则两个节点之间的容量最多可达 368 TB 。
+
+
+
+===== 对于 HA 对，镜像数据是否计入许可的容量限制？
+
+不可以。HA 对中的数据会在节点之间同步镜像，以便在 Google Cloud 发生故障时可以使用这些数据。例如，如果您在节点 A 上购买了 8 TB 磁盘，则 Cloud Manager 还会在节点 B 上分配一个 8 TB 磁盘，用于镜像数据。虽然配置了 16 TB 的容量，但许可证限制仅会计入 8 TB 的容量。
+
+
+
+== 磁盘和分层限制
+
+下表显示了单独使用磁盘以及将磁盘和冷数据分层到对象存储的最大系统容量。磁盘限制特定于包含用户数据的磁盘。这些限制不包括启动磁盘和根磁盘。
+
+[cols="60,40"]
+|===
+| 参数 | limit 
+
+
+| 最大数据磁盘数  a| 
+* 124 ，用于单节点系统
+* 对于 HA 对，每个节点 123 个
+
+
+
+
+| 最大磁盘大小 | 64 TB 
+
+
+| 仅使用磁盘时的最大系统容量 | 256 TB ^1^ 
+
+
+| 将磁盘和冷数据分层到 Google Cloud 存储分段时的最大系统容量 | 取决于许可证。请参见上表。 
+|===
+^1^ 此限制由 Google Cloud Platform 中的虚拟机限制定义。
+
+
+
+== 聚合限制
+
+Cloud Volumes ONTAP 将 Google 云平台磁盘分组为 _aggreges_ 。聚合可为卷提供存储。
+
+[cols="2*"]
+|===
+| 参数 | limit 
+
+
+| 最大数据聚合数 ^1^  a| 
+* 99 表示单个节点
+* 64 表示整个 HA 对
+
+
+
+
+| 最大聚合大小 | 256 TB 原始容量 ^2^ 
+
+
+| 每个聚合的磁盘数 | 1-6 ^3^ 
+
+
+| 每个聚合的最大 RAID 组数 | 1. 
+|===
+注释：
+
+. 数据聚合的最大数量不包括根聚合。
+. 聚合容量限制基于构成聚合的磁盘。此限制不包括用于数据分层的对象存储。
+. 聚合中的所有磁盘大小必须相同。
+
+
+
+
+== 逻辑存储限制
+
+[cols="22,22,56"]
+|===
+| 逻辑存储 | 参数 | limit 
+
+
+| * 存储虚拟机（ SVM ） * | Cloud Volumes ONTAP 的最大数量（ HA 对或单个节点） | 一个提供数据的 SVM 和一个用于灾难恢复的目标 SVM 。如果源 SVM 发生中断，您可以激活目标 SVM 以进行数据访问。^1^ 一个提供数据的 SVM 跨整个 Cloud Volumes ONTAP 系统（ HA 对或单个节点）。 
+
+
+.2+| * 文件 * | 最大大小 | 16 TB 
+
+
+| 每个卷的上限 | 取决于卷大小，最多 20 亿个 
+
+
+| * FlexClone 卷 * | 分层克隆深度 ^2^ | 499 
+
+
+.3+| * FlexVol 卷 * | 每个节点的上限 | 500 
+
+
+| 最小大小 | 20 MB 
+
+
+| 最大大小 | 100 TB 
+
+
+| * qtree* | 每个 FlexVol 卷的上限 | 4,995 
+
+
+| * Snapshot 副本 * | 每个 FlexVol 卷的上限 | 1,023 
+|===
+注释：
+
+. Cloud Manager 不为 SVM 灾难恢复提供任何设置或业务流程支持。它也不支持在其他 SVM 上执行与存储相关的任务。必须使用 System Manager 或 CLI 进行 SVM 灾难恢复。
++
+** https://library.netapp.com/ecm/ecm_get_file/ECMLP2839856["《 SVM 灾难恢复准备快速指南》"^]
+** https://library.netapp.com/ecm/ecm_get_file/ECMLP2839857["《 SVM 灾难恢复快速指南》"^]
+
+
+. 分层克隆深度是可以从单个 FlexVol 卷创建的 FlexClone 卷嵌套层次结构的最大深度。
+
+
+
+
+== iSCSI 存储限制
+
+[cols="3*"]
+|===
+| iSCSI 存储 | 参数 | limit 
+
+
+.4+| * LUN * | 每个节点的上限 | 1,024 
+
+
+| LUN 映射的最大数量 | 1,024 
+
+
+| 最大大小 | 16 TB 
+
+
+| 每个卷的上限 | 512 
+
+
+| * igroup* | 每个节点的上限 | 256 
+
+
+.2+| * 启动程序 * | 每个节点的上限 | 512 
+
+
+| 每个 igroup 的最大值 | 128. 
+
+
+| * iSCSI 会话 * | 每个节点的上限 | 1,024 
+
+
+.2+| * LIF* | 每个端口的上限 | 1. 
+
+
+| 每个端口集的最大值 | 32 
+
+
+| * 端口集 * | 每个节点的上限 | 256 
+|===

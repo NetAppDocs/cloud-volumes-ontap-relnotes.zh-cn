@@ -1,0 +1,32 @@
+---
+sidebar: sidebar 
+permalink: reference-limitations-gcp.html 
+keywords: limitations, google cloud platform, gcp, psc, private service connect 
+summary: 已知限制确定了本产品版本不支持的平台、设备或功能、或者这些平台、设备或功能无法与产品正确交互操作。仔细审查这些限制。 
+---
+= Google Cloud 中的已知限制
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+以下已知限制特定于 Google 云平台中的 Cloud Volumes ONTAP 。请务必同时查看 link:reference-limitations.html["所有云提供商中 Cloud Volumes ONTAP 的限制"]。
+
+
+
+== 数据包镜像的限制
+
+https://cloud.google.com/vpc/docs/packet-mirroring["数据包镜像"^] 必须在部署 Cloud Volumes ONTAP 的 Google Cloud VPC 中禁用。
+
+如果启用了数据包镜像，则 Cloud Volumes ONTAP 无法正常运行。
+
+
+
+== Google Private Service Connect 限制
+
+如果您充分利用 https://cloud.google.com/vpc/docs/private-service-connect["Google Private Service Connect"^] 在要将 Cloud Volumes ONTAP 部署到的 VPC 中，您需要实施 DNS 记录，以便将流量转发到所需的 https://docs.netapp.com/us-en/cloud-manager-setup-admin/reference-networking-cloud-manager.html#outbound-internet-access.html["Cloud Manager API 端点"^]。
+
+目前， Private Service Connect 不支持将数据从 Cloud Volumes ONTAP 分层到 Google 云存储分段。

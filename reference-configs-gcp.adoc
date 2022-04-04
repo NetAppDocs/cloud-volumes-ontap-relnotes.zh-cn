@@ -1,0 +1,102 @@
+---
+sidebar: sidebar 
+permalink: reference-configs-gcp.html 
+keywords: google, gcp, google cloud platform, explore, standard, premium, byol, paygo, disks, supported, capacity, machine types, sizes, HA, high availability, HA pairs 
+summary: Google Cloud 支持多种 Cloud Volumes ONTAP 配置。 
+---
+= Google Cloud 支持的配置
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Google Cloud 支持多种 Cloud Volumes ONTAP 配置。
+
+
+
+== 按许可证支持的配置
+
+Cloud Volumes ONTAP 在 Google 云平台中作为单节点系统和高可用性（ HA ）节点对提供，可实现容错和无中断运行。
+
+不支持将单节点系统升级到 HA 对。如果要在单节点系统和 HA 对之间切换，则需要部署新系统并将现有系统中的数据复制到新系统。
+
+[cols="h,d,d,d,d,d,d"]
+|===
+|  | 免费 | PAYGO 探索 | PAYGO 标准 | PAYGO 高级版 | 基于节点的许可证 | 基于容量的许可证 
+
+
+| 最大系统容量（磁盘 + 对象存储） ^1^ | 500 GB | 2 TB ^2^ | 10 TB | 368 TB | 每个许可证 368 TB | 2 个 PIB 
+
+
+| 支持的计算机类型 ^3^  a| 
+* N1-standard-8
+* N1-standard-32
+* n2-standard-4
+* n2-standard-8
+* n2-standard-32
+
+ a| 
+* n2-standard-4
+
+ a| 
+* N1-standard-8
+* n2-standard-8
+
+ a| 
+* N1-standard-32
+* n2-standard-32
+
+ a| 
+* N1-standard-8
+* N1-standard-32
+* n2-standard-4
+* n2-standard-8
+* n2-standard-32
+
+ a| 
+* N1-standard-8
+* N1-standard-32
+* n2-standard-4
+* n2-standard-8
+* n2-standard-32
+
+
+
+
+| 支持的磁盘类型 ^4^ 6+| 区域持久性磁盘（ SSD ，平衡磁盘和标准磁盘） 
+|===
+注释：
+
+. 磁盘限制可以防止您单独使用磁盘来达到最大系统容量限制。您可以通过达到容量限制 https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/concept-data-tiering.html["将非活动数据分层到对象存储"^]。
++
+link:reference-limits-gcp.html["详细了解 Google Cloud 中的磁盘限制"]。
+
+. PAYGO Explore 不支持将数据分层到 Google Cloud Storage 。
+. 新的 Cloud Volumes ONTAP 系统不再支持 custom-4-16384 计算机类型。
++
+如果您的现有系统在此计算机类型上运行，则可以继续使用它，但我们建议切换到 n2-standard-4 计算机类型。
+
+. 使用 SSD 时会启用增强的写入性能。
+. Cloud Manager 界面显示了 Standard 和 BYOL 支持的另一种计算机类型： N1-HIGHEM-4 。但是，此计算机类型并不适用于生产环境。我们已将其仅用于特定实验室环境。
+. 有关 Google Cloud Platform 区域支持，请参见 https://cloud.netapp.com/cloud-volumes-global-regions["Cloud Volumes 全球地区"^]。
+. Cloud Volumes ONTAP 可以在云提供商提供的预留或按需 VM 实例上运行。不支持使用其他 VM 实例类型的解决方案。
+
+
+
+
+== 支持的磁盘大小
+
+在 Google Cloud 中，一个聚合最多可以包含 6 个类型和大小相同的磁盘。支持以下磁盘大小：
+
+* 100 GB
+* 500 GB
+* 1 TB
+* 2 TB
+* 4 TB
+* 8 TB
+* 16 TB
+* 64 TB
+

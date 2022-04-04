@@ -1,0 +1,496 @@
+---
+sidebar: sidebar 
+permalink: reference-limits-azure.html 
+keywords: limits, maximum, storage, aggregates, disks, volumes, capacity, luns, size, storage virtual machine, SVM, page blobs, ebs, managed disks 
+summary: Cloud Volumes ONTAP 在 Azure 中具有存储配置限制，可提供可靠的操作。为获得最佳性能，请勿将系统配置为最大值。 
+---
+= Azure 中的存储限制
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Cloud Volumes ONTAP 具有存储配置限制，可提供可靠的操作。为获得最佳性能，请勿将系统配置为最大值。
+
+
+
+== 按许可证计算的最大系统容量
+
+Cloud Volumes ONTAP 系统的最大系统容量取决于其许可证。最大系统容量包括基于磁盘的存储以及用于数据分层的对象存储。
+
+NetApp 不支持超过系统容量限制。如果您达到许可的容量限制， Cloud Manager 将显示一条需要执行操作消息，并且不再允许您添加其他磁盘。
+
+[cols="25,75"]
+|===
+| 许可证 | 最大系统容量（磁盘 + 对象存储） 
+
+
+| 免费 | 500 GiB 
+
+
+| PAYGO 探索 | 2 TiB （ Explore 不支持数据分层） 
+
+
+| PAYGO 标准 | 10 TiB 
+
+
+| PAYGO 高级版 | 368 TiB 
+
+
+| 基于节点的许可证 | 每个许可证 368 TiB 
+
+
+| 基于容量的许可证 | 2 个 PIB 
+|===
+
+
+===== 对于 HA ，是每个节点的许可证容量限制还是整个 HA 对的许可证容量限制？
+
+容量限制适用于整个 HA 对。不是每个节点。例如，如果使用高级版许可证，则两个节点之间的容量最多可达 368 TiB 。
+
+
+
+== 按虚拟机大小的磁盘和分层限制
+
+以下磁盘限制特定于包含用户数据的磁盘。限制不包括根磁盘，核心磁盘和 VNVRAM 。
+
+下表按虚拟机大小显示了单个磁盘以及将磁盘和冷数据分层到对象存储的最大系统容量。
+
+* 单节点系统可以使用标准 HDD 受管磁盘，标准 SSD 受管磁盘和高级 SSD 受管磁盘，每个磁盘最多 32 TiB 。支持的磁盘数量因虚拟机大小而异。
+* HA 系统使用高级页面 BLOB 作为磁盘，每页 BLOB 最多 8 TiB 。支持的磁盘数量因虚拟机大小而异。
+
+
+
+NOTE: 您可以为 Cloud Volumes ONTAP BYOL 系统购买多个基于节点的许可证，以分配超过 368 TiB 的容量。您可以为单节点系统或 HA 对购买的许可证数量不受限制。请注意，磁盘限制可能会阻止您单独使用磁盘来达到容量限制。您可以通过超出磁盘限制 https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/concept-data-tiering.html["将非活动数据分层到对象存储"^]。 https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-manage-node-licenses.html["了解如何向 Cloud Volumes ONTAP 添加其他系统许可证"^]。
+
+
+
+=== 具有高级许可证的单个节点
+
+[cols="14,20,31,33"]
+|===
+| VM 大小 | 每个节点的 MAX Data 磁盘数 | 单独使用磁盘时的最大系统容量 | 使用磁盘和数据分层的最大系统容量 
+
+
+| DS5_v2 | 61. | 368 TiB | 368 TiB 
+
+
+| DS14_v2 | 61. | 368 TiB | 368 TiB 
+
+
+| DS15_v2 | 61. | 368 TiB | 368 TiB 
+
+
+| E32S_v3 | 29 | 368 TiB | 368 TiB 
+
+
+| E48s_v3 | 29 | 368 TiB | 368 TiB 
+
+
+| E64is_v3 | 29 | 368 TiB | 368 TiB 
+
+
+| E32ds_v4 | 29 | 368 TiB | 368 TiB 
+
+
+| E48ds_v4 | 29 | 368 TiB | 368 TiB 
+
+
+| E80ids_v4 | 61. | 368 TiB | 368 TiB 
+|===
+
+
+=== 采用基于节点的许可的单节点
+
+
+NOTE: 对于某些 VM 类型，您需要多个 BYOL 许可证才能达到下面列出的最大系统容量。例如，使用 DS5_v2 时，您需要 6 个 BYOL 许可证才能达到 1.95 PiB 。
+
+[cols="10,18,18,18,18,18"]
+|===
+| VM 大小 | 每个节点的 MAX Data 磁盘数 2+| 使用一个许可证时的最大系统容量 2+| 使用多个许可证时的最大系统容量 
+
+
+2+|  | * 仅磁盘 * | * 磁盘 + 数据分层 * | * 仅磁盘 * | * 磁盘 + 数据分层 * 
+
+
+| DS4_v2 | 29 | 368 TiB | 368 TiB | 928 TiB | 每个许可证 368 TiB x 
+
+
+| DS5_v2 | 61. | 368 TiB | 368 TiB | 1.95 PIB | 每个许可证 368 TiB x 
+
+
+| DS13_v2 | 29 | 368 TiB | 368 TiB | 928 TiB | 每个许可证 368 TiB x 
+
+
+| DS14_v2 | 61. | 368 TiB | 368 TiB | 1.95 PIB | 每个许可证 368 TiB x 
+
+
+| DS15_v2 | 61. | 368 TiB | 368 TiB | 1.95 PIB | 每个许可证 368 TiB x 
+
+
+| L8s_v2 | 13 | 368 TiB | 368 TiB | 416 TiB | 每个许可证 368 TiB x 
+
+
+| e4s_v3 | 5. | 160 TiB | 368 TiB | 160 TiB | 每个许可证 368 TiB x 
+
+
+| E8s_v3 | 13 | 368 TiB | 368 TiB | 416 TiB | 每个许可证 368 TiB x 
+
+
+| E32S_v3 | 29 | 368 TiB | 368 TiB | 928 TiB | 每个许可证 368 TiB x 
+
+
+| E48s_v3 | 29 | 368 TiB | 368 TiB | 928 TiB | 每个许可证 368 TiB x 
+
+
+| E64is_v3 | 29 | 368 TiB | 368 TiB | 928 TiB | 每个许可证 368 TiB x 
+
+
+| E4ds_v4 | 5. | 160 TiB | 368 TiB | 160 TiB | 每个许可证 368 TiB x 
+
+
+| E8ds_v4 | 13 | 368 TiB | 368 TiB | 416 TiB | 每个许可证 368 TiB x 
+
+
+| E32ds_v4 | 29 | 368 TiB | 368 TiB | 928 TiB | 每个许可证 368 TiB x 
+
+
+| E48ds_v4 | 29 | 368 TiB | 368 TiB | 928 TiB | 每个许可证 368 TiB x 
+
+
+| E80ids_v4 | 61. | 368 TiB | 368 TiB | 1.95 PIB | 每个许可证 368 TiB x 
+|===
+
+
+=== 具有基于容量的许可的单个节点
+
+[cols="14,20,31,33"]
+|===
+| VM 大小 | 每个节点的 MAX Data 磁盘数 | 单独使用磁盘时的最大系统容量 | 使用磁盘和数据分层的最大系统容量 
+
+
+| DS4_v2 | 29 | 928 TiB | 2 个 PIB 
+
+
+| DS5_v2 | 61. | 1.95 PIB | 2 个 PIB 
+
+
+| DS13_v2 | 29 | 928 TiB | 2 个 PIB 
+
+
+| DS14_v2 | 61. | 1.95 PIB | 2 个 PIB 
+
+
+| DS15_v2 | 61. | 1.95 PIB | 2 个 PIB 
+
+
+| L8s_v2 | 13 | 416 TiB | 2 个 PIB 
+
+
+| e4s_v3 | 5. | 160 TiB | 2 个 PIB 
+
+
+| E8s_v3 | 13 | 416 TiB | 2 个 PIB 
+
+
+| E32S_v3 | 29 | 928 TiB | 2 个 PIB 
+
+
+| E48s_v3 | 29 | 928 TiB | 2 个 PIB 
+
+
+| E64is_v3 | 29 | 928 TiB | 2 个 PIB 
+
+
+| E4ds_v4 | 5. | 160 TiB | 2 个 PIB 
+
+
+| E8ds_v4 | 13 | 416 TiB | 2 个 PIB 
+
+
+| E32ds_v4 | 29 | 928 TiB | 2 个 PIB 
+
+
+| E48ds_v4 | 29 | 928 TiB | 2 个 PIB 
+
+
+| E80ids_v4 | 61. | 1.95 PIB | 2 个 PIB 
+|===
+
+
+=== 具有高级许可证的 HA 对
+
+[cols="14,20,31,33"]
+|===
+| VM 大小 | HA 对的 MAX Data 磁盘 | 单独使用磁盘时的最大系统容量 | 使用磁盘和数据分层的最大系统容量 
+
+
+| DS5_v2 | 61. | 368 TiB | 368 TiB 
+
+
+| DS14_v2 | 61. | 368 TiB | 368 TiB 
+
+
+| DS15_v2 | 61. | 368 TiB | 368 TiB 
+
+
+| E8s_v3 | 13 | 104 TiB | 368 TiB 
+
+
+| E48s_v3 | 29 | 232 TiB | 368 TiB 
+
+
+| E32ds_v4 | 29 | 232 TiB | 368 TiB 
+
+
+| E48ds_v4 | 29 | 232 TiB | 368 TiB 
+
+
+| E80ids_v4 | 61. | 368 TiB | 368 TiB 
+|===
+
+
+=== 采用基于节点的许可的 HA 对
+
+[cols="10,18,18,18,18,18"]
+|===
+| VM 大小 | HA 对的 MAX Data 磁盘 2+| 使用一个许可证时的最大系统容量 2+| 使用多个许可证时的最大系统容量 
+
+
+2+|  | * 仅磁盘 * | * 磁盘 + 数据分层 * | * 仅磁盘 * | * 磁盘 + 数据分层 * 
+
+
+| DS4_v2 | 29 | 232 TiB | 368 TiB | 232 TiB | 每个许可证 368 TiB x 
+
+
+| DS5_v2 | 61. | 368 TiB | 368 TiB | 488 TiB | 每个许可证 368 TiB x 
+
+
+| DS13_v2 | 29 | 232 TiB | 368 TiB | 232 TiB | 每个许可证 368 TiB x 
+
+
+| DS14_v2 | 61. | 368 TiB | 368 TiB | 488 TiB | 每个许可证 368 TiB x 
+
+
+| DS15_v2 | 61. | 368 TiB | 368 TiB | 488 TiB | 每个许可证 368 TiB x 
+
+
+| E8s_v3 | 13 | 104 TiB | 368 TiB | 104 TiB | 每个许可证 368 TiB x 
+
+
+| E48s_v3 | 29 | 232 TiB | 368 TiB | 232 TiB | 每个许可证 368 TiB x 
+
+
+| E8ds_v4 | 13 | 104 TiB | 368 TiB | 104 TiB | 每个许可证 368 TiB x 
+
+
+| E32ds_v4 | 29 | 232 TiB | 368 TiB | 232 TiB | 每个许可证 368 TiB x 
+
+
+| E48ds_v4 | 29 | 232 TiB | 368 TiB | 232 TiB | 每个许可证 368 TiB x 
+
+
+| E80ids_v4 | 61. | 368 TiB | 368 TiB | 488 TiB | 每个许可证 368 TiB x 
+|===
+
+
+=== 采用基于容量的许可的 HA 对
+
+[cols="14,20,31,33"]
+|===
+| VM 大小 | HA 对的 MAX Data 磁盘 | 单独使用磁盘时的最大系统容量 | 使用磁盘和数据分层的最大系统容量 
+
+
+| DS4_v2 | 29 | 232 TiB | 2 个 PIB 
+
+
+| DS5_v2 | 61. | 488 TiB | 2 个 PIB 
+
+
+| DS13_v2 | 29 | 232 TiB | 2 个 PIB 
+
+
+| DS14_v2 | 61. | 488 TiB | 2 个 PIB 
+
+
+| DS15_v2 | 61. | 488 TiB | 2 个 PIB 
+
+
+| E8s_v3 | 13 | 104 TiB | 2 个 PIB 
+
+
+| E48s_v3 | 29 | 232 TiB | 2 个 PIB 
+
+
+| E8ds_v4 | 13 | 104 TiB | 2 个 PIB 
+
+
+| E32ds_v4 | 29 | 232 TiB | 2 个 PIB 
+
+
+| E48ds_v4 | 29 | 232 TiB | 2 个 PIB 
+
+
+| E80ids_v4 | 61. | 488 TiB | 2 个 PIB 
+|===
+
+
+== 聚合限制
+
+Cloud Volumes ONTAP 使用 Azure 存储作为磁盘并将其分组为 _aggreges_ 。聚合可为卷提供存储。
+
+[cols="2*"]
+|===
+| 参数 | limit 
+
+
+| 聚合的最大数量 | 与磁盘限制相同 
+
+
+| 最大聚合大小 ^1^ | 单节点 384 TiB 原始容量 ^2^ 352 TiB 原始容量，单节点 PAYGO 96 TiB HA 对原始容量 
+
+
+| 每个聚合的磁盘数 | 1-12 ^3^ 
+
+
+| 每个聚合的最大 RAID 组数 | 1. 
+|===
+注释：
+
+. 聚合容量限制基于构成聚合的磁盘。此限制不包括用于数据分层的对象存储。
+. 如果使用基于节点的许可，则需要两个 BYOL 许可证才能达到 384 TiB 。
+. 聚合中的所有磁盘大小必须相同。
+
+
+
+
+== Storage VM 限制
+
+在某些配置中，您可以为 Cloud Volumes ONTAP 创建其他 Storage VM （ SVM ）。
+
+这些是经过测试的限制。虽然理论上可以配置其他 Storage VM ，但不支持。
+
+https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-managing-svms-azure.html["了解如何创建其他 Storage VM"^]。
+
+[cols="2*"]
+|===
+| 许可证类型 | Storage VM 限制 
+
+
+| * PAYGO*  a| 
+* 1 个存储 VM 用于提供数据
+* 1 个 Storage VM 用于灾难恢复
+
+
+
+
+| * 免费 *  a| 
+共 24 个 Storage VM ^1 ， 2^
+
+
+
+| * 基于容量的许可证 * ^3^  a| 
+共 24 个 Storage VM ^1 ， 2^
+
+
+
+| * 基于节点的 BYOL* ^4^  a| 
+共 24 个 Storage VM ^1 ， 2^
+
+|===
+. 这 24 个 Storage VM 可以提供数据或配置为灾难恢复（ Disaster Recovery ， DR ）。
+. 每个 Storage VM 最多可以有三个 LIF ，其中两个是数据 LIF ，一个是 SVM 管理 LIF 。
+. 对于基于容量的许可，额外的 Storage VM 不会产生额外的许可成本，但每个 Storage VM 的最低容量费用为 4 TiB 。例如，如果您创建了两个 Storage VM ，并且每个 VM 都有 2 TiB 的已配置容量，则总共需要支付 8 TiB 的费用。
+. 对于基于节点的 BYOL ，除了默认情况下随 Cloud Volumes ONTAP 提供的第一个 Storage VM 之外，每个额外的 _data-fouring 存储 VM 都需要一个附加许可证。请联系您的客户团队以获取 Storage VM 附加许可证。
++
+您为灾难恢复（ DR ）配置的 Storage VM 不需要附加许可证（它们是免费的），但它们会计入 Storage VM 限制。例如，如果为灾难恢复配置了 12 个提供数据的 Storage VM 和 12 个 Storage VM ，则表示已达到此限制，无法再创建任何 Storage VM 。
+
+
+
+
+
+== 文件和卷限制
+
+[cols="22,22,56"]
+|===
+| 逻辑存储 | 参数 | limit 
+
+
+.2+| * 文件 * | 最大大小 | 16 TiB 
+
+
+| 每个卷的上限 | 取决于卷大小，最多 20 亿个 
+
+
+| * FlexClone 卷 * | 分层克隆深度 ^2^ | 499 
+
+
+.3+| * FlexVol 卷 * | 每个节点的上限 | 500 
+
+
+| 最小大小 | 20 MB 
+
+
+| 最大大小 | 100 TiB 
+
+
+| * qtree* | 每个 FlexVol 卷的上限 | 4,995 
+
+
+| * Snapshot 副本 * | 每个 FlexVol 卷的上限 | 1,023 
+|===
+注释：
+
+. Cloud Manager 不为 SVM 灾难恢复提供任何设置或业务流程支持。它也不支持在其他 SVM 上执行与存储相关的任务。必须使用 System Manager 或 CLI 进行 SVM 灾难恢复。
++
+** https://library.netapp.com/ecm/ecm_get_file/ECMLP2839856["《 SVM 灾难恢复准备快速指南》"^]
+** https://library.netapp.com/ecm/ecm_get_file/ECMLP2839857["《 SVM 灾难恢复快速指南》"^]
+
+
+. 分层克隆深度是可以从单个 FlexVol 卷创建的 FlexClone 卷嵌套层次结构的最大深度。
+
+
+
+
+== iSCSI 存储限制
+
+[cols="3*"]
+|===
+| iSCSI 存储 | 参数 | limit 
+
+
+.4+| * LUN * | 每个节点的上限 | 1,024 
+
+
+| LUN 映射的最大数量 | 1,024 
+
+
+| 最大大小 | 16 TiB 
+
+
+| 每个卷的上限 | 512 
+
+
+| * igroup* | 每个节点的上限 | 256 
+
+
+.2+| * 启动程序 * | 每个节点的上限 | 512 
+
+
+| 每个 igroup 的最大值 | 128. 
+
+
+| * iSCSI 会话 * | 每个节点的上限 | 1,024 
+
+
+.2+| * LIF* | 每个端口的上限 | 32 
+
+
+| 每个端口集的最大值 | 32 
+
+
+| * 端口集 * | 每个节点的上限 | 256 
+|===
