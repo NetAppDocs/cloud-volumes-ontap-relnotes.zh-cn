@@ -41,7 +41,6 @@ NOTE: WAFL 文件系统中的 ONTAP 一致性点决定了数据一致性。只�
 中国地区支持 Cloud Volumes ONTAP ，如下所示。
 
 * AWS 中国地区支持 Cloud Volumes ONTAP 9.6 。
-* 中国 Azure 地区支持 Cloud Volumes ONTAP 9.9 。
 * 支持单节点系统。
 * 支持直接从 NetApp 购买的许可证。
 
