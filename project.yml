@@ -96,7 +96,7 @@ homepage:
     - title: 存储限制
       url: reference-limits-aws.html
     - title: 限制
-      url: reference-limitations-gcp.html
+      url: reference-limitations-aws.html
   - title: Google Cloud
     links:
     - title: 支持的配置

@@ -720,7 +720,6 @@
   <block id="63573dab314c98e4e22e47653c15cf64" category="list-text">如果您还没有订阅，<block ref="49d6686f1a400348bbcff579d9d978a6" category="inline-link-rx"></block>。</block>
   <block id="697cc5090bb98ee57c1e28438084378b" category="list-text">mailto ： ng-keystone-success@netapp.com （联系 NetApp ）授权您的 Cloud Manager 用户帐户订阅一个或多个 Keystone Flex 订阅。</block>
   <block id="72aa254218c757aad3e3703bdaf90694" category="inline-link">链接您的订阅以用于 Cloud Volumes ONTAP</block>
-  <block id="f96e5580f13646b320535609852aaf80" category="list-text">在 NetApp 授权您的帐户后，<block ref="b8a2932fb185e14a928f847d974c3942" category="inline-link-rx"></block>。</block>
   <block id="de4b56542275c5f0b46bea6fcc27b034" category="list-text">创建 Cloud Volumes ONTAP 系统时，请选择 Keystone Flex 订阅收费方法。</block>
   <block id="a2f6a3e98ea1849ed1ab07d821bf6a18" category="section-title">基于节点的许可</block>
   <block id="361abfc2eaabdb045de49dafd20dbdf1" category="paragraph">基于节点的许可是上一代许可模式，可用于按节点许可 Cloud Volumes ONTAP 。新客户不能使用此许可模式，也不能免费试用。按节点充电已被上述按容量充电方法所取代。</block>
@@ -767,4 +766,5 @@
   <block id="dea335c9c6f638eb584011e253ad6ca1" category="sidebar">ONTAP 云</block>
   <block id="ee095a2fd0990ba785c303c6524d8145" category="list-text">对于其他提供数据的 Storage VM （ SVM ），无需额外的许可成本，但每个提供数据的 SVM 的最低容量费用为 4 TiB 。</block>
   <block id="cc331a0f761602982769cdbb99e71272" category="list-text">灾难恢复 SVM 会根据配置的容量进行收费。</block>
+  <block id="48f0974a79de83d6884f04d71ab3a90a" category="list-text">在 NetApp 授权您的帐户后，<block ref="691060edb0108ad45359b1773c59fa65" category="inline-link-rx"></block></block>
 </blocks>
