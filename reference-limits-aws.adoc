@@ -6,6 +6,7 @@ summary: Cloud Volumes ONTAP 在 AWS 中具有存储配置限制，可提供可�
 ---
 = AWS 中的存储限制
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

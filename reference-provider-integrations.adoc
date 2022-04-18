@@ -6,6 +6,7 @@ summary: 此页面介绍了 NetApp 如何与云提供商合作来解决可能出
 ---
 = 云提供商集成
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

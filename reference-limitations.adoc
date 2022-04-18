@@ -6,6 +6,7 @@ summary: 已知限制确定了本产品版本不支持的平台、设备或功�
 ---
 = 所有云提供商的限制
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 
@@ -19,9 +20,21 @@ summary: 已知限制确定了本产品版本不支持的平台、设备或功�
 
 
 
-== 最大并发复制操作数
+== 不得从云提供商的控制台修改 Cloud Volumes ONTAP 部署
 
-无论实例类型或计算机类型如何， Cloud Volumes ONTAP 的并发 SnapMirror 或 SnapVault 传输的最大数量均为每个节点 100 。
+通过云提供商的控制台更改 Cloud Volumes ONTAP 系统的配置会导致配置不受支持。对 Cloud Manager 创建和管理的 Cloud Volumes ONTAP 资源进行的任何更改都会影响系统稳定性以及 Cloud Manager 管理系统的能力。
+
+
+
+== 磁盘和聚合必须通过 Cloud Manager 进行管理
+
+必须直接从 Cloud Manager 创建和删除所有磁盘和聚合。不应从其他管理工具执行这些操作。这样做可能会影响系统稳定性、妨碍将来添加磁盘的能力、并可能产生冗余云提供商费用。
+
+
+
+== 软件更新必须由 Cloud Manager 完成
+
+Cloud Volumes ONTAP 升级必须从 Cloud Manager 完成。您不应使用 System Manager 或命令行界面升级 Cloud Volumes ONTAP 。这样做可能会影响系统稳定性。
 
 
 
@@ -33,6 +46,12 @@ https://docs.netapp.com/us-en/cloud-manager-backup-restore/concept-backup-to-clo
 
 
 NOTE: WAFL 文件系统中的 ONTAP 一致性点决定了数据一致性。只有 ONTAP 可以暂停 WAFL 文件系统以进行崩溃状态一致的备份。
+
+
+
+== 自动应用程序资源管理解决方案
+
+自动应用程序资源管理解决方案不应管理 Cloud Volumes ONTAP 系统。这样做可能会导致更改不受支持的配置。例如，解决方案可能会将 Cloud Volumes ONTAP 更改为不受支持的 VM 实例类型。
 
 
 
@@ -55,27 +74,9 @@ Cloud Volumes ONTAP 可以在云提供商提供的预留或按需 VM 实例上�
 
 
 
-== 不应使用自动应用程序资源管理解决方案
+== 最大并发复制操作数
 
-自动应用程序资源管理解决方案不应管理 Cloud Volumes ONTAP 系统。这样做可能会导致更改不受支持的配置。例如，解决方案可能会将 Cloud Volumes ONTAP 更改为不受支持的 VM 实例类型。
-
-
-
-== 软件更新必须由 Cloud Manager 完成
-
-Cloud Volumes ONTAP 升级必须从 Cloud Manager 完成。您不应使用 System Manager 或命令行界面升级 Cloud Volumes ONTAP 。这样做可能会影响系统稳定性。
-
-
-
-== 不得从云提供商的控制台修改 Cloud Volumes ONTAP 部署
-
-通过云提供商的控制台更改 Cloud Volumes ONTAP 配置会导致配置不受支持。对 Cloud Manager 创建和管理的 Cloud Volumes ONTAP 资源进行的任何更改都会影响系统稳定性以及 Cloud Manager 管理系统的能力。
-
-
-
-== 磁盘和聚合必须通过 Cloud Manager 进行管理
-
-必须直接从 Cloud Manager 创建和删除所有磁盘和聚合。不应从其他管理工具执行这些操作。这样做可能会影响系统稳定性、妨碍将来添加磁盘的能力、并可能产生冗余云提供商费用。
+无论实例类型或计算机类型如何， Cloud Volumes ONTAP 的并发 SnapMirror 或 SnapVault 传输的最大数量均为每个节点 100 。
 
 
 

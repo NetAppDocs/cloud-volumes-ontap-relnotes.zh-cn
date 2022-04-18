@@ -6,6 +6,7 @@ summary: Cloud Volumes ONTAP 在 Google Cloud 中设置了存储配置限制，�
 ---
 = Google Cloud 中的存储限制
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

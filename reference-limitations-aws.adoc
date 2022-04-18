@@ -6,6 +6,7 @@ summary: 这些已知限制特定于 Amazon Web Services 中的 Cloud Volumes ON
 ---
 = AWS 中的已知限制
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

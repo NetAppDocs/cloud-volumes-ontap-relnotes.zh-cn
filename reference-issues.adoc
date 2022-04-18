@@ -6,6 +6,7 @@ summary: 已知问题可确定可能妨碍您成功使用此版本产品的问�
 ---
 = 已知问题
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

@@ -486,12 +486,10 @@
   <block id="a5a1e4029969159a5f8fdeddd3fb7e1b" category="paragraph">不支持所有其他位置，版本，配置和许可证。</block>
   <block id="38220a2514a2fcb218be440c035b4175" category="section-title">Cloud Volumes ONTAP 支持预留和按需 VM 实例</block>
   <block id="8ce602039d8c7d53c95e1f62b1d83ef0" category="paragraph">Cloud Volumes ONTAP 可以在云提供商提供的预留或按需 VM 实例上运行。不支持其他类型的 VM 实例。</block>
-  <block id="207289e471510410b8d11da3001f65d7" category="section-title">不应使用自动应用程序资源管理解决方案</block>
   <block id="f9492a63b4f60679d003c1e9c0ebbb18" category="paragraph">自动应用程序资源管理解决方案不应管理 Cloud Volumes ONTAP 系统。这样做可能会导致更改不受支持的配置。例如，解决方案可能会将 Cloud Volumes ONTAP 更改为不受支持的 VM 实例类型。</block>
   <block id="1d7a5501cfb31aff808abb63ef9085c2" category="section-title">软件更新必须由 Cloud Manager 完成</block>
   <block id="93e3c3d0ea43d600b3c3cd4548ea3987" category="paragraph">Cloud Volumes ONTAP 升级必须从 Cloud Manager 完成。您不应使用 System Manager 或命令行界面升级 Cloud Volumes ONTAP 。这样做可能会影响系统稳定性。</block>
   <block id="cbc4bd981852b46f0fbf6e6a6d4ed5af" category="section-title">不得从云提供商的控制台修改 Cloud Volumes ONTAP 部署</block>
-  <block id="5f706f3e7b360cd0d02bd068f4ba9afa" category="paragraph">通过云提供商的控制台更改 Cloud Volumes ONTAP 配置会导致配置不受支持。对 Cloud Manager 创建和管理的 Cloud Volumes ONTAP 资源进行的任何更改都会影响系统稳定性以及 Cloud Manager 管理系统的能力。</block>
   <block id="871cdf07a10d1cc27cb3166e7a820a66" category="section-title">磁盘和聚合必须通过 Cloud Manager 进行管理</block>
   <block id="dbdb55d3acfbb139cd66db544b19d738" category="paragraph">必须直接从 Cloud Manager 创建和删除所有磁盘和聚合。不应从其他管理工具执行这些操作。这样做可能会影响系统稳定性、妨碍将来添加磁盘的能力、并可能产生冗余云提供商费用。</block>
   <block id="4d2719ea5599a5bf1a9973d3b247f959" category="section-title">SnapManager 许可限制</block>
@@ -767,4 +765,6 @@
   <block id="ee095a2fd0990ba785c303c6524d8145" category="list-text">对于其他提供数据的 Storage VM （ SVM ），无需额外的许可成本，但每个提供数据的 SVM 的最低容量费用为 4 TiB 。</block>
   <block id="cc331a0f761602982769cdbb99e71272" category="list-text">灾难恢复 SVM 会根据配置的容量进行收费。</block>
   <block id="48f0974a79de83d6884f04d71ab3a90a" category="list-text">在 NetApp 授权您的帐户后，<block ref="691060edb0108ad45359b1773c59fa65" category="inline-link-rx"></block></block>
+  <block id="9baac3e3e045ecc1a8ffecb16253a5d1" category="paragraph">通过云提供商的控制台更改 Cloud Volumes ONTAP 系统的配置会导致配置不受支持。对 Cloud Manager 创建和管理的 Cloud Volumes ONTAP 资源进行的任何更改都会影响系统稳定性以及 Cloud Manager 管理系统的能力。</block>
+  <block id="448cc0188a2bcc18119c0abf6d253d7a" category="section-title">自动应用程序资源管理解决方案</block>
 </blocks>

@@ -6,6 +6,7 @@ summary: AWS 支持多种 Cloud Volumes ONTAP 配置。
 ---
 = AWS 中支持的配置
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

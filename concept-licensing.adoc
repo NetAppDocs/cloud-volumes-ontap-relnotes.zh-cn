@@ -6,6 +6,7 @@ summary: Cloud Volumes ONTAP 提供了多种许可选项。每个选项都可用
 ---
 = Cloud Volumes ONTAP 许可
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 
