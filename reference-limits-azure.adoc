@@ -381,25 +381,25 @@ https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-managing-sv
 | 许可证类型 | Storage VM 限制 
 
 
-| * PAYGO*  a| 
-* 1 个存储 VM 用于提供数据
-* 1 个 Storage VM 用于灾难恢复
-
-
-
-
 | * 免费 *  a| 
 共 24 个 Storage VM ^1 ， 2^
 
 
 
-| * 基于容量的许可证 * ^3^  a| 
+| * 基于容量的 PAYGO 或 BYOL* ^3^  a| 
 共 24 个 Storage VM ^1 ， 2^
 
 
 
 | * 基于节点的 BYOL* ^4^  a| 
 共 24 个 Storage VM ^1 ， 2^
+
+
+
+| * 基于节点的 PAYGO*  a| 
+* 1 个存储 VM 用于提供数据
+* 1 个 Storage VM 用于灾难恢复
+
 
 |===
 . 这 24 个 Storage VM 可以提供数据或配置为灾难恢复（ Disaster Recovery ， DR ）。

@@ -117,14 +117,12 @@
   <block id="82060d81b7ce43c57280e879899f9a2c" category="cell">许可证类型</block>
   <block id="4037b2b5756ae2a7b370c7b6e783aa25" category="cell">实例系列</block>
   <block id="2b32b0b2d0f29c87c701d113a9b7814c" category="cell">Storage VM 限制</block>
-  <block id="e1b07c013b611d07bfb9af53a3dbe920" category="cell">* PAYGO*</block>
   <block id="39361436d2ec06b159fff2a0853d8f11" category="cell">c4 ， m4 和 r4</block>
   <block id="b44aff299926ff48d9c9937caf2bcc7c" category="list-text">1 个存储 VM 用于提供数据</block>
   <block id="0d8a30d82cccb71952d16b4403bf498c" category="list-text">1 个 Storage VM 用于灾难恢复</block>
   <block id="db2a5609d325e7b486ff21c338843d70" category="cell">c5 ， m5 和 R5</block>
   <block id="c420a49390d2a1dcf064814a1b9bce50" category="cell">* 免费 *</block>
   <block id="bff1ed10eaa2848422c2177b3404da96" category="list-text">共 24 个 Storage VM ^1 ， 2^</block>
-  <block id="4c18f3e05dae8de865bfd4823b76b7c5" category="cell">* 基于容量的许可证 * ^3^</block>
   <block id="91910075fafd14e95deb889d8997ae86" category="cell">* 基于节点的 BYOL* ^4^</block>
   <block id="4a17a3c856fd1f9d634bfd17f1c2f886" category="list-text">根据您使用的 EC2 实例类型，限制可以更低。下面一节列出了每个实例的限制。</block>
   <block id="5fa8fd0741d7b90ffde672d2beaf9223" category="list-text">这 24 个 Storage VM 可以提供数据或配置为灾难恢复（ Disaster Recovery ， DR ）。</block>
@@ -767,4 +765,6 @@
   <block id="48f0974a79de83d6884f04d71ab3a90a" category="list-text">在 NetApp 授权您的帐户后，<block ref="691060edb0108ad45359b1773c59fa65" category="inline-link-rx"></block></block>
   <block id="9baac3e3e045ecc1a8ffecb16253a5d1" category="paragraph">通过云提供商的控制台更改 Cloud Volumes ONTAP 系统的配置会导致配置不受支持。对 Cloud Manager 创建和管理的 Cloud Volumes ONTAP 资源进行的任何更改都会影响系统稳定性以及 Cloud Manager 管理系统的能力。</block>
   <block id="448cc0188a2bcc18119c0abf6d253d7a" category="section-title">自动应用程序资源管理解决方案</block>
+  <block id="84c132b976f487cccd3001ed2c7557f2" category="cell">* 基于容量的 PAYGO 或 BYOL* ^3^</block>
+  <block id="15e276b5f20d3f04c4dde66ecf8a249c" category="cell">* 基于节点的 PAYGO*</block>
 </blocks>
