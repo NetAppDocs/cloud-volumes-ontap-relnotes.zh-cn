@@ -50,6 +50,6 @@ https://www.netapp.com/us/legal/privacypolicy/index.aspx[]
 
 通知文件提供有关 NetApp 软件中使用的第三方版权和许可证的信息。
 
-* link:media/notice_cloud_volumes_ontap_9.10.1_aws.pdf["AWS 中的 Cloud Volumes ONTAP 9.10.1 调解器注意事项"^]
-* link:media/notice_cloud_volumes_ontap_9.10.1_google.pdf["Google Cloud 中的 Cloud Volumes ONTAP 9.10.1 调解器注意事项"^]
+* link:media/notice-aws.pdf["AWS中的Cloud Volumes ONTAP 9.11.0调解器注意事项"^]
+* link:media/notice-google-cloud.pdf["Google Cloud中的Cloud Volumes ONTAP 9.11.0调解器注意事项"^]
 
