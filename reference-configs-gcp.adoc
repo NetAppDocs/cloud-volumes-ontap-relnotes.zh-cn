@@ -37,6 +37,7 @@ Cloud Volumes ONTAP 在 Google 云平台中作为单节点系统和高可用性�
 * N1-standard-32
 * n2-standard-4
 * n2-standard-8
+* n2-standard-16
 * n2-standard-32
 
  a| 
@@ -48,6 +49,7 @@ Cloud Volumes ONTAP 在 Google 云平台中作为单节点系统和高可用性�
 
  a| 
 * N1-standard-32
+* n2-standard-16
 * n2-standard-32
 
  a| 
@@ -55,6 +57,7 @@ Cloud Volumes ONTAP 在 Google 云平台中作为单节点系统和高可用性�
 * N1-standard-32
 * n2-standard-4
 * n2-standard-8
+* n2-standard-16
 * n2-standard-32
 
  a| 
@@ -62,6 +65,7 @@ Cloud Volumes ONTAP 在 Google 云平台中作为单节点系统和高可用性�
 * N1-standard-32
 * n2-standard-4
 * n2-standard-8
+* n2-standard-16
 * n2-standard-32
 
 

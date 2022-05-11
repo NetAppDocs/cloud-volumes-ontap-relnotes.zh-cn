@@ -746,4 +746,5 @@
   <block id="656d282ec4da3b613132f8e29d6cb90e" category="paragraph">您可以从云提供商市场的按需购买订阅中获得 30 天免费试用。免费试用版包括Cloud Volumes ONTAP 和云备份。在您订阅市场上的产品时、试用即开始。</block>
   <block id="2986f3edb85e34a7556b412028be57fb" category="paragraph">不存在实例或容量限制。您可以根据需要部署任意数量的Cloud Volumes ONTAP 系统、并根据需要免费分配30天的容量。30天后、免费试用将自动转换为按小时付费的订阅。</block>
   <block id="631556a144b10d5d5f19603b18176e32" category="paragraph">Cloud Volumes ONTAP 无需每小时支付软件许可证费用、但云提供商提供的基础架构费用仍然适用。</block>
+  <block id="79561dd1a4e00a3e05c0d892a01e77bf" category="list-text">n2-standard-16</block>
 </blocks>
