@@ -26,7 +26,7 @@ Cloud Volumes ONTAP 在 Google 云平台中作为单节点系统和高可用性�
 
 [cols="h,d,d,d,d,d,d"]
 |===
-|  | 免费 | PAYGO 探索 | PAYGO 标准 | PAYGO 高级版 | 基于节点的许可证 | 基于容量的许可证 
+|  | 免费 | PAYGO 探索 | PAYGO 标准 | PAYGO 高级版 | 基于节点的 BYOL | 基于容量的许可证 
 
 
 | 最大系统容量（磁盘 + 对象存储） ^1^ | 500 GB | 2 TB ^2^ | 10 TB | 368 TB | 每个许可证 368 TB | 2 个 PIB 

@@ -426,7 +426,7 @@ https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-managing-sv
 | 每个卷的上限 | 取决于卷大小，最多 20 亿个 
 
 
-| * FlexClone 卷 * | 分层克隆深度 ^2^ | 499 
+| * FlexClone 卷 * | 分层克隆深度 ^1^ | 499 
 
 
 .3+| * FlexVol 卷 * | 每个节点的上限 | 500 
@@ -443,14 +443,6 @@ https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-managing-sv
 
 | * Snapshot 副本 * | 每个 FlexVol 卷的上限 | 1,023 
 |===
-注释：
-
-. Cloud Manager 不为 SVM 灾难恢复提供任何设置或业务流程支持。它也不支持在其他 SVM 上执行与存储相关的任务。必须使用 System Manager 或 CLI 进行 SVM 灾难恢复。
-+
-** https://library.netapp.com/ecm/ecm_get_file/ECMLP2839856["《 SVM 灾难恢复准备快速指南》"^]
-** https://library.netapp.com/ecm/ecm_get_file/ECMLP2839857["《 SVM 灾难恢复快速指南》"^]
-
-
 . 分层克隆深度是可以从单个 FlexVol 卷创建的 FlexClone 卷嵌套层次结构的最大深度。
 
 

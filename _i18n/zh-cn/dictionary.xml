@@ -95,13 +95,11 @@
   <block id="6f4922f45568161a8cdf4ad2299f6d23" category="cell">18</block>
   <block id="d165ee52657df0e131ad67ed84783dfb" category="cell">16 ^1^</block>
   <block id="77da8ca35e02ab32c9b48e9f632913bf" category="section-title">聚合限制</block>
-  <block id="b9d1a1e4bd5440efc61b41572ff402ed" category="paragraph">Cloud Volumes ONTAP 使用 AWS 卷作为磁盘，并将其分组为 _aggregodes_ 。聚合可为卷提供存储。</block>
   <block id="83f499a540b1323009c200d6f8cc9396" category="cell">参数</block>
   <block id="80d2677cf518f4d04320042f4ea6c146" category="cell">limit</block>
   <block id="82420b01cfee82b0c54b049d0dbfad9f" category="cell">聚合的最大数量</block>
   <block id="84e0bd7c947290d306ef975cf8082911" category="cell">单节点：与磁盘限制 HA 对相同：一个节点中 18 个 ^1^</block>
   <block id="fb036cbd7d294e0cb30d09908d1a5107" category="cell">最大聚合大小</block>
-  <block id="9825b8fbfebdae674007d54a87208654" category="cell">96 TiB 原始容量 ^2^</block>
   <block id="c540b9e7edec4adafdaa9dff60f7a893" category="cell">每个聚合的磁盘数</block>
   <block id="c2831ba563a5f21bb204f1c1e4a6ef78" category="cell">1-6 ^3^</block>
   <block id="4ab1bc7e6fe6c19a70cc9470efcb6c1e" category="cell">每个聚合的最大 RAID 组数</block>
@@ -261,17 +259,8 @@
   <block id="e1939137c51a8307ff44bee2959f145d" category="cell">256 TB 原始容量 ^2^</block>
   <block id="d5372d02fa2f8d09ddfa9be3500d8847" category="list-text">数据聚合的最大数量不包括根聚合。</block>
   <block id="41a0b1e6c6d31716c7d7b603ce6a4936" category="section-title">逻辑存储限制</block>
-  <block id="73a985be794327e4a037c64d0184774a" category="cell">* 存储虚拟机（ SVM ） *</block>
-  <block id="835d5536792339ec4a51105123601003" category="cell">Cloud Volumes ONTAP 的最大数量（ HA 对或单个节点）</block>
-  <block id="b2734f21c300d02359bdc60073cc3bc5" category="cell">一个提供数据的 SVM 和一个用于灾难恢复的目标 SVM 。如果源 SVM 发生中断，您可以激活目标 SVM 以进行数据访问。^1^ 一个提供数据的 SVM 跨整个 Cloud Volumes ONTAP 系统（ HA 对或单个节点）。</block>
   <block id="324f218b8144e744b54eb58e0bf14eea" category="cell">16 TB</block>
-  <block id="fa6258f6bacddead986c2cbf9e97e512" category="cell">分层克隆深度 ^2^</block>
   <block id="309524b9e1ef1d7d7d905c7cb1d358e9" category="cell">100 TB</block>
-  <block id="f930216066584d74a1d100b4781661f9" category="list-text">Cloud Manager 不为 SVM 灾难恢复提供任何设置或业务流程支持。它也不支持在其他 SVM 上执行与存储相关的任务。必须使用 System Manager 或 CLI 进行 SVM 灾难恢复。</block>
-  <block id="412af2a2404a4e920b18be59197204b0" category="inline-link">《 SVM 灾难恢复准备快速指南》</block>
-  <block id="c15bb50c43eaf0ceb1bc0ce3d7503ebd" category="list-text"><block ref="c15bb50c43eaf0ceb1bc0ce3d7503ebd" category="inline-link-rx"></block></block>
-  <block id="a06e9c241b02eb678d35f19c0eec257f" category="inline-link">《 SVM 灾难恢复快速指南》</block>
-  <block id="84e6a974fd77c552b4d54c8a9b0727ab" category="list-text"><block ref="84e6a974fd77c552b4d54c8a9b0727ab" category="inline-link-rx"></block></block>
   <block id="fa082ab1a05e05550971e6e5f583dcfe" category="summary">AWS 支持多种 Cloud Volumes ONTAP 配置。</block>
   <block id="8bb0da4c260f565e0c8162ea9c2b7caa" category="doc">AWS 中支持的配置</block>
   <block id="7db0f9060b8b2def82346add7b8e89c0" category="section-title">支持的节点数</block>
@@ -299,7 +288,6 @@
   <block id="714ff467ced5dd4ad0cd34ca2d29d911" category="list-text">在对所有 Cloud Volumes ONTAP 配置使用 SSD 时，系统会启用增强的写入性能，但 PAYGO Explore 除外。</block>
   <block id="907c78338365697be8fd8d4a130503c8" category="list-text">使用吞吐量优化型 HDD （ st1 ）时，不建议将数据分层到对象存储。</block>
   <block id="36e4aa065725aff22926f2fed53bc3c7" category="section-title">支持的磁盘大小</block>
-  <block id="f1ef8a69abb63b240d611c09ea5ddde6" category="paragraph">在 AWS 中，一个聚合最多可以包含 6 个类型和大小相同的磁盘。</block>
   <block id="afb82c4f80baa4ecca2a2e4e97df3ada" category="cell">通用 SSD （ GP3 和 GP2 ）</block>
   <block id="c50feb3c9ed89b38a1757f8a63ccd0a6" category="cell">已配置 IOPS SSD （ IO1 ）</block>
   <block id="b097d252160f5ccb21350abbc9a2d37d" category="cell">吞吐量优化型 HDD （ st1 ）</block>
@@ -663,7 +651,6 @@
   <block id="514c35ac615c3426962d39f27b71014b" category="paragraph">此版本中没有特定于 Cloud Volumes ONTAP 的已知问题。</block>
   <block id="626a7cbe056796bcb1c158b143866230" category="inline-link">《 ONTAP 发行说明》</block>
   <block id="398d7dd4fa02e30dc6322ad98eff7d2b" category="paragraph">您可以在中找到 ONTAP 软件的已知问题<block ref="13c0668cefb5d13050e1de01793dacbb" category="inline-link-rx"></block>。</block>
-  <block id="7ff191df90fac0fa94ab5c2b5101a5e9" category="sidebar">所有 Cloud Manager 文档</block>
   <block id="da38098873cb3db962a9491ab33ff93d" category="sidebar">发行说明主页</block>
   <block id="33871b6190a8d5adbe8b15282054766c" category="sidebar">新增功能</block>
   <block id="4847e034bb0a55fcbc8a3380d6a3ab80" category="sidebar">AWS</block>
@@ -689,8 +676,6 @@
   <block id="cc331a0f761602982769cdbb99e71272" category="list-text">灾难恢复 SVM 会根据配置的容量进行收费。</block>
   <block id="84c132b976f487cccd3001ed2c7557f2" category="cell">* 基于容量的 PAYGO 或 BYOL* ^3^</block>
   <block id="15e276b5f20d3f04c4dde66ecf8a249c" category="cell">* 基于节点的 PAYGO*</block>
-  <block id="ee2c4874552f5697a0af1830ee27ae7f" category="summary">本发行说明介绍了Cloud Volumes ONTAP 9.11.0的新增功能、限制和已知问题。</block>
-  <block id="2f54a24e27032c204d405a8ab4727fa6" category="doc">《Cloud Volumes ONTAP 9.11.0发行说明》</block>
   <block id="207289e471510410b8d11da3001f65d7" category="section-title">不应使用自动应用程序资源管理解决方案</block>
   <block id="5f706f3e7b360cd0d02bd068f4ba9afa" category="paragraph">通过云提供商的控制台更改 Cloud Volumes ONTAP 配置会导致配置不受支持。对 Cloud Manager 创建和管理的 Cloud Volumes ONTAP 资源进行的任何更改都会影响系统稳定性以及 Cloud Manager 管理系统的能力。</block>
   <block id="8e85765bc3ce726509dc354633dff4d1" category="list-text">Google Cloud中的ONTAP S3 (Azure和AWS支持S3协议)</block>
@@ -703,27 +688,10 @@
   <block id="51606c7b614cdc7ab9e0489981838dfa" category="paragraph">在NetApp与您共享私人优惠后、您可以在创建工作环境期间从Azure Marketplace订阅年度计划。</block>
   <block id="d3ef010be2a71bc188b8cf2beb05ac32" category="list-text">在Google Cloud中、您需要与NetApp销售代表合作购买年度合同。此合同在Google Cloud Marketplace中以私人优惠形式提供。</block>
   <block id="f96723ecb29e40ca9b9fb042ab6ff4ef" category="paragraph">在NetApp与您共享私人优惠后、您可以在创建工作环境期间从Google Cloud Marketplace订阅年度计划。</block>
-  <block id="7a84427a5e5e82250a397a979b4a23d9" category="inline-link-macro">AWS中的Cloud Volumes ONTAP 9.11.0调解器注意事项</block>
-  <block id="1b0f71ebd48e9699818ac954485ecd65" category="list-text"><block ref="1b0f71ebd48e9699818ac954485ecd65" category="inline-link-macro-rx"></block></block>
-  <block id="083726d342ebf9fc4e92168f0e8f0440" category="inline-link-macro">Google Cloud中的Cloud Volumes ONTAP 9.11.0调解器注意事项</block>
-  <block id="6cee01dc91f9e923f46b91312e8b7929" category="list-text"><block ref="6cee01dc91f9e923f46b91312e8b7929" category="inline-link-macro-rx"></block></block>
-  <block id="c5d699450790178e60948a45fcba6733" category="summary">Cloud Volumes ONTAP 9.11.0提供了一项新的增强功能。</block>
-  <block id="f747db0e9b603a98fe752d35abb43555" category="doc">Cloud Volumes ONTAP 9.11.0中的新增功能</block>
-  <block id="21c41da3d84aadd8771c9d5e1db4032e" category="section-title">9.11.0 P1 (2022年5月2日)</block>
-  <block id="31516c7a0e8dbe8987a899eaa2622897" category="paragraph">Cloud Volumes ONTAP 9.11.0 P1版本现在可在AWS、Azure和Google Cloud中使用。此版本包括以下增强功能。</block>
-  <block id="1684c84d61e6741870d756c9a01c5f62" category="section-title">AWS支持ONTAP S3</block>
-  <block id="8d467a7942b40322f0cf058b3e0cb13c" category="paragraph">现在、您可以从AWS中的Cloud Volumes ONTAP 提供S3对象存储(Microsoft Azure已受支持)。除了NFS和SMB等基于文件的传统协议之外、Cloud Volumes ONTAP 还支持将S3作为横向扩展存储的一个选项。</block>
-  <block id="5e02c0dddf5ca2c2a77a3cacc5cfea9b" category="list-text">采用 Cloud Volumes ONTAP 的 ONTAP S3 的主要用例是通用对象存储。</block>
-  <block id="5252476cb34632463947449f62af599b" category="list-text">目前、Google Cloud中的Cloud Volumes ONTAP 不支持S3协议。</block>
-  <block id="c5444b69e0d4a498ada01a16f84ab46d" category="list-text">Cloud Manager 不为 ONTAP S3 功能提供任何管理功能。</block>
-  <block id="6958464059ef304c59d06fcb948ccafd" category="inline-link">了解如何在 ONTAP 中配置和管理 S3 对象存储服务</block>
-  <block id="75081fb4982f7b843e702079b35f0ed4" category="paragraph"><block ref="3fe75f10a35597997861eca633c30fa7" category="inline-link-rx"></block>。</block>
   <block id="dfb01a7b38cba8284269f37f00622809" category="paragraph">通读这些注释、了解有关升级到此版本的更多信息。</block>
   <block id="b78b1188c7979365981f7c88049f9366" category="section-title">如何升级</block>
   <block id="c4d6a904ef528003bf03bc2e65cffd26" category="section-title">支持的升级路径</block>
-  <block id="26317bf7459e73707ee916570832e5d0" category="paragraph">您可以从9.10.1版升级到Cloud Volumes ONTAP 9.11.0。Cloud Manager将提示您将符合条件的Cloud Volumes ONTAP 系统升级到此版本。</block>
   <block id="402e8d971886b1604e4de74c0058dc71" category="section-title">所需版本的Connector</block>
-  <block id="089931e7f88b7a409ed7ad2ba44d8100" category="paragraph">Cloud Manager Connector必须运行版本3.9.18或更高版本、才能将现有系统升级到9.11.0。</block>
   <block id="75026846c1403e202a52bdb027762fbb" category="section-title">停机</block>
   <block id="656d282ec4da3b613132f8e29d6cb90e" category="paragraph">您可以从云提供商市场的按需购买订阅中获得 30 天免费试用。免费试用版包括Cloud Volumes ONTAP 和云备份。在您订阅市场上的产品时、试用即开始。</block>
   <block id="2986f3edb85e34a7556b412028be57fb" category="paragraph">不存在实例或容量限制。您可以根据需要部署任意数量的Cloud Volumes ONTAP 系统、并根据需要免费分配30天的容量。30天后、免费试用将自动转换为按小时付费的订阅。</block>
@@ -740,4 +708,69 @@
   <block id="fed5c8246ca485a22abc959eb3025a8c" category="admonition">免费试用开始、剩余7天以及剩余1天时、您将在Cloud Manager中收到通知。例如：<block ref="4c1747a7ecb096dffecedae45404dae8" category="inline-image-macro-rx" type="image"></block></block>
   <block id="451e7fc5df78c19113abdb3f6a0dc54e" category="paragraph">了解如何开始使用基于容量的许可：</block>
   <block id="fdb736034a6801c8a5010a511211a4a7" category="paragraph">了解如何开始使用Keystone Flex订阅：</block>
+  <block id="cb93ad4589e6e6834d2627d2ef8c8456" category="list-text">多管理员验证</block>
+  <block id="88e362071d1f2ba61570f62aacd1c1c5" category="paragraph">在Cloud Volumes ONTAP 上启用多管理员验证将导致配置不受支持。</block>
+  <block id="8ba657a83ab71e004f50b135f305bacf" category="paragraph"><block ref="4e6a16574fcae9468a780b7adff941e3" category="inline-link-rx"></block>。</block>
+  <block id="2bd90c70a6810dfcb6a428870a127746" category="paragraph">共24个Storage VM ^1^</block>
+  <block id="5bec2c66c2254fff818718bf2d9e8c44" category="cell">*基于容量的PAYGO或BYOL*^2^</block>
+  <block id="8e612b6b306f120390f4c3bd234f9ce8" category="cell">*基于节点的BYOL*^3^</block>
+  <block id="302f571fec3e23b2236f116e51e46721" category="cell">分层克隆深度^12^</block>
+  <block id="dd3a01ec5d4598a3233e196c00eb9493" category="summary">本发行说明介绍了Cloud Volumes ONTAP 9.11.1的新增功能、限制和已知问题。</block>
+  <block id="84da1541cae666ec8e7f781f0d3b6175" category="doc">《Cloud Volumes ONTAP 9.11.1发行说明》</block>
+  <block id="caad2a7dc9cfca100a8a4cd9178c5c3c" category="summary">Cloud Volumes ONTAP 9.11.1提供了一项新的增强功能。</block>
+  <block id="a7eac8b4a926da262039a402441599c8" category="doc">Cloud Volumes ONTAP 9.11.1中的新增功能</block>
+  <block id="749d592703da3a848a73787c63c1b7b3" category="paragraph">Cloud Volumes ONTAP 9.11.1提供了新的增强功能。</block>
+  <block id="b86e6dd31ab5551fadfa63d0a04883ae" category="section-title">9.11.1 RC1 (2022年6月8日)</block>
+  <block id="39034d90f9ffc3ae3d6bfac5d80a47b0" category="paragraph">Cloud Volumes ONTAP 9.11.1候选版本1现已在AWS、Azure和Google Cloud中推出。此版本包含以下新增功能和增强功能：</block>
+  <block id="0d14c546aac1d41bf632c7d7c3b6bb3d" category="section-title">性能增强</block>
+  <block id="a98457b4d59ceca5e3d55d0aa4fc5df9" category="paragraph">我们提高了9.11.1或更高版本中创建的新聚合的读取性能。</block>
+  <block id="0d64eb012ac615ef6e2b3a594a3c4138" category="section-title">提高存储效率</block>
+  <block id="296c3971e11769dce408108e26b7b844" category="paragraph">从9.11.1版开始、为提高存储效率而启用的所有新卷都将包括一项称为"温度敏感型存储效率"的新压缩功能。不再使用上一代数据压缩功能。</block>
+  <block id="105114793b1936be01f86fbb18f18487" category="paragraph">对温度敏感的存储效率会根据数据温度或数据使用频率对数据进行压缩。冷数据或不常使用的数据会以较高的压缩率进行重新压缩、以提高存储效率。</block>
+  <block id="3d8cbce3336f1f7d87369f120127deb3" category="section-title">AWS中的VPC共享</block>
+  <block id="098f6f115e8980c5a7c03a40e08f5c54" category="paragraph">现在、具有VPC共享的AWS支持Cloud Volumes ONTAP HA对。通过VPC共享、您的组织可以与其他AWS帐户共享子网。网络连接(VPC、子网和路由表)位于VPC所有者帐户中、而HA配置的EC2实例位于使用共享子网的参与者帐户中。</block>
+  <block id="d4b5e68525cac241fcf3cdcaa1a6e3dd" category="inline-link">了解如何在共享子网中部署HA对</block>
+  <block id="9d5ffa97252128bf87e1636e1a64a843" category="paragraph"><block ref="9d5ffa97252128bf87e1636e1a64a843" category="inline-link-rx"></block></block>
+  <block id="a83e9f7623076b623810b57914d36eed" category="section-title">新增 AWS 区域支持</block>
+  <block id="5eb162472268d73ff725b5895110cecd" category="paragraph">现在、AWS雅加达地区(亚太地区东南部3)支持Cloud Volumes ONTAP。</block>
+  <block id="d1ce20099e22fd96c2217da218a20a9e" category="inline-link">查看Cloud Volumes ONTAP 支持的区域的完整列表</block>
+  <block id="efb1786cdf88244f9480e15cb039f942" category="paragraph"><block ref="efb1786cdf88244f9480e15cb039f942" category="inline-link-rx"></block></block>
+  <block id="27c27f8e93050339d7c947d496a184e5" category="section-title">新增Azure区域支持</block>
+  <block id="e9f9c72d103b21187e0da8b94a05a46c" category="paragraph">现在、Azure巴西东南部地区支持Cloud Volumes ONTAP。</block>
+  <block id="c2d4a08230372ee80200724895518d5d" category="section-title">支持在Google Cloud中使用24个Storage VM</block>
+  <block id="08d621e40bc74d4d91492f0994bd9c34" category="paragraph">在大多数配置中、Google Cloud中的Cloud Volumes ONTAP 现在支持24个Storage VM。</block>
+  <block id="ab9d588372f30d162e50dbbed45980eb" category="inline-link-macro">详细了解Google Cloud中的Storage VM限制</block>
+  <block id="c316dc3e5870be1d22b4b83a0f427fad" category="list-text"><block ref="c316dc3e5870be1d22b4b83a0f427fad" category="inline-link-macro-rx"></block></block>
+  <block id="3a7eebf972f838daafe4ea7948002b3d" category="inline-link">了解如何在Google Cloud中为Cloud Volumes ONTAP 创建提供数据的Storage VM</block>
+  <block id="ca24fa909b4afaad2c6e5b8403afbeaf" category="list-text"><block ref="ca24fa909b4afaad2c6e5b8403afbeaf" category="inline-link-rx"></block></block>
+  <block id="81ad4f0de90ee8a7305d0fd7751df796" category="section-title">全新Google Cloud区域支持</block>
+  <block id="eb026d13ca31e3456cc201dd04616023" category="paragraph">现在、Cloud Volumes ONTAP HA对在米兰(欧洲-西部8)地区受支持。</block>
+  <block id="4fe11e69b0c0a0b0a5636aa1f305ab9f" category="section-title">修改新Storage VM的LIF服务</block>
+  <block id="f6d0586946e555ebb9e4a58ed7cb1074" category="paragraph">从此版本开始、如果您在AWS或Azure中的Cloud Volumes ONTAP HA对上创建新的Storage VM、则需要修改此Storage VM的网络服务策略。需要修改服务、因为它可以确保Cloud Volumes ONTAP 可以使用iSCSI LIF进行出站管理连接。</block>
+  <block id="0eb394a663512cb54d223022103a22da" category="paragraph">请注意、在Google Cloud中、Cloud Volumes ONTAP 不需要修改LIF服务、因为Cloud Manager API会在创建期间为您设置LIF服务。</block>
+  <block id="c2cc97c1c3292912f6ea24f176a9994c" category="paragraph">您需要运行的命令在以下页面上指定：</block>
+  <block id="819d8ddbe5323dbe85b4d9de1471949d" category="inline-link">了解如何在AWS中创建其他Storage VM</block>
+  <block id="3198e73245d15ad83bd4f291e42a75bf" category="list-text"><block ref="3198e73245d15ad83bd4f291e42a75bf" category="inline-link-rx"></block></block>
+  <block id="69cbc5d49a23bbb40c4dc099f27a5744" category="inline-link">了解如何在Azure中创建其他Storage VM</block>
+  <block id="23858c69a27a236fbe5b07eae57ddda7" category="list-text"><block ref="23858c69a27a236fbe5b07eae57ddda7" category="inline-link-rx"></block></block>
+  <block id="3f9444579360cfadb1f0fd377acfe203" category="section-title">新增不支持的ONTAP 功能</block>
+  <block id="3e684f8279e576b45f0e2d4d989bb161" category="paragraph">Cloud Volumes ONTAP 不支持ONTAP 9.11.1中引入的新多管理员验证功能。在Cloud Volumes ONTAP 上启用多管理员验证将导致配置不受支持。</block>
+  <block id="2cfb19e929bb9a8001655d21c5a21bc6" category="paragraph">您可以从9.11.0版和9.10.1版升级到Cloud Volumes ONTAP 9.11.1版。Cloud Manager将提示您将符合条件的Cloud Volumes ONTAP 系统升级到此版本。</block>
+  <block id="37b4327ada554a21f357e50f7ff5495c" category="paragraph">要部署新的Cloud Volumes ONTAP 9.11.1系统并将现有系统升级到9.11.1、Cloud Manager Connector必须运行版本3.9.19或更高版本。</block>
+  <block id="6fa21a90023c559c7fe8ff0b407c5128" category="paragraph">Cloud Volumes ONTAP 使用EBS卷作为磁盘并将其分组到_aggregodes_中。聚合可为卷提供存储。</block>
+  <block id="440729c4473422c5af58047ed61f9c33" category="cell">最大聚合大小^2^</block>
+  <block id="a204f172aa7caebd3b3b2b9d2ec1e132" category="list-text">96 TiB 原始容量</block>
+  <block id="eba85a087985c7150b43d2878dd0c2da" category="list-text">128 TiB原始容量、弹性卷^3^</block>
+  <block id="b7d71850fd138e6cd477a1887cc244f3" category="cell">每个聚合的磁盘数^4^</block>
+  <block id="449daf85c71a9f8eb7c666134b1d9b95" category="list-text">1 至 6</block>
+  <block id="734bf70b1c522fd659b58c67d2c015e9" category="list-text">1-8、弹性卷^3^</block>
+  <block id="4d7bfec0bd52de6919125094b75ca0d4" category="list-text">最大聚合大小取决于构成聚合的磁盘。此限制不包括用于数据分层的对象存储。</block>
+  <block id="70fb554e00e352dd7da6941d99b53751" category="inline-link">了解有关支持弹性卷的更多信息</block>
+  <block id="952bf77691b64be6e1f8cbee69dd8112" category="list-text">如果您的配置支持Amazon EBS弹性卷功能、则聚合最多可以包含8个磁盘、从而提供高达128 TiB的容量。使用GP3或IO1磁盘时、_new_ Cloud Volumes ONTAP 9.11.0或更高版本的系统默认启用Amazon EBS弹性卷功能。<block ref="eb2d37c537dc5a49383d4a1aea5db77f" category="inline-link-rx"></block></block>
+  <block id="dc2065e297a9790d182a555ba250dbda" category="cell">基于节点的 BYOL</block>
+  <block id="33dae6103de96581cabc3ad35cefb829" category="inline-link-macro">AWS中的Cloud Volumes ONTAP 9.11.1调解器注意事项</block>
+  <block id="e595c649a367744544e13f68f54580f9" category="list-text"><block ref="e595c649a367744544e13f68f54580f9" category="inline-link-macro-rx"></block></block>
+  <block id="b50289e78d6a423be932389cf178a958" category="inline-link-macro">Google Cloud中的Cloud Volumes ONTAP 9.11.1调解器注意事项</block>
+  <block id="c35639ede069036a5d63bb08043fd4f9" category="list-text"><block ref="c35639ede069036a5d63bb08043fd4f9" category="inline-link-macro-rx"></block></block>
+  <block id="3fb5fad778ff400a49097ca0bf0b9754" category="paragraph">在 AWS 中，一个聚合最多可以包含 6 个大小相同的磁盘。但是、如果您的配置支持Amazon EBS弹性卷功能、则聚合最多可以包含8个磁盘。<block ref="eb2d37c537dc5a49383d4a1aea5db77f" category="inline-link-rx"></block></block>
 </blocks>

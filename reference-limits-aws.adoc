@@ -201,7 +201,7 @@ Cloud Volumes ONTAP 使用 EBS 卷作为磁盘，最大磁盘大小为 16 TiB �
 
 == 聚合限制
 
-Cloud Volumes ONTAP 使用 AWS 卷作为磁盘，并将其分组为 _aggregodes_ 。聚合可为卷提供存储。
+Cloud Volumes ONTAP 使用EBS卷作为磁盘并将其分组到_aggregodes_中。聚合可为卷提供存储。
 
 [cols="2*"]
 |===
@@ -211,10 +211,18 @@ Cloud Volumes ONTAP 使用 AWS 卷作为磁盘，并将其分组为 _aggregodes_
 | 聚合的最大数量 | 单节点：与磁盘限制 HA 对相同：一个节点中 18 个 ^1^ 
 
 
-| 最大聚合大小 | 96 TiB 原始容量 ^2^ 
+| 最大聚合大小^2^  a| 
+* 96 TiB 原始容量
+* 128 TiB原始容量、弹性卷^3^
 
 
-| 每个聚合的磁盘数 | 1-6 ^3^ 
+
+
+| 每个聚合的磁盘数^4^  a| 
+* 1 至 6
+* 1-8、弹性卷^3^
+
+
 
 
 | 每个聚合的最大 RAID 组数 | 1. 
@@ -222,7 +230,8 @@ Cloud Volumes ONTAP 使用 AWS 卷作为磁盘，并将其分组为 _aggregodes_
 注释：
 
 . 无法在 HA 对中的两个节点上创建 18 个聚合，因为这样做会超出数据磁盘限制。
-. 聚合容量限制基于构成聚合的磁盘。此限制不包括用于数据分层的对象存储。
+. 最大聚合大小取决于构成聚合的磁盘。此限制不包括用于数据分层的对象存储。
+. 如果您的配置支持Amazon EBS弹性卷功能、则聚合最多可以包含8个磁盘、从而提供高达128 TiB的容量。使用GP3或IO1磁盘时、_new_ Cloud Volumes ONTAP 9.11.0或更高版本的系统默认启用Amazon EBS弹性卷功能。 https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/concept-aws-elastic-volumes.html["了解有关支持弹性卷的更多信息"^]
 . 聚合中的所有磁盘大小必须相同。
 
 

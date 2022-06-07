@@ -101,6 +101,10 @@ Cloud Volumes ONTAP 不支持以下功能：
 * 接口组
 * 索引节点 LIF 故障转移
 * MetroCluster
+* 多管理员验证
++
+在Cloud Volumes ONTAP 上启用多管理员验证将导致配置不受支持。
+
 * Google Cloud中的ONTAP S3 (Azure和AWS支持S3协议)
 * RAID4 ， RAID-DP ， RAID-TEC （支持 RAID0 ）
 * 服务处理器

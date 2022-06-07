@@ -38,7 +38,7 @@ Cloud Volumes ONTAP 支持多种类型的 EBS 磁盘以及用于数据分层的 
 
 [cols="h,d,d,d,d,d,d"]
 |===
-|  | 免费 | PAYGO 探索 | PAYGO 标准 | PAYGO 高级版 | 基于节点的许可证 | 基于容量的许可证 
+|  | 免费 | PAYGO 探索 | PAYGO 标准 | PAYGO 高级版 | 基于节点的 BYOL | 基于容量的许可证 
 
 
 | 最大系统容量（磁盘 + 对象存储） ^1^ | 500 GiB | 2 TiB | 10 TiB | 368 TiB ^2^ | 每个许可证 368 TiB ^2^ | 2 个 PIB ^2 个^ 
@@ -64,7 +64,7 @@ Cloud Volumes ONTAP 支持多种类型的 EBS 磁盘以及用于数据分层的 
 
 === 支持的磁盘大小
 
-在 AWS 中，一个聚合最多可以包含 6 个类型和大小相同的磁盘。
+在 AWS 中，一个聚合最多可以包含 6 个大小相同的磁盘。但是、如果您的配置支持Amazon EBS弹性卷功能、则聚合最多可以包含8个磁盘。 https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/concept-aws-elastic-volumes.html["了解有关支持弹性卷的更多信息"^]
 
 [cols="3*"]
 |===
