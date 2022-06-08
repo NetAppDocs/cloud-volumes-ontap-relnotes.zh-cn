@@ -20,7 +20,7 @@ Cloud Volumes ONTAP 9.11.1提供了新的增强功能。
 
 
 
-== 9.11.1 RC1 (2022年6月8日)
+== 9.11.1 RC1 (2022年6月7日)
 
 Cloud Volumes ONTAP 9.11.1候选版本1现已在AWS、Azure和Google Cloud中推出。此版本包含以下新增功能和增强功能：
 
