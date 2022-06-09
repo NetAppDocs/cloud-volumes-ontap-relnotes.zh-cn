@@ -774,4 +774,8 @@
   <block id="0d8238cb20fb41ede1eb68d45d598c4f" category="list-text">使用单节点系统时，所有实例类型均支持高写入速度。您可以在部署期间或之后的任何时间从Cloud Manager启用高写入速度。<block ref="18805b87db41583a67ecc2414d022f2b" category="inline-link-rx"></block>。</block>
   <block id="4e1b6146fa2cb1efc8bff10f1cf7e93c" category="list-text">E80ids_v4 ^1、2^</block>
   <block id="7ddea5d9f1e01b01ba11b40da7046d95" category="list-text">使用 HA 对时， Cloud Volumes ONTAP 支持对这些 VM 类型使用较高的写入速度。您可以在部署期间或之后的任何时间从Cloud Manager启用高写入速度。<block ref="18805b87db41583a67ecc2414d022f2b" category="inline-link-rx"></block>。</block>
+  <block id="5505ffcb759fb1c9c3793b2dd386cd82" category="inline-link">了解如何在PAYGO和BYOL之间切换</block>
+  <block id="e1e947c069bd154f04aefec0a6619873" category="paragraph">请注意、不支持将系统从PAYGO by node许可转换为BYOL by-node许可(反之亦然)。您需要部署一个新系统、然后将数据复制到该系统。<block ref="c9d55d60961394f2cbacfb1050626915" category="inline-link-rx"></block></block>
+  <block id="75b66e0b3cef735ea985bd79ab9601e2" category="cell">m5dn.4xlarge</block>
+  <block id="bc503c45d950d94391e7685c6585b286" category="cell">m5dn.12 x大型</block>
 </blocks>

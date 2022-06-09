@@ -127,7 +127,7 @@ Cloud Volumes ONTAP 支持多种类型的 EBS 磁盘以及用于数据分层的 
 | m5.2xlarge | 8. | 32 | 不支持 | 最多 10 个 | 最多 4 ， 750 个 | supported 
 
 
-.19+| * 高级版或任何其他许可证 * | m5n.2xlarge | 8. | 32 | 不支持 | 最多 25 个 | 最多 4 ， 750 个 | supported 
+.21+| * 高级版或任何其他许可证 * | m5n.2xlarge | 8. | 32 | 不支持 | 最多 25 个 | 最多 4 ， 750 个 | supported 
 
 
 | r5.2 个大型 | 8. | 64 | 不支持 | 最多 10 个 | 最多 4 ， 750 个 | supported 
@@ -140,6 +140,9 @@ Cloud Volumes ONTAP 支持多种类型的 EBS 磁盘以及用于数据分层的 
 
 
 | m5.4xlarge | 16. | 64 | 不支持 | 最多 10 个 | 4,750 | supported 
+
+
+| m5dn.4xlarge | 16. | 64 | supported | 最多 25 个 | 4,750 | supported 
 
 
 | m5d.8xlarge | 32 | 128. | supported | 10 | 6,800 | supported 
@@ -167,6 +170,9 @@ Cloud Volumes ONTAP 支持多种类型的 EBS 磁盘以及用于数据分层的 
 
 
 | m5d.12 x 大型 | 48 | 192. | supported | 12 | 9,500 | supported 
+
+
+| m5dn.12 x大型 | 48 | 192. | supported | 50 | 9,500 | supported 
 
 
 | c5n.18x 大型 | 48 ^4^ | 192. | 不支持 | 100 | 19,000 | supported 

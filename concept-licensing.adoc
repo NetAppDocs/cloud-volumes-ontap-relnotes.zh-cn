@@ -241,6 +241,8 @@ HA 对支持 Keystone Flex 订阅。目前，单节点系统不支持此许可�
 
 如果要过渡到其他许可方法，您可以购买许可证，使用该许可证部署新的 Cloud Volumes ONTAP 系统，然后将数据复制到该新系统。
 
+请注意、不支持将系统从PAYGO by node许可转换为BYOL by-node许可(反之亦然)。您需要部署一个新系统、然后将数据复制到该系统。 https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-manage-node-licenses.html["了解如何在PAYGO和BYOL之间切换"^]
+
 
 
 == 最大系统数
