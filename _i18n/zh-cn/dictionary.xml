@@ -45,14 +45,11 @@
   <block id="7751129b8546a0da65fb379b1cc9c243" category="cell">每个许可证 368 TiB</block>
   <block id="376c581ebe9ec9aa8853377f8538ebbd" category="cell">基于容量的许可证</block>
   <block id="9010e525ec80d0fdea3d56191f64ce39" category="cell">2 个 PIB</block>
-  <block id="2f9882645b2c32820ad085240bacb763" category="section-title">对于 HA ，是每个节点的许可证容量限制还是整个 HA 对的许可证容量限制？</block>
   <block id="44007958b04e5e15a25a3ca1ee98abeb" category="paragraph">容量限制适用于整个 HA 对。不是每个节点。例如，如果使用高级版许可证，则两个节点之间的容量最多可达 368 TiB 。</block>
-  <block id="fc9a388cd18c69244f22554de6f0d544" category="section-title">对于 AWS 中的 HA 系统，镜像数据是否计入容量限制？</block>
   <block id="8644b747d80d3144a35c2f7a3eb37c2e" category="paragraph">不可以。AWS HA 对中的数据会在节点之间同步镜像，以便在发生故障时可以使用这些数据。例如，如果您在节点 A 上购买了 8 TiB 磁盘，则 Cloud Manager 还会在节点 B 上分配一个 8 TiB 磁盘，用于镜像数据。虽然配置了 16 TiB 的容量，但许可证限制仅会计入 8 TiB 的容量。</block>
   <block id="c029ebf0cab0f40812ebec7c644fef41" category="section-title">EC2 实例的磁盘和分层限制</block>
   <block id="5a9c94e941761c15ef227dfa8c3fc6d8" category="paragraph">Cloud Volumes ONTAP 使用 EBS 卷作为磁盘，最大磁盘大小为 16 TiB 。以下各节显示了 EC2 实例系列的磁盘和分层限制，因为许多 EC2 实例类型具有不同的磁盘限制。单节点系统和 HA 对之间的磁盘限制也不同。</block>
   <block id="cf3a2d2c139bf5c9cc87fe714bfff3b1" category="paragraph">请注意以下事项：</block>
-  <block id="e197fb210372b9fefa18060ae467b367" category="list-text">新的 Cloud Volumes ONTAP 9.10.0 系统不支持 c4 ， m4 和 r4 实例类型。但是，我们仍会显示这些实例类型的磁盘限制，因为在这些实例类型之一上运行时，您可以将系统升级到 9.10.0 版本。</block>
   <block id="5eb6e090da55ad28bf2f9c1286619ef2" category="list-text">以下磁盘限制特定于包含用户数据的磁盘。这些限制不包括启动磁盘和根磁盘。</block>
   <block id="275e3ef1a302e67e93bcf0f30d566f74" category="inline-link">了解如何向 Cloud Volumes ONTAP 添加其他系统许可证</block>
   <block id="bb1dfd389b14b44028041022a8d2899f" category="list-text">现在，您可以为 Cloud Volumes ONTAP BYOL 系统购买多个基于节点的许可证，以分配 368 TiB 以上的容量。您可以为单节点系统或 HA 对购买的许可证数量不受限制。请注意，磁盘限制可能会阻止您单独使用磁盘来达到容量限制。您可以通过超出磁盘限制<block ref="91a4fc4ecb983c2fca7588f26341e223" category="inline-link-rx"></block>。<block ref="cd9ff634efd9a4fe20f170cd618702b5" category="inline-link-rx"></block>。</block>
@@ -236,9 +233,7 @@
   <block id="1191f788083da9194f8eef9400d10898" category="cell">10 TB</block>
   <block id="86eaddcad9cef8a014b014a3ad2afb9c" category="cell">368 TB</block>
   <block id="38797647ee0806ca5a6dba902f03f6e0" category="cell">每个许可证 368 TB</block>
-  <block id="2819feead2b07762a4465189ab8b2f52" category="section-title">对于 HA 对，是每个节点的许可容量限制还是整个 HA 对的许可容量限制？</block>
   <block id="ce5ee1bd79a3fbc4ee9fee207a94ef54" category="paragraph">容量限制适用于整个 HA 对。不是每个节点。例如，如果使用高级版许可证，则两个节点之间的容量最多可达 368 TB 。</block>
-  <block id="7093c2c9844cf46dcd5d50c6d596d244" category="section-title">对于 HA 对，镜像数据是否计入许可的容量限制？</block>
   <block id="1ddc84b3dc9fe6599d89fd9b7f5c6660" category="paragraph">不可以。HA 对中的数据会在节点之间同步镜像，以便在 Google Cloud 发生故障时可以使用这些数据。例如，如果您在节点 A 上购买了 8 TB 磁盘，则 Cloud Manager 还会在节点 B 上分配一个 8 TB 磁盘，用于镜像数据。虽然配置了 16 TB 的容量，但许可证限制仅会计入 8 TB 的容量。</block>
   <block id="466cd90b62b5da75ee4bd662add41e7f" category="section-title">磁盘和分层限制</block>
   <block id="49e0d392d83f24aa1384f18b22975ef6" category="paragraph">下表显示了单独使用磁盘以及将磁盘和冷数据分层到对象存储的最大系统容量。磁盘限制特定于包含用户数据的磁盘。这些限制不包括启动磁盘和根磁盘。</block>
@@ -639,8 +634,6 @@
   <block id="d81f72d124621f7fbe888b57a3b055c2" category="paragraph">不支持将现有 Cloud Volumes ONTAP 系统转换为其他许可方法。当前的三种许可方法是基于容量的许可， Keystone Flex 订阅和基于节点的许可。例如，您不能将系统从基于节点的许可转换为基于容量的许可（反之亦然）。</block>
   <block id="7bd090ccc30738cd79592e7431dee17b" category="paragraph">如果要过渡到其他许可方法，您可以购买许可证，使用该许可证部署新的 Cloud Volumes ONTAP 系统，然后将数据复制到该新系统。</block>
   <block id="170d227d215fb560bb4c8ad4e345183a" category="section-title">最大系统数</block>
-  <block id="3ac6338087c4180b5cbb359584abab3a" category="paragraph">无论使用哪种许可模式，每个 NetApp 帐户最多只能有 20 个 Cloud Volumes ONTAP 系统。</block>
-  <block id="5908d4e5a438659ba844464125f51abe" category="paragraph">system_ 是 HA 对或单节点系统。例如，如果您有两个 Cloud Volumes ONTAP HA 对和两个单节点系统，则总共有 4 个系统，您的帐户中还有 16 个额外的系统。</block>
   <block id="a259bb127cd2a1cd02edf6a3a2484f33" category="paragraph">如有任何疑问，请联系您的客户代表或销售团队。</block>
   <block id="fc2be74c7bf9f46e12967c2298a899ba" category="inline-link">了解有关 NetApp 客户的更多信息</block>
   <block id="e821f27f6bd96fe3103abd85280bcc70" category="paragraph"><block ref="e0109745edea3dd07561e6ef24e031b3" category="inline-link-rx"></block>。</block>
@@ -778,4 +771,7 @@
   <block id="e1e947c069bd154f04aefec0a6619873" category="paragraph">请注意、不支持将系统从PAYGO by node许可转换为BYOL by-node许可(反之亦然)。您需要部署一个新系统、然后将数据复制到该系统。<block ref="c9d55d60961394f2cbacfb1050626915" category="inline-link-rx"></block></block>
   <block id="75b66e0b3cef735ea985bd79ab9601e2" category="cell">m5dn.4xlarge</block>
   <block id="bc503c45d950d94391e7685c6585b286" category="cell">m5dn.12 x大型</block>
+  <block id="c50e8615eb65e21639a9b12f16b31280" category="list-text">此版本中的新Cloud Volumes ONTAP 系统不支持c4、m4和r4实例类型。但是、我们仍会显示这些实例类型的磁盘限制、因为在这些实例类型之一上运行时、您可以将系统升级到此版本。</block>
+  <block id="fe133d1f6db8d046e4b328c0d9a967a1" category="paragraph">无论使用哪种许可模式、每个NetApp帐户最多只能有50个Cloud Volumes ONTAP 系统。</block>
+  <block id="ae5034ae6657395ba1fc2a16d2c55db3" category="paragraph">system_ 是 HA 对或单节点系统。例如、如果您有八个Cloud Volumes ONTAP HA对和四个单节点系统、则总共有12个系统、帐户中还有38个系统。</block>
 </blocks>

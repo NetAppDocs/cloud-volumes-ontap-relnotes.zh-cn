@@ -60,7 +60,7 @@ Cloud Volumes ONTAP 使用 EBS 卷作为磁盘，最大磁盘大小为 16 TiB �
 
 请注意以下事项：
 
-* 新的 Cloud Volumes ONTAP 9.10.0 系统不支持 c4 ， m4 和 r4 实例类型。但是，我们仍会显示这些实例类型的磁盘限制，因为在这些实例类型之一上运行时，您可以将系统升级到 9.10.0 版本。
+* 此版本中的新Cloud Volumes ONTAP 系统不支持c4、m4和r4实例类型。但是、我们仍会显示这些实例类型的磁盘限制、因为在这些实例类型之一上运行时、您可以将系统升级到此版本。
 * 以下磁盘限制特定于包含用户数据的磁盘。这些限制不包括启动磁盘和根磁盘。
 * 现在，您可以为 Cloud Volumes ONTAP BYOL 系统购买多个基于节点的许可证，以分配 368 TiB 以上的容量。您可以为单节点系统或 HA 对购买的许可证数量不受限制。请注意，磁盘限制可能会阻止您单独使用磁盘来达到容量限制。您可以通过超出磁盘限制 https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/concept-data-tiering.html["将非活动数据分层到对象存储"^]。 https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-manage-node-licenses.html["了解如何向 Cloud Volumes ONTAP 添加其他系统许可证"^]。
 
