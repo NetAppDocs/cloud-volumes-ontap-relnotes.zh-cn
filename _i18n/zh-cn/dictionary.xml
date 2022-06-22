@@ -772,6 +772,6 @@
   <block id="75b66e0b3cef735ea985bd79ab9601e2" category="cell">m5dn.4xlarge</block>
   <block id="bc503c45d950d94391e7685c6585b286" category="cell">m5dn.12 x大型</block>
   <block id="c50e8615eb65e21639a9b12f16b31280" category="list-text">此版本中的新Cloud Volumes ONTAP 系统不支持c4、m4和r4实例类型。但是、我们仍会显示这些实例类型的磁盘限制、因为在这些实例类型之一上运行时、您可以将系统升级到此版本。</block>
-  <block id="fe133d1f6db8d046e4b328c0d9a967a1" category="paragraph">无论使用哪种许可模式、每个NetApp帐户最多只能有50个Cloud Volumes ONTAP 系统。</block>
-  <block id="ae5034ae6657395ba1fc2a16d2c55db3" category="paragraph">system_ 是 HA 对或单节点系统。例如、如果您有八个Cloud Volumes ONTAP HA对和四个单节点系统、则总共有12个系统、帐户中还有38个系统。</block>
+  <block id="3ac6338087c4180b5cbb359584abab3a" category="paragraph">无论使用哪种许可模式，每个 NetApp 帐户最多只能有 20 个 Cloud Volumes ONTAP 系统。</block>
+  <block id="b730a5e05a41eebeb51f5aee7c746386" category="paragraph">system_ 是 HA 对或单节点系统。例如、如果您有两个Cloud Volumes ONTAP HA对和两个单节点系统、则总共有4个系统、您的帐户中还有16个额外的系统。</block>
 </blocks>

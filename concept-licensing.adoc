@@ -247,9 +247,9 @@ HA 对支持 Keystone Flex 订阅。目前，单节点系统不支持此许可�
 
 == 最大系统数
 
-无论使用哪种许可模式、每个NetApp帐户最多只能有50个Cloud Volumes ONTAP 系统。
+无论使用哪种许可模式，每个 NetApp 帐户最多只能有 20 个 Cloud Volumes ONTAP 系统。
 
-system_ 是 HA 对或单节点系统。例如、如果您有八个Cloud Volumes ONTAP HA对和四个单节点系统、则总共有12个系统、帐户中还有38个系统。
+system_ 是 HA 对或单节点系统。例如、如果您有两个Cloud Volumes ONTAP HA对和两个单节点系统、则总共有4个系统、您的帐户中还有16个额外的系统。
 
 如有任何疑问，请联系您的客户代表或销售团队。
 
