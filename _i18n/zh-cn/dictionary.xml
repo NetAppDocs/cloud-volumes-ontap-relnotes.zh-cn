@@ -48,12 +48,7 @@
   <block id="44007958b04e5e15a25a3ca1ee98abeb" category="paragraph">容量限制适用于整个 HA 对。不是每个节点。例如，如果使用高级版许可证，则两个节点之间的容量最多可达 368 TiB 。</block>
   <block id="8644b747d80d3144a35c2f7a3eb37c2e" category="paragraph">不可以。AWS HA 对中的数据会在节点之间同步镜像，以便在发生故障时可以使用这些数据。例如，如果您在节点 A 上购买了 8 TiB 磁盘，则 Cloud Manager 还会在节点 B 上分配一个 8 TiB 磁盘，用于镜像数据。虽然配置了 16 TiB 的容量，但许可证限制仅会计入 8 TiB 的容量。</block>
   <block id="c029ebf0cab0f40812ebec7c644fef41" category="section-title">EC2 实例的磁盘和分层限制</block>
-  <block id="5a9c94e941761c15ef227dfa8c3fc6d8" category="paragraph">Cloud Volumes ONTAP 使用 EBS 卷作为磁盘，最大磁盘大小为 16 TiB 。以下各节显示了 EC2 实例系列的磁盘和分层限制，因为许多 EC2 实例类型具有不同的磁盘限制。单节点系统和 HA 对之间的磁盘限制也不同。</block>
-  <block id="cf3a2d2c139bf5c9cc87fe714bfff3b1" category="paragraph">请注意以下事项：</block>
-  <block id="5eb6e090da55ad28bf2f9c1286619ef2" category="list-text">以下磁盘限制特定于包含用户数据的磁盘。这些限制不包括启动磁盘和根磁盘。</block>
   <block id="275e3ef1a302e67e93bcf0f30d566f74" category="inline-link">了解如何向 Cloud Volumes ONTAP 添加其他系统许可证</block>
-  <block id="bb1dfd389b14b44028041022a8d2899f" category="list-text">现在，您可以为 Cloud Volumes ONTAP BYOL 系统购买多个基于节点的许可证，以分配 368 TiB 以上的容量。您可以为单节点系统或 HA 对购买的许可证数量不受限制。请注意，磁盘限制可能会阻止您单独使用磁盘来达到容量限制。您可以通过超出磁盘限制<block ref="91a4fc4ecb983c2fca7588f26341e223" category="inline-link-rx"></block>。<block ref="cd9ff634efd9a4fe20f170cd618702b5" category="inline-link-rx"></block>。</block>
-  <block id="129e3a061f7870067c1e133ba0a412f2" category="section-title">具有高级许可证的单个节点</block>
   <block id="d9a17c1c9e8ef6866e4dbeef41c741b2" category="cell">实例</block>
   <block id="4f42986706a322f09678a2f25be54dd9" category="cell">每个节点的最大磁盘数</block>
   <block id="a9b87ab892cc3b768d5fb6b4d85fcdd5" category="cell">单独使用磁盘时的最大系统容量</block>
@@ -68,7 +63,6 @@
   <block id="e369853df766fa44e1ed0ff613f563bd" category="cell">34</block>
   <block id="64d21a165becbe18d275a66aac4f8e8e" category="list-text">21 个数据磁盘是部署 Cloud Volumes ONTAP 的 _new_ 限制。如果升级使用 9.7 或更早版本创建的系统，则系统仍支持 22 个磁盘。由于从 9.8 版开始添加了一个核心磁盘，因此在使用这些实例类型的新系统上支持的数据磁盘减少一个。</block>
   <block id="3d60f9d4f3945975bb1eca051c0bbef9" category="list-text">与其他实例类型相比，此实例类型具有更多的本地 NVMe 磁盘，这意味着支持的数据磁盘数量较少。</block>
-  <block id="84dbd7aba83fa6e04c6f7c96a1be85f2" category="section-title">采用基于节点的许可的单节点</block>
   <block id="aaa9a5ed21c4e4c107aab47a353049bc" category="cell">使用一个许可证时的最大系统容量</block>
   <block id="cabc996760a00c42a2b15b388054d050" category="cell">使用多个许可证时的最大系统容量</block>
   <block id="d41d8cd98f00b204e9800998ecf8427e" category="cell"></block>
@@ -76,19 +70,15 @@
   <block id="e3185eb0708df4883935910ebf26f8db" category="cell">* 磁盘 + 数据分层 *</block>
   <block id="f94f9afeacfc431720c782db2e1d8809" category="cell">每个许可证 368 TiB x</block>
   <block id="6ebe799c380816a48bf991ae59543433" category="cell">544 TiB</block>
-  <block id="918660df9dabb216873a828f8dba357f" category="section-title">具有基于容量的许可的单个节点</block>
   <block id="3c59dc048e8850243be8079a5c74d079" category="cell">21</block>
   <block id="a23ca456fec74dd76d95b20f2cf60dd0" category="cell">19 ^1^</block>
-  <block id="2fe12d2fbca1ad427f800563e85d7942" category="section-title">具有高级许可证的 HA 对</block>
   <block id="156b98ab4634edb024f99442726e3e8d" category="cell">18 ^1^</block>
   <block id="b7608c5d160ea75c5c58e10097dc4db7" category="cell">288 TiB</block>
   <block id="dee0912fefbe003d7ae380d371a87fad" category="cell">16 ^2^</block>
   <block id="9f71cb3204a7c80e435b6337aed1e728" category="cell">256 TiB</block>
   <block id="c16a5320fa475530d9583c34fd356ef5" category="cell">31</block>
   <block id="01d00547146974c6eeb34ecc38263cb0" category="list-text">18 个数据磁盘是部署 Cloud Volumes ONTAP 的 _new_ 限制。如果升级使用 9.7 或更早版本创建的系统，则系统仍支持 19 个磁盘。由于从 9.8 版开始添加了一个核心磁盘，因此在使用这些实例类型的新系统上支持的数据磁盘减少一个。</block>
-  <block id="5d0440e2b7983c0540ac561d3bd66201" category="section-title">采用基于节点的许可的 HA 对</block>
   <block id="35a779533962b549212e6b883b5793f7" category="cell">496 TiB</block>
-  <block id="74c7b6190ee0e7fb8e5bb03dd438c3da" category="section-title">采用基于容量的许可的 HA 对</block>
   <block id="6f4922f45568161a8cdf4ad2299f6d23" category="cell">18</block>
   <block id="d165ee52657df0e131ad67ed84783dfb" category="cell">16 ^1^</block>
   <block id="77da8ca35e02ab32c9b48e9f632913bf" category="section-title">聚合限制</block>
@@ -236,7 +226,6 @@
   <block id="ce5ee1bd79a3fbc4ee9fee207a94ef54" category="paragraph">容量限制适用于整个 HA 对。不是每个节点。例如，如果使用高级版许可证，则两个节点之间的容量最多可达 368 TB 。</block>
   <block id="1ddc84b3dc9fe6599d89fd9b7f5c6660" category="paragraph">不可以。HA 对中的数据会在节点之间同步镜像，以便在 Google Cloud 发生故障时可以使用这些数据。例如，如果您在节点 A 上购买了 8 TB 磁盘，则 Cloud Manager 还会在节点 B 上分配一个 8 TB 磁盘，用于镜像数据。虽然配置了 16 TB 的容量，但许可证限制仅会计入 8 TB 的容量。</block>
   <block id="466cd90b62b5da75ee4bd662add41e7f" category="section-title">磁盘和分层限制</block>
-  <block id="49e0d392d83f24aa1384f18b22975ef6" category="paragraph">下表显示了单独使用磁盘以及将磁盘和冷数据分层到对象存储的最大系统容量。磁盘限制特定于包含用户数据的磁盘。这些限制不包括启动磁盘和根磁盘。</block>
   <block id="08fca9107919e2a3190d5edc75ce7c61" category="cell">最大数据磁盘数</block>
   <block id="73a5b4e1955745ba2e19b7f891caf5fd" category="list-text">124 ，用于单节点系统</block>
   <block id="2b7385ac96adbf2201cf7b11333b798c" category="list-text">对于 HA 对，每个节点 123 个</block>
@@ -245,7 +234,6 @@
   <block id="92d6dc05cca759fe0b05fc952ab8d146" category="cell">仅使用磁盘时的最大系统容量</block>
   <block id="245cf9fb027a40ee8a30bfcbf5a0f859" category="cell">256 TB ^1^</block>
   <block id="fb477a816dd39a57a35e342288ae601b" category="cell">将磁盘和冷数据分层到 Google Cloud 存储分段时的最大系统容量</block>
-  <block id="1a731420bbc4adfcc3e3c640955180d2" category="cell">取决于许可证。请参见上表。</block>
   <block id="f001a5c220f0213e63339dfe3e66fb03" category="paragraph">^1^ 此限制由 Google Cloud Platform 中的虚拟机限制定义。</block>
   <block id="c774172e35ab7294ce80989983a6d47e" category="paragraph">Cloud Volumes ONTAP 将 Google 云平台磁盘分组为 _aggreges_ 。聚合可为卷提供存储。</block>
   <block id="78c305f4cc241040025b8466926183c4" category="cell">最大数据聚合数 ^1^</block>
@@ -531,11 +519,6 @@
   <block id="6a8a2e92f318dbd4f6a8e47b03350d4d" category="summary">Cloud Volumes ONTAP 在 Azure 中具有存储配置限制，可提供可靠的操作。为获得最佳性能，请勿将系统配置为最大值。</block>
   <block id="e622ddac1a96836929babb5b993749ba" category="doc">Azure 中的存储限制</block>
   <block id="e6607992aca7a2cd8b89f152b0cf553d" category="section-title">按虚拟机大小的磁盘和分层限制</block>
-  <block id="a9b575c3ac8492900fd552582c6fecae" category="paragraph">以下磁盘限制特定于包含用户数据的磁盘。限制不包括根磁盘，核心磁盘和 VNVRAM 。</block>
-  <block id="295f33d6ece0cb2125433cf6ec678e7e" category="paragraph">下表按虚拟机大小显示了单个磁盘以及将磁盘和冷数据分层到对象存储的最大系统容量。</block>
-  <block id="f114a72e19307d64279cad76172579f0" category="list-text">单节点系统可以使用标准 HDD 受管磁盘，标准 SSD 受管磁盘和高级 SSD 受管磁盘，每个磁盘最多 32 TiB 。支持的磁盘数量因虚拟机大小而异。</block>
-  <block id="bb8cb4958d23b69d96d3891aa7ae598a" category="list-text">HA 系统使用高级页面 BLOB 作为磁盘，每页 BLOB 最多 8 TiB 。支持的磁盘数量因虚拟机大小而异。</block>
-  <block id="c40775108b323ba29757ee7d6526594a" category="admonition">您可以为 Cloud Volumes ONTAP BYOL 系统购买多个基于节点的许可证，以分配超过 368 TiB 的容量。您可以为单节点系统或 HA 对购买的许可证数量不受限制。请注意，磁盘限制可能会阻止您单独使用磁盘来达到容量限制。您可以通过超出磁盘限制<block ref="91a4fc4ecb983c2fca7588f26341e223" category="inline-link-rx"></block>。<block ref="cd9ff634efd9a4fe20f170cd618702b5" category="inline-link-rx"></block>。</block>
   <block id="50c51ed959c686d478aaf3f5e64ce255" category="cell">VM 大小</block>
   <block id="1522e1d48d50a8b533ccfa8eeaad6405" category="cell">每个节点的 MAX Data 磁盘数</block>
   <block id="7f39f8317fbdb1988ef4c628eba02591" category="cell">61.</block>
@@ -544,7 +527,6 @@
   <block id="0ea77c0c108fe11200832cf8df830512" category="cell">E48s_v3</block>
   <block id="7d11aba6c40237104a266be93dc3a00f" category="cell">E64is_v3</block>
   <block id="6b9d51616a5f0637dd2fb237d868c037" category="cell">E80ids_v4</block>
-  <block id="9a14c9013ea629276a361bd58d8e1f28" category="admonition">对于某些 VM 类型，您需要多个 BYOL 许可证才能达到下面列出的最大系统容量。例如，使用 DS5_v2 时，您需要 6 个 BYOL 许可证才能达到 1.95 PiB 。</block>
   <block id="84581eec82fbf62be31e4721312910b0" category="cell">L8s_v2</block>
   <block id="c717534327e269958ec86746c88f88bf" category="cell">416 TiB</block>
   <block id="82c5a657ae8662e2146ad882dc2b2d0b" category="cell">160 TiB</block>
@@ -679,7 +661,6 @@
   <block id="7ddea5d9f1e01b01ba11b40da7046d95" category="list-text">使用 HA 对时， Cloud Volumes ONTAP 支持对这些 VM 类型使用较高的写入速度。您可以在部署期间或之后的任何时间从Cloud Manager启用高写入速度。<block ref="18805b87db41583a67ecc2414d022f2b" category="inline-link-rx"></block>。</block>
   <block id="75b66e0b3cef735ea985bd79ab9601e2" category="cell">m5dn.4xlarge</block>
   <block id="bc503c45d950d94391e7685c6585b286" category="cell">m5dn.12 x大型</block>
-  <block id="c50e8615eb65e21639a9b12f16b31280" category="list-text">此版本中的新Cloud Volumes ONTAP 系统不支持c4、m4和r4实例类型。但是、我们仍会显示这些实例类型的磁盘限制、因为在这些实例类型之一上运行时、您可以将系统升级到此版本。</block>
   <block id="30af1a6878bac3a7aaed5d0e64e7b511" category="paragraph">Cloud Volumes ONTAP 提供了不同的许可选项、可让您根据自己的需求选择消费模式。</block>
   <block id="37439fa615a442ec183c1c602f9755f1" category="paragraph">基于容量的许可以 _package_ 的形式提供。部署Cloud Volumes ONTAP 系统时、您可以根据业务需求从多个许可包中进行选择。</block>
   <block id="deb56fb5a824215375b16e72749e2aa3" category="inline-link">详细了解这些许可选项</block>
@@ -688,4 +669,32 @@
   <block id="f7a595a5b716a220ebf66ec097a076b9" category="section-title">9.11.1 GA (2022年8月1日)</block>
   <block id="841cdf435f69aa307d11070ce78d7160" category="paragraph">Cloud Volumes ONTAP 9.11.1的通用(GA)版本现已推出。GA 版本包含错误修复。</block>
   <block id="33f66f5b18b24875dca7a81c8f84c5b9" category="cell">896 TiB</block>
+  <block id="a4a5e7bfb7afd26ff6a225ef7681add9" category="paragraph">下表显示了单独使用磁盘以及将磁盘和冷数据分层到对象存储的最大系统容量。磁盘限制特定于包含用户数据的磁盘。限制不包括启动磁盘、根磁盘或NVRAM。</block>
+  <block id="aa22c87da31d41edeac2ffbad9e7507d" category="cell">取决于许可证。请参见上述最大系统容量限制。</block>
+  <block id="4309266475af7c71bb88f9be6f8c3940" category="paragraph">根据您使用的EC2实例类型系列以及您使用的是单节点系统还是HA对、容量限制会有所不同。</block>
+  <block id="b1fb395f7c47ced4c12fc74fad2320b5" category="paragraph">以下注释提供了有关下表中所示数字的详细信息：</block>
+  <block id="3ee4a294c58f9e6c4461dc10d825844c" category="list-text">磁盘限制特定于包含用户数据的磁盘。</block>
+  <block id="e7caa46d6e70a5b96752b4644b9f1527" category="paragraph">这些限制不包括启动磁盘和根磁盘。</block>
+  <block id="e8ea7579109541b8654ac77df6ec5b21" category="list-text">仅使用磁盘以及使用磁盘以及将冷数据分层到对象存储时、将列出最大系统容量。</block>
+  <block id="dd81441aed81dac4d773ef1291a64e00" category="list-text">Cloud Volumes ONTAP 使用 EBS 卷作为磁盘，最大磁盘大小为 16 TiB 。</block>
+  <block id="6f55661d86c0b385d8b362ed90701d0d" category="section-title">基于容量的许可限制</block>
+  <block id="54fe37b73954e37cae21db9bbd66c952" category="inline-link">了解Cloud Volumes ONTAP 许可选项</block>
+  <block id="bdb02d545feb4269f91ba30bafe0b877" category="paragraph">以下磁盘限制适用于使用基于容量的许可包的Cloud Volumes ONTAP 系统。<block ref="f34dd0069e6a1810319c8488dea69f29" category="inline-link-rx"></block></block>
+  <block id="5aabc9069557be7e4aeff466605cbc75" category="section-title">单个节点</block>
+  <block id="6c3b49ddb811c2d88edee86163680009" category="section-title">基于节点的许可限制</block>
+  <block id="d017aa906544a3348ee35d75ebb10b72" category="paragraph">以下磁盘限制适用于使用基于节点的许可的Cloud Volumes ONTAP 系统、此许可模式是上一代许可模式、可用于按节点许可Cloud Volumes ONTAP。基于节点的许可仍可供现有客户使用。</block>
+  <block id="52960fb5a2829740ddef9c61b6015d59" category="list-text">如果您使用基于节点的许可、则可以为Cloud Volumes ONTAP BYOL系统购买多个基于节点的许可证、以分配超过368 TiB的容量。</block>
+  <block id="f64d686366f69524d03c9279a078fb54" category="paragraph">您可以为单节点系统或 HA 对购买的许可证数量不受限制。请注意，磁盘限制可能会阻止您单独使用磁盘来达到容量限制。您可以通过超出磁盘限制<block ref="91a4fc4ecb983c2fca7588f26341e223" category="inline-link-rx"></block>。<block ref="cd9ff634efd9a4fe20f170cd618702b5" category="inline-link-rx"></block>。</block>
+  <block id="ab3e9017f469fcaf61a0f16670f627f1" category="list-text">此版本中的新Cloud Volumes ONTAP 系统不支持c4、m4和r4实例类型。</block>
+  <block id="adad2ef28b2450525f057d0f5e32ec33" category="paragraph">但是、我们仍会显示这些实例类型的磁盘限制、因为在这些实例类型之一上运行时、您可以将系统升级到此版本。</block>
+  <block id="fff4bb20e652c529e2e22e76e56ed9b5" category="section-title">采用PAYGO Premium的单节点</block>
+  <block id="a9698a2172c5fcc72b7ecd7910403955" category="section-title">具有BYOL的单个节点</block>
+  <block id="9dbb7f356b08de585f6ddbe523e4a8d8" category="section-title">采用PAYGO Premium的HA对</block>
+  <block id="1bc398eeb632d3ea2f565d86881775d8" category="section-title">具有BYOL的HA对</block>
+  <block id="8839c374fd950d105b5836c5400c37e3" category="paragraph">根据所使用的虚拟机大小以及所使用的是单节点系统还是HA对、容量限制会有所不同。</block>
+  <block id="10e6e33e8d7a64d70c731d40ea252ed8" category="paragraph">以下注释提供了有关您将在下表中看到的数字的详细信息：</block>
+  <block id="bbeef84c33f1676ea87c5c7f476795e6" category="paragraph">限制不包括根磁盘，核心磁盘和 VNVRAM 。</block>
+  <block id="70f278cadf665202f3ebb7a682519f5c" category="list-text">单节点系统使用受管磁盘、每个磁盘最多32 TiB。支持的磁盘数量因虚拟机大小而异。</block>
+  <block id="c5fa07957eb90c414f1dadcad7da5df6" category="list-text">HA对使用高级页面BLOB作为磁盘、每页BLOB最多8 TiB。支持的磁盘数量因虚拟机大小而异。</block>
+  <block id="0d5277886c056c697a81cb7ba46178fc" category="list-text">对于具有特定VM大小的单节点系统、列出的基于磁盘的896 TiB限制为_TESTESTESTEST_限制。</block>
 </blocks>
