@@ -687,10 +687,6 @@
   <block id="deb56fb5a824215375b16e72749e2aa3" category="inline-link">详细了解这些许可选项</block>
   <block id="f3b3e9858be5dbfaf6c39891db3263a2" category="paragraph"><block ref="f3b3e9858be5dbfaf6c39891db3263a2" category="inline-link-rx"></block></block>
   <block id="346f7f627d1a93bfbf315865554048c6" category="section-title">反勒索软件</block>
-  <block id="df9ade3904ce4c10cfe2ea1f484d177c" category="paragraph">Cloud Volumes ONTAP 现在支持ONTAP 反勒索软件功能。此功能使用NAS (NFS和SMB)环境中的工作负载分析主动检测并警告可能指示勒索软件攻击的异常活动。</block>
-  <block id="1682a2d73db17506ef748746ae0e5b26" category="inline-link">了解有关反勒索软件的更多信息</block>
-  <block id="2965efaf6a81d93c812190fdf70e8421" category="paragraph"><block ref="2965efaf6a81d93c812190fdf70e8421" category="inline-link-rx"></block></block>
-  <block id="ce6ffc4c3a796f2c5529a32c31151213" category="paragraph">请注意、Cloud Manager不对此功能进行任何管理。您需要使用System Manager或CLI启用反勒索软件保护。</block>
-  <block id="f710d8a9c5acc6eccad3f0bf89772d55" category="inline-link">您可以通过Cloud Manager启用的勒索软件保护</block>
-  <block id="ef849f76db615e66fabc0f181faeeaa0" category="paragraph">反勒索软件解决了与不同的使用情形<block ref="bb3f0e167d3bc03dccb553be56950b92" category="inline-link-rx"></block></block>
+  <block id="f7a595a5b716a220ebf66ec097a076b9" category="section-title">9.11.1 GA (2022年8月1日)</block>
+  <block id="841cdf435f69aa307d11070ce78d7160" category="paragraph">Cloud Volumes ONTAP 9.11.1的通用(GA)版本现已推出。GA 版本包含错误修复。</block>
 </blocks>
