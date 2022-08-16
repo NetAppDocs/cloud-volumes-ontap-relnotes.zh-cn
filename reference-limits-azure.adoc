@@ -113,19 +113,19 @@ NOTE: 对于某些 VM 类型，您需要多个 BYOL 许可证才能达到下面�
 2+|  | * 仅磁盘 * | * 磁盘 + 数据分层 * | * 仅磁盘 * | * 磁盘 + 数据分层 * 
 
 
-| DS4_v2 | 29 | 368 TiB | 368 TiB | 928 TiB | 每个许可证 368 TiB x 
+| DS4_v2 | 29 | 368 TiB | 368 TiB | 896 TiB | 每个许可证 368 TiB x 
 
 
-| DS5_v2 | 61. | 368 TiB | 368 TiB | 1.95 PIB | 每个许可证 368 TiB x 
+| DS5_v2 | 61. | 368 TiB | 368 TiB | 896 TiB | 每个许可证 368 TiB x 
 
 
-| DS13_v2 | 29 | 368 TiB | 368 TiB | 928 TiB | 每个许可证 368 TiB x 
+| DS13_v2 | 29 | 368 TiB | 368 TiB | 896 TiB | 每个许可证 368 TiB x 
 
 
-| DS14_v2 | 61. | 368 TiB | 368 TiB | 1.95 PIB | 每个许可证 368 TiB x 
+| DS14_v2 | 61. | 368 TiB | 368 TiB | 896 TiB | 每个许可证 368 TiB x 
 
 
-| DS15_v2 | 61. | 368 TiB | 368 TiB | 1.95 PIB | 每个许可证 368 TiB x 
+| DS15_v2 | 61. | 368 TiB | 368 TiB | 896 TiB | 每个许可证 368 TiB x 
 
 
 | L8s_v2 | 13 | 368 TiB | 368 TiB | 416 TiB | 每个许可证 368 TiB x 
@@ -137,13 +137,13 @@ NOTE: 对于某些 VM 类型，您需要多个 BYOL 许可证才能达到下面�
 | E8s_v3 | 13 | 368 TiB | 368 TiB | 416 TiB | 每个许可证 368 TiB x 
 
 
-| E32S_v3 | 29 | 368 TiB | 368 TiB | 928 TiB | 每个许可证 368 TiB x 
+| E32S_v3 | 29 | 368 TiB | 368 TiB | 896 TiB | 每个许可证 368 TiB x 
 
 
-| E48s_v3 | 29 | 368 TiB | 368 TiB | 928 TiB | 每个许可证 368 TiB x 
+| E48s_v3 | 29 | 368 TiB | 368 TiB | 896 TiB | 每个许可证 368 TiB x 
 
 
-| E64is_v3 | 29 | 368 TiB | 368 TiB | 928 TiB | 每个许可证 368 TiB x 
+| E64is_v3 | 29 | 368 TiB | 368 TiB | 896 TiB | 每个许可证 368 TiB x 
 
 
 | E4ds_v4 | 5. | 160 TiB | 368 TiB | 160 TiB | 每个许可证 368 TiB x 
@@ -152,13 +152,13 @@ NOTE: 对于某些 VM 类型，您需要多个 BYOL 许可证才能达到下面�
 | E8ds_v4 | 13 | 368 TiB | 368 TiB | 416 TiB | 每个许可证 368 TiB x 
 
 
-| E32ds_v4 | 29 | 368 TiB | 368 TiB | 928 TiB | 每个许可证 368 TiB x 
+| E32ds_v4 | 29 | 368 TiB | 368 TiB | 896 TiB | 每个许可证 368 TiB x 
 
 
-| E48ds_v4 | 29 | 368 TiB | 368 TiB | 928 TiB | 每个许可证 368 TiB x 
+| E48ds_v4 | 29 | 368 TiB | 368 TiB | 896 TiB | 每个许可证 368 TiB x 
 
 
-| E80ids_v4 | 61. | 368 TiB | 368 TiB | 1.95 PIB | 每个许可证 368 TiB x 
+| E80ids_v4 | 61. | 368 TiB | 368 TiB | 896 TiB | 每个许可证 368 TiB x 
 |===
 
 
@@ -169,19 +169,19 @@ NOTE: 对于某些 VM 类型，您需要多个 BYOL 许可证才能达到下面�
 | VM 大小 | 每个节点的 MAX Data 磁盘数 | 单独使用磁盘时的最大系统容量 | 使用磁盘和数据分层的最大系统容量 
 
 
-| DS4_v2 | 29 | 928 TiB | 2 个 PIB 
+| DS4_v2 | 29 | 896 TiB | 2 个 PIB 
 
 
-| DS5_v2 | 61. | 1.95 PIB | 2 个 PIB 
+| DS5_v2 | 61. | 896 TiB | 2 个 PIB 
 
 
-| DS13_v2 | 29 | 928 TiB | 2 个 PIB 
+| DS13_v2 | 29 | 896 TiB | 2 个 PIB 
 
 
-| DS14_v2 | 61. | 1.95 PIB | 2 个 PIB 
+| DS14_v2 | 61. | 896 TiB | 2 个 PIB 
 
 
-| DS15_v2 | 61. | 1.95 PIB | 2 个 PIB 
+| DS15_v2 | 61. | 896 TiB | 2 个 PIB 
 
 
 | L8s_v2 | 13 | 416 TiB | 2 个 PIB 
@@ -193,13 +193,13 @@ NOTE: 对于某些 VM 类型，您需要多个 BYOL 许可证才能达到下面�
 | E8s_v3 | 13 | 416 TiB | 2 个 PIB 
 
 
-| E32S_v3 | 29 | 928 TiB | 2 个 PIB 
+| E32S_v3 | 29 | 896 TiB | 2 个 PIB 
 
 
-| E48s_v3 | 29 | 928 TiB | 2 个 PIB 
+| E48s_v3 | 29 | 896 TiB | 2 个 PIB 
 
 
-| E64is_v3 | 29 | 928 TiB | 2 个 PIB 
+| E64is_v3 | 29 | 896 TiB | 2 个 PIB 
 
 
 | E4ds_v4 | 5. | 160 TiB | 2 个 PIB 
@@ -208,13 +208,13 @@ NOTE: 对于某些 VM 类型，您需要多个 BYOL 许可证才能达到下面�
 | E8ds_v4 | 13 | 416 TiB | 2 个 PIB 
 
 
-| E32ds_v4 | 29 | 928 TiB | 2 个 PIB 
+| E32ds_v4 | 29 | 896 TiB | 2 个 PIB 
 
 
-| E48ds_v4 | 29 | 928 TiB | 2 个 PIB 
+| E48ds_v4 | 29 | 896 TiB | 2 个 PIB 
 
 
-| E80ids_v4 | 61. | 1.95 PIB | 2 个 PIB 
+| E80ids_v4 | 61. | 896 TiB | 2 个 PIB 
 |===
 
 
