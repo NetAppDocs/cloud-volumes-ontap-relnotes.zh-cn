@@ -52,4 +52,5 @@ https://www.netapp.com/us/legal/privacypolicy/index.aspx[]
 
 * link:media/notice-aws.pdf["AWS中的Cloud Volumes ONTAP 9.11.1调解器注意事项"^]
 * link:media/notice-google-cloud.pdf["Google Cloud中的Cloud Volumes ONTAP 9.11.1调解器注意事项"^]
+* https://docs.netapp.com/us-en/ontap/reference_legal_notices.html#open-source["ONTAP 注意事项"^]
 

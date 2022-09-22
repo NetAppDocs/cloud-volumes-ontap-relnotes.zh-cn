@@ -697,4 +697,7 @@
   <block id="70f278cadf665202f3ebb7a682519f5c" category="list-text">单节点系统使用受管磁盘、每个磁盘最多32 TiB。支持的磁盘数量因虚拟机大小而异。</block>
   <block id="c5fa07957eb90c414f1dadcad7da5df6" category="list-text">HA对使用高级页面BLOB作为磁盘、每页BLOB最多8 TiB。支持的磁盘数量因虚拟机大小而异。</block>
   <block id="0d5277886c056c697a81cb7ba46178fc" category="list-text">对于具有特定VM大小的单节点系统、列出的基于磁盘的896 TiB限制为_TESTESTESTEST_限制。</block>
+  <block id="8a11b7df22322ab2814174e7745c863f" category="inline-link">ONTAP 注意事项</block>
+  <block id="a65d010a2b24f9e4a0919b7faf52d022" category="list-text"><block ref="a65d010a2b24f9e4a0919b7faf52d022" category="inline-link-rx"></block></block>
+  <block id="7ff191df90fac0fa94ab5c2b5101a5e9" category="sidebar">所有 Cloud Manager 文档</block>
 </blocks>
