@@ -20,6 +20,14 @@ Cloud Volumes ONTAP 9.11.1提供了新的增强功能。
 
 
 
+== 9.11.1 P3 (2022年10月19日)
+
+如果您的Connector运行的是3.9.22或更高版本、则Cloud Volumes ONTAP 现在可以为所有云提供商提供9.11.1 P3修补程序。Cloud Manager 将提示您将现有系统升级到此修补程序版本。
+
+link:https://mysupport.netapp.com/site/products/all/details/cloud-volumes-ontap/downloads-tab/download/62632/9.11.1P3["查看 P3 修补程序中已修复的错误列表"] （需要登录 NetApp 支持站点）。
+
+
+
 == 9.11.1 GA (2022年8月1日)
 
 Cloud Volumes ONTAP 9.11.1的通用(GA)版本现已推出。GA 版本包含错误修复。
