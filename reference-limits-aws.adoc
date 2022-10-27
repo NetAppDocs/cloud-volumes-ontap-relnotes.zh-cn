@@ -156,10 +156,6 @@ Cloud Volumes ONTAP 使用EBS卷作为磁盘并将其分组到_aggregodes_中。
 +
 您可以为单节点系统或 HA 对购买的许可证数量不受限制。请注意，磁盘限制可能会阻止您单独使用磁盘来达到容量限制。您可以通过超出磁盘限制 https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/concept-data-tiering.html["将非活动数据分层到对象存储"^]。 https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-manage-node-licenses.html["了解如何向 Cloud Volumes ONTAP 添加其他系统许可证"^]。
 
-* 此版本中的新Cloud Volumes ONTAP 系统不支持c4、m4和r4实例类型。
-+
-但是、我们仍会显示这些实例类型的磁盘限制、因为在这些实例类型之一上运行时、您可以将系统升级到此版本。
-
 
 
 
@@ -175,9 +171,6 @@ Cloud Volumes ONTAP 使用EBS卷作为磁盘并将其分组到_aggregodes_中。
 
 
 | m5dn.24xlarge | 19 ^2^ | 304 TiB | 368 TiB 
-
-
-| c4 ， m4 和 r4 实例 | 34 | 368 TiB | 368 TiB 
 |===
 . 21 个数据磁盘是部署 Cloud Volumes ONTAP 的 _new_ 限制。如果升级使用 9.7 或更早版本创建的系统，则系统仍支持 22 个磁盘。由于从 9.8 版开始添加了一个核心磁盘，因此在使用这些实例类型的新系统上支持的数据磁盘减少一个。
 . 与其他实例类型相比，此实例类型具有更多的本地 NVMe 磁盘，这意味着支持的数据磁盘数量较少。
@@ -199,9 +192,6 @@ Cloud Volumes ONTAP 使用EBS卷作为磁盘并将其分组到_aggregodes_中。
 
 
 | m5dn.24xlarge | 19 ^2^ | 304 TiB | 368 TiB | 304 TiB | 每个许可证 368 TiB x 
-
-
-| c4 ， m4 和 r4 实例 | 34 | 368 TiB | 368 TiB | 544 TiB | 每个许可证 368 TiB x 
 |===
 . 21 个数据磁盘是部署 Cloud Volumes ONTAP 的 _new_ 限制。如果升级使用 9.7 或更早版本创建的系统，则系统仍支持 22 个磁盘。由于从 9.8 版开始添加了一个核心磁盘，因此在使用这些实例类型的新系统上支持的数据磁盘减少一个。
 . 与其他实例类型相比，此实例类型具有更多的本地 NVMe 磁盘，这意味着支持的数据磁盘数量较少。
@@ -220,9 +210,6 @@ Cloud Volumes ONTAP 使用EBS卷作为磁盘并将其分组到_aggregodes_中。
 
 
 | m5dn.24xlarge | 16 ^2^ | 256 TiB | 368 TiB 
-
-
-| c4 ， m4 和 r4 实例 | 31 | 368 TiB | 368 TiB 
 |===
 . 18 个数据磁盘是部署 Cloud Volumes ONTAP 的 _new_ 限制。如果升级使用 9.7 或更早版本创建的系统，则系统仍支持 19 个磁盘。由于从 9.8 版开始添加了一个核心磁盘，因此在使用这些实例类型的新系统上支持的数据磁盘减少一个。
 . 与其他实例类型相比，此实例类型具有更多的本地 NVMe 磁盘，这意味着支持的数据磁盘数量较少。
@@ -244,9 +231,6 @@ Cloud Volumes ONTAP 使用EBS卷作为磁盘并将其分组到_aggregodes_中。
 
 
 | m5dn.24xlarge | 16 ^2^ | 256 TiB | 368 TiB | 256 TiB | 每个许可证 368 TiB x 
-
-
-| c4 ， m4 和 r4 实例 | 31 | 368 TiB | 368 TiB | 496 TiB | 每个许可证 368 TiB x 
 |===
 . 18 个数据磁盘是部署 Cloud Volumes ONTAP 的 _new_ 限制。如果升级使用 9.7 或更早版本创建的系统，则系统仍支持 19 个磁盘。由于从 9.8 版开始添加了一个核心磁盘，因此在使用这些实例类型的新系统上支持的数据磁盘减少一个。
 . 与其他实例类型相比，此实例类型具有更多的本地 NVMe 磁盘，这意味着支持的数据磁盘数量较少。
@@ -260,45 +244,29 @@ Cloud Volumes ONTAP 使用EBS卷作为磁盘并将其分组到_aggregodes_中。
 
 https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-managing-svms-aws.html["了解如何创建其他 Storage VM"^]。
 
-[cols="26,26,48"]
+[cols="40,60"]
 |===
-| 许可证类型 | 实例系列 | Storage VM 限制 
+| 许可证类型 | Storage VM 限制 
 
 
-| * 免费 * | c5 ， m5 和 R5  a| 
-* 共 24 个 Storage VM ^1 ， 2^
-
-
-
-
-| * 基于容量的 PAYGO 或 BYOL* ^3^ | c5 ， m5 和 R5  a| 
-* 共 24 个 Storage VM ^1 ， 2^
+| * 免费 *  a| 
+共 24 个 Storage VM ^1 ， 2^
 
 
 
+| * 基于容量的 PAYGO 或 BYOL* ^3^  a| 
+共 24 个 Storage VM ^1 ， 2^
 
-.2+| * 基于节点的 PAYGO* | c4 ， m4 和 r4  a| 
+
+
+| * 基于节点的 PAYGO*  a| 
 * 1 个存储 VM 用于提供数据
 * 1 个 Storage VM 用于灾难恢复
 
 
 
 
-| c5 ， m5 和 R5  a| 
-* 1 个存储 VM 用于提供数据
-* 1 个 Storage VM 用于灾难恢复
-
-
-
-
-.2+| * 基于节点的 BYOL* ^4^ | c4 ， m4 和 r4  a| 
-* 1 个存储 VM 用于提供数据
-* 1 个 Storage VM 用于灾难恢复
-
-
-
-
-| c5 ， m5 和 R5  a| 
+| * 基于节点的 BYOL* ^4^  a| 
 * 共 24 个 Storage VM ^1 ， 2^
 
 
