@@ -126,6 +126,6 @@ homepage:
     - title: 云网络研讨会
       url: https://cloud.netapp.com/events
 product-family:
-  name: Cloud Manager
+  name: BlueXP
   repo: cloud-manager-family
-  sidebar_label: 所有 Cloud Manager 文档
+  sidebar_label: 所有BlueXP文档
