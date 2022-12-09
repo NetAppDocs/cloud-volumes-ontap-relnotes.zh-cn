@@ -36,9 +36,3 @@ summary: 这些已知限制特定于 Microsoft Azure 中的 Cloud Volumes ONTAP 
 某些地区不支持 HA 对。
 
 https://cloud.netapp.com/cloud-volumes-global-regions["查看支持的 Azure 区域列表"^]。
-
-
-
-== 按需购买不适用于 CSP 合作伙伴
-
-如果您是 Microsoft Cloud 解决方案 Provider （ CSP ）合作伙伴，则无法部署 Cloud Volumes ONTAP Explore ，标准版或高级版，因为 CSP 合作伙伴不支持按需购买订阅。您必须购买许可证并部署 Cloud Volumes ONTAP BYOL 。

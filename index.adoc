@@ -2,8 +2,8 @@
 layout: astra 
 sidebar: sidebar 
 permalink: index.html 
-lead: These release notes describe new features, limitations, and known issues for Cloud Volumes ONTAP 9.11.1. 
-summary: 本发行说明介绍了Cloud Volumes ONTAP 9.11.1的新增功能、限制和已知问题。 
+lead: These release notes describe new features, limitations, and known issues for Cloud Volumes ONTAP 9.12.1. 
+summary: 本发行说明介绍了Cloud Volumes ONTAP 9.12.1的新增功能、限制和已知问题。 
 ---
 = 《Cloud Volumes ONTAP 9.12.1发行说明》
 :hardbreaks:
