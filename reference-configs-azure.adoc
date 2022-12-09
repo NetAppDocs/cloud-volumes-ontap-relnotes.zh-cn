@@ -44,7 +44,6 @@ Cloud Volumes ONTAP 在 Azure 中可作为单节点系统和高可用性（ HA �
 * DS13_v2
 * DS14_v2
 * DS15_v2
-* L8s_v2 ^2^
 * e4s_v3
 * E8s_v3
 * E32S_v3 ^3^
@@ -55,6 +54,9 @@ Cloud Volumes ONTAP 在 Azure 中可作为单节点系统和高可用性（ HA �
 * E32ds_v4 ^3^
 * E48ds_v4 ^3^
 * E80ids_v4 ^3^
+* L8s_v3 ^2^
+* L16s_v3 ^2、4^
+* L32s_v3 ^2、4^
 
  a| 
 * e4s_v3
@@ -65,6 +67,7 @@ Cloud Volumes ONTAP 在 Azure 中可作为单节点系统和高可用性（ HA �
 * DS13_v2
 * E8s_v3
 * E8ds_v4 ^3^
+* L8s_v3 ^2^
 
  a| 
 * DS5_v2
@@ -83,7 +86,6 @@ Cloud Volumes ONTAP 在 Azure 中可作为单节点系统和高可用性（ HA �
 * DS13_v2
 * DS14_v2
 * DS15_v2
-* L8s_v2 ^2^
 * e4s_v3
 * E8s_v3
 * E32S_v3 ^3^
@@ -94,6 +96,9 @@ Cloud Volumes ONTAP 在 Azure 中可作为单节点系统和高可用性（ HA �
 * E32ds_v4 ^3^
 * E48ds_v4 ^3^
 * E80ids_v4 ^3^
+* L8s_v3 ^2^
+* L16s_v3 ^2、4^
+* L32s_v3 ^2、4^
 
  a| 
 * DS4_v2
@@ -101,7 +106,6 @@ Cloud Volumes ONTAP 在 Azure 中可作为单节点系统和高可用性（ HA �
 * DS13_v2
 * DS14_v2
 * DS15_v2
-* L8s_v2 ^2^
 * e4s_v3
 * E8s_v3
 * E32S_v3 ^3^
@@ -112,6 +116,9 @@ Cloud Volumes ONTAP 在 Azure 中可作为单节点系统和高可用性（ HA �
 * E32ds_v4 ^3^
 * E48ds_v4 ^3^
 * E80ids_v4 ^3^
+* L8s_v3 ^2^
+* L16s_v3 ^2、4^
+* L32s_v3 ^2、4^
 
 
 
@@ -157,38 +164,29 @@ Cloud Volumes ONTAP 在 Azure 中可作为单节点系统和高可用性（ HA �
 * DS15_v2 ^1^
 * E8s_v3
 * E48s_v3 ^1^
-* E8ds_v4 ^1^
-* E32ds_v4 ^1^
-* E48ds_v4 ^1^
-* E80ids_v4 ^1、2^
+* E8ds_v4 ^7^
+* E32ds_v4 ^1、7^
+* E48ds_v4 ^1、7^
+* E80ids_v4 ^1、2、7^
+* L16s_v3 ^1、6、7^
+* L32s_v3 ^1、6、7^
 
  a| 
 * DS4_v2
 * DS13_v2
-* E8ds_v4 ^1^
+* E8s_v3
+* E8ds_v4 ^7^
 
  a| 
 * DS5_v2 ^1^
 * DS14_v2 ^1^
 * DS15_v2 ^1^
-* E8s_v3
 * E48s_v3 ^1^
-* E32ds_v4 ^1^
-* E48ds_v4 ^1^
-* E80ids_v4 ^1、2^
-
- a| 
-* DS4_v2
-* DS5_v2 ^1^
-* DS13_v2
-* DS14_v2 ^1^
-* DS15_v2 ^1^
-* E8s_v3
-* E48s_v3 ^1^
-* E8ds_v4 ^1^
-* E32ds_v4 ^1^
-* E48ds_v4 ^1^
-* E80ids_v4 ^1、2^
+* E32ds_v4 ^1、7^
+* E48ds_v4 ^1、7^
+* E80ids_v4 ^1、2、7^
+* L16s_v3 ^1、6、7^
+* L32s_v3 ^1、6、7^
 
  a| 
 * DS4_v2
@@ -198,15 +196,32 @@ Cloud Volumes ONTAP 在 Azure 中可作为单节点系统和高可用性（ HA �
 * DS15_v2 ^1^
 * E8s_v3
 * E48s_v3 ^1^
-* E8ds_v4 ^1^
-* E32ds_v4 ^1^
-* E48ds_v4 ^1^
-* E80ids_v4 ^1、2^
+* E8ds_v4 ^7^
+* E32ds_v4 ^1、7^
+* E48ds_v4 ^1、7^
+* E80ids_v4 ^1、2、7^
+* L16s_v3 ^1、6、7^
+* L32s_v3 ^1、6、7^
+
+ a| 
+* DS4_v2
+* DS5_v2 ^1^
+* DS13_v2
+* DS14_v2 ^1^
+* DS15_v2 ^1^
+* E8s_v3
+* E48s_v3 ^1^
+* E8ds_v4 ^7^
+* E32ds_v4 ^1、7^
+* E48ds_v4 ^1、7^
+* E80ids_v4 ^1、2、7^
+* L16s_v3 ^1、6、7^
+* L32s_v3 ^1、6、7^
 
 
 
 
-| 支持的磁盘类型 5+| 高级页面 Blobs 
+| 支持的磁盘类型 5+| 受管磁盘 
 |===
 注释：
 
@@ -215,6 +230,8 @@ Cloud Volumes ONTAP 在 Azure 中可作为单节点系统和高可用性（ HA �
 . Azure 中的 HA 对不支持 PAYGO Explore 。
 . 有关 Azure 区域支持，请参见 https://cloud.netapp.com/cloud-volumes-global-regions["Cloud Volumes 全球地区"^]。
 . Cloud Volumes ONTAP 可以在云提供商提供的预留或按需 VM 实例上运行。不支持使用其他 VM 实例类型的解决方案。
+. 这些VM可以支持在受管磁盘上运行。
+. 只有共享受管磁盘部署才支持这些VM类型。所有新的HA部署都使用共享受管磁盘。以前使用过页面Blobs。
 
 
 
@@ -269,11 +286,15 @@ Cloud Volumes ONTAP 在 Azure 中可作为单节点系统和高可用性（ HA �
 
 === HA 对
 
-HA 对使用高级页面 Blobs 。支持以下磁盘大小：
+HA对使用受管磁盘。(9.12.1版之前部署的HA对支持页面Blobs。)
+
+支持以下磁盘大小：
 
 * 500 GiB
 * 1 TiB
 * 2 TiB
 * 4 TiB
 * 8 TiB
+* 16 TiB (仅限受管磁盘)
+* 32 TiB (仅限受管磁盘)
 

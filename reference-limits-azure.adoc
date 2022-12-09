@@ -46,6 +46,7 @@ NetApp 不支持超过系统容量限制。如果您达到许可的容量限制�
 
 | 基于容量的许可证 | 2 个 PIB 
 |===
+.对于 HA ，是每个节点的许可证容量限制还是整个 HA 对的许可证容量限制？
 容量限制适用于整个 HA 对。不是每个节点。例如，如果使用高级版许可证，则两个节点之间的容量最多可达 368 TiB 。
 
 
@@ -62,7 +63,7 @@ Cloud Volumes ONTAP 使用 Azure 存储作为磁盘并将其分组为 _aggreges_
 | 聚合的最大数量 | 与磁盘限制相同 
 
 
-| 最大聚合大小 ^1^ | 单节点 384 TiB 原始容量 ^2^ 352 TiB 原始容量，单节点 PAYGO 96 TiB HA 对原始容量 
+| 最大聚合大小 ^1^ | 单节点384 TiB原始容量^对于具有PAYGO 96 TiB原始容量的单节点、2^ 352 TiB原始容量对于具有受管磁盘的HA对、页面blob 384 TiB原始容量 
 
 
 | 每个聚合的磁盘数 | 1-12 ^3^ 
@@ -90,8 +91,8 @@ Cloud Volumes ONTAP 使用 Azure 存储作为磁盘并将其分组为 _aggreges_
 限制不包括根磁盘，核心磁盘和 VNVRAM 。
 
 * 仅使用磁盘以及使用磁盘以及将冷数据分层到对象存储时、将列出最大系统容量。
-* 单节点系统使用受管磁盘、每个磁盘最多32 TiB。支持的磁盘数量因虚拟机大小而异。
-* HA对使用高级页面BLOB作为磁盘、每页BLOB最多8 TiB。支持的磁盘数量因虚拟机大小而异。
+* 使用受管磁盘的单节点和HA系统的每个磁盘最多具有32 TiB。支持的磁盘数量因虚拟机大小而异。
+* 使用页面BLOB的HA系统的每个页面BLOB最多具有8 TiB。支持的磁盘数量因虚拟机大小而异。
 * 对于具有特定VM大小的单节点系统、列出的基于磁盘的896 TiB限制为_TESTESTESTEST_限制。
 
 
@@ -125,9 +126,6 @@ Cloud Volumes ONTAP 使用 Azure 存储作为磁盘并将其分组为 _aggreges_
 | DS15_v2 | 61. | 896 TiB | 2 个 PIB 
 
 
-| L8s_v2 | 13 | 416 TiB | 2 个 PIB 
-
-
 | e4s_v3 | 5. | 160 TiB | 2 个 PIB 
 
 
@@ -156,10 +154,19 @@ Cloud Volumes ONTAP 使用 Azure 存储作为磁盘并将其分组为 _aggreges_
 
 
 | E80ids_v4 | 61. | 896 TiB | 2 个 PIB 
+
+
+| L8s_v3 | 12 | 384 TiB | 2 个 PIB 
+
+
+| L16s_v3 | 28 | 896 TiB | 2 个 PIB 
+
+
+| L32s_v3 | 28 | 896 TiB | 2 个 PIB 
 |===
 
 
-==== HA 对
+==== 单个可用性区域中的HA对、具有页面Blobs
 
 [cols="14,20,31,33"]
 |===
@@ -200,6 +207,52 @@ Cloud Volumes ONTAP 使用 Azure 存储作为磁盘并将其分组为 _aggreges_
 |===
 
 
+==== 一个可用性区域中的HA对与共享受管磁盘
+
+[cols="14,20,31,33"]
+|===
+| VM 大小 | HA 对的 MAX Data 磁盘 | 单独使用磁盘时的最大系统容量 | 使用磁盘和数据分层的最大系统容量 
+
+
+| E8ds_v4 | 12 | 384 TiB | 2 个 PIB 
+
+
+| E32ds_v4 | 28 | 896 TiB | 2 个 PIB 
+
+
+| E48ds_v4 | 28 | 896 TiB | 2 个 PIB 
+
+
+| E80ids_v4 | 28 | 896 TiB | 2 个 PIB 
+
+
+| L16s_v3 | 28 | 896 TiB | 2 个 PIB 
+
+
+| L32s_v3 | 28 | 896 TiB | 2 个 PIB 
+|===
+
+
+==== 多个可用性区域中具有共享受管磁盘的HA对
+
+[cols="14,20,31,33"]
+|===
+| VM 大小 | HA 对的 MAX Data 磁盘 | 单独使用磁盘时的最大系统容量 | 使用磁盘和数据分层的最大系统容量 
+
+
+| E8ds_v4 | 12 | 384 TiB | 2 个 PIB 
+
+
+| E32ds_v4 | 28 | 896 TiB | 2 个 PIB 
+
+
+| E48ds_v4 | 28 | 896 TiB | 2 个 PIB 
+
+
+| E80ids_v4 | 28 | 896 TiB | 2 个 PIB 
+|===
+
+
 === 基于节点的许可限制
 
 以下磁盘限制适用于使用基于节点的许可的Cloud Volumes ONTAP 系统、此许可模式是上一代许可模式、可用于按节点许可Cloud Volumes ONTAP。基于节点的许可仍可供现有客户使用。
@@ -210,8 +263,13 @@ Cloud Volumes ONTAP 使用 Azure 存储作为磁盘并将其分组为 _aggreges_
 
 
 
-==== 采用PAYGO Premium的单节点
+==== 单个节点
 
+单个节点具有两个基于节点的许可选项：PAYGO Premium和BYOL。
+
+.采用PAYGO Premium的单节点
+[%collapsible]
+====
 [cols="14,20,31,33"]
 |===
 | VM 大小 | 每个节点的 MAX Data 磁盘数 | 单独使用磁盘时的最大系统容量 | 使用磁盘和数据分层的最大系统容量 
@@ -243,10 +301,10 @@ Cloud Volumes ONTAP 使用 Azure 存储作为磁盘并将其分组为 _aggreges_
 
 | E80ids_v4 | 61. | 368 TiB | 368 TiB 
 |===
-
-
-==== 具有BYOL的单个节点
-
+====
+.具有BYOL的单个节点
+[%collapsible]
+====
 [cols="10,18,18,18,18,18"]
 |===
 | VM 大小 | 每个节点的 MAX Data 磁盘数 2+| 使用一个许可证时的最大系统容量 2+| 使用多个许可证时的最大系统容量 
@@ -302,10 +360,16 @@ Cloud Volumes ONTAP 使用 Azure 存储作为磁盘并将其分组为 _aggreges_
 
 | E80ids_v4 | 61. | 368 TiB | 368 TiB | 896 TiB | 每个许可证 368 TiB x 
 |===
+====
 
 
-==== 采用PAYGO Premium的HA对
+==== HA 对
 
+HA对具有两种配置类型：page blob和Multiple Availability Zone。每个配置都有两个基于节点的许可选项：PAYGO Premium和BYOL。
+
+.PAYGO Premium：单个可用性区域中的HA对、具有页面Blobs
+[%collapsible]
+====
 [cols="14,20,31,33"]
 |===
 | VM 大小 | HA 对的 MAX Data 磁盘 | 单独使用磁盘时的最大系统容量 | 使用磁盘和数据分层的最大系统容量 
@@ -334,10 +398,27 @@ Cloud Volumes ONTAP 使用 Azure 存储作为磁盘并将其分组为 _aggreges_
 
 | E80ids_v4 | 61. | 368 TiB | 368 TiB 
 |===
+====
+.PAYGO Premium：多可用性区域配置中的高可用性对、具有共享受管磁盘
+[%collapsible]
+====
+[cols="14,20,31,33"]
+|===
+| VM 大小 | HA 对的 MAX Data 磁盘 | 单独使用磁盘时的最大系统容量 | 使用磁盘和数据分层的最大系统容量 
 
 
-==== 具有BYOL的HA对
+| E32ds_v4 | 28 | 368 TiB | 368 TiB 
 
+
+| E48ds_v4 | 28 | 368 TiB | 368 TiB 
+
+
+| E80ids_v4 | 28 | 368 TiB | 368 TiB 
+|===
+====
+.BYOL：单个可用性区域中的HA对、具有页面blob
+[%collapsible]
+====
 [cols="10,18,18,18,18,18"]
 |===
 | VM 大小 | HA 对的 MAX Data 磁盘 2+| 使用一个许可证时的最大系统容量 2+| 使用多个许可证时的最大系统容量 
@@ -378,6 +459,30 @@ Cloud Volumes ONTAP 使用 Azure 存储作为磁盘并将其分组为 _aggreges_
 
 | E80ids_v4 | 61. | 368 TiB | 368 TiB | 488 TiB | 每个许可证 368 TiB x 
 |===
+====
+.BYOL：使用共享受管磁盘的多可用性区域配置中的HA对
+[%collapsible]
+====
+[cols="10,18,18,18,18,18"]
+|===
+| VM 大小 | HA 对的 MAX Data 磁盘 2+| 使用一个许可证时的最大系统容量 2+| 使用多个许可证时的最大系统容量 
+
+
+2+|  | * 仅磁盘 * | * 磁盘 + 数据分层 * | * 仅磁盘 * | * 磁盘 + 数据分层 * 
+
+
+| E8ds_v4 | 12 | 368 TiB | 368 TiB | 368 TiB | 每个许可证 368 TiB x 
+
+
+| E32ds_v4 | 28 | 368 TiB | 368 TiB | 368 TiB | 每个许可证 368 TiB x 
+
+
+| E48ds_v4 | 28 | 368 TiB | 368 TiB | 368 TiB | 每个许可证 368 TiB x 
+
+
+| E80ids_v4 | 28 | 368 TiB | 368 TiB | 368 TiB | 每个许可证 368 TiB x 
+|===
+====
 
 
 == Storage VM 限制

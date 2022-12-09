@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: reference-new.html 
 keywords: 'what"s new, new, features, release notes, enhancements' 
-summary: Cloud Volumes ONTAP 9.11.1提供了一项新的增强功能。 
+summary: Cloud Volumes ONTAP 9.12.1提供了一项新的增强功能。 
 ---
-= Cloud Volumes ONTAP 9.11.1中的新增功能
+= Cloud Volumes ONTAP 9.12.1中的新增功能
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,9 +14,66 @@ summary: Cloud Volumes ONTAP 9.11.1提供了一项新的增强功能。
 
 
 [role="lead"]
-Cloud Volumes ONTAP 9.11.1提供了新的增强功能。
+Cloud Volumes ONTAP 9.12.1提供了新的增强功能。
 
 最新版本的BlueXP (以前称为Cloud Manager)还引入了其他功能和增强功能。请参见 https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/whats-new.html["《BlueXP发行说明》"^] 了解详细信息。
+
+
+
+== 9.12.1 RC1 (2022年12月8日)
+
+Cloud Volumes ONTAP 9.12.1候选版本1现已在AWS、Azure和Google Cloud中推出。此版本包含以下新增功能和增强功能：
+
+
+
+=== 支持的升级路径
+
+您可以从9.12.0版和9.11.1版升级到Cloud Volumes ONTAP 9.12.1。BlueXP将提示您将符合条件的Cloud Volumes ONTAP 系统升级到此版本。
+
+
+
+=== 所需版本的Connector
+
+要部署新的Cloud Volumes ONTAP 9.12.1系统并将现有系统升级到9.12.1、BlueXP连接器必须运行版本3.9.23或更高版本。
+
+
+TIP: 默认情况下，连接器会自动升级，因此您应运行最新版本。
+
+
+
+=== GCP中的ONTAP S3许可证
+
+现在、在Google云平台中运行9.12.1或更高版本的新Cloud Volumes ONTAP 系统和现有系统上均包含ONTAP S3许可证。
+
+https://docs.netapp.com/us-en/ontap/object-storage-management/index.html["了解如何在 ONTAP 中配置和管理 S3 对象存储服务"^]
+
+
+
+=== Cloud Volumes ONTAP 中支持NVMe-TCP
+
+如果您使用的是Cloud Volumes ONTAP 9.12.1或更高版本、则云提供商支持NVMe-TCP。BlueXP不为NVMe-TCP提供任何管理功能。
+
+有关通过ONTAP 配置NVMe的详细信息、请参见 link:https://docs.netapp.com/us-en/ontap/san-admin/configure-svm-nvme-task.html["为NVMe配置Storage VM"^]。
+
+
+
+=== Azure HA位于具有共享受管磁盘的单个可用性区域中
+
+现在、您可以使用在共享受管磁盘上运行的Microsoft Azure本地冗余存储(LRS)部署Cloud Volumes ONTAP HA配置。本地冗余存储可在同一区域的单个数据中心内复制三次数据。
+
+有关HA配置架构和组件的详细信息、请参见 link:https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/concept-ha-azure.html["Azure 中的高可用性对"^]。
+
+在一个可用性区域中的Azure中部署新HA对时、您现在将使用LRS共享受管磁盘、而不是页面Blobs进行存储。"工作环境"向导未发生任何更改。要使用此新配置、只需选择一个可用性区域即可。有关详细信息，请参见 link:https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-deploying-otc-azure.html["在Azure中启动Cloud Volumes ONTAP HA对"^]。
+
+
+
+=== 使用共享受管磁盘在多个可用性区域中配置Azure HA
+
+现在、您可以使用Azure在一个区域中部署多个可用性区域来部署Cloud Volumes ONTAP HA配置。这种新配置可通过使用Azure分区冗余存储(ZRS)共享受管磁盘来防止数据中心故障并保持应用程序可用性。
+
+有关HA配置架构和组件的详细信息、请参见 link:https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/concept-ha-azure.html["Azure 中的高可用性对"^]。
+
+要使用此新配置、请参见 link:https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-deploying-otc-azure.html["在Azure中启动Cloud Volumes ONTAP HA对"^]。
 
 
 
@@ -27,136 +84,3 @@ Cloud Volumes ONTAP 9.11.1提供了新的增强功能。
 link:https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-change-ec2-instance.html["了解如何更改Cloud Volumes ONTAP 的EC2实例类型"^]。
 
 请参见 link:https://mysupport.netapp.com/info/communications/ECMLP2880231.html["NetApp 支持"^] 了解有关这些实例类型的可用性和支持终止的更多信息。
-
-
-
-== 9.11.1 P3 (2022年10月19日)
-
-如果您的Connector运行的是3.9.22或更高版本、则Cloud Volumes ONTAP 现在可以为所有云提供商提供9.11.1 P3修补程序。BlueXP将提示您将现有系统升级到此修补程序版本。
-
-link:https://mysupport.netapp.com/site/products/all/details/cloud-volumes-ontap/downloads-tab/download/62632/9.11.1P3["查看 P3 修补程序中已修复的错误列表"^] （需要登录 NetApp 支持站点）。
-
-
-
-== 9.11.1 GA (2022年8月1日)
-
-Cloud Volumes ONTAP 9.11.1的通用(GA)版本现已推出。GA 版本包含错误修复。
-
-
-
-== 9.11.1 RC1 (2022年6月7日)
-
-Cloud Volumes ONTAP 9.11.1候选版本1现已在AWS、Azure和Google Cloud中推出。此版本包含以下新增功能和增强功能：
-
-
-
-=== 性能增强
-
-我们提高了9.11.1或更高版本中创建的新聚合的读取性能。
-
-
-
-=== 提高存储效率
-
-从9.11.1版开始、为提高存储效率而启用的所有新卷都将包括一项称为"温度敏感型存储效率"的新压缩功能。不再使用上一代数据压缩功能。
-
-对温度敏感的存储效率会根据数据温度或数据使用频率对数据进行压缩。冷数据或不常使用的数据会以较高的压缩率进行重新压缩、以提高存储效率。
-
-
-
-=== AWS中的VPC共享
-
-现在、具有VPC共享的AWS支持Cloud Volumes ONTAP HA对。通过VPC共享、您的组织可以与其他AWS帐户共享子网。网络连接(VPC、子网和路由表)位于VPC所有者帐户中、而HA配置的EC2实例位于使用共享子网的参与者帐户中。
-
-https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-deploy-aws-shared-vpc.html["了解如何在共享子网中部署HA对"^]
-
-
-
-=== 新增 AWS 区域支持
-
-现在、AWS雅加达地区(亚太地区东南部3)支持Cloud Volumes ONTAP。
-
-https://cloud.netapp.com/cloud-volumes-global-regions["查看Cloud Volumes ONTAP 支持的区域的完整列表"^]
-
-
-
-=== 新增Azure区域支持
-
-现在、Azure巴西东南部地区支持Cloud Volumes ONTAP。
-
-https://cloud.netapp.com/cloud-volumes-global-regions["查看Cloud Volumes ONTAP 支持的区域的完整列表"^]
-
-
-
-=== 支持在Google Cloud中使用24个Storage VM
-
-在大多数配置中、Google Cloud中的Cloud Volumes ONTAP 现在支持24个Storage VM。
-
-* link:reference-limits-gcp.html#storage-vm-limits["详细了解Google Cloud中的Storage VM限制"]
-* https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-managing-svms-gcp.html["了解如何在Google Cloud中为Cloud Volumes ONTAP 创建提供数据的Storage VM"^]
-
-
-
-
-=== 全新Google Cloud区域支持
-
-现在、Cloud Volumes ONTAP HA对在米兰(欧洲-西部8)地区受支持。
-
-https://cloud.netapp.com/cloud-volumes-global-regions["查看Cloud Volumes ONTAP 支持的区域的完整列表"^]
-
-
-
-=== 修改新Storage VM的LIF服务
-
-从此版本开始、如果您在AWS或Azure中的Cloud Volumes ONTAP HA对上创建新的Storage VM、则需要修改此Storage VM的网络服务策略。需要修改服务、因为它可以确保Cloud Volumes ONTAP 可以使用iSCSI LIF进行出站管理连接。
-
-请注意、在Google Cloud中、Cloud Volumes ONTAP 不需要修改LIF服务、因为BlueXP API会在创建期间为您设置LIF服务。
-
-您需要运行的命令在以下页面上指定：
-
-* https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-managing-svms-aws.html["了解如何在AWS中创建其他Storage VM"^]
-* https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-managing-svms-azure.html["了解如何在Azure中创建其他Storage VM"^]
-
-
-
-
-== 新增不支持的ONTAP 功能
-
-Cloud Volumes ONTAP 不支持ONTAP 9.11.1中引入的新多管理员验证功能。在Cloud Volumes ONTAP 上启用多管理员验证将导致配置不受支持。
-
-
-
-== 升级说明
-
-通读这些注释、了解有关升级到此版本的更多信息。
-
-
-
-=== 如何升级
-
-必须从BlueXP完成Cloud Volumes ONTAP 升级。您不应使用 System Manager 或命令行界面升级 Cloud Volumes ONTAP 。这样做可能会影响系统稳定性。
-
-http://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-updating-ontap-cloud.html["了解在收到BlueXP通知时如何升级"^]。
-
-
-
-=== 支持的升级路径
-
-您可以从9.11.0版和9.10.1版升级到Cloud Volumes ONTAP 9.11.1版。BlueXP将提示您将符合条件的Cloud Volumes ONTAP 系统升级到此版本。
-
-
-
-=== 所需版本的Connector
-
-要部署新的Cloud Volumes ONTAP 9.11.1系统并将现有系统升级到9.11.1、BlueXP Connector必须运行版本3.9.19或更高版本。
-
-
-TIP: 默认情况下，连接器会自动升级，因此您应运行最新版本。
-
-
-
-=== 停机
-
-* 升级单节点系统会使系统脱机长达 25 分钟，在此期间 I/O 会中断。
-* 升级 HA 对无中断， I/O 不会中断。在此无中断升级过程中，每个节点会同时进行升级，以继续为客户端提供 I/O 。
-
