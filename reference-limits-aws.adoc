@@ -126,7 +126,11 @@ Cloud Volumes ONTAP 使用EBS卷作为磁盘并将其分组到_aggregodes_中。
 | c5 ， m5 和 R5 实例 | 21 | 336 TiB | 2 个 PIB 
 
 
-| m5dn.24xlarge | 19 ^1^ | 304 TiB | 2 个 PIB 
+ a| 
+* m5dn.24xlarge
+* m6id.32xlarge
+
+| 19 ^1^ | 304 TiB | 2 个 PIB 
 |===
 . 与其他实例类型相比，此实例类型具有更多的本地 NVMe 磁盘，这意味着支持的数据磁盘数量较少。
 
@@ -143,7 +147,11 @@ Cloud Volumes ONTAP 使用EBS卷作为磁盘并将其分组到_aggregodes_中。
 | c5 ， m5 和 R5 实例 | 18 | 288 TiB | 2 个 PIB 
 
 
-| m5dn.24xlarge | 16 ^1^ | 256 TiB | 2 个 PIB 
+ a| 
+* m5dn.24xlarge
+* m6id.32xlarge
+
+| 16 ^1^ | 256 TiB | 2 个 PIB 
 |===
 . 与其他实例类型相比，此实例类型具有更多的本地 NVMe 磁盘，这意味着支持的数据磁盘数量较少。
 
@@ -172,7 +180,11 @@ Cloud Volumes ONTAP 使用EBS卷作为磁盘并将其分组到_aggregodes_中。
 | c5 ， m5 和 R5 实例 | 21 ^1^ | 336 TiB | 368 TiB 
 
 
-| m5dn.24xlarge | 19 ^2^ | 304 TiB | 368 TiB 
+ a| 
+* m5dn.24xlarge
+* m6id.32xlarge
+
+| 19 ^2^ | 304 TiB | 368 TiB 
 |===
 . 21 个数据磁盘是部署 Cloud Volumes ONTAP 的 _new_ 限制。如果升级使用 9.7 或更早版本创建的系统，则系统仍支持 22 个磁盘。由于从 9.8 版开始添加了一个核心磁盘，因此在使用这些实例类型的新系统上支持的数据磁盘减少一个。
 . 与其他实例类型相比，此实例类型具有更多的本地 NVMe 磁盘，这意味着支持的数据磁盘数量较少。
@@ -193,7 +205,11 @@ Cloud Volumes ONTAP 使用EBS卷作为磁盘并将其分组到_aggregodes_中。
 | c5 ， m5 和 R5 实例 | 21 ^1^ | 336 TiB | 368 TiB | 336 TiB | 每个许可证 368 TiB x 
 
 
-| m5dn.24xlarge | 19 ^2^ | 304 TiB | 368 TiB | 304 TiB | 每个许可证 368 TiB x 
+ a| 
+* m5dn.24xlarge
+* m6id.32xlarge
+
+| 19 ^2^ | 304 TiB | 368 TiB | 304 TiB | 每个许可证 368 TiB x 
 |===
 . 21 个数据磁盘是部署 Cloud Volumes ONTAP 的 _new_ 限制。如果升级使用 9.7 或更早版本创建的系统，则系统仍支持 22 个磁盘。由于从 9.8 版开始添加了一个核心磁盘，因此在使用这些实例类型的新系统上支持的数据磁盘减少一个。
 . 与其他实例类型相比，此实例类型具有更多的本地 NVMe 磁盘，这意味着支持的数据磁盘数量较少。
@@ -211,7 +227,11 @@ Cloud Volumes ONTAP 使用EBS卷作为磁盘并将其分组到_aggregodes_中。
 | c5 ， m5 和 R5 实例 | 18 ^1^ | 288 TiB | 368 TiB 
 
 
-| m5dn.24xlarge | 16 ^2^ | 256 TiB | 368 TiB 
+ a| 
+* m5dn.24xlarge
+* m6id.32xlarge
+
+| 16 ^2^ | 256 TiB | 368 TiB 
 |===
 . 18 个数据磁盘是部署 Cloud Volumes ONTAP 的 _new_ 限制。如果升级使用 9.7 或更早版本创建的系统，则系统仍支持 19 个磁盘。由于从 9.8 版开始添加了一个核心磁盘，因此在使用这些实例类型的新系统上支持的数据磁盘减少一个。
 . 与其他实例类型相比，此实例类型具有更多的本地 NVMe 磁盘，这意味着支持的数据磁盘数量较少。
@@ -232,7 +252,11 @@ Cloud Volumes ONTAP 使用EBS卷作为磁盘并将其分组到_aggregodes_中。
 | c5 ， m5 和 R5 实例 | 18 ^1^ | 288 TiB | 368 TiB | 288 TiB | 每个许可证 368 TiB x 
 
 
-| m5dn.24xlarge | 16 ^2^ | 256 TiB | 368 TiB | 256 TiB | 每个许可证 368 TiB x 
+ a| 
+* m5dn.24xlarge
+* m6id.32xlarge
+
+| 16 ^2^ | 256 TiB | 368 TiB | 256 TiB | 每个许可证 368 TiB x 
 |===
 . 18 个数据磁盘是部署 Cloud Volumes ONTAP 的 _new_ 限制。如果升级使用 9.7 或更早版本创建的系统，则系统仍支持 19 个磁盘。由于从 9.8 版开始添加了一个核心磁盘，因此在使用这些实例类型的新系统上支持的数据磁盘减少一个。
 . 与其他实例类型相比，此实例类型具有更多的本地 NVMe 磁盘，这意味着支持的数据磁盘数量较少。
