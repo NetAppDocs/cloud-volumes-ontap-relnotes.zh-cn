@@ -12,7 +12,6 @@
   <block id="b73cfe36c7ff7b1b656525a530b23497" category="list-text">目前仅支持通用 SSD （ GP2 ）</block>
   <block id="a0cf071b9038a23221cd589c25d7e392" category="section-title">Flash Cache 限制</block>
   <block id="032ad17d65f47ce036675718d3986c48" category="paragraph">C5D 和 R5D 实例类型包括本地 NVMe 存储， Cloud Volumes ONTAP 将其用作 _Flash Cache_ 。请注意以下限制：</block>
-  <block id="341cc964e0c52fec40f9705182116dda" category="list-text">必须在所有卷上禁用数据压缩，才能利用 Flash Cache 性能改进功能。</block>
   <block id="405cb575e50b611a22ec99d1abb3f202" category="inline-link">使用命令行界面禁用数据压缩</block>
   <block id="444f10b28a63ab25d9664d0647602d07" category="list-text">Cloud Volumes ONTAP 不支持在重新启动后重新恢复缓存。</block>
   <block id="c564897ef3b9328940c3edd5bc917926" category="section-title">Amazon CloudWatch 报告错误警报</block>
@@ -702,4 +701,5 @@
   <block id="00795e3f043d0bab791590ffc0257204" category="list-text">升级 HA 对无中断， I/O 不会中断。在此无中断升级过程中，每个节点会同时进行升级，以继续为客户端提供 I/O 。</block>
   <block id="618671ce849d1a8ff524b77c314fe4e2" category="section-title">不再支持c4、m4和r4实例</block>
   <block id="e19784a5420512b2876c7b24680652b5" category="cell">40,000</block>
+  <block id="4237e167da34ce4cc54b7915a9ee779a" category="list-text">必须在所有卷上禁用数据压缩、才能利用Cloud Volumes ONTAP 9.12.0之前的Flash Cache性能改进功能。在部署或升级到Cloud Volumes ONTAP 9.12.1时、无需禁用数据压缩。</block>
 </blocks>
