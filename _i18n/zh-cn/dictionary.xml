@@ -400,7 +400,6 @@
   <block id="1c593d3ddd7d37cba983231fd6abdd9d" category="list-text">DS15_v2 ^1^</block>
   <block id="0b9dfa1d6e582593bcd75a94bfaa5add" category="list-text">E48s_v3 ^1^</block>
   <block id="4efc25f6cc7013d95ca2f5ab1dcc3366" category="list-text">只有在需要 Azure 维护控制时，才建议使用此虚拟机。由于定价较高，因此不建议用于任何其他使用情形。</block>
-  <block id="d642bc6852e213242f2c21d17b6d3e43" category="list-text">Azure 中的 HA 对不支持 PAYGO Explore 。</block>
   <block id="88d444d836b2ea3ca342f4cc3a6b2b50" category="paragraph">在 Azure 中，一个聚合最多可以包含 12 个类型和大小相同的磁盘。</block>
   <block id="90d1dad6ac7388ba65631ec0b927dabc" category="paragraph">单节点系统使用 Azure 受管磁盘。支持以下磁盘大小：</block>
   <block id="fac18bfae2384f6eccc3a9779ce41d25" category="cell">高级 SSD</block>
@@ -648,19 +647,9 @@
   <block id="9d123a356c832621891a3328c128b78b" category="list-text">L8s_v3 ^2^</block>
   <block id="6f487c8743b08c743167da3781c42f57" category="list-text">L16s_v3 ^2、4^</block>
   <block id="2b5c34a51aff2e04df61ba2f74efb07e" category="list-text">L32s_v3 ^2、4^</block>
-  <block id="f1b2cd8f6fdc3940f6e46a9af8ab660c" category="list-text">E8ds_v4 ^7^</block>
-  <block id="9e8e72837438857b91eef056b7a33159" category="list-text">E32ds_v4 ^1、7^</block>
-  <block id="608fa968f2e0b6150691aaaac56fae8c" category="list-text">E48ds_v4 ^1、7^</block>
-  <block id="fc7d40b7239e653daf9a843f12a0f36d" category="list-text">E80ids_v4 ^1、2、7^</block>
-  <block id="18e6a92344e98904f39e86e7eb655faa" category="list-text">L16s_v3 ^1、6、7^</block>
-  <block id="e02f32aa9691d408118de8f182f85e7e" category="list-text">L32s_v3 ^1、6、7^</block>
   <block id="b869cbdadaa9844d32c24de3f4db3242" category="cell">受管磁盘</block>
-  <block id="01269b38d12a6e985a194062817e204c" category="list-text">这些VM可以支持在受管磁盘上运行。</block>
-  <block id="6e05c1f5c1b1ffce142a5f3013f9ee93" category="list-text">只有共享受管磁盘部署才支持这些VM类型。所有新的HA部署都使用共享受管磁盘。以前使用过页面Blobs。</block>
   <block id="bdebc137cea9fa36d51bbecef44687cc" category="paragraph">HA对使用受管磁盘。(9.12.1版之前部署的HA对支持页面Blobs。)</block>
   <block id="2c5ad1776ac4cf950a5e0576f35bf111" category="paragraph">支持以下磁盘大小：</block>
-  <block id="0bd47e4dae550ba8bfd133248f3efde6" category="list-text">16 TiB (仅限受管磁盘)</block>
-  <block id="e976f9591845e426a456344d35bd0caf" category="list-text">32 TiB (仅限受管磁盘)</block>
   <block id="dbe94f36417009d827f76ccf107bd90c" category="section-title">不应使用自动应用程序资源管理解决方案</block>
   <block id="2f9882645b2c32820ad085240bacb763" category="paragraph-title">对于 HA ，是每个节点的许可证容量限制还是整个 HA 对的许可证容量限制？</block>
   <block id="2d7789be6e6e477491f790d5a3ea60b3" category="cell">单节点384 TiB原始容量^对于具有PAYGO 96 TiB原始容量的单节点、2^ 352 TiB原始容量对于具有受管磁盘的HA对、页面blob 384 TiB原始容量</block>
@@ -702,4 +691,19 @@
   <block id="618671ce849d1a8ff524b77c314fe4e2" category="section-title">不再支持c4、m4和r4实例</block>
   <block id="e19784a5420512b2876c7b24680652b5" category="cell">40,000</block>
   <block id="4237e167da34ce4cc54b7915a9ee779a" category="list-text">必须在所有卷上禁用数据压缩、才能利用Cloud Volumes ONTAP 9.12.0之前的Flash Cache性能改进功能。在部署或升级到Cloud Volumes ONTAP 9.12.1时、无需禁用数据压缩。</block>
+  <block id="b80fdfea42d505d96700af73261164a3" category="section-title">带有页面blob的HA对</block>
+  <block id="45af86f1009df1b7e7575bd510350625" category="list-text">E32ds_v4 ^1.3^</block>
+  <block id="70f33ddea414a26001d98ec1ee7c49a4" category="list-text">E48ds_v4 ^1、3^</block>
+  <block id="338b010678cca88a9e61c9a5b5db4e85" category="list-text">E80ids_v4 ^1、2、3^</block>
+  <block id="540e57f70019c3eb8d7fb999259fd473" category="cell">页面Blobs</block>
+  <block id="69ff9d2e034a02bd645e9455824ce446" category="list-text">只有Cloud Volumes ONTAP 9.12.1或更早版本的部署才支持这些VM类型。</block>
+  <block id="8c41a0d9e980d7223b4ad7585ce70fa2" category="section-title">具有共享受管磁盘的HA对</block>
+  <block id="678bba9079ce79c3806a40a1b6306799" category="list-text">E8ds_v4 ^4^</block>
+  <block id="fd5fff93ea6b0d7a9072274f514573ae" category="list-text">E32ds_v4 ^1、4^</block>
+  <block id="6cddc6e542baa2aaad6e58fdc397ce90" category="list-text">E48ds_v4 ^1、4^</block>
+  <block id="de04224de00bacc811083f3a49af24b0" category="list-text">E80ids_v4 ^1、2、4^</block>
+  <block id="7f556a87aab63796eccbfaafbe789614" category="list-text">L16s_v3 ^1.3^</block>
+  <block id="951f86fa0d8dd0f01062b7d8deb4a4eb" category="list-text">L32s_v3 ^1.3^</block>
+  <block id="72e0d2497593ac6a5fdc024537224aed" category="list-text">只有在共享受管磁盘上运行的单个可用性区域配置中的HA对才支持这些VM类型。</block>
+  <block id="7502ea8e5d477af63195f04d6179ca92" category="list-text">单个可用性区域中的HA对以及共享受管磁盘上运行的多个可用性区域配置支持这些VM类型。</block>
 </blocks>
