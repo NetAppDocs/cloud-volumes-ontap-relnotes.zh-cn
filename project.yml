@@ -50,7 +50,7 @@ settings:
   - name: ONTAP 云
     url: "/cloud-volumes-ontap-93-relnotes"
     version-number: '9.3'
-  langs: zh-cn,us-en,ja-jp,zh-tw,ko-kr,fr-fr,de-de
+  langs: zh-cn,us-en,ja-jp,ko-kr,zh-tw,de-de,fr-fr
 sidebar:
   entries:
   - title: 发行说明主页

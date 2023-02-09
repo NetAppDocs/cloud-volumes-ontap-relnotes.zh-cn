@@ -642,7 +642,6 @@
   <block id="68367d4408e943b9268a7a6d4314fb0a" category="inline-link-macro">在Azure中启动Cloud Volumes ONTAP HA对</block>
   <block id="bb0d42e6fed6d85c4ddc5b2d8c94e08b" category="paragraph">在一个可用性区域中的Azure中部署新HA对时、您现在将使用LRS共享受管磁盘、而不是页面Blobs进行存储。"工作环境"向导未发生任何更改。要使用此新配置、只需选择一个可用性区域即可。有关详细信息，请参见 <block ref="74ff11371741a9669ba3ff027e13cdfb" category="inline-link-macro-rx"></block>。</block>
   <block id="adacae0ffd14e727a49e7808c807ce42" category="section-title">使用共享受管磁盘在多个可用性区域中配置Azure HA</block>
-  <block id="bfcf5935583a46f9d5f7f5ad4fa31baf" category="paragraph">现在、您可以使用Azure在一个区域中部署多个可用性区域来部署Cloud Volumes ONTAP HA配置。这种新配置可通过使用Azure分区冗余存储(ZRS)共享受管磁盘来防止数据中心故障并保持应用程序可用性。</block>
   <block id="5f04b8451f48f03e36e44aea747e0a8b" category="paragraph">要使用此新配置、请参见 <block ref="74ff11371741a9669ba3ff027e13cdfb" category="inline-link-macro-rx"></block>。</block>
   <block id="9d123a356c832621891a3328c128b78b" category="list-text">L8s_v3 ^2^</block>
   <block id="6f487c8743b08c743167da3781c42f57" category="list-text">L16s_v3 ^2、4^</block>
@@ -706,4 +705,9 @@
   <block id="72e0d2497593ac6a5fdc024537224aed" category="list-text">只有在共享受管磁盘上运行的单个可用性区域配置中的HA对才支持这些VM类型。</block>
   <block id="7502ea8e5d477af63195f04d6179ca92" category="list-text">单个可用性区域中的HA对以及共享受管磁盘上运行的多个可用性区域配置支持这些VM类型。</block>
   <block id="6c895f204de5d4dd4a02c2926e76c998" category="list-text">只有Cloud Volumes ONTAP 9.11.1或更早版本的部署才支持这些VM类型。</block>
+  <block id="b3d2b2f33046bc452ceeba660d878f97" category="section-title">9.12.1 GA (2023年2月9日)</block>
+  <block id="d7ad70132837e18b99685763f8db95f2" category="paragraph">Cloud Volumes ONTAP 9.12.1的通用版本(GA)现在可在AWS、Azure和Google Cloud中使用。GA 版本包含错误修复。</block>
+  <block id="901f48339d9d297cd3f32a0be361c057" category="paragraph">现在、您可以使用Azure在一个区域中部署多个可用性区域来部署Cloud Volumes ONTAP HA配置。这种新配置可通过使用Azure分区冗余存储(ZRS)共享受管磁盘来防止数据中心故障并保持应用程序可用性。目前、此功能仅适用于美国西部2、西欧、北欧和法国中部地区。</block>
+  <block id="967b9ba2107b00338e92f6eb93ca99d8" category="inline-link-macro">Microsoft Azure的文档。</block>
+  <block id="0d66ef11df7c9797df8b9cf7f638438a" category="paragraph">要了解有关受管磁盘的分区冗余存储的详细信息、请参见 <block ref="cc9f7b6977bd94adf51c6f83282634a2" category="inline-link-macro-rx"></block></block>
 </blocks>

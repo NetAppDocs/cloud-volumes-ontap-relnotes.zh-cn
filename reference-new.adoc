@@ -20,6 +20,12 @@ Cloud Volumes ONTAP 9.12.1提供了新的增强功能。
 
 
 
+== 9.12.1 GA (2023年2月9日)
+
+Cloud Volumes ONTAP 9.12.1的通用版本(GA)现在可在AWS、Azure和Google Cloud中使用。GA 版本包含错误修复。
+
+
+
 == 9.12.1 RC1 (2022年12月8日)
 
 Cloud Volumes ONTAP 9.12.1候选版本1现已在AWS、Azure和Google Cloud中推出。此版本包含以下新增功能和增强功能：
@@ -54,11 +60,13 @@ https://docs.netapp.com/us-en/ontap/object-storage-management/index.html["了解
 
 === 使用共享受管磁盘在多个可用性区域中配置Azure HA
 
-现在、您可以使用Azure在一个区域中部署多个可用性区域来部署Cloud Volumes ONTAP HA配置。这种新配置可通过使用Azure分区冗余存储(ZRS)共享受管磁盘来防止数据中心故障并保持应用程序可用性。
+现在、您可以使用Azure在一个区域中部署多个可用性区域来部署Cloud Volumes ONTAP HA配置。这种新配置可通过使用Azure分区冗余存储(ZRS)共享受管磁盘来防止数据中心故障并保持应用程序可用性。目前、此功能仅适用于美国西部2、西欧、北欧和法国中部地区。
 
 有关HA配置架构和组件的详细信息、请参见 link:https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/concept-ha-azure.html["Azure 中的高可用性对"^]。
 
 要使用此新配置、请参见 link:https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-deploying-otc-azure.html["在Azure中启动Cloud Volumes ONTAP HA对"^]。
+
+要了解有关受管磁盘的分区冗余存储的详细信息、请参见 link:https://learn.microsoft.com/en-us/azure/virtual-machines/disks-redundancy#zone-redundant-storage-for-managed-disks["Microsoft Azure的文档。"]
 
 
 
