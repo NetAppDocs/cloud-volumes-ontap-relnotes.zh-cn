@@ -39,6 +39,8 @@ Cloud Volumes ONTAP 在 Google 云平台中作为单节点系统和高可用性�
 * n2-standard-8
 * n2-standard-16
 * n2-standard-32
+* n2-standard-48
+* n2-standard-64
 
  a| 
 * n2-standard-4
@@ -51,6 +53,8 @@ Cloud Volumes ONTAP 在 Google 云平台中作为单节点系统和高可用性�
 * N1-standard-32
 * n2-standard-16
 * n2-standard-32
+* n2-standard-48
+* n2-standard-64
 
  a| 
 * N1-standard-8
@@ -59,6 +63,8 @@ Cloud Volumes ONTAP 在 Google 云平台中作为单节点系统和高可用性�
 * n2-standard-8
 * n2-standard-16
 * n2-standard-32
+* n2-standard-48
+* n2-standard-64
 
  a| 
 * N1-standard-8
@@ -67,6 +73,8 @@ Cloud Volumes ONTAP 在 Google 云平台中作为单节点系统和高可用性�
 * n2-standard-8
 * n2-standard-16
 * n2-standard-32
+* n2-standard-48
+* n2-standard-64
 
 
 
@@ -88,6 +96,21 @@ link:reference-limits-gcp.html["详细了解 Google Cloud 中的磁盘限制"]�
 . BlueXP界面显示了Standard和BYOL支持的另一种计算机类型：N1-HIGHMEM-4。但是，此计算机类型并不适用于生产环境。我们已将其仅用于特定实验室环境。
 . 有关 Google Cloud Platform 区域支持，请参见 https://cloud.netapp.com/cloud-volumes-global-regions["Cloud Volumes 全球地区"^]。
 . Cloud Volumes ONTAP 可以在云提供商提供的预留或按需 VM 实例上运行。不支持使用其他 VM 实例类型的解决方案。
+. 从Cloud Volumes ONTAP 软件9.13.0版开始、可以为以下HA对部署实例提供_Flash Cache"高写入速度"和更高的最大传输单元(MTU) 8、896字节：
++
+** n2-standard-16
+** n2-standard-32
+** n2-standard-48
+** n2-standard-64
++
+在部署符合条件的实例类型时、您可以启用_Flash Cache_和高写入速度。要启用8、896字节的最大传输单元、必须在部署中选择VPC-1、VPC-2或VPC-3。MTU越高、网络吞吐量就越高。有关启动其中一种部署的详细信息、请参见 https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-deploying-gcp.html#launching-an-ha-pair-in-google-cloud["在Google Cloud中启动HA对"]。
+
++
+
+NOTE: _Flash cache"、"高写入"模式和8、896的MTU与功能相关、不能在已配置的实例中单独禁用。
+
+
+
 
 
 
