@@ -30,7 +30,7 @@ Cloud Volumes ONTAP 9.13.0的通用发布(GA)版本现在可在AWS、Azure和Goo
 
 现在、对于Cloud Volumes ONTAP 9.13.0版本的特定实例、可支持闪存、高写入速度和8、896字节的高最大传输单元(MTU)。
 
-了解更多信息 link:https://docs.netapp.com/us-en/cloud-volumes-ontap-relnotes/reference-configs-gcp.html["支持Google Cloud按许可证配置"^]。
+了解更多信息 link:https://docs.netapp.com/us-en/cloud-volumes-ontap-relnotes/reference-configs-gcp.html["Google Cloud中按许可证支持的配置"^]。
 
 
 
