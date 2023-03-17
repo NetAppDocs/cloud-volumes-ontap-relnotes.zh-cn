@@ -1,0 +1,32 @@
+---
+sidebar: sidebar 
+permalink: reference-other-versions.html 
+keywords: Cloud Volumes ONTAP, versions, other versions, latest, other releases, version selector, previous versions 
+summary: 如果您运行的不是最新的Cloud Volumes ONTAP 版本、则可以参考其他版本的文档。您可以使用版本选择器在最新版本和三个先前版本之间导航、也可以使用以下链接。 
+---
+= 其他版本
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+如果您运行的不是最新的Cloud Volumes ONTAP 版本、则可以参考其他版本的文档。您可以使用页面右上角的版本选择器或使用以下链接。
+
+* link:https://docs.netapp.com/us-en/cloud-volumes-ontap-relnotes/index.html["Cloud Volumes ONTAP 9.13.0"]
+* link:https://docs.netapp.com/us-en/cloud-volumes-ontap-9121-relnotes/index.html["Cloud Volumes ONTAP 9.12.1"]
+* link:https://docs.netapp.com/us-en/cloud-volumes-ontap-9120-relnotes/index.html["Cloud Volumes ONTAP 9.12.0"]
+* link:https://docs.netapp.com/us-en/cloud-volumes-ontap-9111-relnotes/index.html["Cloud Volumes ONTAP 9.11.1"]
+* link:https://docs.netapp.com/us-en/cloud-volumes-ontap-9110-relnotes/index.html["Cloud Volumes ONTAP 9.11.0"]
+* link:https://docs.netapp.com/us-en/cloud-volumes-ontap-9101-relnotes/index.html["Cloud Volumes ONTAP 9.10.1"]
+* link:https://docs.netapp.com/us-en/cloud-volumes-ontap-9100-relnotes/index.html["Cloud Volumes ONTAP 9.10.0"]
+* link:https://docs.netapp.com/us-en/cloud-volumes-ontap-991-relnotes/index.html["Cloud Volumes ONTAP 9.9.1"]
+* link:https://docs.netapp.com/us-en/cloud-volumes-ontap-990-relnotes/index.html["Cloud Volumes ONTAP 9.9.0"]
+* link:https://docs.netapp.com/us-en/cloud-volumes-ontap-98-relnotes/index.html["Cloud Volumes ONTAP 9.8"]
+* link:https://docs.netapp.com/us-en/cloud-volumes-ontap-97-relnotes/index.html["Cloud Volumes ONTAP 9.9.7"]
+* link:https://docs.netapp.com/us-en/cloud-volumes-ontap-96-relnotes/index.html["Cloud Volumes ONTAP 9.6"]
+* link:https://docs.netapp.com/us-en/cloud-volumes-ontap-95-relnotes/index.html["Cloud Volumes ONTAP 9.5"]
+
