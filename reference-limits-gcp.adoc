@@ -235,3 +235,10 @@ https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-managing-sv
 
 | * 端口集 * | 每个节点的上限 | 256 
 |===
+
+
+== Cloud Volumes ONTAP HA 对不支持即时存储交还
+
+节点重新启动后，配对节点必须先同步数据，然后才能返回存储。重新同步数据所需的时间取决于节点关闭时客户端写入的数据量以及交还期间的数据写入速度。
+
+https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/concept-ha-google-cloud.html["了解存储如何在Google Cloud中运行的Cloud Volumes ONTAP HA对中工作"^]。
