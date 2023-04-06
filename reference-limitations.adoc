@@ -37,19 +37,6 @@ NOTE: WAFL 文件系统中的 ONTAP 一致性点决定了数据一致性。只�
 
 
 
-== 在中国地区提供支持
-
-中国地区支持 Cloud Volumes ONTAP ，如下所示。
-
-* AWS 中国地区支持 Cloud Volumes ONTAP 9.6 。
-* 支持单节点系统。
-* 支持直接从 NetApp 购买的许可证。
-
-
-不支持所有其他位置，版本，配置和许可证。
-
-
-
 == Cloud Volumes ONTAP 支持预留和按需 VM 实例
 
 Cloud Volumes ONTAP 可以在云提供商提供的预留或按需 VM 实例上运行。不支持其他类型的 VM 实例。
