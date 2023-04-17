@@ -613,8 +613,6 @@
   <block id="2819feead2b07762a4465189ab8b2f52" category="paragraph-title">对于 HA 对，是每个节点的许可容量限制还是整个 HA 对的许可容量限制？</block>
   <block id="7093c2c9844cf46dcd5d50c6d596d244" category="paragraph-title">对于 HA 对，镜像数据是否计入许可的容量限制？</block>
   <block id="9d123a356c832621891a3328c128b78b" category="list-text">L8s_v3 ^2^</block>
-  <block id="6f487c8743b08c743167da3781c42f57" category="list-text">L16s_v3 ^2、4^</block>
-  <block id="2b5c34a51aff2e04df61ba2f74efb07e" category="list-text">L32s_v3 ^2、4^</block>
   <block id="b869cbdadaa9844d32c24de3f4db3242" category="cell">受管磁盘</block>
   <block id="bdebc137cea9fa36d51bbecef44687cc" category="paragraph">HA对使用受管磁盘。(9.12.1版之前部署的HA对支持页面Blobs。)</block>
   <block id="2c5ad1776ac4cf950a5e0576f35bf111" category="paragraph">支持以下磁盘大小：</block>
@@ -704,4 +702,6 @@
   <block id="7b9e5415e02ff7ad5eaae61345740517" category="inline-link">了解存储如何在Google Cloud中运行的Cloud Volumes ONTAP HA对中工作</block>
   <block id="e14f9eb0a41dc045a4d5568d18e8170e" category="paragraph"><block ref="50d9731ce0bfc8e3757cc819b5895c1f" category="inline-link-rx"></block>。</block>
   <block id="1201140e917505446359a76c53a69515" category="paragraph">如果您充分利用<block ref="e066b15eeebd4e6d571fd7dd588f94f7" category="inline-link-rx"></block> 在要将 Cloud Volumes ONTAP 部署到的 VPC 中，您需要实施 DNS 记录，以便将流量转发到所需的<block ref="c007aa246e3c48e1ccfa24499d50b4d8" category="inline-link-rx"></block>。</block>
+  <block id="1b604734bf53595ed7c7d204bb25e549" category="list-text">L16s_v3 ^2^</block>
+  <block id="645c4fc55b2cf93995a9e487870102f5" category="list-text">L32s_v3 ^2^</block>
 </blocks>
