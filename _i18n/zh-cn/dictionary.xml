@@ -411,8 +411,6 @@
   <block id="55daffc7827b6ec74240106a8f647473" category="paragraph">无论实例类型或计算机类型如何， Cloud Volumes ONTAP 的并发 SnapMirror 或 SnapVault 传输的最大数量均为每个节点 100 。</block>
   <block id="6678cc30386be959db340cbdd54ecbda" category="section-title">您的备份和恢复计划不得使用云提供商快照</block>
   <block id="f6fdc425c22fbe91b4cd43c5702c7923" category="paragraph">您不应在 Cloud Volumes ONTAP 数据的备份和恢复计划中使用云提供商的快照。您应始终使用 ONTAP Snapshot 副本或第三方备份解决方案备份和还原 Cloud Volumes ONTAP 上托管的数据。</block>
-  <block id="71674eaa07f12640df0ea0be77ecd9ac" category="inline-link">了解如何使用 Cloud Backup Service 备份和还原 ONTAP 数据</block>
-  <block id="e81db3857b1943249df996fe0b3ed679" category="paragraph"><block ref="935fff627382fb455a98804a9e37d559" category="inline-link-rx"></block>。</block>
   <block id="3d880dec2575e676954faf6a6a218972" category="admonition">WAFL 文件系统中的 ONTAP 一致性点决定了数据一致性。只有 ONTAP 可以暂停 WAFL 文件系统以进行崩溃状态一致的备份。</block>
   <block id="38220a2514a2fcb218be440c035b4175" category="section-title">Cloud Volumes ONTAP 支持预留和按需 VM 实例</block>
   <block id="8ce602039d8c7d53c95e1f62b1d83ef0" category="paragraph">Cloud Volumes ONTAP 可以在云提供商提供的预留或按需 VM 实例上运行。不支持其他类型的 VM 实例。</block>
@@ -603,7 +601,6 @@
   <block id="846a4ecea919427b6111365c125ada6f" category="list-text">这些列中列出的数字包括BlueXP默认创建的初始Storage VM。例如，如果此列中列出 24 个，则表示您可以再创建 23 个 Storage VM ，总共可以创建 24 个。</block>
   <block id="30749b02bc62d931d770e6c719254e7b" category="list-text">BlueXP界面显示了Standard和BYOL支持的另一种计算机类型：N1-HIGHMEM-4。但是，此计算机类型并不适用于生产环境。我们已将其仅用于特定实验室环境。</block>
   <block id="9889b7a9df56580016f59ccd942fb1d1" category="inline-link">《BlueXP发行说明》</block>
-  <block id="7b266e39bb1d33ceb7866245509e3615" category="paragraph">最新版本的BlueXP (以前称为Cloud Manager)还引入了其他功能和增强功能。请参见<block ref="6872c7556ed1cb501f7ddf52354e86ee" category="inline-link-rx"></block> 了解详细信息。</block>
   <block id="fde45fa5cd70a93e88151b83aa348f12" category="inline-link">BlueXP API端点</block>
   <block id="40aa449308d0af16355f19e61ffe344b" category="paragraph">不可以。HA 对中的数据会在节点之间同步镜像，以便在 Google Cloud 发生故障时可以使用这些数据。例如、如果您在节点A上购买了8 TB磁盘、则BlueXP还会在节点B上分配一个8 TB磁盘、用于镜像数据。虽然配置了 16 TB 的容量，但许可证限制仅会计入 8 TB 的容量。</block>
   <block id="07daff7fe86cfb582b0c246d7cefb754" category="list-text">使用单节点系统时，所有实例类型均支持高写入速度。您可以在部署期间或之后的任何时间从BlueXP启用高写入速度。<block ref="18805b87db41583a67ecc2414d022f2b" category="inline-link-rx"></block>。</block>
@@ -704,4 +701,7 @@
   <block id="1201140e917505446359a76c53a69515" category="paragraph">如果您充分利用<block ref="e066b15eeebd4e6d571fd7dd588f94f7" category="inline-link-rx"></block> 在要将 Cloud Volumes ONTAP 部署到的 VPC 中，您需要实施 DNS 记录，以便将流量转发到所需的<block ref="c007aa246e3c48e1ccfa24499d50b4d8" category="inline-link-rx"></block>。</block>
   <block id="1b604734bf53595ed7c7d204bb25e549" category="list-text">L16s_v3 ^2^</block>
   <block id="645c4fc55b2cf93995a9e487870102f5" category="list-text">L32s_v3 ^2^</block>
+  <block id="468539119bbdc1adf73b917e2900aee4" category="inline-link">了解如何使用BlueXP备份和恢复来备份和还原ONTAP 数据</block>
+  <block id="97f2669f2be89519b70ab300a23d78bf" category="paragraph"><block ref="dd0e067e6a9ee59d9a054d0786a54cd0" category="inline-link-rx"></block>。</block>
+  <block id="619c180e46c9dec776a0347d35298e14" category="paragraph">最新版本的BlueXP还引入了其他功能和增强功能。请参见<block ref="6872c7556ed1cb501f7ddf52354e86ee" category="inline-link-rx"></block> 了解详细信息。</block>
 </blocks>

@@ -18,4 +18,4 @@ summary: 已知问题可确定可能妨碍您成功使用此版本产品的问�
 
 此版本中没有特定于 Cloud Volumes ONTAP 的已知问题。
 
-您可以在中找到 ONTAP 软件的已知问题 https://library.netapp.com/ecm/ecm_download_file/ECMLP2492508["《 ONTAP 发行说明》"^]。
+您可以在中找到 ONTAP 软件的已知问题 https://["《 ONTAP 发行说明》"^]。

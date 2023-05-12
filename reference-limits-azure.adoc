@@ -100,7 +100,7 @@ Cloud Volumes ONTAP 使用 Azure 存储作为磁盘并将其分组为 _aggreges_
 
 === 基于容量的许可限制
 
-以下磁盘限制适用于使用基于容量的许可包的Cloud Volumes ONTAP 系统。 https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/concept-licensing.html["了解Cloud Volumes ONTAP 许可选项"^]
+以下磁盘限制适用于使用基于容量的许可包的Cloud Volumes ONTAP 系统。 https://["了解Cloud Volumes ONTAP 许可选项"^]
 
 
 
@@ -259,7 +259,7 @@ Cloud Volumes ONTAP 使用 Azure 存储作为磁盘并将其分组为 _aggreges_
 
 如果您使用基于节点的许可、则可以为Cloud Volumes ONTAP BYOL系统购买多个基于节点的许可证、以分配超过368 TiB的容量。
 
-您可以为单节点系统或 HA 对购买的许可证数量不受限制。请注意，磁盘限制可能会阻止您单独使用磁盘来达到容量限制。您可以通过超出磁盘限制 https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/concept-data-tiering.html["将非活动数据分层到对象存储"^]。 https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-manage-node-licenses.html["了解如何向 Cloud Volumes ONTAP 添加其他系统许可证"^]。
+您可以为单节点系统或 HA 对购买的许可证数量不受限制。请注意，磁盘限制可能会阻止您单独使用磁盘来达到容量限制。您可以通过超出磁盘限制 https://["将非活动数据分层到对象存储"^]。 https://["了解如何向 Cloud Volumes ONTAP 添加其他系统许可证"^]。
 
 
 
@@ -491,7 +491,7 @@ HA对具有两种配置类型：page blob和Multiple Availability Zone。每个�
 
 这些是经过测试的限制。虽然理论上可以配置其他 Storage VM ，但不支持。
 
-https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-managing-svms-azure.html["了解如何创建其他 Storage VM"^]。
+https://["了解如何创建其他 Storage VM"^]。
 
 [cols="2*"]
 |===

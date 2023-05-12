@@ -20,7 +20,7 @@ summary: 已知限制确定了本产品版本不支持的平台、设备或功�
 
 == 数据包镜像的限制
 
-https://cloud.google.com/vpc/docs/packet-mirroring["数据包镜像"^] 必须在部署 Cloud Volumes ONTAP 的 Google Cloud VPC 中禁用。
+https://["数据包镜像"^] 必须在部署 Cloud Volumes ONTAP 的 Google Cloud VPC 中禁用。
 
 如果启用了数据包镜像，则 Cloud Volumes ONTAP 无法正常运行。
 
@@ -28,6 +28,6 @@ https://cloud.google.com/vpc/docs/packet-mirroring["数据包镜像"^] 必须在
 
 == Google Private Service Connect 限制
 
-如果您充分利用 https://cloud.google.com/vpc/docs/private-service-connect["Google Private Service Connect"^] 在要将 Cloud Volumes ONTAP 部署到的 VPC 中，您需要实施 DNS 记录，以便将流量转发到所需的 https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-quick-start-connector-google.html["BlueXP API端点"^]。
+如果您充分利用 https://["Google Private Service Connect"^] 在要将 Cloud Volumes ONTAP 部署到的 VPC 中，您需要实施 DNS 记录，以便将流量转发到所需的 https://["BlueXP API端点"^]。
 
 目前， Private Service Connect 不支持将数据从 Cloud Volumes ONTAP 分层到 Google 云存储分段。
