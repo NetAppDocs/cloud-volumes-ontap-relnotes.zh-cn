@@ -306,7 +306,6 @@
   <block id="a59ad4f9735c6c90fea48ef6e88441ac" category="cell">c5n.9x 大型</block>
   <block id="26657d5ff9020d2abefe558796b99584" category="cell">96</block>
   <block id="2d3e51e89d3f05d2abe99df631cb0b4c" category="cell">C5a.12 x 大型</block>
-  <block id="1688c903113006683515d0a4aabfc6d1" category="cell">48 ^4^</block>
   <block id="c5349a9d783e985390617543cf910af4" category="cell">c5.18 x 大型</block>
   <block id="0a09c8844ba8f0936c20bd791130d6b6" category="cell">144.</block>
   <block id="99a85ba98f759e2af5b37706147521a4" category="cell">19,000</block>
@@ -327,7 +326,6 @@
   <block id="18ca3c89ae9e8edbe217f2c9b7c6107d" category="inline-link">了解有关选择写入速度的更多信息</block>
   <block id="ecaae8a00365bc31bac2a2e1afa5c71d" category="list-text">在使用 HA 对时， Cloud Volumes ONTAP 支持对大多数实例类型使用高写入速度。使用单节点系统时，所有实例类型均支持高写入速度。<block ref="18805b87db41583a67ecc2414d022f2b" category="inline-link-rx"></block>。</block>
   <block id="8e6a2ebba2f4ad1a560224744383ef97" category="list-text">r5.12 个大型实例类型具有已知的可支持性限制。如果节点因崩溃而意外重新启动，则系统可能无法收集用于对问题进行故障排除的核心文件，并对问题进行根发生原因处理。客户接受风险和有限支持条款，如果发生这种情况，则承担所有支持责任。此限制会影响新部署的 HA 对和从 9.8 升级的 HA 对。此限制不会影响新部署的单节点系统。</block>
-  <block id="f18904153dfcf72e0d6ca5f227644b87" category="list-text">虽然这些 EC2 实例类型支持 48 个以上的 vCPU ，但 Cloud Volumes ONTAP 最多支持 48 个 vCPU 。</block>
   <block id="9de28fbf6817cd511eb799f9575b611d" category="list-text">选择 EC2 实例类型时，您可以指定它是共享实例还是专用实例。</block>
   <block id="afea36f2c9999a231c58b7e9dcf3b16e" category="list-text">Cloud Volumes ONTAP 可以在预留或按需 EC2 实例上运行。不支持使用其他实例类型的解决方案。</block>
   <block id="8c4b25218155a1fdb972f4169855d04f" category="section-title">支持的区域</block>
@@ -704,4 +702,6 @@
   <block id="468539119bbdc1adf73b917e2900aee4" category="inline-link">了解如何使用BlueXP备份和恢复来备份和还原ONTAP 数据</block>
   <block id="97f2669f2be89519b70ab300a23d78bf" category="paragraph"><block ref="dd0e067e6a9ee59d9a054d0786a54cd0" category="inline-link-rx"></block>。</block>
   <block id="619c180e46c9dec776a0347d35298e14" category="paragraph">最新版本的BlueXP还引入了其他功能和增强功能。请参见<block ref="6872c7556ed1cb501f7ddf52354e86ee" category="inline-link-rx"></block> 了解详细信息。</block>
+  <block id="f5d86d667fcde1b9fc5b1c45e55d135e" category="cell">64 ^4^</block>
+  <block id="5ce58b1e3bfddca3ae7d5a13676224ff" category="list-text">虽然这些EC2实例类型支持64个以上的vCPU、但Cloud Volumes ONTAP 仅支持多达64个vCPU。</block>
 </blocks>

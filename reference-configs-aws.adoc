@@ -160,13 +160,13 @@ Cloud Volumes ONTAP 支持多种类型的 EBS 磁盘以及用于数据分层的 
 | c5n.9x 大型 | 36 | 96 | 不支持 | 50 | 9,500 | supported 
 
 
-| C5a.12 x 大型 | 48 ^4^ | 96 | 不支持 | 12 | 4,750 | supported 
+| C5a.12 x 大型 | 48 | 96 | 不支持 | 12 | 4,750 | supported 
 
 
-| c5.18 x 大型 | 48 ^4^ | 144. | 不支持 | 25. | 19,000 | supported 
+| c5.18 x 大型 | 64 ^4^ | 144. | 不支持 | 25. | 19,000 | supported 
 
 
-| c5d.18x 大型 | 48 ^4^ | 144. | supported | 25. | 19,000 | supported 
+| c5d.18x 大型 | 64 ^4^ | 144. | supported | 25. | 19,000 | supported 
 
 
 | m5d.12 x 大型 | 48 | 192. | supported | 12 | 9,500 | supported 
@@ -175,27 +175,27 @@ Cloud Volumes ONTAP 支持多种类型的 EBS 磁盘以及用于数据分层的 
 | m5dn.12 x大型 | 48 | 192. | supported | 50 | 9,500 | supported 
 
 
-| c5n.18x 大型 | 48 ^4^ | 192. | 不支持 | 100 | 19,000 | supported 
+| c5n.18x 大型 | 64 ^4^ | 192. | 不支持 | 100 | 19,000 | supported 
 
 
-| m5a.16 x 大型 | 48 ^4^ | 256 | 不支持 | 12 | 9,500 | supported 
+| m5a.16 x 大型 | 64 | 256 | 不支持 | 12 | 9,500 | supported 
 
 
-| m5.16 x 大型 | 48 ^4^ | 256 | 不支持 | 20 | 13,600 | supported 
+| m5.16 x 大型 | 64 | 256 | 不支持 | 20 | 13,600 | supported 
 
 
 | r5.12 x 大型 ^3^ | 48 | 384 | 不支持 | 10 | 9,500 | supported 
 
 
-| m5dn.24xlarge | 48 ^4^ | 384 | supported | 100 | 19,000 | supported 
+| m5dn.24xlarge | 64 ^4^ | 384 | supported | 100 | 19,000 | supported 
 
 
-| m6id.32xlarge | 48 ^4^ | 512 | supported | 50 | 40,000 | supported 
+| m6id.32xlarge | 64 ^4^ | 512 | supported | 50 | 40,000 | supported 
 |===
 . 某些实例类型包括本地 NVMe 存储， Cloud Volumes ONTAP 将其用作 _Flash Cache_ 。Flash Cache 通过实时智能缓存最近读取的用户数据和 NetApp 元数据来加快数据访问速度。它适用于随机读取密集型工作负载，包括数据库，电子邮件和文件服务。必须在所有卷上禁用数据压缩，才能利用 Flash Cache 性能改进功能。 https://["了解有关 Flash Cache 的更多信息"^]。
 . 在使用 HA 对时， Cloud Volumes ONTAP 支持对大多数实例类型使用高写入速度。使用单节点系统时，所有实例类型均支持高写入速度。 https://["了解有关选择写入速度的更多信息"^]。
 . r5.12 个大型实例类型具有已知的可支持性限制。如果节点因崩溃而意外重新启动，则系统可能无法收集用于对问题进行故障排除的核心文件，并对问题进行根发生原因处理。客户接受风险和有限支持条款，如果发生这种情况，则承担所有支持责任。此限制会影响新部署的 HA 对和从 9.8 升级的 HA 对。此限制不会影响新部署的单节点系统。
-. 虽然这些 EC2 实例类型支持 48 个以上的 vCPU ，但 Cloud Volumes ONTAP 最多支持 48 个 vCPU 。
+. 虽然这些EC2实例类型支持64个以上的vCPU、但Cloud Volumes ONTAP 仅支持多达64个vCPU。
 . 选择 EC2 实例类型时，您可以指定它是共享实例还是专用实例。
 . Cloud Volumes ONTAP 可以在预留或按需 EC2 实例上运行。不支持使用其他实例类型的解决方案。
 
