@@ -55,7 +55,7 @@ Cloud Volumes ONTAP 支持多种类型的 EBS 磁盘以及用于数据分层的 
 | 将冷数据分层到 S3 | supported | 不支持 4+| supported 
 |===
 . 对于 HA 对，容量限制适用于整个 HA 对。这不是每个节点的。例如，如果使用高级版许可证，则两个节点之间的容量最多可达 368 TiB 。
-. 对于某些配置，磁盘限制会阻止您单独使用磁盘来达到容量限制。在这些情况下，您可以通过达到容量限制 https://["将非活动数据分层到对象存储"^]。有关磁盘限制的信息，请参见 link:reference-limits-aws.html["存储限制"]。
+. 对于某些配置，磁盘限制会阻止您单独使用磁盘来达到容量限制。在这些情况下，您可以通过达到容量限制 https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/concept-data-tiering.html["将非活动数据分层到对象存储"^]。有关磁盘限制的信息，请参见 link:reference-limits-aws.html["存储限制"]。
 . 在对所有 Cloud Volumes ONTAP 配置使用 SSD 时，系统会启用增强的写入性能，但 PAYGO Explore 除外。
 . 使用吞吐量优化型 HDD （ st1 ）时，不建议将数据分层到对象存储。
 
@@ -64,7 +64,7 @@ Cloud Volumes ONTAP 支持多种类型的 EBS 磁盘以及用于数据分层的 
 
 === 支持的磁盘大小
 
-在 AWS 中，一个聚合最多可以包含 6 个大小相同的磁盘。但是、如果您的配置支持Amazon EBS弹性卷功能、则聚合最多可以包含8个磁盘。 https://["了解有关支持弹性卷的更多信息"^]
+在 AWS 中，一个聚合最多可以包含 6 个大小相同的磁盘。但是、如果您的配置支持Amazon EBS弹性卷功能、则聚合最多可以包含8个磁盘。 https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/concept-aws-elastic-volumes.html["了解有关支持弹性卷的更多信息"^]
 
 [cols="3*"]
 |===
@@ -106,9 +106,9 @@ Cloud Volumes ONTAP 支持多种类型的 EBS 磁盘以及用于数据分层的 
 
 == 支持的 EC2 计算
 
-每个 Cloud Volumes ONTAP 许可证支持不同的 EC2 实例类型。为方便起见，下表显示了每个受支持实例类型的 vCPU ， RAM 和带宽。 https://["有关 EC2 实例类型的最新完整详细信息，请参见 AWS"^]。
+每个 Cloud Volumes ONTAP 许可证支持不同的 EC2 实例类型。为方便起见，下表显示了每个受支持实例类型的 vCPU ， RAM 和带宽。 https://aws.amazon.com/ec2/instance-types/["有关 EC2 实例类型的最新完整详细信息，请参见 AWS"^]。
 
-下表中显示的带宽与每个实例类型的 AWS 限制一致。这些限制与 Cloud Volumes ONTAP 所能提供的功能不完全一致。有关预期性能，请参见 https://["NetApp 技术报告 4383 ：使用应用程序工作负载在 Amazon Web Services 中对 Cloud Volumes ONTAP 进行性能特征描述"^]。
+下表中显示的带宽与每个实例类型的 AWS 限制一致。这些限制与 Cloud Volumes ONTAP 所能提供的功能不完全一致。有关预期性能，请参见 https://www.netapp.com/us/media/tr-4383.pdf["NetApp 技术报告 4383 ：使用应用程序工作负载在 Amazon Web Services 中对 Cloud Volumes ONTAP 进行性能特征描述"^]。
 
 [cols="8*"]
 |===
@@ -192,8 +192,8 @@ Cloud Volumes ONTAP 支持多种类型的 EBS 磁盘以及用于数据分层的 
 
 | m6id.32xlarge | 64 ^4^ | 512 | supported | 50 | 40,000 | supported 
 |===
-. 某些实例类型包括本地 NVMe 存储， Cloud Volumes ONTAP 将其用作 _Flash Cache_ 。Flash Cache 通过实时智能缓存最近读取的用户数据和 NetApp 元数据来加快数据访问速度。它适用于随机读取密集型工作负载，包括数据库，电子邮件和文件服务。必须在所有卷上禁用数据压缩，才能利用 Flash Cache 性能改进功能。 https://["了解有关 Flash Cache 的更多信息"^]。
-. 在使用 HA 对时， Cloud Volumes ONTAP 支持对大多数实例类型使用高写入速度。使用单节点系统时，所有实例类型均支持高写入速度。 https://["了解有关选择写入速度的更多信息"^]。
+. 某些实例类型包括本地 NVMe 存储， Cloud Volumes ONTAP 将其用作 _Flash Cache_ 。Flash Cache 通过实时智能缓存最近读取的用户数据和 NetApp 元数据来加快数据访问速度。它适用于随机读取密集型工作负载，包括数据库，电子邮件和文件服务。必须在所有卷上禁用数据压缩，才能利用 Flash Cache 性能改进功能。 https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/concept-flash-cache.html["了解有关 Flash Cache 的更多信息"^]。
+. 在使用 HA 对时， Cloud Volumes ONTAP 支持对大多数实例类型使用高写入速度。使用单节点系统时，所有实例类型均支持高写入速度。 https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/concept-write-speed.html["了解有关选择写入速度的更多信息"^]。
 . r5.12 个大型实例类型具有已知的可支持性限制。如果节点因崩溃而意外重新启动，则系统可能无法收集用于对问题进行故障排除的核心文件，并对问题进行根发生原因处理。客户接受风险和有限支持条款，如果发生这种情况，则承担所有支持责任。此限制会影响新部署的 HA 对和从 9.8 升级的 HA 对。此限制不会影响新部署的单节点系统。
 . 虽然这些EC2实例类型支持64个以上的vCPU、但Cloud Volumes ONTAP 仅支持多达64个vCPU。
 . 选择 EC2 实例类型时，您可以指定它是共享实例还是专用实例。
@@ -204,4 +204,4 @@ Cloud Volumes ONTAP 支持多种类型的 EBS 磁盘以及用于数据分层的 
 
 == 支持的区域
 
-有关 AWS 区域支持，请参见 https://["Cloud Volumes 全球地区"^]。
+有关 AWS 区域支持，请参见 https://cloud.netapp.com/cloud-volumes-global-regions["Cloud Volumes 全球地区"^]。

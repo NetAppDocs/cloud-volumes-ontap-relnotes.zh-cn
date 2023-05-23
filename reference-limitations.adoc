@@ -30,7 +30,7 @@ summary: 已知限制确定了本产品版本不支持的平台、设备或功�
 
 您不应在 Cloud Volumes ONTAP 数据的备份和恢复计划中使用云提供商的快照。您应始终使用 ONTAP Snapshot 副本或第三方备份解决方案备份和还原 Cloud Volumes ONTAP 上托管的数据。
 
-https://["了解如何使用BlueXP备份和恢复来备份和还原ONTAP 数据"^]。
+https://docs.netapp.com/us-en/cloud-manager-backup-restore/concept-backup-to-cloud.html["了解如何使用BlueXP备份和恢复来备份和还原ONTAP 数据"^]。
 
 
 NOTE: WAFL 文件系统中的 ONTAP 一致性点决定了数据一致性。只有 ONTAP 可以暂停 WAFL 文件系统以进行崩溃状态一致的备份。
