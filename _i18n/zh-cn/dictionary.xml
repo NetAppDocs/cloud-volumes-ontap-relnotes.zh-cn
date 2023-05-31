@@ -20,14 +20,12 @@
   <block id="1de430b06ad7ac64cf016ffed9f4194b" category="section-title">Cloud Volumes ONTAP HA 对不支持即时存储交还</block>
   <block id="d69dddad3d38a1500a52e7e599cb94df" category="paragraph">节点重新启动后，配对节点必须先同步数据，然后才能返回存储。重新同步数据所需的时间取决于节点关闭时客户端写入的数据量以及交还期间的数据写入速度。</block>
   <block id="ac1c2f0887629ee768721c3b8cf91e3a" category="inline-link">了解存储在 AWS 中运行的 Cloud Volumes ONTAP HA 对中的工作原理</block>
-  <block id="1ede57873000993784f510b4546c1c3f" category="paragraph"><block ref="946966cdbb5ad64ec13d8ce9c3014b31" category="inline-link-rx"></block>。</block>
   <block id="00341a78c2eaf7d804cfe027a2f67870" category="summary">Cloud Volumes ONTAP 在 AWS 中具有存储配置限制，可提供可靠的操作。为获得最佳性能，请勿将系统配置为最大值。</block>
   <block id="6870aed8e6dfc4f093d5b5c6f8a4d81c" category="doc">AWS 中的存储限制</block>
   <block id="b3dfe19c7d46d1f8795ac17bf3d5a909" category="paragraph">Cloud Volumes ONTAP 具有存储配置限制，可提供可靠的操作。为获得最佳性能，请勿将系统配置为最大值。</block>
   <block id="ecedb9353641e4bd058af0268a6edce8" category="section-title">按许可证计算的最大系统容量</block>
   <block id="6fa7d9268a4a052eee070e7e621245fe" category="paragraph">Cloud Volumes ONTAP 系统的最大系统容量取决于其许可证。最大系统容量包括基于磁盘的存储以及用于数据分层的对象存储。</block>
   <block id="ba23388576c937a1743b84554bd13c72" category="inline-link">将非活动数据分层到对象存储</block>
-  <block id="13e43f7520d8163c6554fc15774d56ed" category="paragraph">对于某些配置，磁盘限制会阻止您单独使用磁盘来达到容量限制。在这些情况下，您可以通过达到容量限制<block ref="91a4fc4ecb983c2fca7588f26341e223" category="inline-link-rx"></block>。有关详细信息，请参见以下容量和磁盘限制。</block>
   <block id="794df3791a8c800841516007427a2aa3" category="cell">许可证</block>
   <block id="643a529396d04bbbe61c8daa70456163" category="cell">最大系统容量（磁盘 + 对象存储）</block>
   <block id="d8fe59d93325a956d9b5fd3e85bb96d8" category="cell">免费</block>
@@ -89,7 +87,6 @@
   <block id="a95e3bd264855a83a2c90be11b509673" category="section-title">Storage VM 限制</block>
   <block id="3327bf895c2d31f9b328aa44c7400786" category="paragraph">在某些配置中，您可以为 Cloud Volumes ONTAP 创建其他 Storage VM （ SVM ）。</block>
   <block id="10a824a307a3ec9647d72cf1842c2254" category="inline-link">了解如何创建其他 Storage VM</block>
-  <block id="94603c2f4a34dbb9c9a2fa72acf1b544" category="paragraph"><block ref="b409a35c1f5637c3fa6cd7bc9b79706b" category="inline-link-rx"></block>。</block>
   <block id="82060d81b7ce43c57280e879899f9a2c" category="cell">许可证类型</block>
   <block id="2b32b0b2d0f29c87c701d113a9b7814c" category="cell">Storage VM 限制</block>
   <block id="b44aff299926ff48d9c9937caf2bcc7c" category="list-text">1 个存储 VM 用于提供数据</block>
@@ -199,7 +196,6 @@
   <block id="1e6996b39daf779b565c50c8411fbc8d" category="paragraph"><block ref="8e36f0f32d75ebd3c7851e726c538544" category="inline-link-rx"></block>。</block>
   <block id="5520e32d61a58dff51fc6730939c3baf" category="summary">Cloud Volumes ONTAP 在 Google Cloud 中设置了存储配置限制，以提供可靠的操作。为获得最佳性能，请勿将系统配置为最大值。</block>
   <block id="c73908091fadeb9dec16abab42821644" category="doc">Google Cloud 中的存储限制</block>
-  <block id="b5110a96ee31f0d84f4df3d51e44588e" category="paragraph">对于某些配置，磁盘限制会阻止您单独使用磁盘来达到容量限制。您可以通过达到容量限制<block ref="91a4fc4ecb983c2fca7588f26341e223" category="inline-link-rx"></block>。有关详细信息，请参见以下磁盘限制。</block>
   <block id="47a5e6e39f64ff5d5dfb25da1aa3f3f2" category="cell">500 GB</block>
   <block id="5f807342ab46838a576d3111827add1c" category="cell">2 TB （ Explore 不支持数据分层）</block>
   <block id="1191f788083da9194f8eef9400d10898" category="cell">10 TB</block>
@@ -248,7 +244,6 @@
   <block id="aa7f77e663b832d5b0e544c5511e680c" category="cell">不支持</block>
   <block id="b13356b20cd05f0312d51b60b5736e0f" category="list-text">对于 HA 对，容量限制适用于整个 HA 对。这不是每个节点的。例如，如果使用高级版许可证，则两个节点之间的容量最多可达 368 TiB 。</block>
   <block id="9cb3b0db1f5a7a0032a165789bcde1dd" category="inline-link-macro">存储限制</block>
-  <block id="200f2587d6d9c86f9f31c89a52660dd4" category="list-text">对于某些配置，磁盘限制会阻止您单独使用磁盘来达到容量限制。在这些情况下，您可以通过达到容量限制<block ref="91a4fc4ecb983c2fca7588f26341e223" category="inline-link-rx"></block>。有关磁盘限制的信息，请参见 <block ref="71ccaacc6f6c8feca068c7ff1a7b2eb5" category="inline-link-macro-rx"></block>。</block>
   <block id="714ff467ced5dd4ad0cd34ca2d29d911" category="list-text">在对所有 Cloud Volumes ONTAP 配置使用 SSD 时，系统会启用增强的写入性能，但 PAYGO Explore 除外。</block>
   <block id="907c78338365697be8fd8d4a130503c8" category="list-text">使用吞吐量优化型 HDD （ st1 ）时，不建议将数据分层到对象存储。</block>
   <block id="36e4aa065725aff22926f2fed53bc3c7" category="section-title">支持的磁盘大小</block>
@@ -322,9 +317,7 @@
   <block id="0ac094105593f2223af0fadea2d4e6d0" category="cell">r5.12 x 大型 ^3^</block>
   <block id="0584ce565c824b7b7f50282d9a19945b" category="cell">384</block>
   <block id="dfeeabb8d703f59f841c2a6e2ed8d240" category="inline-link">了解有关 Flash Cache 的更多信息</block>
-  <block id="ea501cab10ad53ac25a0413ab3b40e3b" category="list-text">某些实例类型包括本地 NVMe 存储， Cloud Volumes ONTAP 将其用作 _Flash Cache_ 。Flash Cache 通过实时智能缓存最近读取的用户数据和 NetApp 元数据来加快数据访问速度。它适用于随机读取密集型工作负载，包括数据库，电子邮件和文件服务。必须在所有卷上禁用数据压缩，才能利用 Flash Cache 性能改进功能。<block ref="f318540a9100d71afa67f65db482ff92" category="inline-link-rx"></block>。</block>
   <block id="18ca3c89ae9e8edbe217f2c9b7c6107d" category="inline-link">了解有关选择写入速度的更多信息</block>
-  <block id="ecaae8a00365bc31bac2a2e1afa5c71d" category="list-text">在使用 HA 对时， Cloud Volumes ONTAP 支持对大多数实例类型使用高写入速度。使用单节点系统时，所有实例类型均支持高写入速度。<block ref="18805b87db41583a67ecc2414d022f2b" category="inline-link-rx"></block>。</block>
   <block id="8e6a2ebba2f4ad1a560224744383ef97" category="list-text">r5.12 个大型实例类型具有已知的可支持性限制。如果节点因崩溃而意外重新启动，则系统可能无法收集用于对问题进行故障排除的核心文件，并对问题进行根发生原因处理。客户接受风险和有限支持条款，如果发生这种情况，则承担所有支持责任。此限制会影响新部署的 HA 对和从 9.8 升级的 HA 对。此限制不会影响新部署的单节点系统。</block>
   <block id="9de28fbf6817cd511eb799f9575b611d" category="list-text">选择 EC2 实例类型时，您可以指定它是共享实例还是专用实例。</block>
   <block id="afea36f2c9999a231c58b7e9dcf3b16e" category="list-text">Cloud Volumes ONTAP 可以在预留或按需 EC2 实例上运行。不支持使用其他实例类型的解决方案。</block>
@@ -451,7 +444,6 @@
   <block id="056d5ee0191954b71fbb1a0eec04a22a" category="list-text">n2-standard-8</block>
   <block id="8f66358785ed8f4d9a356630a4ee515c" category="list-text">n2-standard-32</block>
   <block id="8fb6e38745600f700e7342cdd70e43f5" category="cell">区域持久性磁盘（ SSD ，平衡磁盘和标准磁盘）</block>
-  <block id="869d12417f0d6085bf2ee05d7abd89e6" category="list-text">磁盘限制可以防止您单独使用磁盘来达到最大系统容量限制。您可以通过达到容量限制<block ref="91a4fc4ecb983c2fca7588f26341e223" category="inline-link-rx"></block>。</block>
   <block id="f30cabe0a77d16d16cf1ef723d8eb186" category="inline-link-macro">详细了解 Google Cloud 中的磁盘限制</block>
   <block id="a93742b808592a2ce1b1926f98f391eb" category="paragraph"><block ref="46bbc0e4d7a811f26e46cbb2c2ad7173" category="inline-link-macro-rx"></block>。</block>
   <block id="b4c4a8c75337dc28089aec3e79ae943c" category="list-text">PAYGO Explore 不支持将数据分层到 Google Cloud Storage 。</block>
@@ -488,7 +480,6 @@
   <block id="fd09e7b7125ae29e623561a2b5d68449" category="cell">1-12 ^3^</block>
   <block id="e2f4de94176ab48a70e3d04c548660fd" category="list-text">如果使用基于节点的许可，则需要两个 BYOL 许可证才能达到 384 TiB 。</block>
   <block id="73cbcc5508ae5bff313fecfcc6e16834" category="paragraph">这些是经过测试的限制。虽然理论上可以配置其他 Storage VM ，但不支持。</block>
-  <block id="b715b1ccc3469258fd6485e0f690ee32" category="paragraph"><block ref="b30615257fdd1ef7d59e50279858c1d0" category="inline-link-rx"></block>。</block>
   <block id="f732decff3cb02f88745e152cc078819" category="list-text">每个 Storage VM 最多可以有三个 LIF ，其中两个是数据 LIF ，一个是 SVM 管理 LIF 。</block>
   <block id="e70747c71702cdc100bd5f592ed452be" category="summary">Cloud Volumes ONTAP 提供了多种许可选项。每个选项都可用于选择满足您需求的配置。</block>
   <block id="be02aeef4770b69cefbe40935aba2797" category="doc">Cloud Volumes ONTAP 许可</block>
@@ -533,7 +524,6 @@
   <block id="79561dd1a4e00a3e05c0d892a01e77bf" category="list-text">n2-standard-16</block>
   <block id="cb93ad4589e6e6834d2627d2ef8c8456" category="list-text">多管理员验证</block>
   <block id="88e362071d1f2ba61570f62aacd1c1c5" category="paragraph">在Cloud Volumes ONTAP 上启用多管理员验证将导致配置不受支持。</block>
-  <block id="8ba657a83ab71e004f50b135f305bacf" category="paragraph"><block ref="4e6a16574fcae9468a780b7adff941e3" category="inline-link-rx"></block>。</block>
   <block id="2bd90c70a6810dfcb6a428870a127746" category="paragraph">共24个Storage VM ^1^</block>
   <block id="5bec2c66c2254fff818718bf2d9e8c44" category="cell">*基于容量的PAYGO或BYOL*^2^</block>
   <block id="8e612b6b306f120390f4c3bd234f9ce8" category="cell">*基于节点的BYOL*^3^</block>
@@ -547,15 +537,12 @@
   <block id="734bf70b1c522fd659b58c67d2c015e9" category="list-text">1-8、弹性卷^3^</block>
   <block id="4d7bfec0bd52de6919125094b75ca0d4" category="list-text">最大聚合大小取决于构成聚合的磁盘。此限制不包括用于数据分层的对象存储。</block>
   <block id="70fb554e00e352dd7da6941d99b53751" category="inline-link">了解有关支持弹性卷的更多信息</block>
-  <block id="952bf77691b64be6e1f8cbee69dd8112" category="list-text">如果您的配置支持Amazon EBS弹性卷功能、则聚合最多可以包含8个磁盘、从而提供高达128 TiB的容量。使用GP3或IO1磁盘时、_new_ Cloud Volumes ONTAP 9.11.0或更高版本的系统默认启用Amazon EBS弹性卷功能。<block ref="eb2d37c537dc5a49383d4a1aea5db77f" category="inline-link-rx"></block></block>
   <block id="dc2065e297a9790d182a555ba250dbda" category="cell">基于节点的 BYOL</block>
-  <block id="3fb5fad778ff400a49097ca0bf0b9754" category="paragraph">在 AWS 中，一个聚合最多可以包含 6 个大小相同的磁盘。但是、如果您的配置支持Amazon EBS弹性卷功能、则聚合最多可以包含8个磁盘。<block ref="eb2d37c537dc5a49383d4a1aea5db77f" category="inline-link-rx"></block></block>
   <block id="75b66e0b3cef735ea985bd79ab9601e2" category="cell">m5dn.4xlarge</block>
   <block id="bc503c45d950d94391e7685c6585b286" category="cell">m5dn.12 x大型</block>
   <block id="30af1a6878bac3a7aaed5d0e64e7b511" category="paragraph">Cloud Volumes ONTAP 提供了不同的许可选项、可让您根据自己的需求选择消费模式。</block>
   <block id="37439fa615a442ec183c1c602f9755f1" category="paragraph">基于容量的许可以 _package_ 的形式提供。部署Cloud Volumes ONTAP 系统时、您可以根据业务需求从多个许可包中进行选择。</block>
   <block id="deb56fb5a824215375b16e72749e2aa3" category="inline-link">详细了解这些许可选项</block>
-  <block id="f3b3e9858be5dbfaf6c39891db3263a2" category="paragraph"><block ref="f3b3e9858be5dbfaf6c39891db3263a2" category="inline-link-rx"></block></block>
   <block id="346f7f627d1a93bfbf315865554048c6" category="section-title">反勒索软件</block>
   <block id="33f66f5b18b24875dca7a81c8f84c5b9" category="cell">896 TiB</block>
   <block id="a4a5e7bfb7afd26ff6a225ef7681add9" category="paragraph">下表显示了单独使用磁盘以及将磁盘和冷数据分层到对象存储的最大系统容量。磁盘限制特定于包含用户数据的磁盘。限制不包括启动磁盘、根磁盘或NVRAM。</block>
@@ -568,12 +555,10 @@
   <block id="dd81441aed81dac4d773ef1291a64e00" category="list-text">Cloud Volumes ONTAP 使用 EBS 卷作为磁盘，最大磁盘大小为 16 TiB 。</block>
   <block id="6f55661d86c0b385d8b362ed90701d0d" category="section-title">基于容量的许可限制</block>
   <block id="54fe37b73954e37cae21db9bbd66c952" category="inline-link">了解Cloud Volumes ONTAP 许可选项</block>
-  <block id="bdb02d545feb4269f91ba30bafe0b877" category="paragraph">以下磁盘限制适用于使用基于容量的许可包的Cloud Volumes ONTAP 系统。<block ref="f34dd0069e6a1810319c8488dea69f29" category="inline-link-rx"></block></block>
   <block id="5aabc9069557be7e4aeff466605cbc75" category="section-title">单个节点</block>
   <block id="6c3b49ddb811c2d88edee86163680009" category="section-title">基于节点的许可限制</block>
   <block id="d017aa906544a3348ee35d75ebb10b72" category="paragraph">以下磁盘限制适用于使用基于节点的许可的Cloud Volumes ONTAP 系统、此许可模式是上一代许可模式、可用于按节点许可Cloud Volumes ONTAP。基于节点的许可仍可供现有客户使用。</block>
   <block id="52960fb5a2829740ddef9c61b6015d59" category="list-text">如果您使用基于节点的许可、则可以为Cloud Volumes ONTAP BYOL系统购买多个基于节点的许可证、以分配超过368 TiB的容量。</block>
-  <block id="f64d686366f69524d03c9279a078fb54" category="paragraph">您可以为单节点系统或 HA 对购买的许可证数量不受限制。请注意，磁盘限制可能会阻止您单独使用磁盘来达到容量限制。您可以通过超出磁盘限制<block ref="91a4fc4ecb983c2fca7588f26341e223" category="inline-link-rx"></block>。<block ref="cd9ff634efd9a4fe20f170cd618702b5" category="inline-link-rx"></block>。</block>
   <block id="fff4bb20e652c529e2e22e76e56ed9b5" category="section-title">采用PAYGO Premium的单节点</block>
   <block id="a9698a2172c5fcc72b7ecd7910403955" category="section-title">具有BYOL的单个节点</block>
   <block id="9dbb7f356b08de585f6ddbe523e4a8d8" category="section-title">采用PAYGO Premium的HA对</block>
@@ -585,7 +570,6 @@
   <block id="8a11b7df22322ab2814174e7745c863f" category="inline-link">ONTAP 注意事项</block>
   <block id="a65d010a2b24f9e4a0919b7faf52d022" category="list-text"><block ref="a65d010a2b24f9e4a0919b7faf52d022" category="inline-link-rx"></block></block>
   <block id="6614eabe1ab14f33107830de1efb584a" category="inline-link-macro">了解如何更改Cloud Volumes ONTAP 的EC2实例类型</block>
-  <block id="f072eddf76dc8c19f3d32a7263fe7931" category="paragraph"><block ref="37cca4b92d12a1904a84ee04c60f6ada" category="inline-link-macro-rx"></block>。</block>
   <block id="09ea0908fbfc4cde85bf416e35dc55c8" category="inline-link-macro">NetApp 支持</block>
   <block id="0b55c70d5652d8fe1f5ddc75633eaa95" category="paragraph">请参见 <block ref="0bcfd67fb2b966e3378fbf640ee81a22" category="inline-link-macro-rx"></block> 了解有关这些实例类型的可用性和支持终止的更多信息。</block>
   <block id="fd1f8e9df9f2971a09de148f57ee5ce0" category="section-title">软件更新必须由BlueXP完成</block>
@@ -601,8 +585,6 @@
   <block id="9889b7a9df56580016f59ccd942fb1d1" category="inline-link">《BlueXP发行说明》</block>
   <block id="fde45fa5cd70a93e88151b83aa348f12" category="inline-link">BlueXP API端点</block>
   <block id="40aa449308d0af16355f19e61ffe344b" category="paragraph">不可以。HA 对中的数据会在节点之间同步镜像，以便在 Google Cloud 发生故障时可以使用这些数据。例如、如果您在节点A上购买了8 TB磁盘、则BlueXP还会在节点B上分配一个8 TB磁盘、用于镜像数据。虽然配置了 16 TB 的容量，但许可证限制仅会计入 8 TB 的容量。</block>
-  <block id="07daff7fe86cfb582b0c246d7cefb754" category="list-text">使用单节点系统时，所有实例类型均支持高写入速度。您可以在部署期间或之后的任何时间从BlueXP启用高写入速度。<block ref="18805b87db41583a67ecc2414d022f2b" category="inline-link-rx"></block>。</block>
-  <block id="6098d03c49b315476cd9c4d4eb330395" category="list-text">使用 HA 对时， Cloud Volumes ONTAP 支持对这些 VM 类型使用较高的写入速度。您可以在部署期间或之后的任何时间从BlueXP启用高写入速度。<block ref="18805b87db41583a67ecc2414d022f2b" category="inline-link-rx"></block>。</block>
   <block id="7a45e6298bb69116e2c6db653fb88884" category="sidebar">所有BlueXP文档</block>
   <block id="bd5465eb0e8cf8f303aee7ea9420c8b1" category="sidebar">BlueXP博客</block>
   <block id="2819feead2b07762a4465189ab8b2f52" category="paragraph-title">对于 HA 对，是每个节点的许可容量限制还是整个 HA 对的许可容量限制？</block>
@@ -669,20 +651,17 @@
   <block id="a8c4c892aed6484fe804ae459960a806" category="section-title">Google Cloud中的映像验证</block>
   <block id="ea34816f3c506620775a84c7a17f65bb" category="paragraph">现在、我们提供了增强的安全功能来验证通过Google Cloud导出的Cloud Volumes ONTAP 映像文件的签名。</block>
   <block id="af10bd89b3d2714a711373f227970f8d" category="inline-link-macro">了解有关Google Cloud映像验证的更多信息</block>
-  <block id="7fd1203256e771eb74f1b349e3dcaea6" category="paragraph"><block ref="cbc507c6f6fef1246987c7525bf37637" category="inline-link-macro-rx"></block>。</block>
   <block id="1b6ed76b2dfdf777c3f7f69a51b27da8" category="section-title">Google Cloud中的新实例支持</block>
   <block id="c7614931957b0270f4ee5806224011a7" category="paragraph">现在、对于Cloud Volumes ONTAP 单节点部署和Google Cloud中的高可用性部署、Freemium、PAYGO Premium、基于节点的BYOL和基于容量的许可证支持两种新的实例类型。</block>
   <block id="33031b274bf5d81fbfbd69c1f2ea39a2" category="list-text">n2-standard-48</block>
   <block id="7c347fcea29ffaea485ee6128a9d7a06" category="list-text">n2-standard-64</block>
   <block id="a4e7d5c6d93cbdfda5947e8b8356e197" category="inline-link-macro">详细了解Google Cloud中支持的配置</block>
   <block id="7d79f600f7bce2dc1b1eea8ef36b3477" category="paragraph"><block ref="6581d56e4f9d9829469412aa95295d08" category="inline-link-macro-rx"></block>。</block>
-  <block id="825b72c29694b250600da1a6306f10a9" category="paragraph"><block ref="012ba5bcba73cfdbd01dce1c158d5e6b" category="inline-link-macro-rx"></block>。</block>
   <block id="3e933a57f8cc8a9465bd8e62bb3ffd3c" category="paragraph">您可以从9.12.1版升级到Cloud Volumes ONTAP 9.13.0。BlueXP将提示您将符合条件的Cloud Volumes ONTAP 系统升级到此版本。</block>
   <block id="7353c6310f3c14fba2d49d2cf95e6f82" category="paragraph">要部署新的Cloud Volumes ONTAP 9.13.0系统并将现有系统升级到9.13.0、BlueXP Connector必须运行版本3.9.26或更高版本。</block>
   <block id="41104125a8a3ef6fe8985ff4df5257be" category="paragraph">在AWS中、Cloud Volumes ONTAP 不再支持C4、M4和M4 EC2实例类型。如果现有系统运行的是C4、M4或r4实例类型、则必须更改为c5、M5或R5实例系列中的实例类型。只有在更改实例类型后才能升级到此版本。</block>
   <block id="8e8865183ac138d80e1eac90bc023d09" category="list-text">从Cloud Volumes ONTAP 软件9.13.0版开始、可以为以下HA对部署实例提供_Flash Cache"高写入速度"和更高的最大传输单元(MTU) 8、896字节：</block>
   <block id="f23467ff8f84fc95ca2baa4b362c7865" category="inline-link">在Google Cloud中启动HA对</block>
-  <block id="7477066216e27af7df839cd63548d9a0" category="paragraph">在部署符合条件的实例类型时、您可以启用_Flash Cache_和高写入速度。要启用8、896字节的最大传输单元、必须在部署中选择VPC-1、VPC-2或VPC-3。MTU越高、网络吞吐量就越高。有关启动其中一种部署的详细信息、请参见<block ref="aeb6f5c153b1dc31a05c0c3a25902ee7" category="inline-link-rx"></block>。</block>
   <block id="13a86b4a06586a14808c627b883e338d" category="admonition">_Flash cache"、"高写入"模式和8、896的MTU与功能相关、不能在已配置的实例中单独禁用。</block>
   <block id="dc0f989b2f6bd3e7bf961fb6ea788d85" category="summary">本发行说明介绍了Cloud Volumes ONTAP 9.13.0的新增功能、限制和已知问题。</block>
   <block id="f53ab0fd2ad9b3e113196ed1a6d6792a" category="doc">《Cloud Volumes ONTAP 9.13.0发行说明》</block>
@@ -690,18 +669,39 @@
   <block id="e976f9591845e426a456344d35bd0caf" category="list-text">32 TiB (仅限受管磁盘)</block>
   <block id="32830aa4ef4df4b9d8e47549047e69c8" category="inline-link-macro">Google Cloud中按许可证支持的配置</block>
   <block id="84be1484c7ac300bd9e0b83a7535caeb" category="paragraph">了解更多信息 <block ref="2e8eda968169518df52bf6fcb01f61cf" category="inline-link-macro-rx"></block>。</block>
-  <block id="0de1a1ee4761fb32fe7c011af9b37f8b" category="list-text">此 VM 类型包括本地 NVMe 存储， Cloud Volumes ONTAP 使用此存储作为 _Flash Cache_ 。Flash Cache 通过实时智能缓存最近读取的用户数据和 NetApp 元数据来加快数据访问速度。它适用于随机读取密集型工作负载，包括数据库，电子邮件和文件服务。<block ref="11a0a91823c32739dc802a8a06ed9368" category="inline-link-rx"></block>。</block>
   <block id="573ba387c27d105c1e3fd20266d13123" category="list-text">L16s_v3 ^1、3、5^</block>
   <block id="2bb521d2d5cea05a3b9b29f1cf232c63" category="list-text">L32s_v3 ^1、3、5^</block>
   <block id="bcc4564bd7fc660f5dd5b39219b9775f" category="list-text">只有Cloud Volumes ONTAP 9.11.1或更早版本的部署才支持这些VM。对于这些VM类型、您可以将现有页面Blob部署从Cloud Volumes ONTAP 9.11.1升级到9.12.1.您不能使用Cloud Volumes ONTAP 9.12.1或更高版本执行新页面Blob部署。</block>
   <block id="7b9e5415e02ff7ad5eaae61345740517" category="inline-link">了解存储如何在Google Cloud中运行的Cloud Volumes ONTAP HA对中工作</block>
-  <block id="e14f9eb0a41dc045a4d5568d18e8170e" category="paragraph"><block ref="50d9731ce0bfc8e3757cc819b5895c1f" category="inline-link-rx"></block>。</block>
-  <block id="1201140e917505446359a76c53a69515" category="paragraph">如果您充分利用<block ref="e066b15eeebd4e6d571fd7dd588f94f7" category="inline-link-rx"></block> 在要将 Cloud Volumes ONTAP 部署到的 VPC 中，您需要实施 DNS 记录，以便将流量转发到所需的<block ref="c007aa246e3c48e1ccfa24499d50b4d8" category="inline-link-rx"></block>。</block>
   <block id="1b604734bf53595ed7c7d204bb25e549" category="list-text">L16s_v3 ^2^</block>
   <block id="645c4fc55b2cf93995a9e487870102f5" category="list-text">L32s_v3 ^2^</block>
   <block id="468539119bbdc1adf73b917e2900aee4" category="inline-link">了解如何使用BlueXP备份和恢复来备份和还原ONTAP 数据</block>
-  <block id="97f2669f2be89519b70ab300a23d78bf" category="paragraph"><block ref="dd0e067e6a9ee59d9a054d0786a54cd0" category="inline-link-rx"></block>。</block>
-  <block id="619c180e46c9dec776a0347d35298e14" category="paragraph">最新版本的BlueXP还引入了其他功能和增强功能。请参见<block ref="6872c7556ed1cb501f7ddf52354e86ee" category="inline-link-rx"></block> 了解详细信息。</block>
   <block id="f5d86d667fcde1b9fc5b1c45e55d135e" category="cell">64 ^4^</block>
   <block id="5ce58b1e3bfddca3ae7d5a13676224ff" category="list-text">虽然这些EC2实例类型支持64个以上的vCPU、但Cloud Volumes ONTAP 仅支持多达64个vCPU。</block>
+  <block id="c46270a9bdf069bd0e015f7953e02355" category="paragraph"><block ref="c46270a9bdf069bd0e015f7953e02355" category="inline-link-rx"></block></block>
+  <block id="d75c8a72363ede5ded8979310421b255" category="paragraph">如果您充分利用<block ref="e066b15eeebd4e6d571fd7dd588f94f7" category="inline-link-rx"></block> 在要将 Cloud Volumes ONTAP 部署到的 VPC 中，您需要实施 DNS 记录，以便将流量转发到所需的<block ref="e6b10532507a1a1747789a49cf51c637" category="inline-link-rx"></block>。</block>
+  <block id="79d3c4941fdb49ae08cc30405f716cce" category="list-text">对于某些配置，磁盘限制会阻止您单独使用磁盘来达到容量限制。在这些情况下，您可以通过达到容量限制<block ref="aea0958203307daa433f894622f3e640" category="inline-link-rx"></block>。有关磁盘限制的信息，请参见 <block ref="71ccaacc6f6c8feca068c7ff1a7b2eb5" category="inline-link-macro-rx"></block>。</block>
+  <block id="ca40429b1b07555a35de829b976a6961" category="paragraph">在 AWS 中，一个聚合最多可以包含 6 个大小相同的磁盘。但是、如果您的配置支持Amazon EBS弹性卷功能、则聚合最多可以包含8个磁盘。<block ref="d6d48ea3644fd45f9f7ff8f4c8d4ae57" category="inline-link-rx"></block></block>
+  <block id="9df4ca2adcfbf390d35edbeb52928a78" category="list-text">某些实例类型包括本地 NVMe 存储， Cloud Volumes ONTAP 将其用作 _Flash Cache_ 。Flash Cache 通过实时智能缓存最近读取的用户数据和 NetApp 元数据来加快数据访问速度。它适用于随机读取密集型工作负载，包括数据库，电子邮件和文件服务。必须在所有卷上禁用数据压缩，才能利用 Flash Cache 性能改进功能。<block ref="da56a164195bbdee72f1dfc4ea53669d" category="inline-link-rx"></block>。</block>
+  <block id="ce4956d12fe22f1b1243720ce22651e0" category="list-text">在使用 HA 对时， Cloud Volumes ONTAP 支持对大多数实例类型使用高写入速度。使用单节点系统时，所有实例类型均支持高写入速度。<block ref="721fe5ee3bbc3d8295d8615ed77ff9be" category="inline-link-rx"></block>。</block>
+  <block id="f6dcc1a079544e36390b698b6f59bf4e" category="paragraph">以下磁盘限制适用于使用基于容量的许可包的Cloud Volumes ONTAP 系统。<block ref="360eefdcdd22adda63e8597e9466029a" category="inline-link-rx"></block></block>
+  <block id="05c9b06fc32318d0689c553219a9d496" category="paragraph">您可以为单节点系统或 HA 对购买的许可证数量不受限制。请注意，磁盘限制可能会阻止您单独使用磁盘来达到容量限制。您可以通过超出磁盘限制<block ref="aea0958203307daa433f894622f3e640" category="inline-link-rx"></block>。<block ref="ca37ce4dde5616ef242d545490c7e6ee" category="inline-link-rx"></block>。</block>
+  <block id="fc8746b925f8923889b77841242bf054" category="paragraph"><block ref="771bd01d5b66ba0bcb76d734267dc8bb" category="inline-link-rx"></block>。</block>
+  <block id="ae90a2e4532cb9b615489b63c36e2383" category="paragraph"><block ref="dca5658ae26fff987979f5de0a83e9fd" category="inline-link-rx"></block>。</block>
+  <block id="efb78221b5926bd89d824f8dec9a7ed2" category="list-text">磁盘限制可以防止您单独使用磁盘来达到最大系统容量限制。您可以通过达到容量限制<block ref="aea0958203307daa433f894622f3e640" category="inline-link-rx"></block>。</block>
+  <block id="df25654d93147d2e6dc5b5b1fd1a4b82" category="paragraph">在部署符合条件的实例类型时、您可以启用_Flash Cache_和高写入速度。要启用8、896字节的最大传输单元、必须在部署中选择VPC-1、VPC-2或VPC-3。MTU越高、网络吞吐量就越高。有关启动其中一种部署的详细信息、请参见<block ref="663913c4edf07faddf2fc43cb75f2fe2" category="inline-link-rx"></block>。</block>
+  <block id="396e70da46ca6b8f2dd7d352ab5d7f16" category="paragraph">对于某些配置，磁盘限制会阻止您单独使用磁盘来达到容量限制。您可以通过达到容量限制<block ref="aea0958203307daa433f894622f3e640" category="inline-link-rx"></block>。有关详细信息，请参见以下磁盘限制。</block>
+  <block id="769a653e8483d7efc5ec7ad2044e739c" category="paragraph"><block ref="b8246ed4559cd25bd4b019aae2787f00" category="inline-link-rx"></block>。</block>
+  <block id="81a074db33c6f62838933c92142f16d6" category="paragraph"><block ref="f969ecf664fae2f86e88c525c7dd7acf" category="inline-link-rx"></block>。</block>
+  <block id="70a8e1fb7e815dcae7d43566ab0db1e7" category="paragraph"><block ref="45c029924054162202773bd86e09b271" category="inline-link-rx"></block>。</block>
+  <block id="a990fdc46668be8e7f963c8df127bbe8" category="paragraph">对于某些配置，磁盘限制会阻止您单独使用磁盘来达到容量限制。在这些情况下，您可以通过达到容量限制<block ref="aea0958203307daa433f894622f3e640" category="inline-link-rx"></block>。有关详细信息，请参见以下容量和磁盘限制。</block>
+  <block id="100e0e5b58741c034dadba013998e8b8" category="list-text">如果您的配置支持Amazon EBS弹性卷功能、则聚合最多可以包含8个磁盘、从而提供高达128 TiB的容量。使用GP3或IO1磁盘时、_new_ Cloud Volumes ONTAP 9.11.0或更高版本的系统默认启用Amazon EBS弹性卷功能。<block ref="d6d48ea3644fd45f9f7ff8f4c8d4ae57" category="inline-link-rx"></block></block>
+  <block id="c0ad13124302d4d047c0f916a6418182" category="paragraph"><block ref="cc3941262f254d1055804ecddca39dec" category="inline-link-rx"></block>。</block>
+  <block id="4bdb15bfe1bad472d818dc31e8f53185" category="paragraph">最新版本的BlueXP还引入了其他功能和增强功能。请参见<block ref="c7887e85c6060ae2594d873a0f2ae025" category="inline-link-rx"></block> 了解详细信息。</block>
+  <block id="ee595b8456f355e35d1bb9a3bdf2fd2e" category="paragraph"><block ref="2011e01ee8a79d4bf660fe2d1770d263" category="inline-link-macro-rx"></block>。</block>
+  <block id="a92c2d98e174fb58a9af451a8c3413f9" category="paragraph"><block ref="8271d50d033781f1596acf863334de58" category="inline-link-macro-rx"></block>。</block>
+  <block id="34b2f4eab827285a262b1781e672e882" category="paragraph"><block ref="3f0e03f473a215943c109dc7746cdb60" category="inline-link-macro-rx"></block>。</block>
+  <block id="3959237302934c658e49cff52293a2a5" category="list-text">此 VM 类型包括本地 NVMe 存储， Cloud Volumes ONTAP 使用此存储作为 _Flash Cache_ 。Flash Cache 通过实时智能缓存最近读取的用户数据和 NetApp 元数据来加快数据访问速度。它适用于随机读取密集型工作负载，包括数据库，电子邮件和文件服务。<block ref="b6abeaa384c5670d0721bcc6323011fc" category="inline-link-rx"></block>。</block>
+  <block id="9655d27d34aaf491a4183d57c0530647" category="list-text">使用单节点系统时，所有实例类型均支持高写入速度。您可以在部署期间或之后的任何时间从BlueXP启用高写入速度。<block ref="721fe5ee3bbc3d8295d8615ed77ff9be" category="inline-link-rx"></block>。</block>
+  <block id="44ed637222e5d571deff68351343db0d" category="list-text">使用 HA 对时， Cloud Volumes ONTAP 支持对这些 VM 类型使用较高的写入速度。您可以在部署期间或之后的任何时间从BlueXP启用高写入速度。<block ref="721fe5ee3bbc3d8295d8615ed77ff9be" category="inline-link-rx"></block>。</block>
 </blocks>

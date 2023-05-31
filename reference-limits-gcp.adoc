@@ -24,7 +24,7 @@ Cloud Volumes ONTAP 系统的最大系统容量取决于其许可证。最大系
 
 NetApp 不支持超过系统容量限制。如果您达到许可的容量限制、BlueXP将显示一条需要执行操作消息、并且不再允许您添加其他磁盘。
 
-对于某些配置，磁盘限制会阻止您单独使用磁盘来达到容量限制。您可以通过达到容量限制 https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/concept-data-tiering.html["将非活动数据分层到对象存储"^]。有关详细信息，请参见以下磁盘限制。
+对于某些配置，磁盘限制会阻止您单独使用磁盘来达到容量限制。您可以通过达到容量限制 https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-data-tiering.html["将非活动数据分层到对象存储"^]。有关详细信息，请参见以下磁盘限制。
 
 [cols="25,75"]
 |===
@@ -123,7 +123,7 @@ Cloud Volumes ONTAP 将 Google 云平台磁盘分组为 _aggreges_ 。聚合可�
 
 这些是经过测试的限制。虽然理论上可以配置其他 Storage VM ，但不支持。
 
-https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-managing-svms-gcp.html["了解如何创建其他 Storage VM"^]。
+https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-managing-svms-gcp.html["了解如何创建其他 Storage VM"^]。
 
 [cols="2*"]
 |===
@@ -241,4 +241,4 @@ https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-managing-sv
 
 节点重新启动后，配对节点必须先同步数据，然后才能返回存储。重新同步数据所需的时间取决于节点关闭时客户端写入的数据量以及交还期间的数据写入速度。
 
-https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/concept-ha-google-cloud.html["了解存储如何在Google Cloud中运行的Cloud Volumes ONTAP HA对中工作"^]。
+https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-ha-google-cloud.html["了解存储如何在Google Cloud中运行的Cloud Volumes ONTAP HA对中工作"^]。

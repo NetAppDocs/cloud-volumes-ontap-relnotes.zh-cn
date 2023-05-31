@@ -16,7 +16,7 @@ summary: Cloud Volumes ONTAP 9.13.0提供了一项新的增强功能。
 [role="lead"]
 Cloud Volumes ONTAP 9.13.0提供了新的增强功能。
 
-最新版本的BlueXP还引入了其他功能和增强功能。请参见 https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/whats-new.html["《BlueXP发行说明》"^] 了解详细信息。
+最新版本的BlueXP还引入了其他功能和增强功能。请参见 https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/whats-new.html["《BlueXP发行说明》"^] 了解详细信息。
 
 
 
@@ -38,7 +38,7 @@ Cloud Volumes ONTAP 9.13.0的通用发布(GA)版本现在可在AWS、Azure和Goo
 
 现在、我们提供了增强的安全功能来验证通过Google Cloud导出的Cloud Volumes ONTAP 映像文件的签名。
 
-link:https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/concept-gcp-image-verification.html["了解有关Google Cloud映像验证的更多信息"^]。
+link:https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-gcp-image-verification.html["了解有关Google Cloud映像验证的更多信息"^]。
 
 
 
@@ -64,7 +64,7 @@ link:https://docs.netapp.com/us-en/cloud-volumes-ontap-relnotes/reference-config
 
 必须从BlueXP完成Cloud Volumes ONTAP 升级。您不应使用 System Manager 或命令行界面升级 Cloud Volumes ONTAP 。这样做可能会影响系统稳定性。
 
-link:http://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-updating-ontap-cloud.html["了解在收到BlueXP通知时如何升级"^]。
+link:http://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-updating-ontap-cloud.html["了解在收到BlueXP通知时如何升级"^]。
 
 
 
@@ -95,6 +95,6 @@ TIP: 默认情况下，连接器会自动升级，因此您应运行最新版本
 
 在AWS中、Cloud Volumes ONTAP 不再支持C4、M4和M4 EC2实例类型。如果现有系统运行的是C4、M4或r4实例类型、则必须更改为c5、M5或R5实例系列中的实例类型。只有在更改实例类型后才能升级到此版本。
 
-link:https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-change-ec2-instance.html["了解如何更改Cloud Volumes ONTAP 的EC2实例类型"^]。
+link:https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-change-ec2-instance.html["了解如何更改Cloud Volumes ONTAP 的EC2实例类型"^]。
 
 请参见 link:https://mysupport.netapp.com/info/communications/ECMLP2880231.html["NetApp 支持"^] 了解有关这些实例类型的可用性和支持终止的更多信息。

@@ -34,4 +34,4 @@ Keystone Flex 订阅:: 一种按需购买，基于订阅的服务，可为那些
 
 先前的逐节点许可模式仍然适用于已购买许可证或已订阅有效的 Marketplace 的现有客户。
 
-https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/concept-licensing.html["详细了解这些许可选项"^]
+https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-licensing.html["详细了解这些许可选项"^]

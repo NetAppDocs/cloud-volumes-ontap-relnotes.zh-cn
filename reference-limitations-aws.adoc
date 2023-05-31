@@ -54,4 +54,4 @@ Cloud Volumes ONTAP 不会在空闲时释放 CPU ，因此 https://aws.amazon.co
 
 节点重新启动后，配对节点必须先同步数据，然后才能返回存储。重新同步数据所需的时间取决于节点关闭时客户端写入的数据量以及交还期间的数据写入速度。
 
-https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/concept-ha.html["了解存储在 AWS 中运行的 Cloud Volumes ONTAP HA 对中的工作原理"^]。
+https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-ha.html["了解存储在 AWS 中运行的 Cloud Volumes ONTAP HA 对中的工作原理"^]。
