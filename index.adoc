@@ -2,10 +2,10 @@
 layout: astra 
 sidebar: sidebar 
 permalink: index.html 
-lead: These release notes describe new features, limitations, and known issues for Cloud Volumes ONTAP 9.13.0. 
-summary: 本发行说明介绍了Cloud Volumes ONTAP 9.13.0的新增功能、限制和已知问题。 
+lead: These release notes describe new features, limitations, and known issues for Cloud Volumes ONTAP 9.13.1. 
+summary: 本发行说明介绍了Cloud Volumes ONTAP 9.13.1的新增功能、限制和已知问题。 
 ---
-= 《Cloud Volumes ONTAP 9.13.0发行说明》
+= Cloud Volumes ONTAP 9.13.1发行说明
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

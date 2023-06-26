@@ -385,10 +385,6 @@
   <block id="e7089e61c962cfdae0de5b1d0748b6f2" category="list-text">Cloud Volumes ONTAP 可以在云提供商提供的预留或按需 VM 实例上运行。不支持使用其他 VM 实例类型的解决方案。</block>
   <block id="b049fcbe8198301adc6bf87634a02845" category="section-title">HA 对</block>
   <block id="2eacfdd792ca3ab121472c95654b43ec" category="paragraph">在 Azure 中将 Cloud Volumes ONTAP 部署为 HA 对时，您可以从以下配置中进行选择。</block>
-  <block id="2cdb7e570d475b109f07d648d27eec58" category="list-text">DS5_v2 ^1^</block>
-  <block id="5631d6c294c4b6398535b6dd0c9a2475" category="list-text">DS14_v2 ^1^</block>
-  <block id="1c593d3ddd7d37cba983231fd6abdd9d" category="list-text">DS15_v2 ^1^</block>
-  <block id="0b9dfa1d6e582593bcd75a94bfaa5add" category="list-text">E48s_v3 ^1^</block>
   <block id="4efc25f6cc7013d95ca2f5ab1dcc3366" category="list-text">只有在需要 Azure 维护控制时，才建议使用此虚拟机。由于定价较高，因此不建议用于任何其他使用情形。</block>
   <block id="88d444d836b2ea3ca342f4cc3a6b2b50" category="paragraph">在 Azure 中，一个聚合最多可以包含 12 个类型和大小相同的磁盘。</block>
   <block id="90d1dad6ac7388ba65631ec0b927dabc" category="paragraph">单节点系统使用 Azure 受管磁盘。支持以下磁盘大小：</block>
@@ -629,11 +625,6 @@
   <block id="618671ce849d1a8ff524b77c314fe4e2" category="section-title">不再支持c4、m4和r4实例</block>
   <block id="e19784a5420512b2876c7b24680652b5" category="cell">40,000</block>
   <block id="4237e167da34ce4cc54b7915a9ee779a" category="list-text">必须在所有卷上禁用数据压缩、才能利用Cloud Volumes ONTAP 9.12.0之前的Flash Cache性能改进功能。在部署或升级到Cloud Volumes ONTAP 9.12.1时、无需禁用数据压缩。</block>
-  <block id="b80fdfea42d505d96700af73261164a3" category="section-title">带有页面blob的HA对</block>
-  <block id="45af86f1009df1b7e7575bd510350625" category="list-text">E32ds_v4 ^1.3^</block>
-  <block id="70f33ddea414a26001d98ec1ee7c49a4" category="list-text">E48ds_v4 ^1、3^</block>
-  <block id="338b010678cca88a9e61c9a5b5db4e85" category="list-text">E80ids_v4 ^1、2、3^</block>
-  <block id="540e57f70019c3eb8d7fb999259fd473" category="cell">页面Blobs</block>
   <block id="8c41a0d9e980d7223b4ad7585ce70fa2" category="section-title">具有共享受管磁盘的HA对</block>
   <block id="678bba9079ce79c3806a40a1b6306799" category="list-text">E8ds_v4 ^4^</block>
   <block id="fd5fff93ea6b0d7a9072274f514573ae" category="list-text">E32ds_v4 ^1、4^</block>
@@ -641,37 +632,14 @@
   <block id="de04224de00bacc811083f3a49af24b0" category="list-text">E80ids_v4 ^1、2、4^</block>
   <block id="72e0d2497593ac6a5fdc024537224aed" category="list-text">只有在共享受管磁盘上运行的单个可用性区域配置中的HA对才支持这些VM类型。</block>
   <block id="7502ea8e5d477af63195f04d6179ca92" category="list-text">单个可用性区域中的HA对以及共享受管磁盘上运行的多个可用性区域配置支持这些VM类型。</block>
-  <block id="a1998150800fd10b93e35cace9e4373f" category="summary">Cloud Volumes ONTAP 9.13.0提供了一项新的增强功能。</block>
-  <block id="3d17e08f201d7b7be36023f1e5ae0588" category="doc">Cloud Volumes ONTAP 9.13.0中的新增功能</block>
-  <block id="6d35656a75b4490b417ac27bea22133b" category="paragraph">Cloud Volumes ONTAP 9.13.0提供了新的增强功能。</block>
-  <block id="d0429a37d66735eb8b3cc4e05bfe725a" category="section-title">9.13.0 GA (2023年3月5日)</block>
-  <block id="08a6d92c67ddca491cb942b3dad79c36" category="paragraph">Cloud Volumes ONTAP 9.13.0的通用发布(GA)版本现在可在AWS、Azure和Google Cloud中使用。此版本包含以下新增功能和增强功能：</block>
-  <block id="98f6dc87e7c206ec16da559a2af45beb" category="section-title">Google Cloud中的Flash Cache和高写入速度</block>
-  <block id="77e5d57bae938bc31208cded57756dc8" category="paragraph">现在、对于Cloud Volumes ONTAP 9.13.0版本的特定实例、可支持闪存、高写入速度和8、896字节的高最大传输单元(MTU)。</block>
-  <block id="a8c4c892aed6484fe804ae459960a806" category="section-title">Google Cloud中的映像验证</block>
-  <block id="ea34816f3c506620775a84c7a17f65bb" category="paragraph">现在、我们提供了增强的安全功能来验证通过Google Cloud导出的Cloud Volumes ONTAP 映像文件的签名。</block>
-  <block id="af10bd89b3d2714a711373f227970f8d" category="inline-link-macro">了解有关Google Cloud映像验证的更多信息</block>
-  <block id="1b6ed76b2dfdf777c3f7f69a51b27da8" category="section-title">Google Cloud中的新实例支持</block>
-  <block id="c7614931957b0270f4ee5806224011a7" category="paragraph">现在、对于Cloud Volumes ONTAP 单节点部署和Google Cloud中的高可用性部署、Freemium、PAYGO Premium、基于节点的BYOL和基于容量的许可证支持两种新的实例类型。</block>
   <block id="33031b274bf5d81fbfbd69c1f2ea39a2" category="list-text">n2-standard-48</block>
   <block id="7c347fcea29ffaea485ee6128a9d7a06" category="list-text">n2-standard-64</block>
-  <block id="a4e7d5c6d93cbdfda5947e8b8356e197" category="inline-link-macro">详细了解Google Cloud中支持的配置</block>
-  <block id="7d79f600f7bce2dc1b1eea8ef36b3477" category="paragraph"><block ref="6581d56e4f9d9829469412aa95295d08" category="inline-link-macro-rx"></block>。</block>
-  <block id="3e933a57f8cc8a9465bd8e62bb3ffd3c" category="paragraph">您可以从9.12.1版升级到Cloud Volumes ONTAP 9.13.0。BlueXP将提示您将符合条件的Cloud Volumes ONTAP 系统升级到此版本。</block>
-  <block id="7353c6310f3c14fba2d49d2cf95e6f82" category="paragraph">要部署新的Cloud Volumes ONTAP 9.13.0系统并将现有系统升级到9.13.0、BlueXP Connector必须运行版本3.9.26或更高版本。</block>
   <block id="41104125a8a3ef6fe8985ff4df5257be" category="paragraph">在AWS中、Cloud Volumes ONTAP 不再支持C4、M4和M4 EC2实例类型。如果现有系统运行的是C4、M4或r4实例类型、则必须更改为c5、M5或R5实例系列中的实例类型。只有在更改实例类型后才能升级到此版本。</block>
   <block id="8e8865183ac138d80e1eac90bc023d09" category="list-text">从Cloud Volumes ONTAP 软件9.13.0版开始、可以为以下HA对部署实例提供_Flash Cache"高写入速度"和更高的最大传输单元(MTU) 8、896字节：</block>
   <block id="f23467ff8f84fc95ca2baa4b362c7865" category="inline-link">在Google Cloud中启动HA对</block>
   <block id="13a86b4a06586a14808c627b883e338d" category="admonition">_Flash cache"、"高写入"模式和8、896的MTU与功能相关、不能在已配置的实例中单独禁用。</block>
-  <block id="dc0f989b2f6bd3e7bf961fb6ea788d85" category="summary">本发行说明介绍了Cloud Volumes ONTAP 9.13.0的新增功能、限制和已知问题。</block>
-  <block id="f53ab0fd2ad9b3e113196ed1a6d6792a" category="doc">《Cloud Volumes ONTAP 9.13.0发行说明》</block>
   <block id="0bd47e4dae550ba8bfd133248f3efde6" category="list-text">16 TiB (仅限受管磁盘)</block>
   <block id="e976f9591845e426a456344d35bd0caf" category="list-text">32 TiB (仅限受管磁盘)</block>
-  <block id="32830aa4ef4df4b9d8e47549047e69c8" category="inline-link-macro">Google Cloud中按许可证支持的配置</block>
-  <block id="84be1484c7ac300bd9e0b83a7535caeb" category="paragraph">了解更多信息 <block ref="2e8eda968169518df52bf6fcb01f61cf" category="inline-link-macro-rx"></block>。</block>
-  <block id="573ba387c27d105c1e3fd20266d13123" category="list-text">L16s_v3 ^1、3、5^</block>
-  <block id="2bb521d2d5cea05a3b9b29f1cf232c63" category="list-text">L32s_v3 ^1、3、5^</block>
-  <block id="bcc4564bd7fc660f5dd5b39219b9775f" category="list-text">只有Cloud Volumes ONTAP 9.11.1或更早版本的部署才支持这些VM。对于这些VM类型、您可以将现有页面Blob部署从Cloud Volumes ONTAP 9.11.1升级到9.12.1.您不能使用Cloud Volumes ONTAP 9.12.1或更高版本执行新页面Blob部署。</block>
   <block id="7b9e5415e02ff7ad5eaae61345740517" category="inline-link">了解存储如何在Google Cloud中运行的Cloud Volumes ONTAP HA对中工作</block>
   <block id="1b604734bf53595ed7c7d204bb25e549" category="list-text">L16s_v3 ^2^</block>
   <block id="645c4fc55b2cf93995a9e487870102f5" category="list-text">L32s_v3 ^2^</block>
@@ -698,10 +666,22 @@
   <block id="100e0e5b58741c034dadba013998e8b8" category="list-text">如果您的配置支持Amazon EBS弹性卷功能、则聚合最多可以包含8个磁盘、从而提供高达128 TiB的容量。使用GP3或IO1磁盘时、_new_ Cloud Volumes ONTAP 9.11.0或更高版本的系统默认启用Amazon EBS弹性卷功能。<block ref="d6d48ea3644fd45f9f7ff8f4c8d4ae57" category="inline-link-rx"></block></block>
   <block id="c0ad13124302d4d047c0f916a6418182" category="paragraph"><block ref="cc3941262f254d1055804ecddca39dec" category="inline-link-rx"></block>。</block>
   <block id="4bdb15bfe1bad472d818dc31e8f53185" category="paragraph">最新版本的BlueXP还引入了其他功能和增强功能。请参见<block ref="c7887e85c6060ae2594d873a0f2ae025" category="inline-link-rx"></block> 了解详细信息。</block>
-  <block id="ee595b8456f355e35d1bb9a3bdf2fd2e" category="paragraph"><block ref="2011e01ee8a79d4bf660fe2d1770d263" category="inline-link-macro-rx"></block>。</block>
   <block id="a92c2d98e174fb58a9af451a8c3413f9" category="paragraph"><block ref="8271d50d033781f1596acf863334de58" category="inline-link-macro-rx"></block>。</block>
   <block id="34b2f4eab827285a262b1781e672e882" category="paragraph"><block ref="3f0e03f473a215943c109dc7746cdb60" category="inline-link-macro-rx"></block>。</block>
   <block id="3959237302934c658e49cff52293a2a5" category="list-text">此 VM 类型包括本地 NVMe 存储， Cloud Volumes ONTAP 使用此存储作为 _Flash Cache_ 。Flash Cache 通过实时智能缓存最近读取的用户数据和 NetApp 元数据来加快数据访问速度。它适用于随机读取密集型工作负载，包括数据库，电子邮件和文件服务。<block ref="b6abeaa384c5670d0721bcc6323011fc" category="inline-link-rx"></block>。</block>
   <block id="9655d27d34aaf491a4183d57c0530647" category="list-text">使用单节点系统时，所有实例类型均支持高写入速度。您可以在部署期间或之后的任何时间从BlueXP启用高写入速度。<block ref="721fe5ee3bbc3d8295d8615ed77ff9be" category="inline-link-rx"></block>。</block>
   <block id="44ed637222e5d571deff68351343db0d" category="list-text">使用 HA 对时， Cloud Volumes ONTAP 支持对这些 VM 类型使用较高的写入速度。您可以在部署期间或之后的任何时间从BlueXP启用高写入速度。<block ref="721fe5ee3bbc3d8295d8615ed77ff9be" category="inline-link-rx"></block>。</block>
+  <block id="7e250845f86eeaaaf4e55296f483f4ee" category="summary">Cloud Volumes ONTAP 9.13.1提供了一项新的增强功能。</block>
+  <block id="59d68d1abaff04001d7f138b569d66a1" category="doc">Cloud Volumes ONTAP 9.13.1中的新增功能</block>
+  <block id="0775e0f9165c68236ce80a5eeaf622d2" category="paragraph">Cloud Volumes ONTAP 9.13.1提供了一些新的增强功能。</block>
+  <block id="9c8c9e4dac5a2be78e81d66cbffd75af" category="section-title">9.13.1 RC1 (2023年6月26日)</block>
+  <block id="73f86a5ebfc8edf0e36c8ad6bb22e282" category="paragraph">Cloud Volumes ONTAP 9.13.1的候选版本1现已在AWS、Azure和Google Cloud中推出。此版本包含以下功能。</block>
+  <block id="9a8603c7a44b001d1d10919fc28a94cc" category="paragraph">您可以从9.12.1和9.13.0版本升级到Cloud Volumes ONTAP 9.13.1。BlueXP将提示您将符合条件的Cloud Volumes ONTAP 系统升级到此版本。</block>
+  <block id="15a36f3b57148762c2209c3b7df4f648" category="paragraph">要部署新的Cloud Volumes ONTAP 9.13.1系统并将现有系统升级到9.13.1、BlueXP Connector必须运行3.9.26或更高版本。</block>
+  <block id="b07f6144410a8635e8ae505b186322a5" category="summary">本发行说明介绍了Cloud Volumes ONTAP 9.13.1的新增功能、限制和已知问题。</block>
+  <block id="a69b1618b78e74242413945e92315e51" category="doc">Cloud Volumes ONTAP 9.13.1发行说明</block>
+  <block id="5f47eaf30741e1b189cb3927920a050e" category="list-text">L48s_v3 ^2^</block>
+  <block id="5d77e4246523d19041d8aaab83469a88" category="list-text">L64s_v3 ^2^</block>
+  <block id="f8f16d462023635d23922013c582281d" category="list-text">L16s_v3 ^1、4、5^</block>
+  <block id="5c5847596a7ce3d290253dfcdcfc153c" category="list-text">L32s_v3 ^1、4、5^</block>
 </blocks>
