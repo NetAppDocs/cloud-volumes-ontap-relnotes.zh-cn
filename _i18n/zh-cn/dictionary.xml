@@ -539,7 +539,6 @@
   <block id="30af1a6878bac3a7aaed5d0e64e7b511" category="paragraph">Cloud Volumes ONTAP 提供了不同的许可选项、可让您根据自己的需求选择消费模式。</block>
   <block id="37439fa615a442ec183c1c602f9755f1" category="paragraph">基于容量的许可以 _package_ 的形式提供。部署Cloud Volumes ONTAP 系统时、您可以根据业务需求从多个许可包中进行选择。</block>
   <block id="deb56fb5a824215375b16e72749e2aa3" category="inline-link">详细了解这些许可选项</block>
-  <block id="346f7f627d1a93bfbf315865554048c6" category="section-title">反勒索软件</block>
   <block id="33f66f5b18b24875dca7a81c8f84c5b9" category="cell">896 TiB</block>
   <block id="a4a5e7bfb7afd26ff6a225ef7681add9" category="paragraph">下表显示了单独使用磁盘以及将磁盘和冷数据分层到对象存储的最大系统容量。磁盘限制特定于包含用户数据的磁盘。限制不包括启动磁盘、根磁盘或NVRAM。</block>
   <block id="aa22c87da31d41edeac2ffbad9e7507d" category="cell">取决于许可证。请参见上述最大系统容量限制。</block>
@@ -675,7 +674,6 @@
   <block id="59d68d1abaff04001d7f138b569d66a1" category="doc">Cloud Volumes ONTAP 9.13.1中的新增功能</block>
   <block id="0775e0f9165c68236ce80a5eeaf622d2" category="paragraph">Cloud Volumes ONTAP 9.13.1提供了一些新的增强功能。</block>
   <block id="9c8c9e4dac5a2be78e81d66cbffd75af" category="section-title">9.13.1 RC1 (2023年6月26日)</block>
-  <block id="73f86a5ebfc8edf0e36c8ad6bb22e282" category="paragraph">Cloud Volumes ONTAP 9.13.1的候选版本1现已在AWS、Azure和Google Cloud中推出。此版本包含以下功能。</block>
   <block id="9a8603c7a44b001d1d10919fc28a94cc" category="paragraph">您可以从9.12.1和9.13.0版本升级到Cloud Volumes ONTAP 9.13.1。BlueXP将提示您将符合条件的Cloud Volumes ONTAP 系统升级到此版本。</block>
   <block id="15a36f3b57148762c2209c3b7df4f648" category="paragraph">要部署新的Cloud Volumes ONTAP 9.13.1系统并将现有系统升级到9.13.1、BlueXP Connector必须运行3.9.26或更高版本。</block>
   <block id="b07f6144410a8635e8ae505b186322a5" category="summary">本发行说明介绍了Cloud Volumes ONTAP 9.13.1的新增功能、限制和已知问题。</block>
@@ -684,4 +682,5 @@
   <block id="5d77e4246523d19041d8aaab83469a88" category="list-text">L64s_v3 ^2^</block>
   <block id="f8f16d462023635d23922013c582281d" category="list-text">L16s_v3 ^1、4、5^</block>
   <block id="5c5847596a7ce3d290253dfcdcfc153c" category="list-text">L32s_v3 ^1、4、5^</block>
+  <block id="808eec7c541e73ef6110de5392ddc8b5" category="paragraph">Cloud Volumes ONTAP 9.13.1的候选版本1现已在AWS、Azure和Google Cloud中推出。</block>
 </blocks>
