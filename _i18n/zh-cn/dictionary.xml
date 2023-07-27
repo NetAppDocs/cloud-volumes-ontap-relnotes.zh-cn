@@ -684,4 +684,6 @@
   <block id="808eec7c541e73ef6110de5392ddc8b5" category="paragraph">Cloud Volumes ONTAP 9.13.1的候选版本1现已在AWS、Azure和Google Cloud中推出。</block>
   <block id="8363a389e0c602867cfdadb32a0bb680" category="cell">均衡持久磁盘^4^、性能(SSD)持久磁盘^4^和标准(HDD)持久磁盘。</block>
   <block id="3ef8b2478ab52b4e7c7dd18d32c5bf06" category="list-text">使用平衡的永久性磁盘和性能(SSD)永久性磁盘时、可以提高写入性能。</block>
+  <block id="3265c73fa992103b2a4f8d03470586ac" category="section-title">9.13.1大会(2023年7月26日)</block>
+  <block id="b5d2ebb75a812f3d5c8fc5e62ce5a672" category="paragraph">Cloud Volumes ONTAP 9.13.1正式发布版现已在AWS、Azure和Google Cloud中推出。</block>
 </blocks>
