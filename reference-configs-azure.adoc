@@ -146,7 +146,7 @@ Cloud Volumes ONTAP 在 Azure 中可作为单节点系统和高可用性（ HA �
 . 使用 SSD 时会启用增强的写入性能。
 . 有关 Azure 区域支持，请参见 https://cloud.netapp.com/cloud-volumes-global-regions["Cloud Volumes 全球地区"^]。
 . Cloud Volumes ONTAP 可以在云提供商提供的预留或按需 VM 实例上运行。不支持使用其他 VM 实例类型的解决方案。
-. SN仅支持标准SSD和HDD以及高级SSD的LRS托管磁盘。
+. 对于标准SSD、HDD和高级SSD、单节点部署仅支持本地冗余存储(LRS)管理的磁盘。
 
 
 
