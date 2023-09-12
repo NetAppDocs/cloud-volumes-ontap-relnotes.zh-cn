@@ -163,6 +163,12 @@ Cloud Volumes ONTAP 使用 Azure 存储作为磁盘并将其分组为 _aggreges_
 
 
 | L32s_v3 | 28 | 896 TiB | 2 个 PIB 
+
+
+| L48s_v3 | 28 | 896 TiB | 2 个 PIB 
+
+
+| L64s_v3 | 28 | 896 TiB | 2 个 PIB 
 |===
 
 
@@ -230,6 +236,12 @@ Cloud Volumes ONTAP 使用 Azure 存储作为磁盘并将其分组为 _aggreges_
 
 
 | L32s_v3 | 28 | 896 TiB | 2 个 PIB 
+
+
+| L48s_v3 | 28 | 896 TiB | 2 个 PIB 
+
+
+| L64s_v3 | 28 | 896 TiB | 2 个 PIB 
 |===
 
 
@@ -250,6 +262,12 @@ Cloud Volumes ONTAP 使用 Azure 存储作为磁盘并将其分组为 _aggreges_
 
 
 | E80ids_v4 | 28 | 896 TiB | 2 个 PIB 
+
+
+| L48s_v3 | 28 | 896 TiB | 2 个 PIB 
+
+
+| L64s_v3 | 28 | 896 TiB | 2 个 PIB 
 |===
 
 
