@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: reference-new.html 
 keywords: 'what"s new, new, features, release notes, enhancements' 
-summary: Cloud Volumes ONTAP 9.13.1提供了一项新的增强功能。 
+summary: Cloud Volumes ONTAP 9.14.0包含一项新增强功能。 
 ---
-= Cloud Volumes ONTAP 9.13.1中的新增功能
+= Cloud Volumes ONTAP 9.14.0中的新增功能
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,21 +14,23 @@ summary: Cloud Volumes ONTAP 9.13.1提供了一项新的增强功能。
 
 
 [role="lead"]
-Cloud Volumes ONTAP 9.13.1提供了一些新的增强功能。
+Cloud Volumes ONTAP 9.14.0包含新的增强功能。
 
 最新版本的BlueXP还引入了其他功能和增强功能。请参见 https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/whats-new.html["《BlueXP发行说明》"^] 了解详细信息。
 
 
 
-== 9.13.1大会(2023年7月26日)
+== 9.14.02023年9月29日)
 
-Cloud Volumes ONTAP 9.13.1正式发布版现已在AWS、Azure和Google Cloud中推出。
+Cloud Volumes ONTAP 9.14.0正式发布(GA)版本现已在AWS、Azure和Google Cloud中推出。此版本包含以下新增功能和增强功能：
 
 
 
-== 9.13.1 RC1 (2023年6月26日)
+=== Azure中的SnapMirror流量隔离
 
-Cloud Volumes ONTAP 9.13.1的候选版本1现已在AWS、Azure和Google Cloud中推出。
+现在、您可以将SnapMirror复制流量与数据和管理流量隔离。通过这一新功能、您可以利用不可路由到用于数据和管理流量的现有子网的额外子网来隔离SnapMirror复制流量。
+
+详细了解如何操作 link:https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-segregate-snapmirror-azure.html["在Azure中隔离SnapMirror流量"^]。
 
 
 
@@ -48,13 +50,13 @@ link:http://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-updating-ontap
 
 === 支持的升级路径
 
-您可以从9.12.1和9.13.0版本升级到Cloud Volumes ONTAP 9.13.1。BlueXP将提示您将符合条件的Cloud Volumes ONTAP 系统升级到此版本。
+您可以从9.13.1.版升级到Cloud Volumes ONTAP 9.14.0。BlueXP将提示您将符合条件的Cloud Volumes ONTAP 系统升级到此版本。
 
 
 
 === 所需版本的Connector
 
-要部署新的Cloud Volumes ONTAP 9.13.1系统并将现有系统升级到9.13.1、BlueXP Connector必须运行3.9.26或更高版本。
+BlueXP连接器必须运行3.9.27或更高版本、才能部署新的Cloud Volumes ONTAP 9.14.0系统并将现有系统升级到9.14.0。
 
 
 TIP: 默认情况下，连接器会自动升级，因此您应运行最新版本。
