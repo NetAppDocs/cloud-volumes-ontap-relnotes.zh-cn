@@ -578,8 +578,6 @@
   <block id="7093c2c9844cf46dcd5d50c6d596d244" category="paragraph-title">对于 HA 对，镜像数据是否计入许可的容量限制？</block>
   <block id="9d123a356c832621891a3328c128b78b" category="list-text">L8s_v3 ^2^</block>
   <block id="b869cbdadaa9844d32c24de3f4db3242" category="cell">受管磁盘</block>
-  <block id="bdebc137cea9fa36d51bbecef44687cc" category="paragraph">HA对使用受管磁盘。(9.12.1版之前部署的HA对支持页面Blobs。)</block>
-  <block id="2c5ad1776ac4cf950a5e0576f35bf111" category="paragraph">支持以下磁盘大小：</block>
   <block id="dbe94f36417009d827f76ccf107bd90c" category="section-title">不应使用自动应用程序资源管理解决方案</block>
   <block id="2f9882645b2c32820ad085240bacb763" category="paragraph-title">对于 HA ，是每个节点的许可证容量限制还是整个 HA 对的许可证容量限制？</block>
   <block id="2d7789be6e6e477491f790d5a3ea60b3" category="cell">单节点384 TiB原始容量^对于具有PAYGO 96 TiB原始容量的单节点、2^ 352 TiB原始容量对于具有受管磁盘的HA对、页面blob 384 TiB原始容量</block>
@@ -694,4 +692,7 @@
   <block id="ade4280527084cf81b8c35333fab8226" category="list-text"><block ref="ade4280527084cf81b8c35333fab8226" category="inline-link-macro-rx"></block></block>
   <block id="373d3eec6a8460edd6d29008332349e5" category="summary">本发行说明介绍了Cloud Volumes ONTAP 9.14.0的新增功能、限制和已知问题。</block>
   <block id="c3264a0692eaa18730a5ddad32b43884" category="doc">Cloud Volumes ONTAP 9.14.0发行说明</block>
+  <block id="474efe63e96f6b9f1c2d9f2e851888a1" category="paragraph">HA对使用Azure托管磁盘。支持以下磁盘类型和大小。</block>
+  <block id="a5cd8e75bf9d20c9038f3cf45ff950e3" category="paragraph">(9.12.1版之前部署的HA对支持页面Blobs。)</block>
+  <block id="fe77d7482327c65392eb365d35d8bd99" category="paragraph">*高级SSD*</block>
 </blocks>

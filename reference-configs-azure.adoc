@@ -271,9 +271,11 @@ Cloud Volumes ONTAP 在 Azure 中可作为单节点系统和高可用性（ HA �
 
 === HA 对
 
-HA对使用受管磁盘。(9.12.1版之前部署的HA对支持页面Blobs。)
+HA对使用Azure托管磁盘。支持以下磁盘类型和大小。
 
-支持以下磁盘大小：
+(9.12.1版之前部署的HA对支持页面Blobs。)
+
+*高级SSD*
 
 * 500 GiB
 * 1 TiB
