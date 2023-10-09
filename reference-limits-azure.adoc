@@ -41,7 +41,7 @@ NetApp 不支持超过系统容量限制。如果您达到许可的容量限制�
 | PAYGO 高级版 | 368 TiB 
 
 
-| 基于节点的许可证 | 每个许可证 368 TiB 
+| 基于节点的许可证 | 2 PIB (需要多个许可证) 
 
 
 | 基于容量的许可证 | 2 个 PIB 
@@ -275,9 +275,7 @@ Cloud Volumes ONTAP 使用 Azure 存储作为磁盘并将其分组为 _aggreges_
 
 以下磁盘限制适用于使用基于节点的许可的Cloud Volumes ONTAP 系统、此许可模式是上一代许可模式、可用于按节点许可Cloud Volumes ONTAP。基于节点的许可仍可供现有客户使用。
 
-如果您使用基于节点的许可、则可以为Cloud Volumes ONTAP BYOL系统购买多个基于节点的许可证、以分配超过368 TiB的容量。
-
-您可以为单节点系统或 HA 对购买的许可证数量不受限制。请注意，磁盘限制可能会阻止您单独使用磁盘来达到容量限制。您可以通过超出磁盘限制 https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-data-tiering.html["将非活动数据分层到对象存储"^]。 https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-manage-node-licenses.html["了解如何向 Cloud Volumes ONTAP 添加其他系统许可证"^]。
+您可以为Cloud Volumes ONTAP BYOL单节点或HA对系统购买多个基于节点的许可证、以分配368 TiB以上的容量、最高可达到测试和支持的最大系统容量限制2 PIB。请注意，磁盘限制可能会阻止您单独使用磁盘来达到容量限制。您可以通过超出磁盘限制 https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-data-tiering.html["将非活动数据分层到对象存储"^]。 https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-manage-node-licenses.html["了解如何向 Cloud Volumes ONTAP 添加其他系统许可证"^]。尽管Cloud Volumes ONTAP支持的最大测试和支持系统容量为2 PIB、但超过2 PIB限制将导致系统配置不受支持。
 
 
 
@@ -331,52 +329,52 @@ Cloud Volumes ONTAP 使用 Azure 存储作为磁盘并将其分组为 _aggreges_
 2+|  | * 仅磁盘 * | * 磁盘 + 数据分层 * | * 仅磁盘 * | * 磁盘 + 数据分层 * 
 
 
-| DS4_v2 | 29 | 368 TiB | 368 TiB | 896 TiB | 每个许可证 368 TiB x 
+| DS4_v2 | 29 | 368 TiB | 368 TiB | 896 TiB | 2 个 PIB 
 
 
-| DS5_v2 | 61. | 368 TiB | 368 TiB | 896 TiB | 每个许可证 368 TiB x 
+| DS5_v2 | 61. | 368 TiB | 368 TiB | 896 TiB | 2 个 PIB 
 
 
-| DS13_v2 | 29 | 368 TiB | 368 TiB | 896 TiB | 每个许可证 368 TiB x 
+| DS13_v2 | 29 | 368 TiB | 368 TiB | 896 TiB | 2 个 PIB 
 
 
-| DS14_v2 | 61. | 368 TiB | 368 TiB | 896 TiB | 每个许可证 368 TiB x 
+| DS14_v2 | 61. | 368 TiB | 368 TiB | 896 TiB | 2 个 PIB 
 
 
-| DS15_v2 | 61. | 368 TiB | 368 TiB | 896 TiB | 每个许可证 368 TiB x 
+| DS15_v2 | 61. | 368 TiB | 368 TiB | 896 TiB | 2 个 PIB 
 
 
-| L8s_v2 | 13 | 368 TiB | 368 TiB | 416 TiB | 每个许可证 368 TiB x 
+| L8s_v2 | 13 | 368 TiB | 368 TiB | 416 TiB | 2 个 PIB 
 
 
-| e4s_v3 | 5. | 160 TiB | 368 TiB | 160 TiB | 每个许可证 368 TiB x 
+| e4s_v3 | 5. | 160 TiB | 368 TiB | 160 TiB | 2 个 PIB 
 
 
-| E8s_v3 | 13 | 368 TiB | 368 TiB | 416 TiB | 每个许可证 368 TiB x 
+| E8s_v3 | 13 | 368 TiB | 368 TiB | 416 TiB | 2 个 PIB 
 
 
-| E32S_v3 | 29 | 368 TiB | 368 TiB | 896 TiB | 每个许可证 368 TiB x 
+| E32S_v3 | 29 | 368 TiB | 368 TiB | 896 TiB | 2 个 PIB 
 
 
-| E48s_v3 | 29 | 368 TiB | 368 TiB | 896 TiB | 每个许可证 368 TiB x 
+| E48s_v3 | 29 | 368 TiB | 368 TiB | 896 TiB | 2 个 PIB 
 
 
-| E64is_v3 | 29 | 368 TiB | 368 TiB | 896 TiB | 每个许可证 368 TiB x 
+| E64is_v3 | 29 | 368 TiB | 368 TiB | 896 TiB | 2 个 PIB 
 
 
-| E4ds_v4 | 5. | 160 TiB | 368 TiB | 160 TiB | 每个许可证 368 TiB x 
+| E4ds_v4 | 5. | 160 TiB | 368 TiB | 160 TiB | 2 个 PIB 
 
 
-| E8ds_v4 | 13 | 368 TiB | 368 TiB | 416 TiB | 每个许可证 368 TiB x 
+| E8ds_v4 | 13 | 368 TiB | 368 TiB | 416 TiB | 2 个 PIB 
 
 
-| E32ds_v4 | 29 | 368 TiB | 368 TiB | 896 TiB | 每个许可证 368 TiB x 
+| E32ds_v4 | 29 | 368 TiB | 368 TiB | 896 TiB | 2 个 PIB 
 
 
-| E48ds_v4 | 29 | 368 TiB | 368 TiB | 896 TiB | 每个许可证 368 TiB x 
+| E48ds_v4 | 29 | 368 TiB | 368 TiB | 896 TiB | 2 个 PIB 
 
 
-| E80ids_v4 | 61. | 368 TiB | 368 TiB | 896 TiB | 每个许可证 368 TiB x 
+| E80ids_v4 | 61. | 368 TiB | 368 TiB | 896 TiB | 2 个 PIB 
 |===
 ====
 
@@ -445,37 +443,37 @@ HA对具有两种配置类型：page blob和Multiple Availability Zone。每个�
 2+|  | * 仅磁盘 * | * 磁盘 + 数据分层 * | * 仅磁盘 * | * 磁盘 + 数据分层 * 
 
 
-| DS4_v2 | 29 | 232 TiB | 368 TiB | 232 TiB | 每个许可证 368 TiB x 
+| DS4_v2 | 29 | 232 TiB | 368 TiB | 232 TiB | 2 个 PIB 
 
 
-| DS5_v2 | 61. | 368 TiB | 368 TiB | 488 TiB | 每个许可证 368 TiB x 
+| DS5_v2 | 61. | 368 TiB | 368 TiB | 488 TiB | 2 个 PIB 
 
 
-| DS13_v2 | 29 | 232 TiB | 368 TiB | 232 TiB | 每个许可证 368 TiB x 
+| DS13_v2 | 29 | 232 TiB | 368 TiB | 232 TiB | 2 个 PIB 
 
 
-| DS14_v2 | 61. | 368 TiB | 368 TiB | 488 TiB | 每个许可证 368 TiB x 
+| DS14_v2 | 61. | 368 TiB | 368 TiB | 488 TiB | 2 个 PIB 
 
 
-| DS15_v2 | 61. | 368 TiB | 368 TiB | 488 TiB | 每个许可证 368 TiB x 
+| DS15_v2 | 61. | 368 TiB | 368 TiB | 488 TiB | 2 个 PIB 
 
 
-| E8s_v3 | 13 | 104 TiB | 368 TiB | 104 TiB | 每个许可证 368 TiB x 
+| E8s_v3 | 13 | 104 TiB | 368 TiB | 104 TiB | 2 个 PIB 
 
 
-| E48s_v3 | 29 | 232 TiB | 368 TiB | 232 TiB | 每个许可证 368 TiB x 
+| E48s_v3 | 29 | 232 TiB | 368 TiB | 232 TiB | 2 个 PIB 
 
 
-| E8ds_v4 | 13 | 104 TiB | 368 TiB | 104 TiB | 每个许可证 368 TiB x 
+| E8ds_v4 | 13 | 104 TiB | 368 TiB | 104 TiB | 2 个 PIB 
 
 
-| E32ds_v4 | 29 | 232 TiB | 368 TiB | 232 TiB | 每个许可证 368 TiB x 
+| E32ds_v4 | 29 | 232 TiB | 368 TiB | 232 TiB | 2 个 PIB 
 
 
-| E48ds_v4 | 29 | 232 TiB | 368 TiB | 232 TiB | 每个许可证 368 TiB x 
+| E48ds_v4 | 29 | 232 TiB | 368 TiB | 232 TiB | 2 个 PIB 
 
 
-| E80ids_v4 | 61. | 368 TiB | 368 TiB | 488 TiB | 每个许可证 368 TiB x 
+| E80ids_v4 | 61. | 368 TiB | 368 TiB | 488 TiB | 2 个 PIB 
 |===
 ====
 .BYOL：使用共享受管磁盘的多可用性区域配置中的HA对
@@ -489,16 +487,16 @@ HA对具有两种配置类型：page blob和Multiple Availability Zone。每个�
 2+|  | * 仅磁盘 * | * 磁盘 + 数据分层 * | * 仅磁盘 * | * 磁盘 + 数据分层 * 
 
 
-| E8ds_v4 | 12 | 368 TiB | 368 TiB | 368 TiB | 每个许可证 368 TiB x 
+| E8ds_v4 | 12 | 368 TiB | 368 TiB | 368 TiB | 2 个 PIB 
 
 
-| E32ds_v4 | 28 | 368 TiB | 368 TiB | 368 TiB | 每个许可证 368 TiB x 
+| E32ds_v4 | 28 | 368 TiB | 368 TiB | 368 TiB | 2 个 PIB 
 
 
-| E48ds_v4 | 28 | 368 TiB | 368 TiB | 368 TiB | 每个许可证 368 TiB x 
+| E48ds_v4 | 28 | 368 TiB | 368 TiB | 368 TiB | 2 个 PIB 
 
 
-| E80ids_v4 | 28 | 368 TiB | 368 TiB | 368 TiB | 每个许可证 368 TiB x 
+| E80ids_v4 | 28 | 368 TiB | 368 TiB | 368 TiB | 2 个 PIB 
 |===
 ====
 

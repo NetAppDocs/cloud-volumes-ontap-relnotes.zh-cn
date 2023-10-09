@@ -60,7 +60,6 @@
   <block id="d41d8cd98f00b204e9800998ecf8427e" category="cell"></block>
   <block id="bb49543449782c0f1b87b3ef8f49a6be" category="cell">* 仅磁盘 *</block>
   <block id="e3185eb0708df4883935910ebf26f8db" category="cell">* 磁盘 + 数据分层 *</block>
-  <block id="f94f9afeacfc431720c782db2e1d8809" category="cell">每个许可证 368 TiB x</block>
   <block id="3c59dc048e8850243be8079a5c74d079" category="cell">21</block>
   <block id="a23ca456fec74dd76d95b20f2cf60dd0" category="cell">19 ^1^</block>
   <block id="156b98ab4634edb024f99442726e3e8d" category="cell">18 ^1^</block>
@@ -546,7 +545,6 @@
   <block id="5aabc9069557be7e4aeff466605cbc75" category="section-title">单个节点</block>
   <block id="6c3b49ddb811c2d88edee86163680009" category="section-title">基于节点的许可限制</block>
   <block id="d017aa906544a3348ee35d75ebb10b72" category="paragraph">以下磁盘限制适用于使用基于节点的许可的Cloud Volumes ONTAP 系统、此许可模式是上一代许可模式、可用于按节点许可Cloud Volumes ONTAP。基于节点的许可仍可供现有客户使用。</block>
-  <block id="52960fb5a2829740ddef9c61b6015d59" category="list-text">如果您使用基于节点的许可、则可以为Cloud Volumes ONTAP BYOL系统购买多个基于节点的许可证、以分配超过368 TiB的容量。</block>
   <block id="fff4bb20e652c529e2e22e76e56ed9b5" category="section-title">采用PAYGO Premium的单节点</block>
   <block id="a9698a2172c5fcc72b7ecd7910403955" category="section-title">具有BYOL的单个节点</block>
   <block id="9dbb7f356b08de585f6ddbe523e4a8d8" category="section-title">采用PAYGO Premium的HA对</block>
@@ -638,7 +636,6 @@
   <block id="9df4ca2adcfbf390d35edbeb52928a78" category="list-text">某些实例类型包括本地 NVMe 存储， Cloud Volumes ONTAP 将其用作 _Flash Cache_ 。Flash Cache 通过实时智能缓存最近读取的用户数据和 NetApp 元数据来加快数据访问速度。它适用于随机读取密集型工作负载，包括数据库，电子邮件和文件服务。必须在所有卷上禁用数据压缩，才能利用 Flash Cache 性能改进功能。<block ref="da56a164195bbdee72f1dfc4ea53669d" category="inline-link-rx"></block>。</block>
   <block id="ce4956d12fe22f1b1243720ce22651e0" category="list-text">在使用 HA 对时， Cloud Volumes ONTAP 支持对大多数实例类型使用高写入速度。使用单节点系统时，所有实例类型均支持高写入速度。<block ref="721fe5ee3bbc3d8295d8615ed77ff9be" category="inline-link-rx"></block>。</block>
   <block id="f6dcc1a079544e36390b698b6f59bf4e" category="paragraph">以下磁盘限制适用于使用基于容量的许可包的Cloud Volumes ONTAP 系统。<block ref="360eefdcdd22adda63e8597e9466029a" category="inline-link-rx"></block></block>
-  <block id="05c9b06fc32318d0689c553219a9d496" category="paragraph">您可以为单节点系统或 HA 对购买的许可证数量不受限制。请注意，磁盘限制可能会阻止您单独使用磁盘来达到容量限制。您可以通过超出磁盘限制<block ref="aea0958203307daa433f894622f3e640" category="inline-link-rx"></block>。<block ref="ca37ce4dde5616ef242d545490c7e6ee" category="inline-link-rx"></block>。</block>
   <block id="fc8746b925f8923889b77841242bf054" category="paragraph"><block ref="771bd01d5b66ba0bcb76d734267dc8bb" category="inline-link-rx"></block>。</block>
   <block id="ae90a2e4532cb9b615489b63c36e2383" category="paragraph"><block ref="dca5658ae26fff987979f5de0a83e9fd" category="inline-link-rx"></block>。</block>
   <block id="efb78221b5926bd89d824f8dec9a7ed2" category="list-text">磁盘限制可以防止您单独使用磁盘来达到最大系统容量限制。您可以通过达到容量限制<block ref="aea0958203307daa433f894622f3e640" category="inline-link-rx"></block>。</block>
@@ -695,4 +692,7 @@
   <block id="474efe63e96f6b9f1c2d9f2e851888a1" category="paragraph">HA对使用Azure托管磁盘。支持以下磁盘类型和大小。</block>
   <block id="a5cd8e75bf9d20c9038f3cf45ff950e3" category="paragraph">(9.12.1版之前部署的HA对支持页面Blobs。)</block>
   <block id="fe77d7482327c65392eb365d35d8bd99" category="paragraph">*高级SSD*</block>
+  <block id="fd164e9cb2bc1ac5405cabfe451663f7" category="cell">2 PIB (需要多个许可证)</block>
+  <block id="2dbd9a217bce4c7ba4ef467f57d6875c" category="paragraph">您可以为Cloud Volumes ONTAP BYOL单节点或HA对系统购买多个基于节点的许可证、以分配368 TiB以上的容量、最高可达到测试和支持的最大系统容量限制2 PIB。请注意，磁盘限制可能会阻止您单独使用磁盘来达到容量限制。您可以通过超出磁盘限制<block ref="aea0958203307daa433f894622f3e640" category="inline-link-rx"></block>。<block ref="ca37ce4dde5616ef242d545490c7e6ee" category="inline-link-rx"></block>。尽管Cloud Volumes ONTAP支持的最大测试和支持系统容量为2 PIB、但超过2 PIB限制将导致系统配置不受支持。</block>
+  <block id="de9d6749570efc87e63811b5947fc250" category="paragraph">从Cloud Volumes ONTAP 9.12.1开始、AWS机密云和Top机密云区域支持购买多个基于节点的许可证。</block>
 </blocks>

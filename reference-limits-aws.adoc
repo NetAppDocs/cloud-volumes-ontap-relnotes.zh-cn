@@ -43,7 +43,7 @@ NetApp 不支持超过系统容量限制。如果您达到许可的容量限制�
 | PAYGO 高级版 | 368 TiB 
 
 
-| 基于节点的许可证 | 每个许可证 368 TiB 
+| 基于节点的许可证 | 2 PIB (需要多个许可证) 
 
 
 | 基于容量的许可证 | 2 个 PIB 
@@ -162,11 +162,9 @@ Cloud Volumes ONTAP 使用EBS卷作为磁盘并将其分组到_aggregodes_中。
 
 以下磁盘限制适用于使用基于节点的许可的Cloud Volumes ONTAP 系统、此许可模式是上一代许可模式、可用于按节点许可Cloud Volumes ONTAP。基于节点的许可仍可供现有客户使用。
 
-* 如果您使用基于节点的许可、则可以为Cloud Volumes ONTAP BYOL系统购买多个基于节点的许可证、以分配超过368 TiB的容量。
-+
-您可以为单节点系统或 HA 对购买的许可证数量不受限制。请注意，磁盘限制可能会阻止您单独使用磁盘来达到容量限制。您可以通过超出磁盘限制 https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-data-tiering.html["将非活动数据分层到对象存储"^]。 https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-manage-node-licenses.html["了解如何向 Cloud Volumes ONTAP 添加其他系统许可证"^]。
+您可以为Cloud Volumes ONTAP BYOL单节点或HA对系统购买多个基于节点的许可证、以分配368 TiB以上的容量、最高可达到测试和支持的最大系统容量限制2 PIB。请注意，磁盘限制可能会阻止您单独使用磁盘来达到容量限制。您可以通过超出磁盘限制 https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-data-tiering.html["将非活动数据分层到对象存储"^]。 https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-manage-node-licenses.html["了解如何向 Cloud Volumes ONTAP 添加其他系统许可证"^]。尽管Cloud Volumes ONTAP支持的最大测试和支持系统容量为2 PIB、但超过2 PIB限制将导致系统配置不受支持。
 
-
+从Cloud Volumes ONTAP 9.12.1开始、AWS机密云和Top机密云区域支持购买多个基于节点的许可证。
 
 
 
@@ -202,14 +200,14 @@ Cloud Volumes ONTAP 使用EBS卷作为磁盘并将其分组到_aggregodes_中。
 2+|  | * 仅磁盘 * | * 磁盘 + 数据分层 * | * 仅磁盘 * | * 磁盘 + 数据分层 * 
 
 
-| c5 ， m5 和 R5 实例 | 21 ^1^ | 336 TiB | 368 TiB | 336 TiB | 每个许可证 368 TiB x 
+| c5 ， m5 和 R5 实例 | 21 ^1^ | 336 TiB | 368 TiB | 336 TiB | 2 个 PIB 
 
 
  a| 
 * m5dn.24xlarge
 * m6id.32xlarge
 
-| 19 ^2^ | 304 TiB | 368 TiB | 304 TiB | 每个许可证 368 TiB x 
+| 19 ^2^ | 304 TiB | 368 TiB | 304 TiB | 2 个 PIB 
 |===
 . 21 个数据磁盘是部署 Cloud Volumes ONTAP 的 _new_ 限制。如果升级使用 9.7 或更早版本创建的系统，则系统仍支持 22 个磁盘。由于从 9.8 版开始添加了一个核心磁盘，因此在使用这些实例类型的新系统上支持的数据磁盘减少一个。
 . 与其他实例类型相比，此实例类型具有更多的本地 NVMe 磁盘，这意味着支持的数据磁盘数量较少。
@@ -249,14 +247,14 @@ Cloud Volumes ONTAP 使用EBS卷作为磁盘并将其分组到_aggregodes_中。
 2+|  | * 仅磁盘 * | * 磁盘 + 数据分层 * | * 仅磁盘 * | * 磁盘 + 数据分层 * 
 
 
-| c5 ， m5 和 R5 实例 | 18 ^1^ | 288 TiB | 368 TiB | 288 TiB | 每个许可证 368 TiB x 
+| c5 ， m5 和 R5 实例 | 18 ^1^ | 288 TiB | 368 TiB | 288 TiB | 2 个 PIB 
 
 
  a| 
 * m5dn.24xlarge
 * m6id.32xlarge
 
-| 16 ^2^ | 256 TiB | 368 TiB | 256 TiB | 每个许可证 368 TiB x 
+| 16 ^2^ | 256 TiB | 368 TiB | 256 TiB | 2 个 PIB 
 |===
 . 18 个数据磁盘是部署 Cloud Volumes ONTAP 的 _new_ 限制。如果升级使用 9.7 或更早版本创建的系统，则系统仍支持 19 个磁盘。由于从 9.8 版开始添加了一个核心磁盘，因此在使用这些实例类型的新系统上支持的数据磁盘减少一个。
 . 与其他实例类型相比，此实例类型具有更多的本地 NVMe 磁盘，这意味着支持的数据磁盘数量较少。
