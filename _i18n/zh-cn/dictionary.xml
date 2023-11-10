@@ -706,4 +706,8 @@
   <block id="540e57f70019c3eb8d7fb999259fd473" category="cell">页面Blobs</block>
   <block id="6098d03c49b315476cd9c4d4eb330395" category="list-text">使用 HA 对时， Cloud Volumes ONTAP 支持对这些 VM 类型使用较高的写入速度。您可以在部署期间或之后的任何时间从BlueXP启用高写入速度。<block ref="18805b87db41583a67ecc2414d022f2b" category="inline-link-rx"></block>。</block>
   <block id="bcc4564bd7fc660f5dd5b39219b9775f" category="list-text">只有Cloud Volumes ONTAP 9.11.1或更早版本的部署才支持这些VM。对于这些VM类型、您可以将现有页面Blob部署从Cloud Volumes ONTAP 9.11.1升级到9.12.1.您不能使用Cloud Volumes ONTAP 9.12.1或更高版本执行新页面Blob部署。</block>
+  <block id="146025031e411527ef6984b6118e640f" category="section-title">9.14.0P1 (2023年11月10日)</block>
+  <block id="fc8e613001b912e569b768ab8df19f0a" category="paragraph">如果您的Connector运行的是3.9.27或更高版本、则9.14.0 P1修补程序现在可用于适用于所有云提供商的Cloud Volumes ONTAP。BlueXP将提示您将现有系统升级到此修补程序版本。</block>
+  <block id="a9380d77cd3c45a5f15f09b231323443" category="inline-link-macro">查看P1修补程序中已修复的错误列表</block>
+  <block id="f9297806abdec62aa803240bcecddc81" category="paragraph"><block ref="f2b4b5c16e7f6ca0207f7436ffc92a53" category="inline-link-macro-rx"></block> （需要登录 NetApp 支持站点）。</block>
 </blocks>

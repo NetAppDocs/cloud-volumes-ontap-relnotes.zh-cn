@@ -20,6 +20,14 @@ Cloud Volumes ONTAP 9.14.0包含新的增强功能。
 
 
 
+== 9.14.0P1 (2023年11月10日)
+
+如果您的Connector运行的是3.9.27或更高版本、则9.14.0 P1修补程序现在可用于适用于所有云提供商的Cloud Volumes ONTAP。BlueXP将提示您将现有系统升级到此修补程序版本。
+
+link:https://mysupport.netapp.com/site/products/all/details/cloud-volumes-ontap/downloads-tab/download/62632/9.14.0P1["查看P1修补程序中已修复的错误列表"^] （需要登录 NetApp 支持站点）。
+
+
+
 == 9.14.02023年9月29日)
 
 Cloud Volumes ONTAP 9.14.0正式发布(GA)版本现已在AWS、Azure和Google Cloud中推出。此版本包含以下新增功能和增强功能：
