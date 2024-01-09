@@ -32,10 +32,10 @@ Cloud Volumes ONTAP 在 Azure 中可作为单节点系统和高可用性（ HA �
 
 [cols="h,d,d,d,d,d,d"]
 |===
-|  | 免费 | PAYGO 探索 | PAYGO 标准 | PAYGO 高级版 | 基于节点的 BYOL | 基于容量的许可证 
+|  | 免费 | 基于容量的许可证 | PAYGO 探索 | PAYGO 标准 | PAYGO 高级版 | 基于节点的 BYOL 
 
 
-| 最大系统容量（磁盘 + 对象存储） | 500 GiB | 2 TiB ^1^ | 10 TiB | 368 TiB | 每个许可证 368 TiB | 2 个 PIB 
+| 最大系统容量（磁盘 + 对象存储） | 500 GiB | 2 个 PIB | 2 TiB ^1^ | 10 TiB | 368 TiB | 每个许可证 368 TiB 
 
 
 | 支持的虚拟机类型  a| 
@@ -61,28 +61,6 @@ Cloud Volumes ONTAP 在 Azure 中可作为单节点系统和高可用性（ HA �
 * L64s_v3 ^2^
 
  a| 
-* e4s_v3
-* E4ds_v4 ^3^
-
- a| 
-* DS4_v2
-* DS13_v2
-* E8s_v3
-* E8ds_v4 ^3^
-* L8s_v3 ^2^
-
- a| 
-* DS5_v2
-* DS14_v2
-* DS15_v2
-* E32S_v3 ^3^
-* E48s_v3 ^3^
-* E64is_v3 ^3^
-* E32ds_v4 ^3^
-* E48ds_v4 ^3^
-* E80ids_v4 ^3^
-
- a| 
 * DS4_v2
 * DS5_v2
 * DS13_v2
@@ -103,6 +81,28 @@ Cloud Volumes ONTAP 在 Azure 中可作为单节点系统和高可用性（ HA �
 * L32s_v3 ^2^
 * L48s_v3 ^2^
 * L64s_v3 ^2^
+
+ a| 
+* e4s_v3
+* E4ds_v4 ^3^
+
+ a| 
+* DS4_v2
+* DS13_v2
+* E8s_v3
+* E8ds_v4 ^3^
+* L8s_v3 ^2^
+
+ a| 
+* DS5_v2
+* DS14_v2
+* DS15_v2
+* E32S_v3 ^3^
+* E48s_v3 ^3^
+* E64is_v3 ^3^
+* E32ds_v4 ^3^
+* E48ds_v4 ^3^
+* E80ids_v4 ^3^
 
  a| 
 * DS4_v2
@@ -161,10 +161,10 @@ Cloud Volumes ONTAP 在 Azure 中可作为单节点系统和高可用性（ HA �
 
 [cols="h,d,d,d,d,d"]
 |===
-|  | 免费 | PAYGO 标准 | PAYGO 高级版 | 基于节点的 BYOL | 基于容量的许可证 
+|  | 免费 | 基于容量的许可证 | PAYGO 标准 | PAYGO 高级版 | 基于节点的 BYOL 
 
 
-| 最大系统容量（磁盘 + 对象存储） | 500 GiB | 10 TiB | 368 TiB | 每个许可证 368 TiB | 2 个 PIB 
+| 最大系统容量（磁盘 + 对象存储） | 500 GiB | 2 个 PIB | 10 TiB | 368 TiB | 每个许可证 368 TiB 
 
 
 | 支持的虚拟机类型  a| 
@@ -182,28 +182,28 @@ Cloud Volumes ONTAP 在 Azure 中可作为单节点系统和高可用性（ HA �
 
  a| 
 * DS4_v2
-* DS13_v2
-* E8s_v3
-* E8ds_v4 ^3^
-
- a| 
 * DS5_v2 ^1^
+* DS13_v2
 * DS14_v2 ^1^
 * DS15_v2 ^1^
+* E8s_v3
 * E48s_v3 ^1^
+* E8ds_v4 ^3^
 * E32ds_v4 ^1.3^
 * E48ds_v4 ^1、3^
 * E80ids_v4 ^1、2、3^
 
  a| 
 * DS4_v2
-* DS5_v2 ^1^
 * DS13_v2
+* E8s_v3
+* E8ds_v4 ^3^
+
+ a| 
+* DS5_v2 ^1^
 * DS14_v2 ^1^
 * DS15_v2 ^1^
-* E8s_v3
 * E48s_v3 ^1^
-* E8ds_v4 ^3^
 * E32ds_v4 ^1.3^
 * E48ds_v4 ^1、3^
 * E80ids_v4 ^1、2、3^
@@ -241,10 +241,10 @@ Cloud Volumes ONTAP 在 Azure 中可作为单节点系统和高可用性（ HA �
 
 [cols="h,d,d,d,d,d"]
 |===
-|  | 免费 | PAYGO 标准 | PAYGO 高级版 | 基于节点的 BYOL | 基于容量的许可证 
+|  | 免费 | 基于容量的许可证 | PAYGO 标准 | PAYGO 高级版 | 基于节点的 BYOL 
 
 
-| 最大系统容量（磁盘 + 对象存储） | 500 GiB | 10 TiB | 368 TiB | 每个许可证 368 TiB | 2 个 PIB 
+| 最大系统容量（磁盘 + 对象存储） | 500 GiB | 2 个 PIB | 10 TiB | 368 TiB | 每个许可证 368 TiB 
 
 
 | 支持的虚拟机类型  a| 
@@ -252,10 +252,20 @@ Cloud Volumes ONTAP 在 Azure 中可作为单节点系统和高可用性（ HA �
 * E32ds_v4 ^1、4^
 * E48ds_v4 ^1、4^
 * E80ids_v4 ^1、2、4^
-* L16s_v3 ^1、3、5^
-* L32s_v3 ^1、3、5^
-* L48s_v3 ^1、3、5^
-* L64s_v3 ^1、3、5^
+* L16s_v3 ^1、4、5^
+* L32s_v3 ^1、4、5^
+* L48s_v3 ^1、4、5^
+* L64s_v3 ^1、4、5^
+
+ a| 
+* E8ds_v4 ^4^
+* E32ds_v4 ^1、4^
+* E48ds_v4 ^1、4^
+* E80ids_v4 ^1、2、4^
+* L16s_v3 ^1、4、5^
+* L32s_v3 ^1、4、5^
+* L48s_v3 ^1、4、5^
+* L64s_v3 ^1、4、5^
 
  a| 
 * E8ds_v4 ^4^
@@ -264,30 +274,20 @@ Cloud Volumes ONTAP 在 Azure 中可作为单节点系统和高可用性（ HA �
 * E32ds_v4 ^1、4^
 * E48ds_v4 ^1、4^
 * E80ids_v4 ^1、2、4^
-* L16s_v3 ^1、3、5^
-* L32s_v3 ^1、3、5^
-* L48s_v3 ^1、3、5^
-* L64s_v3 ^1、3、5^
+* L16s_v3 ^1、4、5^
+* L32s_v3 ^1、4、5^
+* L48s_v3 ^1、4、5^
+* L64s_v3 ^1、4、5^
 
  a| 
 * E8ds_v4 ^4^
 * E32ds_v4 ^1、4^
 * E48ds_v4 ^1、4^
 * E80ids_v4 ^1、2、4^
-* L16s_v3 ^1、3、5^
-* L32s_v3 ^1、3、5^
-* L48s_v3 ^1、3、5^
-* L64s_v3 ^1、3、5^
-
- a| 
-* E8ds_v4 ^4^
-* E32ds_v4 ^1、4^
-* E48ds_v4 ^1、4^
-* E80ids_v4 ^1、2、4^
-* L16s_v3 ^1、3、5^
-* L32s_v3 ^1、3、5^
-* L48s_v3 ^1、3、5^
-* L64s_v3 ^1、3、5^
+* L16s_v3 ^1、4、5^
+* L32s_v3 ^1、4、5^
+* L48s_v3 ^1、4、5^
+* L64s_v3 ^1、4、5^
 
 
 
@@ -299,7 +299,7 @@ Cloud Volumes ONTAP 在 Azure 中可作为单节点系统和高可用性（ HA �
 . 使用 HA 对时， Cloud Volumes ONTAP 支持对这些 VM 类型使用较高的写入速度。您可以在部署期间或之后的任何时间从BlueXP启用高写入速度。 https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-write-speed.html["了解有关选择写入速度的更多信息"^]。
 . 只有在需要 Azure 维护控制时，才建议使用此虚拟机。由于定价较高，因此不建议用于任何其他使用情形。
 . 只有在共享受管磁盘上运行的单个可用性区域配置中的HA对才支持这些VM类型。
-. 单个可用性区域中的HA对以及共享受管磁盘上运行的多个可用性区域配置支持这些VM类型。
+. 单个可用性区域中的HA对以及共享受管磁盘上运行的多个可用性区域配置支持这些VM类型。对于LS_v3虚拟机类型、从ONTAP 9.13.1开始支持多可用性区域。
 . 此 VM 类型包括本地 NVMe 存储， Cloud Volumes ONTAP 使用此存储作为 _Flash Cache_ 。Flash Cache 通过实时智能缓存最近读取的用户数据和 NetApp 元数据来加快数据访问速度。它适用于随机读取密集型工作负载，包括数据库，电子邮件和文件服务。 https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-flash-cache.html["了解更多信息。"^]。
 
 

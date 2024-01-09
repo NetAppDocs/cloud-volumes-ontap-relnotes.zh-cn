@@ -614,7 +614,6 @@
   <block id="6cddc6e542baa2aaad6e58fdc397ce90" category="list-text">E48ds_v4 ^1、4^</block>
   <block id="de04224de00bacc811083f3a49af24b0" category="list-text">E80ids_v4 ^1、2、4^</block>
   <block id="72e0d2497593ac6a5fdc024537224aed" category="list-text">只有在共享受管磁盘上运行的单个可用性区域配置中的HA对才支持这些VM类型。</block>
-  <block id="7502ea8e5d477af63195f04d6179ca92" category="list-text">单个可用性区域中的HA对以及共享受管磁盘上运行的多个可用性区域配置支持这些VM类型。</block>
   <block id="33031b274bf5d81fbfbd69c1f2ea39a2" category="list-text">n2-standard-48</block>
   <block id="7c347fcea29ffaea485ee6128a9d7a06" category="list-text">n2-standard-64</block>
   <block id="41104125a8a3ef6fe8985ff4df5257be" category="paragraph">在AWS中、Cloud Volumes ONTAP 不再支持C4、M4和M4 EC2实例类型。如果现有系统运行的是C4、M4或r4实例类型、则必须更改为c5、M5或R5实例系列中的实例类型。只有在更改实例类型后才能升级到此版本。</block>
@@ -689,10 +688,6 @@
   <block id="540e57f70019c3eb8d7fb999259fd473" category="cell">页面Blobs</block>
   <block id="6098d03c49b315476cd9c4d4eb330395" category="list-text">使用 HA 对时， Cloud Volumes ONTAP 支持对这些 VM 类型使用较高的写入速度。您可以在部署期间或之后的任何时间从BlueXP启用高写入速度。<block ref="18805b87db41583a67ecc2414d022f2b" category="inline-link-rx"></block>。</block>
   <block id="bcc4564bd7fc660f5dd5b39219b9775f" category="list-text">只有Cloud Volumes ONTAP 9.11.1或更早版本的部署才支持这些VM。对于这些VM类型、您可以将现有页面Blob部署从Cloud Volumes ONTAP 9.11.1升级到9.12.1.您不能使用Cloud Volumes ONTAP 9.12.1或更高版本执行新页面Blob部署。</block>
-  <block id="573ba387c27d105c1e3fd20266d13123" category="list-text">L16s_v3 ^1、3、5^</block>
-  <block id="2bb521d2d5cea05a3b9b29f1cf232c63" category="list-text">L32s_v3 ^1、3、5^</block>
-  <block id="6074c6f3226593d830e2700ab7f3f365" category="list-text">L48s_v3 ^1、3、5^</block>
-  <block id="1da7ab1581b8dde8d8bbb3d70c613cd5" category="list-text">L64s_v3 ^1、3、5^</block>
   <block id="fd03e656adaf90d76d9f033d590bdd69" category="summary">本发行说明介绍了Cloud Volumes ONTAP 9.14.1的新增功能、限制和已知问题。</block>
   <block id="3f93d29b3f8dc957c8b9ced853857b76" category="doc">Cloud Volumes ONTAP 9.14.1发行说明</block>
   <block id="ac49adbb868ecf707179d04fceda2832" category="summary">Cloud Volumes ONTAP 9.14.1提供了一项新的增强功能。</block>
@@ -702,4 +697,9 @@
   <block id="08c5c3a5955675754c56665896b714d2" category="paragraph">Cloud Volumes ONTAP 9.14.1的候选版本1现已在AWS、Azure和Google Cloud中推出。</block>
   <block id="0ba3961acf8d8dd9d18bfabbbbc00cc5" category="paragraph">您可以从9.13.1和9.14.0版升级到Cloud Volumes ONTAP 9.14.1。BlueXP将提示您将符合条件的Cloud Volumes ONTAP 系统升级到此版本。</block>
   <block id="c61efd7d56545088713b3c7d2e07cadd" category="paragraph">要部署新的Cloud Volumes ONTAP 9.14.1系统并将现有系统升级到9.14.1、BlueXP Connector必须运行3.9.27或更高版本。</block>
+  <block id="f8f16d462023635d23922013c582281d" category="list-text">L16s_v3 ^1、4、5^</block>
+  <block id="5c5847596a7ce3d290253dfcdcfc153c" category="list-text">L32s_v3 ^1、4、5^</block>
+  <block id="2bf4a4b22f921c225f089ec2954ee9e8" category="list-text">L48s_v3 ^1、4、5^</block>
+  <block id="c130660d20dd5cec8fbf6045fb61af08" category="list-text">L64s_v3 ^1、4、5^</block>
+  <block id="885a1d815cf042f25bd0893361642b6e" category="list-text">单个可用性区域中的HA对以及共享受管磁盘上运行的多个可用性区域配置支持这些VM类型。对于LS_v3虚拟机类型、从ONTAP 9.13.1开始支持多可用性区域。</block>
 </blocks>
