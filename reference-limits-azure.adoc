@@ -559,7 +559,7 @@ https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-managing-svms-azur
 | 逻辑存储 | 参数 | limit 
 
 
-.2+| * 文件 * | 最大大小 | 16 TiB 
+.2+| * 文件 * | 最大尺寸^2^ | 128 TB 
 
 
 | 每个卷的上限 | 取决于卷大小，最多 20 亿个 
@@ -574,7 +574,7 @@ https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-managing-svms-azur
 | 最小大小 | 20 MB 
 
 
-| 最大大小 | 100 TiB 
+| 最大尺寸^3^ | 300 TiB 
 
 
 | * qtree* | 每个 FlexVol 卷的上限 | 4,995 
@@ -583,6 +583,13 @@ https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-managing-svms-azur
 | * Snapshot 副本 * | 每个 FlexVol 卷的上限 | 1,023 
 |===
 . 分层克隆深度是可以从单个 FlexVol 卷创建的 FlexClone 卷嵌套层次结构的最大深度。
+. 从ONTAP 9.12.1P2开始、此限制为128 TB。在ONTAP 9.11.1及更早版本中、此限制为16 TB。
+. 支持使用以下工具和最低版本创建最大大小为300 TiB的FlexVol卷：
++
+** Cloud Volumes ONTAP 9.12.1 P2和9.13.0 P2开始的System Manager和ONTAP命令行界面
+** 从Cloud Volumes ONTAP 9.13.1.开始的BlueXP
+
+
 
 
 
