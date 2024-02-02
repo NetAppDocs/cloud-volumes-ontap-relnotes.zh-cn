@@ -156,6 +156,24 @@ Cloud Volumes ONTAP 使用 Azure 存储作为磁盘并将其分组为 _aggreges_
 | E80ids_v4 | 61. | 896 TiB | 2 个 PIB 
 
 
+| E4ds_v5 | 5. | 160 TiB | 2 个 PIB 
+
+
+| E8ds_v5 | 13 | 416 TiB | 2 个 PIB 
+
+
+| E20ds_v5 | 29 | 896 TiB | 2 个 PIB 
+
+
+| E32ds_v5 | 29 | 896 TiB | 2 个 PIB 
+
+
+| E48ds_v5 | 29 | 896 TiB | 2 个 PIB 
+
+
+| E64ds_v5 | 29 | 896 TiB | 2 个 PIB 
+
+
 | L8s_v3 | 12 | 384 TiB | 2 个 PIB 
 
 
@@ -232,6 +250,21 @@ Cloud Volumes ONTAP 使用 Azure 存储作为磁盘并将其分组为 _aggreges_
 | E80ids_v4 | 28 | 896 TiB | 2 个 PIB 
 
 
+| E8ds_v5 | 12 | 384 TiB | 2 个 PIB 
+
+
+| E20ds_v5 | 28 | 896 TiB | 2 个 PIB 
+
+
+| E32ds_v5 | 28 | 896 TiB | 2 个 PIB 
+
+
+| E48ds_v5 | 28 | 896 TiB | 2 个 PIB 
+
+
+| E64ds_v5 | 28 | 896 TiB | 2 个 PIB 
+
+
 | L16s_v3 | 28 | 896 TiB | 2 个 PIB 
 
 
@@ -262,6 +295,21 @@ Cloud Volumes ONTAP 使用 Azure 存储作为磁盘并将其分组为 _aggreges_
 
 
 | E80ids_v4 | 28 | 896 TiB | 2 个 PIB 
+
+
+| E8ds_v5 | 12 | 384 TiB | 2 个 PIB 
+
+
+| E20ds_v5 | 28 | 896 TiB | 2 个 PIB 
+
+
+| E32ds_v5 | 28 | 896 TiB | 2 个 PIB 
+
+
+| E48ds_v5 | 28 | 896 TiB | 2 个 PIB 
+
+
+| E64ds_v5 | 28 | 896 TiB | 2 个 PIB 
 
 
 | L16s_v3 | 28 | 896 TiB | 2 个 PIB 
@@ -322,6 +370,18 @@ Cloud Volumes ONTAP 使用 Azure 存储作为磁盘并将其分组为 _aggreges_
 
 
 | E80ids_v4 | 61. | 368 TiB | 368 TiB 
+
+
+| E20ds_v5 | 29 | 896 TiB | 2 个 PIB 
+
+
+| E32ds_v5 | 29 | 896 TiB | 2 个 PIB 
+
+
+| E48ds_v5 | 29 | 896 TiB | 2 个 PIB 
+
+
+| E64ds_v5 | 29 | 896 TiB | 2 个 PIB 
 |===
 ====
 .具有BYOL的单个节点
@@ -381,6 +441,24 @@ Cloud Volumes ONTAP 使用 Azure 存储作为磁盘并将其分组为 _aggreges_
 
 
 | E80ids_v4 | 61. | 368 TiB | 368 TiB | 896 TiB | 2 个 PIB 
+
+
+| E4ds_v5 | 5. | 160 TiB | 368 TiB | 160 TiB | 2 个 PIB 
+
+
+| E8ds_v5 | 13 | 368 TiB | 368 TiB | 416 TiB | 2 个 PIB 
+
+
+| E20ds_v5 | 29 | 368 TiB | 368 TiB | 896 TiB | 2 个 PIB 
+
+
+| E32ds_v5 | 29 | 368 TiB | 368 TiB | 896 TiB | 2 个 PIB 
+
+
+| E48ds_v5 | 29 | 368 TiB | 368 TiB | 896 TiB | 2 个 PIB 
+
+
+| E64ds_v5 | 29 | 368 TiB | 368 TiB | 896 TiB | 2 个 PIB 
 |===
 ====
 
@@ -436,6 +514,18 @@ HA对具有两种配置类型：page blob和Multiple Availability Zone。每个�
 
 
 | E80ids_v4 | 28 | 368 TiB | 368 TiB 
+
+
+| E20ds_v5 | 28 | 896 TiB | 2 个 PIB 
+
+
+| E32ds_v5 | 28 | 896 TiB | 2 个 PIB 
+
+
+| E48ds_v5 | 28 | 896 TiB | 2 个 PIB 
+
+
+| E64ds_v5 | 28 | 896 TiB | 2 个 PIB 
 |===
 ====
 .BYOL：单个可用性区域中的HA对、具有页面blob
@@ -503,6 +593,21 @@ HA对具有两种配置类型：page blob和Multiple Availability Zone。每个�
 
 
 | E80ids_v4 | 28 | 368 TiB | 368 TiB | 368 TiB | 2 个 PIB 
+
+
+| E8ds_v5 | 12 | 368 TiB | 368 TiB | 368 TiB | 2 个 PIB 
+
+
+| E20ds_v5 | 28 | 368 TiB | 368 TiB | 368 TiB | 2 个 PIB 
+
+
+| E32ds_v5 | 28 | 368 TiB | 368 TiB | 368 TiB | 2 个 PIB 
+
+
+| E48ds_v5 | 28 | 368 TiB | 368 TiB | 368 TiB | 2 个 PIB 
+
+
+| E64ds_v5 | 28 | 368 TiB | 368 TiB | 368 TiB | 2 个 PIB 
 |===
 ====
 
