@@ -38,10 +38,10 @@ Cloud Volumes ONTAP 支持多种类型的 EBS 磁盘以及用于数据分层的 
 
 [cols="h,d,d,d,d,d,d"]
 |===
-|  | 免费 | PAYGO 探索 | PAYGO 标准 | PAYGO 高级版 | 基于节点的 BYOL | 基于容量的许可证 
+|  | 免费 | 基于容量的许可证 | PAYGO 探索 | PAYGO 标准 | PAYGO 高级版 | 基于节点的 BYOL 
 
 
-| 最大系统容量（磁盘 + 对象存储） ^1^ | 500 GiB | 2 TiB | 10 TiB | 368 TiB ^2^ | 每个许可证 368 TiB ^2^ | 2 个 PIB ^2 个^ 
+| 最大系统容量（磁盘 + 对象存储） ^1^ | 500 GiB | 2 个 PIB ^2 个^ | 2 TiB | 10 TiB | 368 TiB ^2^ | 每个许可证 368 TiB ^2^ 
 
 
 | 支持的磁盘类型  a| 

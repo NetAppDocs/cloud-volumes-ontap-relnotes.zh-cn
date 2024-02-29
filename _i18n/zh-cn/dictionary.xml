@@ -198,7 +198,6 @@
   <block id="5f807342ab46838a576d3111827add1c" category="cell">2 TB （ Explore 不支持数据分层）</block>
   <block id="1191f788083da9194f8eef9400d10898" category="cell">10 TB</block>
   <block id="86eaddcad9cef8a014b014a3ad2afb9c" category="cell">368 TB</block>
-  <block id="38797647ee0806ca5a6dba902f03f6e0" category="cell">每个许可证 368 TB</block>
   <block id="ce5ee1bd79a3fbc4ee9fee207a94ef54" category="paragraph">容量限制适用于整个 HA 对。不是每个节点。例如，如果使用高级版许可证，则两个节点之间的容量最多可达 368 TB 。</block>
   <block id="466cd90b62b5da75ee4bd662add41e7f" category="section-title">磁盘和分层限制</block>
   <block id="08fca9107919e2a3190d5edc75ce7c61" category="cell">最大数据磁盘数</block>
@@ -346,7 +345,6 @@
   <block id="c334038ed8a782403ae705a8de1f584b" category="section-title">按许可证支持的配置</block>
   <block id="9f1dc929787c1a2d05667987a87c083b" category="paragraph">Cloud Volumes ONTAP 在 Azure 中可作为单节点系统和高可用性（ HA ）节点对提供，以实现容错和无中断运行。</block>
   <block id="078325cc35a9c8c9290e445f32bd1855" category="section-title">单节点系统</block>
-  <block id="c817f6adbd40857622b1c5875284dccf" category="paragraph">在 Azure 中将 Cloud Volumes ONTAP 部署为单节点系统时，您可以从以下配置中进行选择：</block>
   <block id="e02cfa40e076b3e2d41b29974af36f06" category="cell">最大系统容量（磁盘 + 对象存储）</block>
   <block id="4493785e0b2d5a6ea8c24204ebf19dc5" category="cell">2 TiB ^1^</block>
   <block id="333cde16cf112bb117788fe2729a875c" category="cell">支持的虚拟机类型</block>
@@ -420,7 +418,6 @@
   <block id="cc85911ae6bc3b2540142e310528310b" category="admonition">默认情况下，连接器会自动升级，因此您应运行最新版本。</block>
   <block id="9141535b8d150812f3cded29f090ad8c" category="summary">Google Cloud 支持多种 Cloud Volumes ONTAP 配置。</block>
   <block id="9e931b1cee40a7346d1f06dd6a75ba8e" category="doc">Google Cloud 支持的配置</block>
-  <block id="0c11951245f2ef7895ea0fc514386d6e" category="paragraph">Cloud Volumes ONTAP 在 Google 云平台中作为单节点系统和高可用性（ HA ）节点对提供，可实现容错和无中断运行。</block>
   <block id="12fe559ef81ce645ef1aee77885e1827" category="paragraph">不支持将单节点系统升级到 HA 对。如果要在单节点系统和 HA 对之间切换，则需要部署新系统并将现有系统中的数据复制到新系统。</block>
   <block id="8c0495bb0212f48146ab592de8a205d9" category="cell">2 TB ^2^</block>
   <block id="c217f1a10b2c84178d69b991f9ca2a8d" category="cell">支持的计算机类型 ^3^</block>
@@ -434,7 +431,6 @@
   <block id="b4c4a8c75337dc28089aec3e79ae943c" category="list-text">PAYGO Explore 不支持将数据分层到 Google Cloud Storage 。</block>
   <block id="46e869bc0f7a5fcdc09df010e1f48b25" category="list-text">新的 Cloud Volumes ONTAP 系统不再支持 custom-4-16384 计算机类型。</block>
   <block id="0e3cb01898d99d0091e2a6f5a7572390" category="paragraph">如果您的现有系统在此计算机类型上运行，则可以继续使用它，但我们建议切换到 n2-standard-4 计算机类型。</block>
-  <block id="7093754c2bc2f151c7deef337385971a" category="list-text">有关 Google Cloud Platform 区域支持，请参见<block ref="2b6a522631c3b3b8afac5466195e108a" category="inline-link-rx"></block>。</block>
   <block id="d29bff99e1f1d5529824e9017672d630" category="paragraph">在 Google Cloud 中，一个聚合最多可以包含 6 个类型和大小相同的磁盘。支持以下磁盘大小：</block>
   <block id="dcfebc6fbca2c5316f55c914e6593d2d" category="list-text">100 GB</block>
   <block id="70f79b00cb7649d94d473895d6c540d2" category="list-text">1 TB</block>
@@ -705,12 +701,20 @@
   <block id="24dbf97d0023e83cab10de240d1d2054" category="list-text">E32ds_v5 ^3^</block>
   <block id="b911e2432937ce8e1c8ac00664872f8b" category="list-text">E48ds_v5 ^3^</block>
   <block id="6f223a60d36f80343c253128f00e82ce" category="list-text">E64ds_v5 ^3^</block>
-  <block id="b29992b09572a94f43a61f1b5fd810e9" category="paragraph">如果您在部署新的 Cloud Volumes ONTAP 系统时选择了其中任何一种 VM 类型，则不能更改为使用适用于 VNVRAM 的超高 SSD 的其他 VM 类型。相反，如果您使用任何其他 VM 类型部署 Cloud Volumes ONTAP ，则无法更改为使用适用于 VNVRAM 的超高 SSD 的 VM 类型。</block>
   <block id="c0cc08e6c7e64a5531dd51afd8a3ed6e" category="list-text">E20s_v5 ^1^</block>
   <block id="e002cc59f5a826e5838dde797b6a9f2b" category="list-text">E32ds_v5 ^1^</block>
   <block id="c0147218881d0d0fb9dddce993d7c08c" category="list-text">E48ds_v5 ^1^</block>
   <block id="d071b0d9481cad34966de3c7caf72b29" category="list-text">E64ds_v5 ^1^</block>
   <block id="c3e43237d47ac4f8f0c184c56276c958" category="list-text">单个可用性区域中的HA对以及共享受管磁盘上运行的多个可用性区域配置支持这些VM类型。对于LS_v3虚拟机类型、从ONTAP 9.13.1开始支持多可用性区域。对于Eds_v5 VM类型、从ONTAP 9.14.1 RC1版开始支持多可用性区域。</block>
-  <block id="fa399104e53f295813fa209a617a3bfe" category="list-text">E20ds_v5 ^3^</block>
   <block id="6c390ecab52e3e5345764abdf66b4a13" category="list-text">E20ds_v5 ^1^</block>
+  <block id="ea724697af39ce2b490b5643777ed273" category="paragraph">Cloud Volumes ONTAP可作为单节点系统和高可用性(HA)节点对在Google Cloud中使用、以实现容错和无中断运行。</block>
+  <block id="f52ead6bbf1fb1c871d206603e5a2347" category="open-title">基于容量的许可证</block>
+  <block id="6e539d2ea7d82ed0e31c450e64ff8c04" category="cell">已优化</block>
+  <block id="82fc13b1b2688039a14feb2fc8785cad" category="cell">基于容量的许可证(Essentials、Professional和Edge Cache)</block>
+  <block id="d56bf07ec8cd4e9f29339d605ffef95c" category="open-title">基于节点的许可证</block>
+  <block id="b338d2a3e5b2fa0602cf93fe49c51138" category="paragraph">有关Google Cloud区域支持、请参见<block ref="2b6a522631c3b3b8afac5466195e108a" category="inline-link-rx"></block>。</block>
+  <block id="bde67b5966889851166e3f5c7b09ff05" category="paragraph">在Azure中将Cloud Volumes ONTAP部署为单节点系统时、您可以从以下基于容量或基于节点的许可配置中进行选择。</block>
+  <block id="d2f103c82b43ca5f2da33f93d94bde64" category="paragraph">如果您在部署新的 Cloud Volumes ONTAP 系统时选择了其中任何一种 VM 类型，则不能更改为使用适用于 VNVRAM 的超高 SSD 的其他 VM 类型。例如，您不能从 E8ds_v4 更改为 E8s_v3 ，但可以从 E8ds_v4 更改为 E32ds_v4 ，因为这两种虚拟机类型都使用超 SSD 。</block>
+  <block id="c0f95d0d2e06eba7eb0522dabf1c9d76" category="paragraph">相反，如果您使用任何其他 VM 类型部署 Cloud Volumes ONTAP ，则无法更改为使用适用于 VNVRAM 的超高 SSD 的 VM 类型。例如，您不能从 E8s_v3 更改为 E8ds_v4 。</block>
+  <block id="5063d3259058d90bbca06465957626d7" category="list-text">使用 SSD 时会启用增强的写入性能。</block>
 </blocks>
