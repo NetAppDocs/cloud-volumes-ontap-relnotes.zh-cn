@@ -1,0 +1,45 @@
+---
+indexpage:
+  title: Cloud Volumes ONTAP 9.14.1发行说明
+  summary: 本发行说明介绍了Cloud Volumes ONTAP 9.14.1的新增功能、限制和已知问题。
+  keywords: RN, CVO, release notes Cloud Volumes ONTAP
+  lead: 本发行说明介绍了Cloud Volumes ONTAP 9.14.1的新增功能、限制和已知问题。
+  tiles:
+  - title: 入门
+    links:
+    - title: 新增功能
+      url: reference-new.html
+    - title: 许可概述
+      url: concept-licensing.html
+  - title: Amazon Web Services
+    links:
+    - title: 支持的配置
+      url: reference-configs-aws.html
+    - title: 存储限制
+      url: reference-limits-aws.html
+    - title: 限制
+      url: reference-limitations-aws.html
+  - title: Google Cloud
+    links:
+    - title: 支持的配置
+      url: reference-configs-gcp.html
+    - title: 存储限制
+      url: reference-limits-gcp.html
+    - title: 限制
+      url: reference-limitations-gcp.html
+  - title: Microsoft Azure
+    links:
+    - title: 支持的配置
+      url: reference-configs-azure.html
+    - title: 存储限制
+      url: reference-limits-azure.html
+    - title: 限制
+      url: reference-limitations-azure.html
+  - title: 博客和社区
+    links:
+    - title: NetApp 社区
+      url: https://community.netapp.com/t5/Cloud-Data-Services/ct-p/CDS
+    - title: BlueXP博客
+      url: https://cloud.netapp.com/blog
+    - title: 云网络研讨会
+      url: https://cloud.netapp.com/events
