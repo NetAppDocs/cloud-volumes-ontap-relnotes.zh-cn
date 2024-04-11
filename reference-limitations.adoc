@@ -88,6 +88,9 @@ Cloud Volumes ONTAP 可以在云提供商提供的预留或按需 VM 实例上�
 通过云提供商的控制台更改 Cloud Volumes ONTAP 配置会导致配置不受支持。如果对Cloud Volumes ONTAP 资源进行任何更改、由BlueXP创建和管理、可能会影响系统稳定性以及BlueXP管理系统的能力。
 
 
+NOTE: 初始部署后、支持修改用于Cloud Volumes ONTAP资源的Azure订阅名称。
+
+
 
 == 磁盘和聚合必须通过BlueXP进行管理
 

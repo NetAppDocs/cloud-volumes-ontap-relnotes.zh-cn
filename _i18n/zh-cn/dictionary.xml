@@ -732,4 +732,5 @@
   <block id="569a9a2a6db2c8239fa51b37ad08f488" category="paragraph">9.14.1 P1修补程序现在可用于所有云提供商的Cloud Volumes ONTAP。BlueXP将提示您将现有系统升级到此修补程序版本。</block>
   <block id="a9380d77cd3c45a5f15f09b231323443" category="inline-link">查看P1修补程序中已修复的错误列表</block>
   <block id="62715934d07ed630b9c606bc666abad5" category="paragraph"><block ref="ae4674889e9a15806f2ba04f7b499642" category="inline-link-rx"></block> （需要登录 NetApp 支持站点）。</block>
+  <block id="43556f17551d900e8a2cd6d933da722d" category="admonition">初始部署后、支持修改用于Cloud Volumes ONTAP资源的Azure订阅名称。</block>
 </blocks>
