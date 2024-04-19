@@ -20,6 +20,14 @@ Cloud Volumes ONTAP 9.14.1提供了新的增强功能。
 
 
 
+== 9.14.1 P2 (2024年4月18日)
+
+9.14.1 P2修补程序现在可用于所有云提供商的Cloud Volumes ONTAP。BlueXP将提示您将现有系统升级到此修补程序版本。
+
+https://mysupport.netapp.com/site/products/all/details/cloud-volumes-ontap/downloads-tab/download/62632/9.14.1P2["查看P2修补程序中已修复的错误列表"^] （需要登录 NetApp 支持站点）。
+
+
+
 == 9.14.1 P1 (2024年4月1日)
 
 9.14.1 P1修补程序现在可用于所有云提供商的Cloud Volumes ONTAP。BlueXP将提示您将现有系统升级到此修补程序版本。
