@@ -45,7 +45,7 @@ Cloud Volumes ONTAP 支持多种类型的 EBS 磁盘以及用于数据分层的 
 
 
 | 支持的磁盘类型  a| 
-* 通用 SSD （ GP3 和 GP2 ） ^3^
+* 通用SSD (GP3和GP2)^3^、^5^
 * 已配置 IOPS SSD （ IO1 ） ^3^
 * 吞吐量优化型 HDD （ st1 ） ^4^
 
@@ -58,6 +58,7 @@ Cloud Volumes ONTAP 支持多种类型的 EBS 磁盘以及用于数据分层的 
 . 对于某些配置，磁盘限制会阻止您单独使用磁盘来达到容量限制。在这些情况下，您可以通过达到容量限制 https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-data-tiering.html["将非活动数据分层到对象存储"^]。有关磁盘限制的信息，请参见 link:reference-limits-aws.html["存储限制"]。
 . 在对所有 Cloud Volumes ONTAP 配置使用 SSD 时，系统会启用增强的写入性能，但 PAYGO Explore 除外。
 . 使用吞吐量优化型 HDD （ st1 ）时，不建议将数据分层到对象存储。
+. AWS本地区域仅支持通用SSD (GP2)磁盘类型。
 
 
 
@@ -108,6 +109,8 @@ Cloud Volumes ONTAP 支持多种类型的 EBS 磁盘以及用于数据分层的 
 
 每个 Cloud Volumes ONTAP 许可证支持不同的 EC2 实例类型。为方便起见，下表显示了每个受支持实例类型的 vCPU ， RAM 和带宽。 https://aws.amazon.com/ec2/instance-types/["有关 EC2 实例类型的最新完整详细信息，请参见 AWS"^]。
 
+Cloud Volumes ONTAP 可以在预留或按需 EC2 实例上运行。不支持使用其他实例类型的解决方案。
+
 下表中显示的带宽与每个实例类型的 AWS 限制一致。这些限制与 Cloud Volumes ONTAP 所能提供的功能不完全一致。有关预期性能，请参见 https://www.netapp.com/us/media/tr-4383.pdf["NetApp 技术报告 4383 ：使用应用程序工作负载在 Amazon Web Services 中对 Cloud Volumes ONTAP 进行性能特征描述"^]。
 
 [cols="8*"]
@@ -115,31 +118,31 @@ Cloud Volumes ONTAP 支持多种类型的 EBS 磁盘以及用于数据分层的 
 | 许可证 | 支持的实例 | vCPU | RAM | Flash Cache ^1^ | 网络带宽（ Gbps ） | EBS 带宽（ MBps ） | 高写入速度 ^2^ 
 
 
-| * 浏览或任何其他许可证 * | m5.xlarge | 4. | 16. | 不支持 | 最多 10 个 | 最多 4 ， 750 个 | 支持（仅限单节点） 
+| * 浏览或任何其他许可证 * | M5.x大^6^ | 4. | 16. | 不支持 | 最多 10 个 | 最多 4 ， 750 个 | 支持（仅限单节点） 
 
 
-.3+| * 标准版或任何其他许可证 * | r5.xlarge | 4. | 32 | 不支持 | 最多 10 个 | 最多 4 ， 750 个 | 支持（仅限单节点） 
+.3+| * 标准版或任何其他许可证 * | R5.x大^6^ | 4. | 32 | 不支持 | 最多 10 个 | 最多 4 ， 750 个 | 支持（仅限单节点） 
 
 
 | m5a.2xlarge | 8. | 32 | 不支持 | 最多 10 个 | 最多 2 ， 880 个 | supported 
 
 
-| m5.2xlarge | 8. | 32 | 不支持 | 最多 10 个 | 最多 4 ， 750 个 | supported 
+| m5.2 x大^6^ | 8. | 32 | 不支持 | 最多 10 个 | 最多 4 ， 750 个 | supported 
 
 
 .22+| * 高级版或任何其他许可证 * | m5n.2xlarge | 8. | 32 | 不支持 | 最多 25 个 | 最多 4 ， 750 个 | supported 
 
 
-| r5.2 个大型 | 8. | 64 | 不支持 | 最多 10 个 | 最多 4 ， 750 个 | supported 
+| r5.2 x大^6^ | 8. | 64 | 不支持 | 最多 10 个 | 最多 4 ， 750 个 | supported 
 
 
 | r5d.2xlarge | 8. | 64 | supported | 最多 10 个 | 最多 4 ， 750 个 | supported 
 
 
-| c5d.4xlarge | 16. | 32 | supported | 最多 10 个 | 4,570 | supported 
+| c5d.4x大^6^ | 16. | 32 | supported | 最多 10 个 | 4,570 | supported 
 
 
-| m5.4xlarge | 16. | 64 | 不支持 | 最多 10 个 | 4,750 | supported 
+| m5.4x大^6^ | 16. | 64 | 不支持 | 最多 10 个 | 4,750 | supported 
 
 
 | m5dn.4xlarge | 16. | 64 | supported | 最多 25 个 | 4,750 | supported 
@@ -197,7 +200,10 @@ Cloud Volumes ONTAP 支持多种类型的 EBS 磁盘以及用于数据分层的 
 . r5.12 个大型实例类型具有已知的可支持性限制。如果节点因崩溃而意外重新启动，则系统可能无法收集用于对问题进行故障排除的核心文件，并对问题进行根发生原因处理。客户接受风险和有限支持条款，如果发生这种情况，则承担所有支持责任。此限制会影响新部署的 HA 对和从 9.8 升级的 HA 对。此限制不会影响新部署的单节点系统。
 . 虽然这些EC2实例类型支持64个以上的vCPU、但Cloud Volumes ONTAP 仅支持多达64个vCPU。
 . 选择 EC2 实例类型时，您可以指定它是共享实例还是专用实例。
-. Cloud Volumes ONTAP 可以在预留或按需 EC2 实例上运行。不支持使用其他实例类型的解决方案。
+. 以下EC2实例类型系列(大小为x大 到4x大)支持AWS本地区域：M5、c5、c5d、R5和R5d。 link:https://aws.amazon.com/about-aws/global-infrastructure/localzones/features/?nc=sn&loc=2["有关本地区域中受支持的EC2实例类型的最新完整详细信息、请参见AWS"^]。
++
+在AWS本地区域中、这些实例类型不支持高写入速度。
+
 
 
 
