@@ -231,6 +231,9 @@ Cloud Volumes ONTAP 可以在云提供商提供的预留或按需 VM 实例上�
 
 ==== 带有页面blob的HA对
 
+
+NOTE: 您可以对Azure中的现有Cloud Volumes ONTAP HA页面Blob部署使用以下配置。新部署不支持页面Blobs。
+
 [role="tabbed-block"]
 ====
 .基于容量的许可证

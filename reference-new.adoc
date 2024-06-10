@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: reference-new.html 
 keywords: 'what"s new, new, features, release notes, enhancements' 
-summary: Cloud Volumes ONTAP 9.14.1提供了一项新的增强功能。 
+summary: Cloud Volumes ONTAP 9.12.09提供了一项新的增强功能。 
 ---
-= Cloud Volumes ONTAP 9.14.1中的新增功能
+= Cloud Volumes ONTAP 9.12.09中的新增功能
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,37 +14,33 @@ summary: Cloud Volumes ONTAP 9.14.1提供了一项新的增强功能。
 
 
 [role="lead"]
-Cloud Volumes ONTAP 9.14.1提供了新的增强功能。
+Cloud Volumes ONTAP 9.12.09提供了一些新的增强功能。
 
 最新版本的BlueXP还引入了其他功能和增强功能。请参见 https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/whats-new.html["《BlueXP发行说明》"^] 了解详细信息。
 
 
 
-== 9.14.1 P2 (2024年4月18日)
+== 9.15 P1次会议(2024年6月10日)
 
-9.14.1 P2修补程序现在可用于所有云提供商的Cloud Volumes ONTAP。BlueXP将提示您将现有系统升级到此修补程序版本。
+Cloud Volumes ONTAP 9.12.09 P1现已在AWS、Azure和Google Cloud中推出。P1版本可用于部署和升级。
 
-https://mysupport.netapp.com/site/products/all/details/cloud-volumes-ontap/downloads-tab/download/62632/9.14.1P2["查看P2修补程序中已修复的错误列表"^] （需要登录 NetApp 支持站点）。
-
-
-
-== 9.14.1 P1 (2024年4月1日)
-
-9.14.1 P1修补程序现在可用于所有云提供商的Cloud Volumes ONTAP。BlueXP将提示您将现有系统升级到此修补程序版本。
-
-https://mysupport.netapp.com/site/products/all/details/cloud-volumes-ontap/downloads-tab/download/62632/9.14.1P1["查看P1修补程序中已修复的错误列表"^] （需要登录 NetApp 支持站点）。
+此版本包含一项新功能和一项增强功能。
 
 
 
-== 9.14.1大会(2024年3月5日)
+=== Azure中的映像验证
 
-Cloud Volumes ONTAP 9.14.1正式发布版现已在AWS、Azure和Google Cloud中推出。
+现在、我们提供了增强的安全功能、用于验证通过Azure导出的Cloud Volumes ONTAP映像文件的签名。
+
+有关详细信息，请参见 link:https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/concept-azure-image-verification.html["了解有关Azure映像验证的更多信息"^]。
 
 
 
-== 9.14.1 RC1 (2023年12月6日)
+=== 新的高可用性对部署不再支持Azure页面Blobs
 
-Cloud Volumes ONTAP 9.14.1的候选版本1现已在AWS、Azure和Google Cloud中推出。
+从Cloud Volumes ONTAP 9.12.0-P1开始、新的高可用性对部署不再支持Azure页面Blobs。如果您当前在现有高可用性对部署中使用Azure页面Blobs、则可以迁移到Edsv4系列VM和Edsv5系列VM中较新的VM实例类型。
+
+link:https://docs.netapp.com/us-en/cloud-volumes-ontap-relnotes/reference-configs-azure.html#ha-pairs["详细了解Azure中支持的配置"^]。
 
 
 
@@ -64,16 +60,7 @@ link:http://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-updating-ontap
 
 === 支持的升级路径
 
-您可以从9.13.1和9.14.0版升级到Cloud Volumes ONTAP 9.14.1。BlueXP将提示您将符合条件的Cloud Volumes ONTAP 系统升级到此版本。
-
-
-
-=== 所需版本的Connector
-
-要部署新的Cloud Volumes ONTAP 9.14.1系统并将现有系统升级到9.14.1、BlueXP Connector必须运行3.9.27或更高版本。
-
-
-TIP: 默认情况下，连接器会自动升级，因此您应运行最新版本。
+您可以从9.14.1版升级到Cloud Volumes ONTAP 9.14.10。BlueXP将提示您将符合条件的Cloud Volumes ONTAP 系统升级到此版本。
 
 
 
