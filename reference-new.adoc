@@ -20,6 +20,14 @@ Cloud Volumes ONTAP 9.12.09提供了一些新的增强功能。
 
 
 
+== 9.15时09分P2次会议(2024年8月8日)
+
+现在、所有云提供商均可使用适用于Cloud Volumes ONTAP的9.12.09 P2修补程序。BlueXP将提示您将现有系统升级到此修补程序版本。
+
+https://mysupport.netapp.com/site/products/all/details/cloud-volumes-ontap/downloads-tab/download/62632/9.15.0P2["查看P2修补程序中已修复的错误列表"^] (需要登录NetApp支持站点)。
+
+
+
 == 9.15 P1次会议(2024年6月10日)
 
 Cloud Volumes ONTAP 9.12.09 P1现已在AWS、Azure和Google Cloud中推出。P1版本可用于部署和升级。

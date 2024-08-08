@@ -752,4 +752,8 @@
   <block id="8e47e9575e2300fd877f61160058d7c0" category="sidebar">本发行说明介绍了Cloud Volumes ONTAP 9.12.09的新增功能、限制和已知问题。</block>
   <block id="3aecd779578c661d895e83c1e9e7274c" category="sidebar">Cloud Volumes ONTAP 9.12.09发行说明</block>
   <block id="b710bbf07a9ba1fa06f2e6f4e77a42db" category="paragraph">下表中显示的带宽与每个实例类型的 AWS 限制一致。这些限制与 Cloud Volumes ONTAP 所能提供的功能不完全一致。有关预期性能，请参见<block ref="c23654021de34c23e6d408104aa3bf49" category="inline-link-rx"></block>。</block>
+  <block id="4ae87c63691b9744168b73d7af816a77" category="section-title">9.15时09分P2次会议(2024年8月8日)</block>
+  <block id="301c7c8cfee4f653db163dd0917e061c" category="paragraph">现在、所有云提供商均可使用适用于Cloud Volumes ONTAP的9.12.09 P2修补程序。BlueXP将提示您将现有系统升级到此修补程序版本。</block>
+  <block id="ce5d0c77f167b881391469fc27895727" category="inline-link">查看P2修补程序中已修复的错误列表</block>
+  <block id="3fc252ec43144c8dd78602ca6c7fe60e" category="paragraph"><block ref="75f3c2aa534462e69fc54717adcc7a98" category="inline-link-rx"></block> (需要登录NetApp支持站点)。</block>
 </blocks>
