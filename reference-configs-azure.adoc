@@ -40,7 +40,7 @@ Cloud Volumes ONTAP 可以在云提供商提供的预留或按需 VM 实例上�
 --
 [cols="h,d,d,d"]
 |===
-|  | 免费 | 已优化 | 基于容量的许可证(Essentials、Professional和Edge Cache) 
+|  | 免费 | 已优化 | 基于容量的许可证(Essentials和Professional) 
 
 
 | 最大系统容量（磁盘 + 对象存储） | 500 GiB | 2 个 PIB | 2 个 PIB 
@@ -121,6 +121,9 @@ Cloud Volumes ONTAP 可以在云提供商提供的预留或按需 VM 实例上�
 
 . PAYGO Explore 不支持将数据分层到 Azure Blob 存储。
 . 此 VM 类型包括本地 NVMe 存储， Cloud Volumes ONTAP 使用此存储作为 _Flash Cache_ 。Flash Cache 通过实时智能缓存最近读取的用户数据和 NetApp 元数据来加快数据访问速度。它适用于随机读取密集型工作负载，包括数据库，电子邮件和文件服务。 https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-flash-cache.html["了解更多信息。"^]。
++
+在Azure上配置Flash Cache所需的最低ONTAP版本为9.13.1GA。
+
 . 这些 VM 类型使用 https://docs.microsoft.com/en-us/azure/virtual-machines/windows/disks-enable-ultra-ssd["超 SSD"^] 用于 VNVRAM ，可提供更好的写入性能。
 +
 如果您在部署新的 Cloud Volumes ONTAP 系统时选择了其中任何一种 VM 类型，则不能更改为使用适用于 VNVRAM 的超高 SSD 的其他 VM 类型。例如，您不能从 E8ds_v4 更改为 E8s_v3 ，但可以从 E8ds_v4 更改为 E32ds_v4 ，因为这两种虚拟机类型都使用超 SSD 。
@@ -240,7 +243,7 @@ NOTE: 您可以对Azure中的现有Cloud Volumes ONTAP HA页面Blob部署使用�
 --
 [cols="h,d,d,d"]
 |===
-|  | 免费 | 已优化 | 基于容量的许可证(Essentials、Professional和Edge Cache) 
+|  | 免费 | 已优化 | 基于容量的许可证(Essentials和Professional) 
 
 
 | 最大系统容量（磁盘 + 对象存储） | 500 GiB | 2 个 PIB | 2 个 PIB 
@@ -377,7 +380,7 @@ NOTE: 您可以对Azure中的现有Cloud Volumes ONTAP HA页面Blob部署使用�
 --
 [cols="h,d,d,d"]
 |===
-|  | 免费 | 已优化 | 基于容量的许可证(Essentials、Professional和Edge Cache) 
+|  | 免费 | 已优化 | 基于容量的许可证(Essentials和Professional) 
 
 
 | 最大系统容量（磁盘 + 对象存储） | 500 GiB | 2 个 PIB | 2 个 PIB 

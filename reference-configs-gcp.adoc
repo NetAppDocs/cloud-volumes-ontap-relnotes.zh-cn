@@ -32,7 +32,7 @@ Cloud Volumes ONTAP 可以在云提供商提供的预留或按需 VM 实例上�
 --
 [cols="h,d,d,d"]
 |===
-|  | 免费 | 已优化 | 基于容量的许可证(Essentials、Professional和Edge Cache) 
+|  | 免费 | 已优化 | 基于容量的许可证(Essentials和Professional) 
 
 
 | 最大系统容量（磁盘 + 对象存储） | 500 GiB | 2 个 PIB | 2 个 PIB 
@@ -80,7 +80,7 @@ link:reference-limits-gcp.html["详细了解 Google Cloud 中的磁盘限制"]�
 
 . 使用平衡的永久性磁盘和性能(SSD)永久性磁盘时、可以提高写入性能。
 . BlueXP界面显示了Standard和BYOL支持的另一种计算机类型：N1-HIGHMEM-4。但是，此计算机类型并不适用于生产环境。我们已将其仅用于特定实验室环境。
-. 从Cloud Volumes ONTAP 软件9.13.0版开始、可以为以下HA对部署实例提供_Flash Cache"高写入速度"和更高的最大传输单元(MTU) 8、896字节：
+. 从Cloud Volumes ONTAP 9.13.0开始、可以为以下HA对部署实例提供_Flash Cache _、高写入速度以及8、896字节的更高最大传输单元(MTU)：
 +
 ** n2-standard-16
 ** n2-standard-32

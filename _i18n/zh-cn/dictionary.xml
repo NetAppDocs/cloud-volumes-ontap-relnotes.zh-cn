@@ -568,7 +568,6 @@
   <block id="6367723c5abb9a6de038561ba69ed33f" category="example-title">BYOL：单个可用性区域中的HA对、具有页面blob</block>
   <block id="561a766e0af8bbc565f3cd929c900d16" category="example-title">BYOL：使用共享受管磁盘的多可用性区域配置中的HA对</block>
   <block id="fc9a388cd18c69244f22554de6f0d544" category="paragraph-title">对于 AWS 中的 HA 系统，镜像数据是否计入容量限制？</block>
-  <block id="39b49fbe12f6121fd761513c05ddba97" category="paragraph">某些虚拟机类型包括本地NVMe存储、Cloud Volumes ONTAP 将其用作_Flash Cachage_。请注意 Flash Cache 的以下限制：</block>
   <block id="f59964eb1e1669da7d916b7e136c88bd" category="list-text">m6id.32xlarge</block>
   <block id="b5cb41a6703cf18b4cecd5a0817f91cf" category="section-title">升级说明</block>
   <block id="dfb01a7b38cba8284269f37f00622809" category="paragraph">通读这些注释、了解有关升级到此版本的更多信息。</block>
@@ -688,7 +687,6 @@
   <block id="ea724697af39ce2b490b5643777ed273" category="paragraph">Cloud Volumes ONTAP可作为单节点系统和高可用性(HA)节点对在Google Cloud中使用、以实现容错和无中断运行。</block>
   <block id="f52ead6bbf1fb1c871d206603e5a2347" category="open-title">基于容量的许可证</block>
   <block id="6e539d2ea7d82ed0e31c450e64ff8c04" category="cell">已优化</block>
-  <block id="82fc13b1b2688039a14feb2fc8785cad" category="cell">基于容量的许可证(Essentials、Professional和Edge Cache)</block>
   <block id="d56bf07ec8cd4e9f29339d605ffef95c" category="open-title">基于节点的许可证</block>
   <block id="b338d2a3e5b2fa0602cf93fe49c51138" category="paragraph">有关Google Cloud区域支持、请参见<block ref="2b6a522631c3b3b8afac5466195e108a" category="inline-link-rx"></block>。</block>
   <block id="bde67b5966889851166e3f5c7b09ff05" category="paragraph">在Azure中将Cloud Volumes ONTAP部署为单节点系统时、您可以从以下基于容量或基于节点的许可配置中进行选择。</block>
@@ -756,4 +754,9 @@
   <block id="301c7c8cfee4f653db163dd0917e061c" category="paragraph">现在、所有云提供商均可使用适用于Cloud Volumes ONTAP的9.12.09 P2修补程序。BlueXP将提示您将现有系统升级到此修补程序版本。</block>
   <block id="ce5d0c77f167b881391469fc27895727" category="inline-link">查看P2修补程序中已修复的错误列表</block>
   <block id="3fc252ec43144c8dd78602ca6c7fe60e" category="paragraph"><block ref="75f3c2aa534462e69fc54717adcc7a98" category="inline-link-rx"></block> (需要登录NetApp支持站点)。</block>
+  <block id="32d6fe93ba69b4395a45277c1885f29f" category="cell">基于容量的许可证(Essentials和Professional)</block>
+  <block id="7ac4ad805c5f62c422ac040e484787d7" category="paragraph">在Azure上配置Flash Cache所需的最低ONTAP版本为9.13.1GA。</block>
+  <block id="fb68df6302dcf52c3640cda14ef6c3e2" category="list-text">从Cloud Volumes ONTAP 9.13.0开始、可以为以下HA对部署实例提供_Flash Cache _、高写入速度以及8、896字节的更高最大传输单元(MTU)：</block>
+  <block id="0ef515bdf91048074b68adb0d7ce587e" category="paragraph">在某些虚拟机类型中、Cloud Volumes ONTAP会将本地NVMe存储用作_Flash Cache _。请注意以下限制：</block>
+  <block id="7616922b4f9b85f327fb9c04518fc90f" category="list-text">不支持在重新启动后重新恢复缓存。</block>
 </blocks>
