@@ -115,7 +115,7 @@ Cloud Volumes ONTAP 可以在云提供商提供的预留或按需 VM 实例上�
 
 
 
-| 支持的磁盘类型 ^4^ 3+| 标准 HDD 受管磁盘，标准 SSD 受管磁盘和高级 SSD 受管磁盘 
+| 支持的磁盘类型 ^4^ 3+| 标准HDD托管磁盘、标准SSD托管磁盘、高级SSD托管磁盘和高级SSD v2托管磁盘。 
 |===
 注释：
 
@@ -126,7 +126,7 @@ Cloud Volumes ONTAP 可以在云提供商提供的预留或按需 VM 实例上�
 
 . 这些 VM 类型使用 https://docs.microsoft.com/en-us/azure/virtual-machines/windows/disks-enable-ultra-ssd["超 SSD"^] 用于 VNVRAM ，可提供更好的写入性能。
 +
-如果您在部署新的 Cloud Volumes ONTAP 系统时选择了其中任何一种 VM 类型，则不能更改为使用适用于 VNVRAM 的超高 SSD 的其他 VM 类型。例如，您不能从 E8ds_v4 更改为 E8s_v3 ，但可以从 E8ds_v4 更改为 E32ds_v4 ，因为这两种虚拟机类型都使用超 SSD 。
+如果您在部署新的 Cloud Volumes ONTAP 系统时选择了其中任何一种 VM 类型，则不能更改为使用适用于 VNVRAM 的超高 SSD 的其他 VM 类型。例如，您不能从 E8ds_v4 更改为 E8s_v3 ，但可以从 E8ds_v4 更改为 E32ds_v4 ，因为这两种虚拟机类型都使用超 SSD 。同样、在部署新的Cloud Volumes ONTAP系统时、不能将虚拟机类型更改为"不支持高级SSD v2托管磁盘"。
 
 +
 相反，如果您使用任何其他 VM 类型部署 Cloud Volumes ONTAP ，则无法更改为使用适用于 VNVRAM 的超高 SSD 的 VM 类型。例如，您不能从 E8s_v3 更改为 E8ds_v4 。
@@ -421,6 +421,9 @@ NOTE: 您可以对Azure中的现有Cloud Volumes ONTAP HA页面Blob部署使用�
 * L64s_v3 ^1、3、5^
 
 
+
+
+| 支持的磁盘类型 3+| 标准HDD托管磁盘、标准SSD托管磁盘、高级SSD托管磁盘和高级SSD v2托管磁盘。 
 |===
 注释：
 

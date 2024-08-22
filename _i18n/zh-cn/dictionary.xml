@@ -569,7 +569,6 @@
   <block id="561a766e0af8bbc565f3cd929c900d16" category="example-title">BYOL：使用共享受管磁盘的多可用性区域配置中的HA对</block>
   <block id="fc9a388cd18c69244f22554de6f0d544" category="paragraph-title">对于 AWS 中的 HA 系统，镜像数据是否计入容量限制？</block>
   <block id="f59964eb1e1669da7d916b7e136c88bd" category="list-text">m6id.32xlarge</block>
-  <block id="b5cb41a6703cf18b4cecd5a0817f91cf" category="section-title">升级说明</block>
   <block id="dfb01a7b38cba8284269f37f00622809" category="paragraph">通读这些注释、了解有关升级到此版本的更多信息。</block>
   <block id="b78b1188c7979365981f7c88049f9366" category="section-title">如何升级</block>
   <block id="c716eebe2519c2ba4a2e109b59dd8b13" category="inline-link">了解在收到BlueXP通知时如何升级</block>
@@ -637,10 +636,6 @@
   <block id="2352c4e1f4d0024ade0869e00e6243f4" category="paragraph"><block ref="2352c4e1f4d0024ade0869e00e6243f4" category="inline-link-macro-rx"></block></block>
   <block id="c7316b16841dc002d14d45c38a750287" category="cell">L48s_v3</block>
   <block id="b9f4aa39433f5232d4ce50f2a9a3c403" category="cell">L64s_v3</block>
-  <block id="83855cac4cd9fe299365bd61fece6bb1" category="inline-link-macro">AWS中Cloud Volumes ONTAP 9.14.0调解器的通知</block>
-  <block id="d3c10a06f4967c50eb334c137f0fea04" category="list-text"><block ref="d3c10a06f4967c50eb334c137f0fea04" category="inline-link-macro-rx"></block></block>
-  <block id="372c9b488802576d68e99603944c4566" category="inline-link-macro">Google Cloud中Cloud Volumes ONTAP 9.14.0调解器的通知</block>
-  <block id="ade4280527084cf81b8c35333fab8226" category="list-text"><block ref="ade4280527084cf81b8c35333fab8226" category="inline-link-macro-rx"></block></block>
   <block id="474efe63e96f6b9f1c2d9f2e851888a1" category="paragraph">HA对使用Azure托管磁盘。支持以下磁盘类型和大小。</block>
   <block id="a5cd8e75bf9d20c9038f3cf45ff950e3" category="paragraph">(9.12.1版之前部署的HA对支持页面Blobs。)</block>
   <block id="fe77d7482327c65392eb365d35d8bd99" category="paragraph">*高级SSD*</block>
@@ -732,31 +727,46 @@
   <block id="0b1bcd721d49fbe0a3ff4bd80dfcd83f" category="list-text">以下EC2实例类型系列(大小为x大 到4x大)支持AWS本地区域：M5、c5、c5d、R5和R5d。 <block ref="3d9029b658475a88eed4e09e15fa8cce" category="inline-link-macro-rx"></block>。</block>
   <block id="4133f4256c016927cb270503c43adeb6" category="paragraph">在AWS本地区域中、这些实例类型不支持高写入速度。</block>
   <block id="910e1bdd6baebdae0421711258065197" category="admonition">您可以对Azure中的现有Cloud Volumes ONTAP HA页面Blob部署使用以下配置。新部署不支持页面Blobs。</block>
-  <block id="c7fba39244cea9bed6ebdf20c533b1ec" category="summary">Cloud Volumes ONTAP 9.12.09提供了一项新的增强功能。</block>
-  <block id="08801b736495375cdbb6bcb3a1212883" category="doc">Cloud Volumes ONTAP 9.12.09中的新增功能</block>
-  <block id="92910f0385055eeb4ce1fb8f6cab0845" category="paragraph">Cloud Volumes ONTAP 9.12.09提供了一些新的增强功能。</block>
-  <block id="275f84b2f13f6be7ad2b4bcf479ba8b2" category="section-title">9.15 P1次会议(2024年6月10日)</block>
-  <block id="9245869e5fee8bd2bb00d26ef6cbb8d0" category="paragraph">Cloud Volumes ONTAP 9.12.09 P1现已在AWS、Azure和Google Cloud中推出。P1版本可用于部署和升级。</block>
-  <block id="8b41c40998a7affc19c72d81b0d005da" category="paragraph">此版本包含一项新功能和一项增强功能。</block>
-  <block id="a4400979defd36b9aabb5e7db96ad29b" category="section-title">Azure中的映像验证</block>
-  <block id="a27a8bf2f715cc5e3614b0faa5cf0a9d" category="paragraph">现在、我们提供了增强的安全功能、用于验证通过Azure导出的Cloud Volumes ONTAP映像文件的签名。</block>
-  <block id="b8abb7c7caaa735ae906cc2808f5f968" category="inline-link-macro">了解有关Azure映像验证的更多信息</block>
-  <block id="99e39190aff1f0a0b65999be97e8be06" category="paragraph">有关详细信息，请参见 <block ref="cf7f85437fd22de8906b5dfc23f9072e" category="inline-link-macro-rx"></block>。</block>
-  <block id="0c617f2eafd2c49f96214ff1591f9e72" category="section-title">新的高可用性对部署不再支持Azure页面Blobs</block>
-  <block id="78791f347f204b6cdb496be6a39521d3" category="paragraph">从Cloud Volumes ONTAP 9.12.0-P1开始、新的高可用性对部署不再支持Azure页面Blobs。如果您当前在现有高可用性对部署中使用Azure页面Blobs、则可以迁移到Edsv4系列VM和Edsv5系列VM中较新的VM实例类型。</block>
-  <block id="11c433da09cca9cd7d57ed81e1cd6310" category="inline-link-macro">详细了解Azure中支持的配置</block>
-  <block id="32fc2dbe6ce23818c00cefccab1d6097" category="paragraph"><block ref="ecdad61fcd8abefb7dbc2e5c682b6e1d" category="inline-link-macro-rx"></block>。</block>
-  <block id="af9688d5cde98d7a041489576710fac7" category="paragraph">您可以从9.14.1版升级到Cloud Volumes ONTAP 9.14.10。BlueXP将提示您将符合条件的Cloud Volumes ONTAP 系统升级到此版本。</block>
-  <block id="8e47e9575e2300fd877f61160058d7c0" category="sidebar">本发行说明介绍了Cloud Volumes ONTAP 9.12.09的新增功能、限制和已知问题。</block>
-  <block id="3aecd779578c661d895e83c1e9e7274c" category="sidebar">Cloud Volumes ONTAP 9.12.09发行说明</block>
   <block id="b710bbf07a9ba1fa06f2e6f4e77a42db" category="paragraph">下表中显示的带宽与每个实例类型的 AWS 限制一致。这些限制与 Cloud Volumes ONTAP 所能提供的功能不完全一致。有关预期性能，请参见<block ref="c23654021de34c23e6d408104aa3bf49" category="inline-link-rx"></block>。</block>
-  <block id="4ae87c63691b9744168b73d7af816a77" category="section-title">9.15时09分P2次会议(2024年8月8日)</block>
-  <block id="301c7c8cfee4f653db163dd0917e061c" category="paragraph">现在、所有云提供商均可使用适用于Cloud Volumes ONTAP的9.12.09 P2修补程序。BlueXP将提示您将现有系统升级到此修补程序版本。</block>
-  <block id="ce5d0c77f167b881391469fc27895727" category="inline-link">查看P2修补程序中已修复的错误列表</block>
-  <block id="3fc252ec43144c8dd78602ca6c7fe60e" category="paragraph"><block ref="75f3c2aa534462e69fc54717adcc7a98" category="inline-link-rx"></block> (需要登录NetApp支持站点)。</block>
   <block id="32d6fe93ba69b4395a45277c1885f29f" category="cell">基于容量的许可证(Essentials和Professional)</block>
   <block id="7ac4ad805c5f62c422ac040e484787d7" category="paragraph">在Azure上配置Flash Cache所需的最低ONTAP版本为9.13.1GA。</block>
   <block id="fb68df6302dcf52c3640cda14ef6c3e2" category="list-text">从Cloud Volumes ONTAP 9.13.0开始、可以为以下HA对部署实例提供_Flash Cache _、高写入速度以及8、896字节的更高最大传输单元(MTU)：</block>
   <block id="0ef515bdf91048074b68adb0d7ce587e" category="paragraph">在某些虚拟机类型中、Cloud Volumes ONTAP会将本地NVMe存储用作_Flash Cache _。请注意以下限制：</block>
   <block id="7616922b4f9b85f327fb9c04518fc90f" category="list-text">不支持在重新启动后重新恢复缓存。</block>
+  <block id="957c86bd7e2943f4f2bea59ca801e935" category="inline-link-macro">AWS中Cloud Volumes ONTAP 9.15.1调解器的通知</block>
+  <block id="ae067c922d91788650ee1d5ddf600801" category="list-text"><block ref="ae067c922d91788650ee1d5ddf600801" category="inline-link-macro-rx"></block></block>
+  <block id="c225bb599d95ae48865f5a5a99751d6d" category="inline-link-macro">Google Cloud中Cloud Volumes ONTAP 9.15.1调解器的通知</block>
+  <block id="8d3eb6c7422d9d7fe8285d43bec57d37" category="list-text"><block ref="8d3eb6c7422d9d7fe8285d43bec57d37" category="inline-link-macro-rx"></block></block>
+  <block id="3feaeead4352aa22a5e23895ca44ad6f" category="cell">标准HDD托管磁盘、标准SSD托管磁盘、高级SSD托管磁盘和高级SSD v2托管磁盘。</block>
+  <block id="f34e593f4dda0ab627f7a62029e82a1a" category="paragraph">如果您在部署新的 Cloud Volumes ONTAP 系统时选择了其中任何一种 VM 类型，则不能更改为使用适用于 VNVRAM 的超高 SSD 的其他 VM 类型。例如，您不能从 E8ds_v4 更改为 E8s_v3 ，但可以从 E8ds_v4 更改为 E32ds_v4 ，因为这两种虚拟机类型都使用超 SSD 。同样、在部署新的Cloud Volumes ONTAP系统时、不能将虚拟机类型更改为"不支持高级SSD v2托管磁盘"。</block>
+  <block id="fbd5af992908b9931b0ae311f285c7d5" category="summary">Cloud Volumes ONTAP 9.151提供了一项新的增强功能。</block>
+  <block id="83a60efee029f00eebfd929bdfd93b02" category="doc">Cloud Volumes ONTAP 9.15.1.中的新增功能</block>
+  <block id="b4c1aa9082f0d8e4483e610ea5ab6d33" category="paragraph">Cloud Volumes ONTAP 9.151提供了一些新的增强功能。</block>
+  <block id="aa4ce9e7e0e2db885cfae0432f23eb02" category="section-title">9.151大会(2024年8月22日)</block>
+  <block id="776ca3f689b01a1c056067512185cd34" category="paragraph">Cloud Volumes ONTAP 9.151 GA现已在AWS、Azure和Google Cloud中推出。GA版本可用于部署和升级。此版本包含以下新增功能和增强功能：</block>
+  <block id="bc7175e423f6e0afd8f8a6b587844b59" category="section-title">支持Azure上的高级SSD v2托管磁盘</block>
+  <block id="5b0ca394a998f1788658ece8c00dd5d2" category="paragraph">Azure上的Cloud Volumes ONTAP系统现在支持高级SSD v2托管磁盘。与高级SSD托管磁盘相比、这些高级磁盘可以为单节点和高可用性(HA)对提供更高的性能、更低的延迟以及更低的成本。与其他受管磁盘一样、最大磁盘大小为32 TiB。可以配置高级SSD v2托管磁盘的性能(容量、吞吐量和IOPS)、从而在满足不断变化的性能需求的同时、经济高效地处理工作负载。</block>
+  <block id="20bb913d178725401e1f129f9cd78e9e" category="inline-link">了解Azure存储</block>
+  <block id="0c9b033761741e7095a8d1bfb0da6304" category="paragraph"><block ref="b59c69fce966b6ba60a6774d4343de96" category="inline-link-rx"></block>(英文)</block>
+  <block id="892d55f6f43d490c5ac28471f96de68a" category="section-title">在Azure上的单个可用性区域中部署HA对</block>
+  <block id="47682b8a4aabe64f4b0715a6d6c5b431" category="paragraph">从Cloud Volumes ONTAP 9.15.1开始、您可以在Azure上的单个可用性区域(Single Availability Zones、AZs)中以HA模式部署虚拟机(VM)实例。与先前的非分区部署不同、Cloud Volumes ONTAP 9.15.1在灵活的流程编排模式下使用Microsoft虚拟机扩展集来部署所有资源、包括在同一可用性分区中部署不同的容错域、从而确保最佳可用性。</block>
+  <block id="38dcec2e270a003b76d28db7df9fcbb3" category="inline-link">了解Azure中的高可用性对</block>
+  <block id="ad079f1950bcd6f1dc9b0da6c93caa11" category="paragraph"><block ref="f518cf6fbcbc18f0f69e2270304a3bb9" category="inline-link-rx"></block>(英文)</block>
+  <block id="5f6ae050f79947b402a5730d141e65ee" category="section-title">支持虚拟机扩展集、以统一所有Azure HA类型</block>
+  <block id="85cf8a29d1fb742b8feb4e50d776436e" category="paragraph">Cloud Volumes ONTAP 9.15.1可利用Azure上灵活流程编排模式下的虚拟机扩展集、在单个可用性区域中部署虚拟机(VM)实例、以实现高可用性(HA)对。</block>
+  <block id="b368f302cd95fd657c5b89ae6ed7d352" category="paragraph">默认情况下、此部署模式会使用高级SSD v2托管磁盘。如果满足以下条件、则可以使用HA模式、Pageblob、本地冗余存储(LRS)、分区冗余存储(ZRS)或多分区以及LRS分区(单个AZ)的所有模式：</block>
+  <block id="6326d313b843fff1d57ed50ec7c000f1" category="list-text">Cloud Volumes ONTAP的版本为9.151或更高版本。</block>
+  <block id="840f8de5c9f54f772062c77429778e38" category="inline-link">Microsoft Azure网站：产品按地区提供</block>
+  <block id="fd7c8b210845b6835720e8398b335dce" category="list-text">该区域支持灵活流程编排模式下的虚拟机扩展集。有关受支持地区的信息，请参阅<block ref="4cad7f2a2d9c49229b747bad0a9e56da" category="inline-link-rx"></block>。</block>
+  <block id="6aa5f36ae7ac4ee786cacf13cbbb981f" category="list-text">某个区域中的选定分区支持灵活流程编排模式下的虚拟机扩展集。</block>
+  <block id="c785b61f2bfc2a0a28110dd4da201a48" category="list-text">已为Microsoft<block ref="fdfb47698b60e554acc8cff3a6065992" prefix=" " category="inline-code"></block>功能注册订阅。</block>
+  <block id="68367d4408e943b9268a7a6d4314fb0a" category="inline-link">在Azure中启动Cloud Volumes ONTAP HA对</block>
+  <block id="e9e34ff3ab97c79b3c316c17375f6ff1" category="inline-link">为单个可用性区域启用VMOrchestratorzonalMultiFD</block>
+  <block id="67d86fb895fd2dadf6a098a0d4cbcf84" category="paragraph">要了解更多信息，请参阅<block ref="21ec87e6eb67935050d7d05994bd62be" category="inline-link-rx"></block>和<block ref="800e13b1242ee8997b4b8c600fd26f10" category="inline-link-rx"></block>。</block>
+  <block id="6ed999af427a3e626f879a4018500deb" category="paragraph">如果不满足上述任一条件、则先前的LRS非分区部署将生效。</block>
+  <block id="8587098b07c4e4a23dccafd754dbc676" category="section-title">升级说明。</block>
+  <block id="a30c58b20b60e5ffb9d932cee170af9a" category="paragraph">您可以从9.15.10和9.14.1版升级到Cloud Volumes ONTAP 9.15.1。BlueXP将提示您将符合条件的Cloud Volumes ONTAP 系统升级到此版本。</block>
+  <block id="8679be60a45e6f155a93161b9a8c5d43" category="sidebar">本发行说明介绍了Cloud Volumes ONTAP 1的新增功能、限制和已知问题。</block>
+  <block id="c32d4655f35315d6cd7ab368b1f0a6de" category="sidebar">Cloud Volumes ONTAP 9.151发行说明</block>
+  <block id="9b74e463f9eba3d7b2490736bd408da0" category="sidebar">本发行说明介绍了Cloud Volumes ONTAP 9.151的新增功能、限制和已知问题。</block>
 </blocks>

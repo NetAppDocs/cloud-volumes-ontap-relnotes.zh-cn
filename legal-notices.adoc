@@ -47,7 +47,7 @@ link:https://www.netapp.com/company/legal/privacy-policy/["https://www.netapp.co
 
 通知文件提供有关 NetApp 软件中使用的第三方版权和许可证的信息。
 
-* link:media/notice-aws.pdf["AWS中Cloud Volumes ONTAP 9.14.0调解器的通知"^]
-* link:media/notice-google-cloud.pdf["Google Cloud中Cloud Volumes ONTAP 9.14.0调解器的通知"^]
+* link:media/notice-aws.pdf["AWS中Cloud Volumes ONTAP 9.15.1调解器的通知"^]
+* link:media/notice-google-cloud.pdf["Google Cloud中Cloud Volumes ONTAP 9.15.1调解器的通知"^]
 * https://docs.netapp.com/us-en/ontap/reference_legal_notices.html#open-source["ONTAP 注意事项"^]
 
