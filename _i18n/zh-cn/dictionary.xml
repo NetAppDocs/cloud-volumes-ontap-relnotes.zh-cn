@@ -738,35 +738,40 @@
   <block id="c225bb599d95ae48865f5a5a99751d6d" category="inline-link-macro">Google Cloud中Cloud Volumes ONTAP 9.15.1调解器的通知</block>
   <block id="8d3eb6c7422d9d7fe8285d43bec57d37" category="list-text"><block ref="8d3eb6c7422d9d7fe8285d43bec57d37" category="inline-link-macro-rx"></block></block>
   <block id="3feaeead4352aa22a5e23895ca44ad6f" category="cell">标准HDD托管磁盘、标准SSD托管磁盘、高级SSD托管磁盘和高级SSD v2托管磁盘。</block>
-  <block id="f34e593f4dda0ab627f7a62029e82a1a" category="paragraph">如果您在部署新的 Cloud Volumes ONTAP 系统时选择了其中任何一种 VM 类型，则不能更改为使用适用于 VNVRAM 的超高 SSD 的其他 VM 类型。例如，您不能从 E8ds_v4 更改为 E8s_v3 ，但可以从 E8ds_v4 更改为 E32ds_v4 ，因为这两种虚拟机类型都使用超 SSD 。同样、在部署新的Cloud Volumes ONTAP系统时、不能将虚拟机类型更改为"不支持高级SSD v2托管磁盘"。</block>
   <block id="fbd5af992908b9931b0ae311f285c7d5" category="summary">Cloud Volumes ONTAP 9.151提供了一项新的增强功能。</block>
   <block id="83a60efee029f00eebfd929bdfd93b02" category="doc">Cloud Volumes ONTAP 9.15.1.中的新增功能</block>
   <block id="b4c1aa9082f0d8e4483e610ea5ab6d33" category="paragraph">Cloud Volumes ONTAP 9.151提供了一些新的增强功能。</block>
   <block id="aa4ce9e7e0e2db885cfae0432f23eb02" category="section-title">9.151大会(2024年8月22日)</block>
-  <block id="776ca3f689b01a1c056067512185cd34" category="paragraph">Cloud Volumes ONTAP 9.151 GA现已在AWS、Azure和Google Cloud中推出。GA版本可用于部署和升级。此版本包含以下新增功能和增强功能：</block>
   <block id="bc7175e423f6e0afd8f8a6b587844b59" category="section-title">支持Azure上的高级SSD v2托管磁盘</block>
   <block id="5b0ca394a998f1788658ece8c00dd5d2" category="paragraph">Azure上的Cloud Volumes ONTAP系统现在支持高级SSD v2托管磁盘。与高级SSD托管磁盘相比、这些高级磁盘可以为单节点和高可用性(HA)对提供更高的性能、更低的延迟以及更低的成本。与其他受管磁盘一样、最大磁盘大小为32 TiB。可以配置高级SSD v2托管磁盘的性能(容量、吞吐量和IOPS)、从而在满足不断变化的性能需求的同时、经济高效地处理工作负载。</block>
   <block id="20bb913d178725401e1f129f9cd78e9e" category="inline-link">了解Azure存储</block>
-  <block id="0c9b033761741e7095a8d1bfb0da6304" category="paragraph"><block ref="b59c69fce966b6ba60a6774d4343de96" category="inline-link-rx"></block>(英文)</block>
   <block id="892d55f6f43d490c5ac28471f96de68a" category="section-title">在Azure上的单个可用性区域中部署HA对</block>
-  <block id="47682b8a4aabe64f4b0715a6d6c5b431" category="paragraph">从Cloud Volumes ONTAP 9.15.1开始、您可以在Azure上的单个可用性区域(Single Availability Zones、AZs)中以HA模式部署虚拟机(VM)实例。与先前的非分区部署不同、Cloud Volumes ONTAP 9.15.1在灵活的流程编排模式下使用Microsoft虚拟机扩展集来部署所有资源、包括在同一可用性分区中部署不同的容错域、从而确保最佳可用性。</block>
-  <block id="38dcec2e270a003b76d28db7df9fcbb3" category="inline-link">了解Azure中的高可用性对</block>
-  <block id="ad079f1950bcd6f1dc9b0da6c93caa11" category="paragraph"><block ref="f518cf6fbcbc18f0f69e2270304a3bb9" category="inline-link-rx"></block>(英文)</block>
   <block id="5f6ae050f79947b402a5730d141e65ee" category="section-title">支持虚拟机扩展集、以统一所有Azure HA类型</block>
-  <block id="85cf8a29d1fb742b8feb4e50d776436e" category="paragraph">Cloud Volumes ONTAP 9.15.1可利用Azure上灵活流程编排模式下的虚拟机扩展集、在单个可用性区域中部署虚拟机(VM)实例、以实现高可用性(HA)对。</block>
-  <block id="b368f302cd95fd657c5b89ae6ed7d352" category="paragraph">默认情况下、此部署模式会使用高级SSD v2托管磁盘。如果满足以下条件、则可以使用HA模式、Pageblob、本地冗余存储(LRS)、分区冗余存储(ZRS)或多分区以及LRS分区(单个AZ)的所有模式：</block>
   <block id="6326d313b843fff1d57ed50ec7c000f1" category="list-text">Cloud Volumes ONTAP的版本为9.151或更高版本。</block>
   <block id="840f8de5c9f54f772062c77429778e38" category="inline-link">Microsoft Azure网站：产品按地区提供</block>
-  <block id="fd7c8b210845b6835720e8398b335dce" category="list-text">该区域支持灵活流程编排模式下的虚拟机扩展集。有关受支持地区的信息，请参阅<block ref="4cad7f2a2d9c49229b747bad0a9e56da" category="inline-link-rx"></block>。</block>
-  <block id="6aa5f36ae7ac4ee786cacf13cbbb981f" category="list-text">某个区域中的选定分区支持灵活流程编排模式下的虚拟机扩展集。</block>
-  <block id="c785b61f2bfc2a0a28110dd4da201a48" category="list-text">已为Microsoft<block ref="fdfb47698b60e554acc8cff3a6065992" prefix=" " category="inline-code"></block>功能注册订阅。</block>
   <block id="68367d4408e943b9268a7a6d4314fb0a" category="inline-link">在Azure中启动Cloud Volumes ONTAP HA对</block>
-  <block id="e9e34ff3ab97c79b3c316c17375f6ff1" category="inline-link">为单个可用性区域启用VMOrchestratorzonalMultiFD</block>
-  <block id="67d86fb895fd2dadf6a098a0d4cbcf84" category="paragraph">要了解更多信息，请参阅<block ref="21ec87e6eb67935050d7d05994bd62be" category="inline-link-rx"></block>和<block ref="800e13b1242ee8997b4b8c600fd26f10" category="inline-link-rx"></block>。</block>
-  <block id="6ed999af427a3e626f879a4018500deb" category="paragraph">如果不满足上述任一条件、则先前的LRS非分区部署将生效。</block>
   <block id="8587098b07c4e4a23dccafd754dbc676" category="section-title">升级说明。</block>
   <block id="a30c58b20b60e5ffb9d932cee170af9a" category="paragraph">您可以从9.15.10和9.14.1版升级到Cloud Volumes ONTAP 9.15.1。BlueXP将提示您将符合条件的Cloud Volumes ONTAP 系统升级到此版本。</block>
   <block id="8679be60a45e6f155a93161b9a8c5d43" category="sidebar">本发行说明介绍了Cloud Volumes ONTAP 1的新增功能、限制和已知问题。</block>
   <block id="c32d4655f35315d6cd7ab368b1f0a6de" category="sidebar">Cloud Volumes ONTAP 9.151发行说明</block>
   <block id="9b74e463f9eba3d7b2490736bd408da0" category="sidebar">本发行说明介绍了Cloud Volumes ONTAP 9.151的新增功能、限制和已知问题。</block>
+  <block id="28440751cbe2a16368822f02f298a2f4" category="inline-link">使用共享受管磁盘的HA单可用性区域配置</block>
+  <block id="e2a0553d4c47017042ca1689993f9c8b" category="paragraph">如果您在部署新的 Cloud Volumes ONTAP 系统时选择了其中任何一种 VM 类型，则不能更改为使用适用于 VNVRAM 的超高 SSD 的其他 VM 类型。例如，您不能从 E8ds_v4 更改为 E8s_v3 ，但可以从 E8ds_v4 更改为 E32ds_v4 ，因为这两种虚拟机类型都使用超 SSD 。同样、在部署新的Cloud Volumes ONTAP系统时、不能将虚拟机类型更改为"不支持高级SSD v2托管磁盘"。要详细了解高级SSD v2托管磁盘支持的配置，请参阅<block ref="6fd1548aedf3667cd5a4b1b43bc16181" category="inline-link-rx"></block>。</block>
+  <block id="9d85572128910a61c3211c3fcb021921" category="section-title">9.151 P1 (2024年9月3日)</block>
+  <block id="0af97325f311859f8c8335d28a3d334c" category="paragraph">9.15.1P1修补程序现在可用于所有云提供商的Cloud Volumes ONTAP。BlueXP将提示您将现有系统升级到此修补程序版本。</block>
+  <block id="a9380d77cd3c45a5f15f09b231323443" category="inline-link-macro">查看P1修补程序中已修复的错误列表</block>
+  <block id="26913715f6472de0e1115ad17f6b6bc8" category="paragraph"><block ref="0551aa4e2b5bd361ee5fdb2414ba928f" category="inline-link-macro-rx"></block> (需要登录NetApp支持站点)。</block>
+  <block id="dfb5c8ec2223bd8a6413a4362da62637" category="paragraph">Cloud Volumes ONTAP 9.151 GA现已在AWS、Azure和Google Cloud中推出。GA版本可用于部署和升级。</block>
+  <block id="3e6d47920aca39db44843a3add6a6655" category="paragraph">此版本为Azure提供了以下功能和增强功能。请继续阅读、详细了解支持这些新功能的特定配置。</block>
+  <block id="1aa9c656bf03d8824495d5c1ad3b6bda" category="paragraph"><block ref="b89aaee931541f273298fee7632a9cbf" category="inline-link-rx"></block>(英文)</block>
+  <block id="80b122992ec0ea80dc356ea01fdddcb4" category="paragraph">从Cloud Volumes ONTAP 9.15.1开始、您可以在Azure的单可用性区域(Single Availability Zones、AZs)中以HA模式部署虚拟机(VM)实例。与先前的非分区部署不同、Cloud Volumes ONTAP 9.15.1在灵活的流程编排模式下使用Microsoft虚拟机扩展集来部署所有资源、包括在同一可用性分区中部署不同的容错域、从而确保最佳可用性。默认情况下、此部署模式会在满足以下条件时使用高级SSD v2托管磁盘：</block>
+  <block id="3d58e19a0ad059c068ea94850f7f07b3" category="list-text">选定区域和区域支持高级SSD v2托管磁盘。有关受支持地区的信息，请参阅<block ref="4cad7f2a2d9c49229b747bad0a9e56da" category="inline-link-rx"></block>。要了解如何添加它们，请参见<block ref="21ec87e6eb67935050d7d05994bd62be" category="inline-link-rx"></block>。</block>
+  <block id="ba9b674ef918293b2811c2896cb57927" category="inline-link">了解如何为单个可用性区域启用VMOrchestratorzonalMultiFD</block>
+  <block id="ddcdfb16338cb24a868b379c7937a3f9" category="list-text">已为Microsoft<block ref="fdfb47698b60e554acc8cff3a6065992" prefix=" " category="inline-code"></block>功能注册订阅。<block ref="37dbbe0007aba28a7312f0bdc995d21b" category="inline-link-rx"></block>(英文)</block>
+  <block id="4c948eb331f4d29ab3fd543fd04028c3" category="paragraph">如果不满足上述任一条件、则本地冗余存储(LRS)的先前非分区部署模式将生效。</block>
+  <block id="569a86e1494e035e7de656acda258ef0" category="paragraph">Cloud Volumes ONTAP 9.15.1可利用Azure上灵活流程编排模式下的虚拟机扩展集、在单个可用性区域中部署虚拟机(VM)实例、以实现高可用性(HA)对。它涵盖了HA模式、Pageblob、LRS、区域冗余存储(ZRS)或多区域以及LRS区域(单个AZ)的所有类型。</block>
+  <block id="fcb7516396bf1d9722f3e765d3004427" category="inline-link">Microsoft Azure文档：虚拟机扩展集文档</block>
+  <block id="b4273b358a9e522bb090b6bbb65e080f" category="list-text"><block ref="b4273b358a9e522bb090b6bbb65e080f" category="inline-link-rx"></block></block>
+  <block id="0bd904c1b3763b65f2cc9d002f6a74e1" category="inline-link">了解Azure中的高可用性对</block>
+  <block id="0a60745fecbc79115b1e58a81d31e5cf" category="list-text"><block ref="80b3c96e29f809092ae7660c3123c5c7" category="inline-link-rx"></block>(英文)</block>
 </blocks>
