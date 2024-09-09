@@ -733,10 +733,6 @@
   <block id="fb68df6302dcf52c3640cda14ef6c3e2" category="list-text">从Cloud Volumes ONTAP 9.13.0开始、可以为以下HA对部署实例提供_Flash Cache _、高写入速度以及8、896字节的更高最大传输单元(MTU)：</block>
   <block id="0ef515bdf91048074b68adb0d7ce587e" category="paragraph">在某些虚拟机类型中、Cloud Volumes ONTAP会将本地NVMe存储用作_Flash Cache _。请注意以下限制：</block>
   <block id="7616922b4f9b85f327fb9c04518fc90f" category="list-text">不支持在重新启动后重新恢复缓存。</block>
-  <block id="957c86bd7e2943f4f2bea59ca801e935" category="inline-link-macro">AWS中Cloud Volumes ONTAP 9.15.1调解器的通知</block>
-  <block id="ae067c922d91788650ee1d5ddf600801" category="list-text"><block ref="ae067c922d91788650ee1d5ddf600801" category="inline-link-macro-rx"></block></block>
-  <block id="c225bb599d95ae48865f5a5a99751d6d" category="inline-link-macro">Google Cloud中Cloud Volumes ONTAP 9.15.1调解器的通知</block>
-  <block id="8d3eb6c7422d9d7fe8285d43bec57d37" category="list-text"><block ref="8d3eb6c7422d9d7fe8285d43bec57d37" category="inline-link-macro-rx"></block></block>
   <block id="3feaeead4352aa22a5e23895ca44ad6f" category="cell">标准HDD托管磁盘、标准SSD托管磁盘、高级SSD托管磁盘和高级SSD v2托管磁盘。</block>
   <block id="fbd5af992908b9931b0ae311f285c7d5" category="summary">Cloud Volumes ONTAP 9.151提供了一项新的增强功能。</block>
   <block id="83a60efee029f00eebfd929bdfd93b02" category="doc">Cloud Volumes ONTAP 9.15.1.中的新增功能</block>
@@ -769,9 +765,11 @@
   <block id="ba9b674ef918293b2811c2896cb57927" category="inline-link">了解如何为单个可用性区域启用VMOrchestratorzonalMultiFD</block>
   <block id="ddcdfb16338cb24a868b379c7937a3f9" category="list-text">已为Microsoft<block ref="fdfb47698b60e554acc8cff3a6065992" prefix=" " category="inline-code"></block>功能注册订阅。<block ref="37dbbe0007aba28a7312f0bdc995d21b" category="inline-link-rx"></block>(英文)</block>
   <block id="4c948eb331f4d29ab3fd543fd04028c3" category="paragraph">如果不满足上述任一条件、则本地冗余存储(LRS)的先前非分区部署模式将生效。</block>
-  <block id="569a86e1494e035e7de656acda258ef0" category="paragraph">Cloud Volumes ONTAP 9.15.1可利用Azure上灵活流程编排模式下的虚拟机扩展集、在单个可用性区域中部署虚拟机(VM)实例、以实现高可用性(HA)对。它涵盖了HA模式、Pageblob、LRS、区域冗余存储(ZRS)或多区域以及LRS区域(单个AZ)的所有类型。</block>
   <block id="fcb7516396bf1d9722f3e765d3004427" category="inline-link">Microsoft Azure文档：虚拟机扩展集文档</block>
   <block id="b4273b358a9e522bb090b6bbb65e080f" category="list-text"><block ref="b4273b358a9e522bb090b6bbb65e080f" category="inline-link-rx"></block></block>
   <block id="0bd904c1b3763b65f2cc9d002f6a74e1" category="inline-link">了解Azure中的高可用性对</block>
   <block id="0a60745fecbc79115b1e58a81d31e5cf" category="list-text"><block ref="80b3c96e29f809092ae7660c3123c5c7" category="inline-link-rx"></block>(英文)</block>
+  <block id="524d94964962cd77e130e880d66b6c97" category="inline-link-macro">Cloud Volumes ONTAP 9.15.1.</block>
+  <block id="69b9c8f99d9f922a1b39668eb1ca9f2d" category="list-text"><block ref="69b9c8f99d9f922a1b39668eb1ca9f2d" category="inline-link-macro-rx"></block></block>
+  <block id="2e87e8a578558ca3febcb42e546e1af4" category="paragraph">Cloud Volumes ONTAP 9.15.1可利用Azure上灵活流程编排模式下的虚拟机扩展集、在单个可用性区域中部署虚拟机(VM)实例、以实现高可用性(HA)对。它涵盖了HA模式、页面Blob、LRS、分区冗余存储(ZRS)或多分区以及LRS分区(单个AZ)的所有类型。</block>
 </blocks>

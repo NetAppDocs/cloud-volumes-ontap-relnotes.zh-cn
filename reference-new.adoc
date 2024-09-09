@@ -59,7 +59,7 @@ https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-storage.html#az
 
 === 支持虚拟机扩展集、以统一所有Azure HA类型
 
-Cloud Volumes ONTAP 9.15.1可利用Azure上灵活流程编排模式下的虚拟机扩展集、在单个可用性区域中部署虚拟机(VM)实例、以实现高可用性(HA)对。它涵盖了HA模式、Pageblob、LRS、区域冗余存储(ZRS)或多区域以及LRS区域(单个AZ)的所有类型。
+Cloud Volumes ONTAP 9.15.1可利用Azure上灵活流程编排模式下的虚拟机扩展集、在单个可用性区域中部署虚拟机(VM)实例、以实现高可用性(HA)对。它涵盖了HA模式、页面Blob、LRS、分区冗余存储(ZRS)或多分区以及LRS分区(单个AZ)的所有类型。
 
 * https://learn.microsoft.com/en-us/azure/virtual-machine-scale-sets/["Microsoft Azure文档：虚拟机扩展集文档"^]
 * https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-ha-azure.html["了解Azure中的高可用性对"^](英文)
