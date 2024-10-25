@@ -419,8 +419,6 @@
   <block id="f30cabe0a77d16d16cf1ef723d8eb186" category="inline-link-macro">详细了解 Google Cloud 中的磁盘限制</block>
   <block id="a93742b808592a2ce1b1926f98f391eb" category="paragraph"><block ref="46bbc0e4d7a811f26e46cbb2c2ad7173" category="inline-link-macro-rx"></block>。</block>
   <block id="b4c4a8c75337dc28089aec3e79ae943c" category="list-text">PAYGO Explore 不支持将数据分层到 Google Cloud Storage 。</block>
-  <block id="46e869bc0f7a5fcdc09df010e1f48b25" category="list-text">新的 Cloud Volumes ONTAP 系统不再支持 custom-4-16384 计算机类型。</block>
-  <block id="0e3cb01898d99d0091e2a6f5a7572390" category="paragraph">如果您的现有系统在此计算机类型上运行，则可以继续使用它，但我们建议切换到 n2-standard-4 计算机类型。</block>
   <block id="d29bff99e1f1d5529824e9017672d630" category="paragraph">在 Google Cloud 中，一个聚合最多可以包含 6 个类型和大小相同的磁盘。支持以下磁盘大小：</block>
   <block id="dcfebc6fbca2c5316f55c914e6593d2d" category="list-text">100 GB</block>
   <block id="70f79b00cb7649d94d473895d6c540d2" category="list-text">1 TB</block>
@@ -730,7 +728,6 @@
   <block id="b710bbf07a9ba1fa06f2e6f4e77a42db" category="paragraph">下表中显示的带宽与每个实例类型的 AWS 限制一致。这些限制与 Cloud Volumes ONTAP 所能提供的功能不完全一致。有关预期性能，请参见<block ref="c23654021de34c23e6d408104aa3bf49" category="inline-link-rx"></block>。</block>
   <block id="32d6fe93ba69b4395a45277c1885f29f" category="cell">基于容量的许可证(Essentials和Professional)</block>
   <block id="7ac4ad805c5f62c422ac040e484787d7" category="paragraph">在Azure上配置Flash Cache所需的最低ONTAP版本为9.13.1GA。</block>
-  <block id="fb68df6302dcf52c3640cda14ef6c3e2" category="list-text">从Cloud Volumes ONTAP 9.13.0开始、可以为以下HA对部署实例提供_Flash Cache _、高写入速度以及8、896字节的更高最大传输单元(MTU)：</block>
   <block id="0ef515bdf91048074b68adb0d7ce587e" category="paragraph">在某些虚拟机类型中、Cloud Volumes ONTAP会将本地NVMe存储用作_Flash Cache _。请注意以下限制：</block>
   <block id="7616922b4f9b85f327fb9c04518fc90f" category="list-text">不支持在重新启动后重新恢复缓存。</block>
   <block id="3feaeead4352aa22a5e23895ca44ad6f" category="cell">标准HDD托管磁盘、标准SSD托管磁盘、高级SSD托管磁盘和高级SSD v2托管磁盘。</block>
@@ -776,4 +773,11 @@
   <block id="8d4440801f529fd94fa4b15d11c84ac0" category="paragraph">9.15.1 P2修补程序现在可用于所有云提供商的Cloud Volumes ONTAP。BlueXP将提示您将现有系统升级到此修补程序版本。</block>
   <block id="ce5d0c77f167b881391469fc27895727" category="inline-link-macro">查看P2修补程序中已修复的错误列表</block>
   <block id="46a5c1839a6c9667da9a201d204a30d8" category="paragraph"><block ref="8043c70c5f9f22a2d553b5b35821b45f" category="inline-link-macro-rx"></block> (需要登录NetApp支持站点)。</block>
+  <block id="e1e1effee5380369716ff955c2de6215" category="cell">支持的计算机类型 ^1^</block>
+  <block id="bb748564d3fa0104390bb3440623c489" category="cell">支持的磁盘类型^2^</block>
+  <block id="1ea028151d07abb047b4e2f17d215216" category="cell">均衡持久磁盘^3^、性能(SSD)持久磁盘^3^和标准(HDD)持久磁盘。</block>
+  <block id="f443009bc7891aa0df061674e73b08e5" category="list-text">在Google Cloud中部署新的Cloud Volumes ONTAP实例时、无法再在BlueXP  上选择n1系列计算机。n1系列机器将保留下来、并且仅在旧的现有系统中受支持。只有从9.8版开始、Google Cloud才支持全新部署Cloud Volumes ONTAP。建议您切换到与Cloud Volumes ONTAP 9.8及更高版本兼容的n2系列机器类型。但是、n1系列计算机将可用于通过API进行的新部署。</block>
+  <block id="6b145cfa91f7c68c4c0c6f2bf60bcf9d" category="paragraph">新的 Cloud Volumes ONTAP 系统不再支持 custom-4-16384 计算机类型。如果您的现有系统在此计算机类型上运行，则可以继续使用它，但我们建议切换到 n2-standard-4 计算机类型。</block>
+  <block id="4a700ade71b64bf589360a1f52b0bdd0" category="paragraph">从Cloud Volumes ONTAP 9.13.0开始、可以为以下HA对部署实例提供_Flash Cache _、高写入速度以及8、896字节的更高最大传输单元(MTU)：* n2-standard-16 * n2-standard-32 * n2-standard-48 * n2-standard-64</block>
+  <block id="1bb0d11a534c8ee967cd62e4d75e3da3" category="list-text">在Google Cloud中部署新的Cloud Volumes ONTAP实例时、无法再在BlueXP  上选择n1系列计算机。n1系列机器将保留下来、并且仅在旧的现有系统中受支持。只有从9.8版开始、Google Cloud才支持全新部署Cloud Volumes ONTAP。建议您切换到与Cloud Volumes ONTAP 9.8及更高版本兼容的n2系列机器类型。但是、n1系列计算机将可用于通过API执行的新部署。</block>
 </blocks>

@@ -38,7 +38,7 @@ Cloud Volumes ONTAP 可以在云提供商提供的预留或按需 VM 实例上�
 | 最大系统容量（磁盘 + 对象存储） | 500 GiB | 2 个 PIB | 2 个 PIB 
 
 
-| 支持的计算机类型 ^3^  a| 
+| 支持的计算机类型 ^1^  a| 
 * N1-standard-8
 * N1-standard-32
 * n2-standard-4
@@ -65,37 +65,27 @@ Cloud Volumes ONTAP 可以在云提供商提供的预留或按需 VM 实例上�
 
 
 
-| 支持的磁盘类型 3+| 均衡持久磁盘^4^、性能(SSD)持久磁盘^4^和标准(HDD)持久磁盘。 
+| 支持的磁盘类型^2^ 3+| 均衡持久磁盘^3^、性能(SSD)持久磁盘^3^和标准(HDD)持久磁盘。 
 |===
 注释：
+
+. 在Google Cloud中部署新的Cloud Volumes ONTAP实例时、无法再在BlueXP  上选择n1系列计算机。n1系列机器将保留下来、并且仅在旧的现有系统中受支持。只有从9.8版开始、Google Cloud才支持全新部署Cloud Volumes ONTAP。建议您切换到与Cloud Volumes ONTAP 9.8及更高版本兼容的n2系列机器类型。但是、n1系列计算机将可用于通过API进行的新部署。
++
+新的 Cloud Volumes ONTAP 系统不再支持 custom-4-16384 计算机类型。如果您的现有系统在此计算机类型上运行，则可以继续使用它，但我们建议切换到 n2-standard-4 计算机类型。
 
 . 磁盘限制可以防止您单独使用磁盘来达到最大系统容量限制。您可以通过达到容量限制 https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-data-tiering.html["将非活动数据分层到对象存储"^]。
 +
 link:reference-limits-gcp.html["详细了解 Google Cloud 中的磁盘限制"]。
 
-. PAYGO Explore 不支持将数据分层到 Google Cloud Storage 。
-. 新的 Cloud Volumes ONTAP 系统不再支持 custom-4-16384 计算机类型。
-+
-如果您的现有系统在此计算机类型上运行，则可以继续使用它，但我们建议切换到 n2-standard-4 计算机类型。
-
 . 使用平衡的永久性磁盘和性能(SSD)永久性磁盘时、可以提高写入性能。
-. BlueXP界面显示了Standard和BYOL支持的另一种计算机类型：N1-HIGHMEM-4。但是，此计算机类型并不适用于生产环境。我们已将其仅用于特定实验室环境。
-. 从Cloud Volumes ONTAP 9.13.0开始、可以为以下HA对部署实例提供_Flash Cache _、高写入速度以及8、896字节的更高最大传输单元(MTU)：
-+
-** n2-standard-16
-** n2-standard-32
-** n2-standard-48
-** n2-standard-64
-+
+
+
+从Cloud Volumes ONTAP 9.13.0开始、可以为以下HA对部署实例提供_Flash Cache _、高写入速度以及8、896字节的更高最大传输单元(MTU)：* n2-standard-16 * n2-standard-32 * n2-standard-48 * n2-standard-64
+
 在部署符合条件的实例类型时、您可以启用_Flash Cache_和高写入速度。要启用8、896字节的最大传输单元、必须在部署中选择VPC-1、VPC-2或VPC-3。MTU越高、网络吞吐量就越高。有关启动其中一种部署的详细信息、请参见 https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-deploying-gcp.html#launching-an-ha-pair-in-google-cloud["在Google Cloud中启动HA对"]。
 
-+
 
 NOTE: _Flash cache"、"高写入"模式和8、896的MTU与功能相关、不能在已配置的实例中单独禁用。
-
-
-
-
 
 --
 .基于节点的许可证
@@ -144,9 +134,9 @@ NOTE: _Flash cache"、"高写入"模式和8、896的MTU与功能相关、不能�
 link:reference-limits-gcp.html["详细了解 Google Cloud 中的磁盘限制"]。
 
 . PAYGO Explore 不支持将数据分层到 Google Cloud Storage 。
-. 新的 Cloud Volumes ONTAP 系统不再支持 custom-4-16384 计算机类型。
+. 在Google Cloud中部署新的Cloud Volumes ONTAP实例时、无法再在BlueXP  上选择n1系列计算机。n1系列机器将保留下来、并且仅在旧的现有系统中受支持。只有从9.8版开始、Google Cloud才支持全新部署Cloud Volumes ONTAP。建议您切换到与Cloud Volumes ONTAP 9.8及更高版本兼容的n2系列机器类型。但是、n1系列计算机将可用于通过API执行的新部署。
 +
-如果您的现有系统在此计算机类型上运行，则可以继续使用它，但我们建议切换到 n2-standard-4 计算机类型。
+新的 Cloud Volumes ONTAP 系统不再支持 custom-4-16384 计算机类型。如果您的现有系统在此计算机类型上运行，则可以继续使用它，但我们建议切换到 n2-standard-4 计算机类型。
 
 . 使用平衡的永久性磁盘和性能(SSD)永久性磁盘时、可以提高写入性能。
 . BlueXP界面显示了Standard和BYOL支持的另一种计算机类型：N1-HIGHMEM-4。但是，此计算机类型并不适用于生产环境。我们已将其仅用于特定实验室环境。

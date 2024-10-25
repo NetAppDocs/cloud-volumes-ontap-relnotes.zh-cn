@@ -52,7 +52,7 @@ Cloud Volumes ONTAP 支持多种类型的 EBS 磁盘以及用于数据分层的 
 
 
 
-| 将冷数据分层到 S3 6+| supported 
+| 将冷数据分层到 S3 2+| supported | 不支持 3+| supported 
 |===
 . 对于 HA 对，容量限制适用于整个 HA 对。这不是每个节点的。例如，如果使用高级版许可证，则两个节点之间的容量最多可达 368 TiB 。
 . 对于某些配置，磁盘限制会阻止您单独使用磁盘来达到容量限制。在这些情况下，您可以通过达到容量限制 https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-data-tiering.html["将非活动数据分层到对象存储"^]。有关磁盘限制的信息，请参见 link:reference-limits-aws.html["存储限制"]。
