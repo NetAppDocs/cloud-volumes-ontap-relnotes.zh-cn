@@ -36,12 +36,54 @@ Cloud Volumes ONTAP 支持多种类型的 EBS 磁盘以及用于数据分层的 
 
 每个许可证支持不同的最大系统容量。最大系统容量包括基于磁盘的存储以及用于数据分层的对象存储。NetApp 不支持超过此限制。
 
-[cols="h,d,d,d,d,d,d"]
+[role="tabbed-block"]
+====
+.基于容量的许可证
+--
+[cols="h,d,d"]
 |===
-|  | 免费 | 基于容量的许可证 | PAYGO 探索 | PAYGO 标准 | PAYGO 高级版 | 基于节点的 BYOL 
+|  | 免费 | 基于容量的许可证 
 
 
-| 最大系统容量（磁盘 + 对象存储） ^1^ | 500 GiB | 2 个 PIB ^2 个^ | 2 TiB | 10 TiB | 368 TiB ^2^ | 每个许可证 368 TiB ^2^ 
+ a| 
+*最大系统容量*(磁盘+对象存储)^1^
+| 500 GiB | 2 个 PIB ^2 个^ 
+
+
+ a| 
+*支持的磁盘类型*
+ a| 
+* 通用SSD (GP3和GP2)^3^、^5^
+* 已配置 IOPS SSD （ IO1 ） ^3^
+* 吞吐量优化型 HDD （ st1 ） ^4^
+
+
+
+
+ a| 
+*冷数据分层到S3*
+ a| 
+supported
+
+|===
+注释：
+
+. 对于 HA 对，容量限制适用于整个 HA 对。这不是每个节点的。例如，如果使用高级版许可证，则两个节点之间的容量最多可达 368 TiB 。
+. 对于某些配置，磁盘限制会阻止您单独使用磁盘来达到容量限制。在这些情况下，您可以通过达到容量限制 https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-data-tiering.html["将非活动数据分层到对象存储"^]。有关磁盘限制的信息，请参见 link:reference-limits-aws.html["存储限制"]。
+. 如果在所有Cloud Volumes ONTAP配置中使用SSD、则会提高写入性能。
+. 使用吞吐量优化型 HDD （ st1 ）时，不建议将数据分层到对象存储。
+. AWS本地区域仅支持通用SSD (GP2)磁盘类型。
+
+
+--
+.基于节点的许可证
+--
+[cols="h,d,d,d,d"]
+|===
+|  | PAYGO 探索 | PAYGO 标准 | PAYGO 高级版 | 基于节点的 BYOL 
+
+
+| 最大系统容量（磁盘 + 对象存储） | 2 TiB | 10 TiB | 368 TiB ^2^ | 每个许可证 368 TiB ^2^ 
 
 
 | 支持的磁盘类型  a| 
@@ -52,8 +94,10 @@ Cloud Volumes ONTAP 支持多种类型的 EBS 磁盘以及用于数据分层的 
 
 
 
-| 将冷数据分层到 S3 2+| supported | 不支持 3+| supported 
+| 将冷数据分层到 S3 | 不支持 3+| supported 
 |===
+注释：
+
 . 对于 HA 对，容量限制适用于整个 HA 对。这不是每个节点的。例如，如果使用高级版许可证，则两个节点之间的容量最多可达 368 TiB 。
 . 对于某些配置，磁盘限制会阻止您单独使用磁盘来达到容量限制。在这些情况下，您可以通过达到容量限制 https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-data-tiering.html["将非活动数据分层到对象存储"^]。有关磁盘限制的信息，请参见 link:reference-limits-aws.html["存储限制"]。
 . 在对所有 Cloud Volumes ONTAP 配置使用 SSD 时，系统会启用增强的写入性能，但 PAYGO Explore 除外。
@@ -61,6 +105,8 @@ Cloud Volumes ONTAP 支持多种类型的 EBS 磁盘以及用于数据分层的 
 . AWS本地区域仅支持通用SSD (GP2)磁盘类型。
 
 
+--
+====
 
 
 === 支持的磁盘大小

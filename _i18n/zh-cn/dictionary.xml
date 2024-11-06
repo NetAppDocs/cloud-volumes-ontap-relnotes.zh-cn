@@ -226,7 +226,6 @@
   <block id="721f444864f7f20b038565facc11ed77" category="paragraph">Cloud Volumes ONTAP 支持多种类型的 EBS 磁盘以及用于数据分层的 S3 对象存储。最大存储容量取决于您选择的许可证。</block>
   <block id="e17c7f98af970809162c4395474988ad" category="section-title">按许可证提供存储支持</block>
   <block id="c5a27c05ad608efda7a7a192ee480209" category="paragraph">每个许可证支持不同的最大系统容量。最大系统容量包括基于磁盘的存储以及用于数据分层的对象存储。NetApp 不支持超过此限制。</block>
-  <block id="2a3273b13e4da5a861913a955ede7809" category="cell">最大系统容量（磁盘 + 对象存储） ^1^</block>
   <block id="7916f32f06eaabdf61df576419c0c138" category="cell">2 TiB</block>
   <block id="705c8901d15869a7116491b156af6fbe" category="cell">368 TiB ^2^</block>
   <block id="6e9a8a2df40afea5890a6ea81b2df2b2" category="cell">每个许可证 368 TiB ^2^</block>
@@ -743,9 +742,7 @@
   <block id="6326d313b843fff1d57ed50ec7c000f1" category="list-text">Cloud Volumes ONTAP的版本为9.151或更高版本。</block>
   <block id="840f8de5c9f54f772062c77429778e38" category="inline-link">Microsoft Azure网站：产品按地区提供</block>
   <block id="68367d4408e943b9268a7a6d4314fb0a" category="inline-link">在Azure中启动Cloud Volumes ONTAP HA对</block>
-  <block id="8587098b07c4e4a23dccafd754dbc676" category="section-title">升级说明。</block>
   <block id="a30c58b20b60e5ffb9d932cee170af9a" category="paragraph">您可以从9.15.10和9.14.1版升级到Cloud Volumes ONTAP 9.15.1。BlueXP将提示您将符合条件的Cloud Volumes ONTAP 系统升级到此版本。</block>
-  <block id="8679be60a45e6f155a93161b9a8c5d43" category="sidebar">本发行说明介绍了Cloud Volumes ONTAP 1的新增功能、限制和已知问题。</block>
   <block id="c32d4655f35315d6cd7ab368b1f0a6de" category="sidebar">Cloud Volumes ONTAP 9.151发行说明</block>
   <block id="9b74e463f9eba3d7b2490736bd408da0" category="sidebar">本发行说明介绍了Cloud Volumes ONTAP 9.151的新增功能、限制和已知问题。</block>
   <block id="28440751cbe2a16368822f02f298a2f4" category="inline-link">使用共享受管磁盘的HA单可用性区域配置</block>
@@ -784,4 +781,9 @@
   <block id="c3e5d9aa8817ef74e74e8cd55f39570f" category="paragraph">9.15.1 P3修补程序现在可用于所有云提供商的Cloud Volumes ONTAP。BlueXP将提示您将现有系统升级到此修补程序版本。</block>
   <block id="4c7cf73669136d536c96ca7317eb5ceb" category="inline-link-macro">查看P3修补程序中已修复的错误列表</block>
   <block id="fae48ca93c7d21429a4d9efb8dbde929" category="paragraph"><block ref="03a97087fa51b558b394583b2ec67707" category="inline-link-macro-rx"></block> (需要登录NetApp支持站点)。</block>
+  <block id="29aaeb333a41db01888c537148053c70" category="paragraph">*最大系统容量*(磁盘+对象存储)^1^</block>
+  <block id="06cf24f6f7b06cb3d2778a1a70e9ff2f" category="paragraph">*支持的磁盘类型*</block>
+  <block id="17943cfde2a5e23c7925dc95a8dde6a4" category="paragraph">*冷数据分层到S3*</block>
+  <block id="640897782baa10cc7d259d38d703b275" category="list-text">如果在所有Cloud Volumes ONTAP配置中使用SSD、则会提高写入性能。</block>
+  <block id="b5cb41a6703cf18b4cecd5a0817f91cf" category="section-title">升级说明</block>
 </blocks>

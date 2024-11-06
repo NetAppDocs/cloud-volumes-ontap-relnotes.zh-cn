@@ -3,7 +3,7 @@ indexpage:
   title: Cloud Volumes ONTAP 9.151发行说明
   summary: 本发行说明介绍了Cloud Volumes ONTAP 9.151的新增功能、限制和已知问题。
   keywords: RN, CVO, release notes Cloud Volumes ONTAP
-  lead: 本发行说明介绍了Cloud Volumes ONTAP 1的新增功能、限制和已知问题。
+  lead: 本发行说明介绍了Cloud Volumes ONTAP 9.151的新增功能、限制和已知问题。
   tiles:
   - title: 入门
     links:
