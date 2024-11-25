@@ -14,7 +14,7 @@ summary: Cloud Volumes ONTAP 提供了多种许可选项。每个选项都可用
 
 
 [role="lead"]
-Cloud Volumes ONTAP 提供了不同的许可选项、可让您根据自己的需求选择消费模式。
+Cloud Volumes ONTAP 提供了多种许可选项。每个选项都允许您选择一种满足您需求的消费模式。
 
 新客户可以使用以下许可选项。
 
@@ -24,6 +24,10 @@ Cloud Volumes ONTAP 提供了不同的许可选项、可让您根据自己的需
 基于容量的许可以 _package_ 的形式提供。部署Cloud Volumes ONTAP 系统时、您可以根据业务需求从多个许可包中进行选择。
 
 --
+
+
+https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-licensing.html#packages["软件包"^] https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-licensing-charging.html["有关基于容量的许可证的更多信息"^]
+
 Keystone Flex 订阅:: 一种按需购买，基于订阅的服务，可为那些倾向于采用运营支出消费模式而不是前期资本支出或租赁模式的客户提供无缝的混合云体验。
 +
 --

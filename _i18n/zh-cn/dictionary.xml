@@ -465,7 +465,6 @@
   <block id="514c35ac615c3426962d39f27b71014b" category="paragraph">此版本中没有特定于 Cloud Volumes ONTAP 的已知问题。</block>
   <block id="626a7cbe056796bcb1c158b143866230" category="inline-link">《 ONTAP 发行说明》</block>
   <block id="398d7dd4fa02e30dc6322ad98eff7d2b" category="paragraph">您可以在中找到 ONTAP 软件的已知问题<block ref="13c0668cefb5d13050e1de01793dacbb" category="inline-link-rx"></block>。</block>
-  <block id="da38098873cb3db962a9491ab33ff93d" category="sidebar">发行说明主页</block>
   <block id="33871b6190a8d5adbe8b15282054766c" category="sidebar">新增功能</block>
   <block id="4847e034bb0a55fcbc8a3380d6a3ab80" category="sidebar">AWS</block>
   <block id="3a580f142203677f1f0bc30898f63f53" category="sidebar">Azure 酒店</block>
@@ -498,7 +497,6 @@
   <block id="dc2065e297a9790d182a555ba250dbda" category="cell">基于节点的 BYOL</block>
   <block id="75b66e0b3cef735ea985bd79ab9601e2" category="cell">m5dn.4xlarge</block>
   <block id="bc503c45d950d94391e7685c6585b286" category="cell">m5dn.12 x大型</block>
-  <block id="30af1a6878bac3a7aaed5d0e64e7b511" category="paragraph">Cloud Volumes ONTAP 提供了不同的许可选项、可让您根据自己的需求选择消费模式。</block>
   <block id="37439fa615a442ec183c1c602f9755f1" category="paragraph">基于容量的许可以 _package_ 的形式提供。部署Cloud Volumes ONTAP 系统时、您可以根据业务需求从多个许可包中进行选择。</block>
   <block id="deb56fb5a824215375b16e72749e2aa3" category="inline-link">详细了解这些许可选项</block>
   <block id="33f66f5b18b24875dca7a81c8f84c5b9" category="cell">896 TiB</block>
@@ -743,7 +741,6 @@
   <block id="840f8de5c9f54f772062c77429778e38" category="inline-link">Microsoft Azure网站：产品按地区提供</block>
   <block id="68367d4408e943b9268a7a6d4314fb0a" category="inline-link">在Azure中启动Cloud Volumes ONTAP HA对</block>
   <block id="a30c58b20b60e5ffb9d932cee170af9a" category="paragraph">您可以从9.15.10和9.14.1版升级到Cloud Volumes ONTAP 9.15.1。BlueXP将提示您将符合条件的Cloud Volumes ONTAP 系统升级到此版本。</block>
-  <block id="c32d4655f35315d6cd7ab368b1f0a6de" category="sidebar">Cloud Volumes ONTAP 9.151发行说明</block>
   <block id="9b74e463f9eba3d7b2490736bd408da0" category="sidebar">本发行说明介绍了Cloud Volumes ONTAP 9.151的新增功能、限制和已知问题。</block>
   <block id="28440751cbe2a16368822f02f298a2f4" category="inline-link">使用共享受管磁盘的HA单可用性区域配置</block>
   <block id="e2a0553d4c47017042ca1689993f9c8b" category="paragraph">如果您在部署新的 Cloud Volumes ONTAP 系统时选择了其中任何一种 VM 类型，则不能更改为使用适用于 VNVRAM 的超高 SSD 的其他 VM 类型。例如，您不能从 E8ds_v4 更改为 E8s_v3 ，但可以从 E8ds_v4 更改为 E32ds_v4 ，因为这两种虚拟机类型都使用超 SSD 。同样、在部署新的Cloud Volumes ONTAP系统时、不能将虚拟机类型更改为"不支持高级SSD v2托管磁盘"。要详细了解高级SSD v2托管磁盘支持的配置，请参阅<block ref="6fd1548aedf3667cd5a4b1b43bc16181" category="inline-link-rx"></block>。</block>
@@ -786,4 +783,19 @@
   <block id="17943cfde2a5e23c7925dc95a8dde6a4" category="paragraph">*冷数据分层到S3*</block>
   <block id="640897782baa10cc7d259d38d703b275" category="list-text">如果在所有Cloud Volumes ONTAP配置中使用SSD、则会提高写入性能。</block>
   <block id="b5cb41a6703cf18b4cecd5a0817f91cf" category="section-title">升级说明</block>
+  <block id="6b32e99bddf60938239aabe092cb4c16" category="paragraph">Cloud Volumes ONTAP 提供了多种许可选项。每个选项都允许您选择一种满足您需求的消费模式。</block>
+  <block id="27fe4eb3edbaff8f250e2d51f7462681" category="inline-link">软件包</block>
+  <block id="13dba612a4f942a80cbc82c5f678d57c" category="inline-link">有关基于容量的许可证的更多信息</block>
+  <block id="d994821c78c4538d3406d1baa52bc470" category="paragraph"><block ref="55cb08b70ffaa99b7ec18860c0180e14" category="inline-link-rx"></block> <block ref="7c9574dfed81dad53ed1c2acf3a874b5" category="inline-link-rx"></block></block>
+  <block id="c3cf4ee6dc24f388844547c270dcc62a" category="section-title">9.15.1 P4 (2024年11月25日)</block>
+  <block id="70801cc1e406ee3c5d3829c09f39d8cc" category="paragraph">9.15.1 P4修补程序现在可用于所有云提供商的Cloud Volumes ONTAP。BlueXP将提示您将现有系统升级到此修补程序版本。</block>
+  <block id="cae74b75cb879fa6011c4bc1e9acafed" category="inline-link-macro">查看P4修补程序中已修复的错误列表</block>
+  <block id="427f5af74d1c3371844f5ceb79ac74ea" category="paragraph"><block ref="d5d8d8f3e8dad9e51774bb89e5c4d87f" category="inline-link-macro-rx"></block> (需要登录NetApp支持站点)。</block>
+  <block id="349b79620c55ff0a99622dc458417341" category="section-title">支持FlexCache回写</block>
+  <block id="7bab27e59a8093f7f1f9f208560906b5" category="paragraph">从Cloud Volumes ONTAP 9.151开始、支持使用FlexCache回写作为在缓存中写入的备用操作模式。</block>
+  <block id="145c5d02a1872aab28d9aee2ee7b1adb" category="inline-link">FlexCache回写概述</block>
+  <block id="e9847573f516d487b3b41696529ea9ac" category="paragraph">有关此功能的详细信息，请参阅ONTAP文档<block ref="f66b7fc45c4e32762d53ba0f27132a8b" category="inline-link-rx"></block>。</block>
+  <block id="34756beb20b44cc3e732425639fae228" category="inline-link">BlueXP  卷缓存文档</block>
+  <block id="fadeb5a0a5453e49f671ad12a304756a" category="paragraph">有关BlueXP  如何管理FlexCache卷的信息，请参阅<block ref="4df7bdb090af4efb3896a25128ffcee3" category="inline-link-rx"></block>。</block>
+  <block id="9136e486881930be99a49d333eddb2ba" category="sidebar">Cloud Volumes ONTAP 9.151发行说明</block>
 </blocks>
