@@ -337,7 +337,6 @@
   <block id="9f1dc929787c1a2d05667987a87c083b" category="paragraph">Cloud Volumes ONTAP 在 Azure 中可作为单节点系统和高可用性（ HA ）节点对提供，以实现容错和无中断运行。</block>
   <block id="078325cc35a9c8c9290e445f32bd1855" category="section-title">单节点系统</block>
   <block id="e02cfa40e076b3e2d41b29974af36f06" category="cell">最大系统容量（磁盘 + 对象存储）</block>
-  <block id="4493785e0b2d5a6ea8c24204ebf19dc5" category="cell">2 TiB ^1^</block>
   <block id="333cde16cf112bb117788fe2729a875c" category="cell">支持的虚拟机类型</block>
   <block id="83eca86ff243df4e1646a92d7c304973" category="list-text">DS4_v2</block>
   <block id="d5dcfd54bc69651d879cec73cf9d8daa" category="list-text">DS5_v2</block>
@@ -346,9 +345,6 @@
   <block id="f09d01e9299f4f1d66eff1fb0b840c5c" category="list-text">DS15_v2</block>
   <block id="31e15d90597db8f67574c519a0e03cff" category="list-text">e4s_v3</block>
   <block id="aa1cf82517b500e91f431051f2593e87" category="list-text">E8s_v3</block>
-  <block id="bd0bb2474f914a7c17554d85d8cb6d26" category="list-text">E32S_v3 ^3^</block>
-  <block id="1624f99ad88b51c43999963b229ba280" category="list-text">E48s_v3 ^3^</block>
-  <block id="d9af7f53ca0f2c89d44909998314253e" category="list-text">E64is_v3 ^3^</block>
   <block id="e5f50792b91a7ddfe1598a0b1b794d50" category="list-text">E4ds_v4 ^3^</block>
   <block id="ddcb1aa3060beebabe2a5c45c6c9e439" category="list-text">E8ds_v4 ^3^</block>
   <block id="75cf995c16e77b49815f8da9d6034987" category="list-text">E32ds_v4 ^3^</block>
@@ -356,10 +352,8 @@
   <block id="3fecdd68da3f6d241960a66e0625a507" category="list-text">E80ids_v4 ^3^</block>
   <block id="233d7152c6f49c17f5310a33fd5a0139" category="cell">支持的磁盘类型 ^4^</block>
   <block id="19482872b5fad6ff5e1e34947a759a98" category="cell">标准 HDD 受管磁盘，标准 SSD 受管磁盘和高级 SSD 受管磁盘</block>
-  <block id="24aa50b65a436c4efc843ed62aab1f03" category="list-text">PAYGO Explore 不支持将数据分层到 Azure Blob 存储。</block>
   <block id="d59048f21fd887ad520398ce677be586" category="inline-link">了解更多信息。</block>
   <block id="11509498a3f1573cdde878f927dc10bd" category="inline-link">超 SSD</block>
-  <block id="9147ab73e7498660eae7ed2b4b8cca5c" category="list-text">这些 VM 类型使用<block ref="d656d82278337f3ecf8db6b2a30a45f2" category="inline-link-rx"></block> 用于 VNVRAM ，可提供更好的写入性能。</block>
   <block id="7c7627c6477255acb2239bd1be90f346" category="list-text">有关 Azure 区域支持，请参见<block ref="2b6a522631c3b3b8afac5466195e108a" category="inline-link-rx"></block>。</block>
   <block id="e7089e61c962cfdae0de5b1d0748b6f2" category="list-text">Cloud Volumes ONTAP 可以在云提供商提供的预留或按需 VM 实例上运行。不支持使用其他 VM 实例类型的解决方案。</block>
   <block id="b049fcbe8198301adc6bf87634a02845" category="section-title">HA 对</block>
@@ -410,14 +404,11 @@
   <block id="12fe559ef81ce645ef1aee77885e1827" category="paragraph">不支持将单节点系统升级到 HA 对。如果要在单节点系统和 HA 对之间切换，则需要部署新系统并将现有系统中的数据复制到新系统。</block>
   <block id="8c0495bb0212f48146ab592de8a205d9" category="cell">2 TB ^2^</block>
   <block id="c217f1a10b2c84178d69b991f9ca2a8d" category="cell">支持的计算机类型 ^3^</block>
-  <block id="0cd9470795b4cb3063783195b32f04ac" category="list-text">N1-standard-8</block>
-  <block id="12f53e222fe53c58560223e660dcae57" category="list-text">N1-standard-32</block>
   <block id="88ba83f191bd27de24492d3f347d8add" category="list-text">n2-standard-4</block>
   <block id="056d5ee0191954b71fbb1a0eec04a22a" category="list-text">n2-standard-8</block>
   <block id="8f66358785ed8f4d9a356630a4ee515c" category="list-text">n2-standard-32</block>
   <block id="f30cabe0a77d16d16cf1ef723d8eb186" category="inline-link-macro">详细了解 Google Cloud 中的磁盘限制</block>
   <block id="a93742b808592a2ce1b1926f98f391eb" category="paragraph"><block ref="46bbc0e4d7a811f26e46cbb2c2ad7173" category="inline-link-macro-rx"></block>。</block>
-  <block id="b4c4a8c75337dc28089aec3e79ae943c" category="list-text">PAYGO Explore 不支持将数据分层到 Google Cloud Storage 。</block>
   <block id="d29bff99e1f1d5529824e9017672d630" category="paragraph">在 Google Cloud 中，一个聚合最多可以包含 6 个类型和大小相同的磁盘。支持以下磁盘大小：</block>
   <block id="dcfebc6fbca2c5316f55c914e6593d2d" category="list-text">100 GB</block>
   <block id="70f79b00cb7649d94d473895d6c540d2" category="list-text">1 TB</block>
@@ -602,7 +593,6 @@
   <block id="f6dcc1a079544e36390b698b6f59bf4e" category="paragraph">以下磁盘限制适用于使用基于容量的许可包的Cloud Volumes ONTAP 系统。<block ref="360eefdcdd22adda63e8597e9466029a" category="inline-link-rx"></block></block>
   <block id="fc8746b925f8923889b77841242bf054" category="paragraph"><block ref="771bd01d5b66ba0bcb76d734267dc8bb" category="inline-link-rx"></block>。</block>
   <block id="ae90a2e4532cb9b615489b63c36e2383" category="paragraph"><block ref="dca5658ae26fff987979f5de0a83e9fd" category="inline-link-rx"></block>。</block>
-  <block id="efb78221b5926bd89d824f8dec9a7ed2" category="list-text">磁盘限制可以防止您单独使用磁盘来达到最大系统容量限制。您可以通过达到容量限制<block ref="aea0958203307daa433f894622f3e640" category="inline-link-rx"></block>。</block>
   <block id="df25654d93147d2e6dc5b5b1fd1a4b82" category="paragraph">在部署符合条件的实例类型时、您可以启用_Flash Cache_和高写入速度。要启用8、896字节的最大传输单元、必须在部署中选择VPC-1、VPC-2或VPC-3。MTU越高、网络吞吐量就越高。有关启动其中一种部署的详细信息、请参见<block ref="663913c4edf07faddf2fc43cb75f2fe2" category="inline-link-rx"></block>。</block>
   <block id="396e70da46ca6b8f2dd7d352ab5d7f16" category="paragraph">对于某些配置，磁盘限制会阻止您单独使用磁盘来达到容量限制。您可以通过达到容量限制<block ref="aea0958203307daa433f894622f3e640" category="inline-link-rx"></block>。有关详细信息，请参见以下磁盘限制。</block>
   <block id="769a653e8483d7efc5ec7ad2044e739c" category="paragraph"><block ref="b8246ed4559cd25bd4b019aae2787f00" category="inline-link-rx"></block>。</block>
@@ -615,12 +605,10 @@
   <block id="a92c2d98e174fb58a9af451a8c3413f9" category="paragraph"><block ref="8271d50d033781f1596acf863334de58" category="inline-link-macro-rx"></block>。</block>
   <block id="34b2f4eab827285a262b1781e672e882" category="paragraph"><block ref="3f0e03f473a215943c109dc7746cdb60" category="inline-link-macro-rx"></block>。</block>
   <block id="3959237302934c658e49cff52293a2a5" category="list-text">此 VM 类型包括本地 NVMe 存储， Cloud Volumes ONTAP 使用此存储作为 _Flash Cache_ 。Flash Cache 通过实时智能缓存最近读取的用户数据和 NetApp 元数据来加快数据访问速度。它适用于随机读取密集型工作负载，包括数据库，电子邮件和文件服务。<block ref="b6abeaa384c5670d0721bcc6323011fc" category="inline-link-rx"></block>。</block>
-  <block id="9655d27d34aaf491a4183d57c0530647" category="list-text">使用单节点系统时，所有实例类型均支持高写入速度。您可以在部署期间或之后的任何时间从BlueXP启用高写入速度。<block ref="721fe5ee3bbc3d8295d8615ed77ff9be" category="inline-link-rx"></block>。</block>
   <block id="44ed637222e5d571deff68351343db0d" category="list-text">使用 HA 对时， Cloud Volumes ONTAP 支持对这些 VM 类型使用较高的写入速度。您可以在部署期间或之后的任何时间从BlueXP启用高写入速度。<block ref="721fe5ee3bbc3d8295d8615ed77ff9be" category="inline-link-rx"></block>。</block>
   <block id="5f47eaf30741e1b189cb3927920a050e" category="list-text">L48s_v3 ^2^</block>
   <block id="5d77e4246523d19041d8aaab83469a88" category="list-text">L64s_v3 ^2^</block>
   <block id="8363a389e0c602867cfdadb32a0bb680" category="cell">均衡持久磁盘^4^、性能(SSD)持久磁盘^4^和标准(HDD)持久磁盘。</block>
-  <block id="3ef8b2478ab52b4e7c7dd18d32c5bf06" category="list-text">使用平衡的永久性磁盘和性能(SSD)永久性磁盘时、可以提高写入性能。</block>
   <block id="52009bb7ee17227f566cd26a02caee56" category="inline-link-macro"><block ref="52009bb7ee17227f566cd26a02caee56" category="inline-link-rx"></block></block>
   <block id="a1a9afcf552a769c282769271829889a" category="paragraph"><block ref="a1a9afcf552a769c282769271829889a" category="inline-link-macro-rx"></block></block>
   <block id="f99aa604031e5049799e73b5c3748a98" category="inline-link-macro"><block ref="f99aa604031e5049799e73b5c3748a98" category="inline-link-rx"></block></block>
@@ -682,7 +670,6 @@
   <block id="bde67b5966889851166e3f5c7b09ff05" category="paragraph">在Azure中将Cloud Volumes ONTAP部署为单节点系统时、您可以从以下基于容量或基于节点的许可配置中进行选择。</block>
   <block id="d2f103c82b43ca5f2da33f93d94bde64" category="paragraph">如果您在部署新的 Cloud Volumes ONTAP 系统时选择了其中任何一种 VM 类型，则不能更改为使用适用于 VNVRAM 的超高 SSD 的其他 VM 类型。例如，您不能从 E8ds_v4 更改为 E8s_v3 ，但可以从 E8ds_v4 更改为 E32ds_v4 ，因为这两种虚拟机类型都使用超 SSD 。</block>
   <block id="c0f95d0d2e06eba7eb0522dabf1c9d76" category="paragraph">相反，如果您使用任何其他 VM 类型部署 Cloud Volumes ONTAP ，则无法更改为使用适用于 VNVRAM 的超高 SSD 的 VM 类型。例如，您不能从 E8s_v3 更改为 E8ds_v4 。</block>
-  <block id="5063d3259058d90bbca06465957626d7" category="list-text">使用 SSD 时会启用增强的写入性能。</block>
   <block id="fa399104e53f295813fa209a617a3bfe" category="list-text">E20ds_v5 ^3^</block>
   <block id="c077185ce5ae625437649ce1dbad7a15" category="section-title">Cloud Volumes ONTAP仅支持预留和按需VM实例</block>
   <block id="876f1172cd6d0607aa7ef915b2e202b5" category="section-title">第三方代理和分机的限制</block>
@@ -721,7 +708,6 @@
   <block id="5eaba9c26c7009842affe7562eb137d3" category="inline-link-macro">有关本地区域中受支持的EC2实例类型的最新完整详细信息、请参见AWS</block>
   <block id="0b1bcd721d49fbe0a3ff4bd80dfcd83f" category="list-text">以下EC2实例类型系列(大小为x大 到4x大)支持AWS本地区域：M5、c5、c5d、R5和R5d。 <block ref="3d9029b658475a88eed4e09e15fa8cce" category="inline-link-macro-rx"></block>。</block>
   <block id="4133f4256c016927cb270503c43adeb6" category="paragraph">在AWS本地区域中、这些实例类型不支持高写入速度。</block>
-  <block id="910e1bdd6baebdae0421711258065197" category="admonition">您可以对Azure中的现有Cloud Volumes ONTAP HA页面Blob部署使用以下配置。新部署不支持页面Blobs。</block>
   <block id="b710bbf07a9ba1fa06f2e6f4e77a42db" category="paragraph">下表中显示的带宽与每个实例类型的 AWS 限制一致。这些限制与 Cloud Volumes ONTAP 所能提供的功能不完全一致。有关预期性能，请参见<block ref="c23654021de34c23e6d408104aa3bf49" category="inline-link-rx"></block>。</block>
   <block id="32d6fe93ba69b4395a45277c1885f29f" category="cell">基于容量的许可证(Essentials和Professional)</block>
   <block id="7ac4ad805c5f62c422ac040e484787d7" category="paragraph">在Azure上配置Flash Cache所需的最低ONTAP版本为9.13.1GA。</block>
@@ -768,12 +754,8 @@
   <block id="ce5d0c77f167b881391469fc27895727" category="inline-link-macro">查看P2修补程序中已修复的错误列表</block>
   <block id="46a5c1839a6c9667da9a201d204a30d8" category="paragraph"><block ref="8043c70c5f9f22a2d553b5b35821b45f" category="inline-link-macro-rx"></block> (需要登录NetApp支持站点)。</block>
   <block id="e1e1effee5380369716ff955c2de6215" category="cell">支持的计算机类型 ^1^</block>
-  <block id="bb748564d3fa0104390bb3440623c489" category="cell">支持的磁盘类型^2^</block>
   <block id="1ea028151d07abb047b4e2f17d215216" category="cell">均衡持久磁盘^3^、性能(SSD)持久磁盘^3^和标准(HDD)持久磁盘。</block>
-  <block id="f443009bc7891aa0df061674e73b08e5" category="list-text">在Google Cloud中部署新的Cloud Volumes ONTAP实例时、无法再在BlueXP  上选择n1系列计算机。n1系列机器将保留下来、并且仅在旧的现有系统中受支持。只有从9.8版开始、Google Cloud才支持全新部署Cloud Volumes ONTAP。建议您切换到与Cloud Volumes ONTAP 9.8及更高版本兼容的n2系列机器类型。但是、n1系列计算机将可用于通过API进行的新部署。</block>
   <block id="6b145cfa91f7c68c4c0c6f2bf60bcf9d" category="paragraph">新的 Cloud Volumes ONTAP 系统不再支持 custom-4-16384 计算机类型。如果您的现有系统在此计算机类型上运行，则可以继续使用它，但我们建议切换到 n2-standard-4 计算机类型。</block>
-  <block id="4a700ade71b64bf589360a1f52b0bdd0" category="paragraph">从Cloud Volumes ONTAP 9.13.0开始、可以为以下HA对部署实例提供_Flash Cache _、高写入速度以及8、896字节的更高最大传输单元(MTU)：* n2-standard-16 * n2-standard-32 * n2-standard-48 * n2-standard-64</block>
-  <block id="1bb0d11a534c8ee967cd62e4d75e3da3" category="list-text">在Google Cloud中部署新的Cloud Volumes ONTAP实例时、无法再在BlueXP  上选择n1系列计算机。n1系列机器将保留下来、并且仅在旧的现有系统中受支持。只有从9.8版开始、Google Cloud才支持全新部署Cloud Volumes ONTAP。建议您切换到与Cloud Volumes ONTAP 9.8及更高版本兼容的n2系列机器类型。但是、n1系列计算机将可用于通过API执行的新部署。</block>
   <block id="7e2d62fe36583822ef49e7ee658d8b17" category="section-title">9.15.1 P3 (2024年10月29日)</block>
   <block id="c3e5d9aa8817ef74e74e8cd55f39570f" category="paragraph">9.15.1 P3修补程序现在可用于所有云提供商的Cloud Volumes ONTAP。BlueXP将提示您将现有系统升级到此修补程序版本。</block>
   <block id="4c7cf73669136d536c96ca7317eb5ceb" category="inline-link-macro">查看P3修补程序中已修复的错误列表</block>
@@ -798,4 +780,32 @@
   <block id="34756beb20b44cc3e732425639fae228" category="inline-link">BlueXP  卷缓存文档</block>
   <block id="fadeb5a0a5453e49f671ad12a304756a" category="paragraph">有关BlueXP  如何管理FlexCache卷的信息，请参阅<block ref="4df7bdb090af4efb3896a25128ffcee3" category="inline-link-rx"></block>。</block>
   <block id="9136e486881930be99a49d333eddb2ba" category="sidebar">Cloud Volumes ONTAP 9.151发行说明</block>
+  <block id="5e02a792172b179afc36359c80581d87" category="list-text">DS4_v2 ^1^</block>
+  <block id="837d17a1b64de221e0265c2f7da393f0" category="list-text">DS13_v2 ^1^</block>
+  <block id="14b3e8da6869b2f214b7efc306aea775" category="list-text">E4s_v3 ^1^</block>
+  <block id="3e25b8eaf9ed482edf1d7cc1aa7dd3f1" category="list-text">E8s_v3 ^1^</block>
+  <block id="475a08176fc17d0c6254ca6f0c476b75" category="list-text">E32s_v3 ^1、3^</block>
+  <block id="c88c885a2fefa2da765b4c347fda5ae4" category="list-text">E48s_v3 ^1、3^</block>
+  <block id="4692ba0d874f9b133db280379656a9ce" category="list-text">E64is_v3 ^1、3^</block>
+  <block id="a63ee61a82be26dabec71dbc1e3c06a5" category="list-text">^1^在Azure中部署新的Cloud Volumes ONTAP实例时、不再可在BlueXP  上选择DS_v2和ES_v3计算机系列。这些系列将仅在旧的现有系统中保留和支持。只有从9.12.1版本开始、Azure才支持全新部署Cloud Volumes ONTAP。建议您切换到ES_v4或与Cloud Volumes ONTAP 9.12.1及更高版本兼容的任何其他系列。但是、通过API进行新部署时、可以使用DS_v2和ES_v3系列计算机。</block>
+  <block id="99b1f6d00bfb2ab2985a552648f9e5c1" category="list-text">^2^此虚拟机类型包括本地NVMe存储、Cloud Volumes ONTAP将此存储用作_Flash Cache_。Flash Cache 通过实时智能缓存最近读取的用户数据和 NetApp 元数据来加快数据访问速度。它适用于随机读取密集型工作负载、包括数据库、电子邮件和文件服务。<block ref="b6abeaa384c5670d0721bcc6323011fc" category="inline-link-rx"></block>(英文)。</block>
+  <block id="9ea31caa0e1962ae75e1a321be9430b7" category="list-text">^3^这些VM类型使用<block ref="d656d82278337f3ecf8db6b2a30a45f2" category="inline-link-rx"></block>VNVRAM、可提高写入性能。</block>
+  <block id="8b3b87610bfcad95c57bd42409dfca29" category="list-text">^4^使用单节点系统时、所有实例类型均支持高写入速度。您可以在部署期间或部署后的任何时间从BlueXP  启用高速写入。<block ref="721fe5ee3bbc3d8295d8615ed77ff9be" category="inline-link-rx"></block>(英文)。使用 SSD 时会启用增强的写入性能。</block>
+  <block id="24559871a19879472a902be1674774bd" category="cell">2 TiB ^5^</block>
+  <block id="85133a824a7524ff6b8a398dd3816914" category="list-text">^5^PAYGO Explore不支持将数据分层到Azure Blb存储。</block>
+  <block id="10b45e1c6ef2fa44200d515d2a6fc694" category="paragraph">您可以对Azure中的现有Cloud Volumes ONTAP HA页面Blob部署使用以下配置。</block>
+  <block id="f9651e2727f6a117e21e37fdefa0c6b2" category="admonition">任何新部署都不支持Azure页面Blobs。</block>
+  <block id="bd4a13e4ffdffbf6589318b707665ee9" category="list-text">N1标准-8 ^1^</block>
+  <block id="2adbdb8a41a872c39f798f0f7e1d4a41" category="list-text">N1标准-32 ^1^</block>
+  <block id="fd19b4f8d16fbd446f92c206592bcc85" category="cell">支持的磁盘类型 ^2^</block>
+  <block id="5d3dde9c211a10976121e86b1e72361e" category="list-text">^1^在Google Cloud中部署新的Cloud Volumes ONTAP实例时、n1系列计算机不再可在BlueXP  上选择。n1系列机器将保留下来、并且仅在旧的现有系统中受支持。只有从9.8版开始、Google Cloud才支持全新部署Cloud Volumes ONTAP。建议您切换到与Cloud Volumes ONTAP 9.8及更高版本兼容的n2系列机器。但是、n1系列计算机将可用于通过API进行的新部署。</block>
+  <block id="c819caf9beab404b5f2223fbcc970eb7" category="list-text">^2^磁盘限制可以防止单独使用磁盘来达到最大系统容量限制。您可以通过达到容量限制<block ref="aea0958203307daa433f894622f3e640" category="inline-link-rx"></block>。</block>
+  <block id="827de26590a8eaf472a57d852b9725a4" category="list-text">^3^使用平衡持久磁盘和性能(SSD)持久磁盘时、会启用增强的写入性能。</block>
+  <block id="fb68df6302dcf52c3640cda14ef6c3e2" category="paragraph">从Cloud Volumes ONTAP 9.13.0开始、可以为以下HA对部署实例提供_Flash Cache _、高写入速度以及8、896字节的更高最大传输单元(MTU)：</block>
+  <block id="c42b3fdcbb4cdcddd43699859073f178" category="list-text">N1标准-8 ^3^</block>
+  <block id="6b5bde370fd32f6d8d3a5e33315ee222" category="list-text">N1标准-32 ^3^</block>
+  <block id="634926381cf0a7884523c112877267d0" category="list-text">^1^磁盘限制可以防止单独使用磁盘来达到最大系统容量限制。您可以通过达到容量限制<block ref="aea0958203307daa433f894622f3e640" category="inline-link-rx"></block>。</block>
+  <block id="22bbad4e1cc44662dc7478520e4f0e07" category="list-text">^2^ PAYGO Explore不支持将数据分层到Google Cloud Storage。</block>
+  <block id="9c6d70371c04fac1c5b3babc1c1a755e" category="list-text">^3^在Google Cloud中部署新的Cloud Volumes ONTAP实例时、n1系列计算机不再可在BlueXP  上选择。n1系列机器将保留下来、并且仅在旧的现有系统中受支持。只有从9.8版开始、Google Cloud才支持全新部署Cloud Volumes ONTAP。建议您切换到与Cloud Volumes ONTAP 9.8及更高版本兼容的n2系列机器。但是、n1系列计算机将可用于通过API执行的新部署。</block>
+  <block id="31269d00cd277adf90f42f882afbd293" category="list-text">^4^使用平衡持久磁盘和性能(SSD)持久磁盘时、会启用增强的写入性能。</block>
 </blocks>
