@@ -808,4 +808,12 @@
   <block id="22bbad4e1cc44662dc7478520e4f0e07" category="list-text">^2^ PAYGO Explore不支持将数据分层到Google Cloud Storage。</block>
   <block id="9c6d70371c04fac1c5b3babc1c1a755e" category="list-text">^3^在Google Cloud中部署新的Cloud Volumes ONTAP实例时、n1系列计算机不再可在BlueXP  上选择。n1系列机器将保留下来、并且仅在旧的现有系统中受支持。只有从9.8版开始、Google Cloud才支持全新部署Cloud Volumes ONTAP。建议您切换到与Cloud Volumes ONTAP 9.8及更高版本兼容的n2系列机器。但是、n1系列计算机将可用于通过API执行的新部署。</block>
   <block id="31269d00cd277adf90f42f882afbd293" category="list-text">^4^使用平衡持久磁盘和性能(SSD)持久磁盘时、会启用增强的写入性能。</block>
+  <block id="ae1d06c72e1d3684dc2b0784b447f8bb" category="section-title">9.15.1(六.25年1月20日)</block>
+  <block id="e685687a0700868820f260439fea454f" category="paragraph">现在、所有云提供商均可使用适用于Cloud Volumes ONTAP的9.15.1 p6修补程序。BlueXP将提示您将现有系统升级到此修补程序版本。</block>
+  <block id="4d90d21642c7222312363da000d7409f" category="inline-link-macro">查看P6修补程序中已修复的错误列表</block>
+  <block id="6dab4a75e78f4da6ffbd02ad6871cda1" category="paragraph"><block ref="6c7645cce7e25bc9b23c20eb84477db8" category="inline-link-macro-rx"></block> (需要登录NetApp支持站点)。</block>
+  <block id="1f3004ca828e883c15cacfbf9150d29e" category="section-title">9.151 P5 (2025年1月20日)</block>
+  <block id="65e2877203eeb473a40f78bda7e6d3b4" category="paragraph">9.15.1 P5修补程序现在可用于所有云提供商的Cloud Volumes ONTAP。BlueXP将提示您将现有系统升级到此修补程序版本。</block>
+  <block id="e890150484086859b9a5078abe9c6f20" category="inline-link-macro">查看P5修补程序中已修复的错误列表</block>
+  <block id="294d0a8af93eae96d1bba19b5a5f69c4" category="paragraph"><block ref="df0857167980a53ee1e89853022218d5" category="inline-link-macro-rx"></block> (需要登录NetApp支持站点)。</block>
 </blocks>
