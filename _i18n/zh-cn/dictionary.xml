@@ -191,7 +191,6 @@
   <block id="0066e8873a17823db601b98ebbc37dd2" category="section-title">HA 限制</block>
   <block id="b1969fa9ebe4dd2003618adb77082978" category="paragraph">某些地区不支持 HA 对。</block>
   <block id="d91c9372e1fdf74d651217f1a36e518b" category="inline-link">查看支持的 Azure 区域列表</block>
-  <block id="1e6996b39daf779b565c50c8411fbc8d" category="paragraph"><block ref="8e36f0f32d75ebd3c7851e726c538544" category="inline-link-rx"></block>。</block>
   <block id="5520e32d61a58dff51fc6730939c3baf" category="summary">Cloud Volumes ONTAP 在 Google Cloud 中设置了存储配置限制，以提供可靠的操作。为获得最佳性能，请勿将系统配置为最大值。</block>
   <block id="c73908091fadeb9dec16abab42821644" category="doc">Google Cloud 中的存储限制</block>
   <block id="47a5e6e39f64ff5d5dfb25da1aa3f3f2" category="cell">500 GB</block>
@@ -310,7 +309,6 @@
   <block id="afea36f2c9999a231c58b7e9dcf3b16e" category="list-text">Cloud Volumes ONTAP 可以在预留或按需 EC2 实例上运行。不支持使用其他实例类型的解决方案。</block>
   <block id="8c4b25218155a1fdb972f4169855d04f" category="section-title">支持的区域</block>
   <block id="a3f8304ab1695053d71855c60f8abf63" category="inline-link">Cloud Volumes 全球地区</block>
-  <block id="4375839c669e051e5f2a8de11ba0c5d0" category="paragraph">有关 AWS 区域支持，请参见<block ref="2b6a522631c3b3b8afac5466195e108a" category="inline-link-rx"></block>。</block>
   <block id="56ca786dd848302142c428b36f1c8b30" category="summary">此页面介绍了 NetApp 如何与云提供商合作来解决可能出现的问题。</block>
   <block id="b67ce24b0ef9db5e8910cc39a69b1ef6" category="doc">云提供商集成</block>
   <block id="3ecb2b72be9054cc88589bb0cf193ca9" category="section-title">协作支持最佳实践</block>
@@ -354,7 +352,6 @@
   <block id="19482872b5fad6ff5e1e34947a759a98" category="cell">标准 HDD 受管磁盘，标准 SSD 受管磁盘和高级 SSD 受管磁盘</block>
   <block id="d59048f21fd887ad520398ce677be586" category="inline-link">了解更多信息。</block>
   <block id="11509498a3f1573cdde878f927dc10bd" category="inline-link">超 SSD</block>
-  <block id="7c7627c6477255acb2239bd1be90f346" category="list-text">有关 Azure 区域支持，请参见<block ref="2b6a522631c3b3b8afac5466195e108a" category="inline-link-rx"></block>。</block>
   <block id="e7089e61c962cfdae0de5b1d0748b6f2" category="list-text">Cloud Volumes ONTAP 可以在云提供商提供的预留或按需 VM 实例上运行。不支持使用其他 VM 实例类型的解决方案。</block>
   <block id="b049fcbe8198301adc6bf87634a02845" category="section-title">HA 对</block>
   <block id="2eacfdd792ca3ab121472c95654b43ec" category="paragraph">在 Azure 中将 Cloud Volumes ONTAP 部署为 HA 对时，您可以从以下配置中进行选择。</block>
@@ -666,7 +663,6 @@
   <block id="f52ead6bbf1fb1c871d206603e5a2347" category="open-title">基于容量的许可证</block>
   <block id="6e539d2ea7d82ed0e31c450e64ff8c04" category="cell">已优化</block>
   <block id="d56bf07ec8cd4e9f29339d605ffef95c" category="open-title">基于节点的许可证</block>
-  <block id="b338d2a3e5b2fa0602cf93fe49c51138" category="paragraph">有关Google Cloud区域支持、请参见<block ref="2b6a522631c3b3b8afac5466195e108a" category="inline-link-rx"></block>。</block>
   <block id="bde67b5966889851166e3f5c7b09ff05" category="paragraph">在Azure中将Cloud Volumes ONTAP部署为单节点系统时、您可以从以下基于容量或基于节点的许可配置中进行选择。</block>
   <block id="d2f103c82b43ca5f2da33f93d94bde64" category="paragraph">如果您在部署新的 Cloud Volumes ONTAP 系统时选择了其中任何一种 VM 类型，则不能更改为使用适用于 VNVRAM 的超高 SSD 的其他 VM 类型。例如，您不能从 E8ds_v4 更改为 E8s_v3 ，但可以从 E8ds_v4 更改为 E32ds_v4 ，因为这两种虚拟机类型都使用超 SSD 。</block>
   <block id="c0f95d0d2e06eba7eb0522dabf1c9d76" category="paragraph">相反，如果您使用任何其他 VM 类型部署 Cloud Volumes ONTAP ，则无法更改为使用适用于 VNVRAM 的超高 SSD 的 VM 类型。例如，您不能从 E8s_v3 更改为 E8ds_v4 。</block>
@@ -818,4 +814,8 @@
   <block id="294d0a8af93eae96d1bba19b5a5f69c4" category="paragraph"><block ref="df0857167980a53ee1e89853022218d5" category="inline-link-macro-rx"></block> (需要登录NetApp支持站点)。</block>
   <block id="c3647f40e3574e0e6f49e20c19135bfa" category="section-title">使用Azure VM扩展的限制</block>
   <block id="9d167ed7d52d81da8d83590ec3b5a4af" category="paragraph">Cloud Volumes ONTAP不支持在部署中使用Azure虚拟机(VM)扩展和VM应用程序。在Azure中将Cloud Volumes ONTAP与VM扩展结合使用会导致操作延迟、NetApp建议避免这些延迟。</block>
+  <block id="0890aa708cef7529c2bd35cb7d2895df" category="paragraph">有关AWS区域支持，请参见<block ref="e55b14db85f4d4837890e415926626e0" category="inline-link-rx"></block>。</block>
+  <block id="f0de068c81c765820aca0fa8fe017396" category="paragraph">有关Azure区域支持，请参见<block ref="e55b14db85f4d4837890e415926626e0" category="inline-link-rx"></block>。</block>
+  <block id="9b986795dc6a434c7339bfecbd5e5c8b" category="paragraph">有关Google Cloud区域支持，请参见<block ref="e55b14db85f4d4837890e415926626e0" category="inline-link-rx"></block>。</block>
+  <block id="d798d4963d0ac509a1bda5483d9b9a52" category="paragraph"><block ref="5a94f18247116693735ff13d8eeaa964" category="inline-link-rx"></block>(英文)</block>
 </blocks>

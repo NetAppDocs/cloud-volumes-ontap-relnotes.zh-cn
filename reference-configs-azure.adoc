@@ -566,4 +566,4 @@ HA对使用Azure托管磁盘。支持以下磁盘类型和大小。
 
 == 支持的区域
 
-有关 Azure 区域支持，请参见 https://cloud.netapp.com/cloud-volumes-global-regions["Cloud Volumes 全球地区"^]。
+有关Azure区域支持，请参见 https://bluexp.netapp.com/cloud-volumes-global-regions["Cloud Volumes 全球地区"^]。

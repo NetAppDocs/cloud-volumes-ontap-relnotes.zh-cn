@@ -184,4 +184,4 @@ NOTE: _Flash cache"、"高写入"模式和8、896的MTU与功能相关、不能�
 
 == 支持的区域
 
-有关Google Cloud区域支持、请参见 https://cloud.netapp.com/cloud-volumes-global-regions["Cloud Volumes 全球地区"^]。
+有关Google Cloud区域支持，请参见 https://bluexp.netapp.com/cloud-volumes-global-regions["Cloud Volumes 全球地区"^]。

@@ -256,4 +256,4 @@ Cloud Volumes ONTAP 可以在预留或按需 EC2 实例上运行。不支持使�
 
 == 支持的区域
 
-有关 AWS 区域支持，请参见 https://cloud.netapp.com/cloud-volumes-global-regions["Cloud Volumes 全球地区"^]。
+有关AWS区域支持，请参见 https://bluexp.netapp.com/cloud-volumes-global-regions["Cloud Volumes 全球地区"^]。
