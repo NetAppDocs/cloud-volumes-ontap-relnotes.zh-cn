@@ -4,7 +4,7 @@ permalink: reference-limits-aws.html
 keywords: limits, maximum, storage, aggregates, disks, volumes, capacity, luns, size, storage virtual machine, SVM, ebs 
 summary: Cloud Volumes ONTAP 在 AWS 中具有存储配置限制，可提供可靠的操作。为获得最佳性能，请勿将系统配置为最大值。 
 ---
-= AWS 中的存储限制
+= AWS中Cloud Volumes ONTAP的存储限制
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

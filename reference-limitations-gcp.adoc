@@ -4,7 +4,7 @@ permalink: reference-limitations-gcp.html
 keywords: limitations, google cloud platform, gcp, psc, private service connect 
 summary: 已知限制确定了本产品版本不支持的平台、设备或功能、或者这些平台、设备或功能无法与产品正确交互操作。仔细审查这些限制。 
 ---
-= Google Cloud 中的已知限制
+= Cloud Volumes ONTAP在Google Cloud中的已知限制
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

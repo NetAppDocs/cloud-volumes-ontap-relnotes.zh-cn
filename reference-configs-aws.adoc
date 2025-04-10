@@ -4,7 +4,7 @@ permalink: reference-configs-aws.html
 keywords: ec2, instance, type, explore, standard, premium, byol, capacity, maximum, virtual machine, Cloud Volumes ONTAP, supported, configurations, sizes, disks, networking, bandwidth, professional package 
 summary: AWS 支持多种 Cloud Volumes ONTAP 配置。 
 ---
-= AWS 中支持的配置
+= AWS中支持的Cloud Volumes ONTAP配置
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -72,7 +72,7 @@ supported
 . 对于某些配置，磁盘限制会阻止您单独使用磁盘来达到容量限制。在这些情况下，您可以通过达到容量限制 https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-data-tiering.html["将非活动数据分层到对象存储"^]。有关磁盘限制的信息，请参见 link:reference-limits-aws.html["存储限制"]。
 . 如果在所有Cloud Volumes ONTAP配置中使用SSD、则会提高写入性能。
 . 使用吞吐量优化型 HDD （ st1 ）时，不建议将数据分层到对象存储。
-. AWS本地区域仅支持通用SSD (GP2)磁盘类型。
+. AWS本地区域中的Cloud Volumes ONTAP配置仅支持通用SSD (GP2)磁盘类型。
 
 
 --
@@ -102,7 +102,7 @@ supported
 . 对于某些配置，磁盘限制会阻止您单独使用磁盘来达到容量限制。在这些情况下，您可以通过达到容量限制 https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-data-tiering.html["将非活动数据分层到对象存储"^]。有关磁盘限制的信息，请参见 link:reference-limits-aws.html["存储限制"]。
 . 在对所有 Cloud Volumes ONTAP 配置使用 SSD 时，系统会启用增强的写入性能，但 PAYGO Explore 除外。
 . 使用吞吐量优化型 HDD （ st1 ）时，不建议将数据分层到对象存储。
-. AWS本地区域仅支持通用SSD (GP2)磁盘类型。
+. AWS本地区域中的Cloud Volumes ONTAP配置仅支持通用SSD (GP2)磁盘类型。
 
 
 --

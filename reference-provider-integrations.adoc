@@ -4,7 +4,7 @@ permalink: reference-provider-integrations.html
 keywords: maintenance event, azure maintenance event, cloud provider, issues, support 
 summary: 此页面介绍了 NetApp 如何与云提供商合作来解决可能出现的问题。 
 ---
-= 云提供商集成
+= 与Cloud Volumes ONTAP云提供商协作
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,7 +14,7 @@ summary: 此页面介绍了 NetApp 如何与云提供商合作来解决可能出
 
 
 [role="lead"]
-此页面介绍了 NetApp 如何与云提供商合作来解决可能出现的问题。
+了解NetApp如何与云提供商合作解决潜在问题。
 
 
 

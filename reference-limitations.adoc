@@ -4,7 +4,7 @@ permalink: reference-limitations.html
 keywords: limitations, detaching, snapmanager, features, disks, aggregates, features, svm 
 summary: 已知限制确定了本产品版本不支持的平台、设备或功能、或者这些平台、设备或功能无法与产品正确交互操作。仔细审查这些限制。 
 ---
-= 所有云提供商的限制
+= Cloud Volumes ONTAP在所有云提供商中的已知限制
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
