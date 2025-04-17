@@ -773,4 +773,12 @@
   <block id="f2642484d82ac71ab617437045e56b35" category="doc">Cloud Volumes ONTAP在Google Cloud中的存储限制</block>
   <block id="0d965f3057c75408feddc192acd12da8" category="doc">与Cloud Volumes ONTAP云提供商协作</block>
   <block id="6e9c766eb64d674ed321c13842973979" category="paragraph">了解NetApp如何与云提供商合作解决潜在问题。</block>
+  <block id="26207601cd717bed61f9a69941108f87" category="section-title">9.16.1 P2 (2025年4月17日)</block>
+  <block id="c4792f112f7f491e5d7e61fba2f33329" category="paragraph">现在、您可以在Azure和Google Cloud中为Cloud Volumes ONTAP部署和升级9.16.1 P2修补程序。但是、无法在AWS中部署和升级此版本。BlueXP将提示您将现有系统升级到此修补程序版本。</block>
+  <block id="ce5d0c77f167b881391469fc27895727" category="inline-link-macro">查看P2修补程序中已修复的错误列表</block>
+  <block id="448f9263b6e5828ecbede3a8f78d17eb" category="paragraph"><block ref="6454149a5f999950d701a0bf861b958d" category="inline-link-macro-rx"></block> (需要登录NetApp支持站点)。</block>
+  <block id="008c5c510153b3136387ddcd33bc112c" category="section-title">9.16.1 P1 (2025年4月17日)</block>
+  <block id="3b3592b54b76bb5d60a585ffacea4e61" category="paragraph">现在、可以在Azure和Google Cloud中为Cloud Volumes ONTAP部署和升级9.16.1 P1修补程序。但是、无法在AWS中部署和升级此版本。BlueXP将提示您将现有系统升级到此修补程序版本。</block>
+  <block id="a9380d77cd3c45a5f15f09b231323443" category="inline-link-macro">查看P1修补程序中已修复的错误列表</block>
+  <block id="664e6349e84880f6407173721fad810a" category="paragraph"><block ref="e1914bcb543b75972205a0cc76dbb433" category="inline-link-macro-rx"></block> (需要登录NetApp支持站点)。</block>
 </blocks>
