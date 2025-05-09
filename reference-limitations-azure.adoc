@@ -33,8 +33,16 @@ Cloud Volumes ONTAP不支持在部署中使用Azure虚拟机(VM)扩展和VM应�
 
 
 
-== HA 限制
+== 高可用性部署的限制
 
-某些地区不支持 HA 对。
+某些地区不支持高可用性(HA)对。
 
 https://bluexp.netapp.com/cloud-volumes-global-regions["查看支持的 Azure 区域列表"^](英文)
+
+
+
+== 在单个可用性区域中进行HA部署的限制
+
+从Cloud Volumes ONTAP 9.15.1开始、您可以在Azure的单可用性区域(Single Availability Zones、AZs)中以HA模式部署虚拟机(VM)实例。有关支持此功能的标准的信息，请参见 https://docs.netapp.com/us-en/cloud-volumes-ontap-9151-relnotes/reference-new.html#deploy-ha-pairs-in-single-availability-zones-on-azure["在Azure的单个可用性区域中部署HA对"^]。
+
+如果Cloud Volumes ONTAP版本为早期版本的9.15.1、或者不满足其中任何一个条件、则使用可用性集的先前部署模式将生效。这仅适用于HA配置。
