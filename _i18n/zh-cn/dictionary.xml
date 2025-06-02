@@ -785,4 +785,8 @@
   <block id="76d43d0c7a6d0d101562acb873375c45" category="inline-link">在Azure的单个可用性区域中部署HA对</block>
   <block id="d8bb5ee8ceb2ff0c0fd5de1a5d8db6ea" category="paragraph">从Cloud Volumes ONTAP 9.15.1开始、您可以在Azure的单可用性区域(Single Availability Zones、AZs)中以HA模式部署虚拟机(VM)实例。有关支持此功能的标准的信息，请参见<block ref="70422bd689a7303399dff3dd5e571c65" category="inline-link-rx"></block>。</block>
   <block id="4ed7f8d6ce44fa053592b73fcd8be5e3" category="paragraph">如果Cloud Volumes ONTAP版本为早期版本的9.15.1、或者不满足其中任何一个条件、则使用可用性集的先前部署模式将生效。这仅适用于HA配置。</block>
+  <block id="2b0112a3fe8db72b28cea3e10ddba401" category="section-title">9.16.1 P3（2025 年 5 月 29 日）</block>
+  <block id="79d2490a076742db13fbcc8f0776a458" category="paragraph">现在、可以在Azure和Google Cloud中为Cloud Volumes ONTAP部署和升级9.16.1 P3修补程序。但是、无法在AWS中部署和升级此版本。BlueXP将提示您将现有系统升级到此修补程序版本。</block>
+  <block id="4c7cf73669136d536c96ca7317eb5ceb" category="inline-link-macro">查看P3修补程序中已修复的错误列表</block>
+  <block id="4beb9f52d4c281cb89fd47e4aaa780cf" category="paragraph"><block ref="77df283c529cda018d08e767dda3eebd" category="inline-link-macro-rx"></block> (需要登录NetApp支持站点)。</block>
 </blocks>
