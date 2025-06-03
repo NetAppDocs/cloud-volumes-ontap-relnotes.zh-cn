@@ -78,13 +78,3 @@ NOTE: 对于AWS、系统不会提示您进行此升级。AWS不支持升级到Cl
 * 升级单节点系统会使系统脱机长达 25 分钟，在此期间 I/O 会中断。
 * 升级HA对不会造成中断、I/O不会中断。在此无中断升级过程中、每个节点会同步升级、以便继续为客户端提供I/O。
 
-
-
-
-=== 不再支持c4、m4和r4实例
-
-在AWS中、Cloud Volumes ONTAP 不再支持C4、M4和M4 EC2实例类型。如果现有系统运行的是C4、M4或r4实例类型、则必须更改为c5、M5或R5实例系列中的实例类型。只有在更改实例类型后才能升级到此版本。
-
-link:https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-change-ec2-instance.html["了解如何更改Cloud Volumes ONTAP 的EC2实例类型"^]。
-
-请参见 link:https://mysupport.netapp.com/info/communications/ECMLP2880231.html["NetApp 支持"^] 了解有关这些实例类型的可用性和支持终止的更多信息。

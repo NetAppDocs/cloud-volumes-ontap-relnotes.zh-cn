@@ -499,8 +499,6 @@
   <block id="8a11b7df22322ab2814174e7745c863f" category="inline-link">ONTAP 注意事项</block>
   <block id="a65d010a2b24f9e4a0919b7faf52d022" category="list-text"><block ref="a65d010a2b24f9e4a0919b7faf52d022" category="inline-link-rx"></block></block>
   <block id="6614eabe1ab14f33107830de1efb584a" category="inline-link-macro">了解如何更改Cloud Volumes ONTAP 的EC2实例类型</block>
-  <block id="09ea0908fbfc4cde85bf416e35dc55c8" category="inline-link-macro">NetApp 支持</block>
-  <block id="0b55c70d5652d8fe1f5ddc75633eaa95" category="paragraph">请参见 <block ref="0bcfd67fb2b966e3378fbf640ee81a22" category="inline-link-macro-rx"></block> 了解有关这些实例类型的可用性和支持终止的更多信息。</block>
   <block id="fd1f8e9df9f2971a09de148f57ee5ce0" category="section-title">软件更新必须由BlueXP完成</block>
   <block id="c6925d752394e325c0b435137fbe997c" category="paragraph">必须从BlueXP完成Cloud Volumes ONTAP 升级。您不应使用 System Manager 或命令行界面升级 Cloud Volumes ONTAP 。这样做可能会影响系统稳定性。</block>
   <block id="93931e849ddff0b1178bc9a719400883" category="paragraph">通过云提供商的控制台更改 Cloud Volumes ONTAP 配置会导致配置不受支持。如果对Cloud Volumes ONTAP 资源进行任何更改、由BlueXP创建和管理、可能会影响系统稳定性以及BlueXP管理系统的能力。</block>
@@ -555,7 +553,6 @@
   <block id="72e0d2497593ac6a5fdc024537224aed" category="list-text">只有在共享受管磁盘上运行的单个可用性区域配置中的HA对才支持这些VM类型。</block>
   <block id="33031b274bf5d81fbfbd69c1f2ea39a2" category="list-text">n2-standard-48</block>
   <block id="7c347fcea29ffaea485ee6128a9d7a06" category="list-text">n2-standard-64</block>
-  <block id="41104125a8a3ef6fe8985ff4df5257be" category="paragraph">在AWS中、Cloud Volumes ONTAP 不再支持C4、M4和M4 EC2实例类型。如果现有系统运行的是C4、M4或r4实例类型、则必须更改为c5、M5或R5实例系列中的实例类型。只有在更改实例类型后才能升级到此版本。</block>
   <block id="8e8865183ac138d80e1eac90bc023d09" category="list-text">从Cloud Volumes ONTAP 软件9.13.0版开始、可以为以下HA对部署实例提供_Flash Cache"高写入速度"和更高的最大传输单元(MTU) 8、896字节：</block>
   <block id="f23467ff8f84fc95ca2baa4b362c7865" category="inline-link">在Google Cloud中启动HA对</block>
   <block id="13a86b4a06586a14808c627b883e338d" category="admonition">_Flash cache"、"高写入"模式和8、896的MTU与功能相关、不能在已配置的实例中单独禁用。</block>
@@ -789,4 +786,25 @@
   <block id="79d2490a076742db13fbcc8f0776a458" category="paragraph">现在、可以在Azure和Google Cloud中为Cloud Volumes ONTAP部署和升级9.16.1 P3修补程序。但是、无法在AWS中部署和升级此版本。BlueXP将提示您将现有系统升级到此修补程序版本。</block>
   <block id="4c7cf73669136d536c96ca7317eb5ceb" category="inline-link-macro">查看P3修补程序中已修复的错误列表</block>
   <block id="4beb9f52d4c281cb89fd47e4aaa780cf" category="paragraph"><block ref="77df283c529cda018d08e767dda3eebd" category="inline-link-macro-rx"></block> (需要登录NetApp支持站点)。</block>
+  <block id="fbb17e3b93a1070f3de5e45b66842d95" category="list-text">AWS本地区域中的Cloud Volumes ONTAP配置仅支持通用SSD (GP2)磁盘类型。AWS 本地区域中的 Cloud Volumes ONTAP 不支持其他磁盘类型。</block>
+  <block id="f051f95f393c93123644b448ca3165c0" category="paragraph">Cloud Volumes ONTAP 不再支持 AWS 中的 c4、m4 和 r4 EC2 实例类型。如果您的系统在 c4、m4 或 r4 实例上运行，请更改为 c5、m5 或 r5 实例。只有在更改实例类型后才能升级到此版本。</block>
+  <block id="2f8299f876158db323c08455b12b585a" category="paragraph">有关详细信息、请参见：</block>
+  <block id="304f5226697d03123fa4611d02bf8546" category="inline-link">知识库 (KB) 文章：将 AWS Xen CVO 实例转换为 Nitro KVM</block>
+  <block id="0dc3c417fc362585e0e7b3798f00b8bb" category="list-text"><block ref="0dc3c417fc362585e0e7b3798f00b8bb" category="inline-link-rx"></block></block>
+  <block id="b5dc3ce37b75c52be2427ecee207d24f" category="inline-link">知识库文章：无法将实例类型从 r4 更改为 r5，并且出现磁盘数量错误</block>
+  <block id="9ed042e52baa279a92fcf5c7a432ecf5" category="list-text"><block ref="9ed042e52baa279a92fcf5c7a432ecf5" category="inline-link-rx"></block></block>
+  <block id="ee47ffaac80894c9307ca443c334cf79" category="inline-link-macro">详细了解这些实例类型的可用性和支持终止情况</block>
+  <block id="c0857a6c0ade184c3afe7f293fc01755" category="list-text"><block ref="c0857a6c0ade184c3afe7f293fc01755" category="inline-link-macro-rx"></block></block>
+  <block id="f9f7c1c9687f8f087477f0ae4cac6b45" category="inline-link">Microsoft Azure文档</block>
+  <block id="e2f4ab859b01d65da06c213f94a69131" category="paragraph">有关支持的实例规格，请参阅<block ref="84495d3a9882d3bd6b6590d973db25e5" category="inline-link-rx"></block> 。</block>
+  <block id="5639612d2f12168c8a83a7d9f034340d" category="inline-link">Azure （单节点）</block>
+  <block id="88e2312354057a90322664c2df9708ae" category="list-text">^4^ 有关单节点部署中支持的磁盘类型的信息，请参阅<block ref="5d976ccca41daf11d6b5e395edda488a" category="inline-link-rx"></block> 。使用单节点系统时，所有实例类型均支持高写入速度。您可以在部署期间或部署后的任何时间从BlueXP  启用高速写入。<block ref="721fe5ee3bbc3d8295d8615ed77ff9be" category="inline-link-rx"></block>(英文)。使用 SSD 时会启用增强的写入性能。</block>
+  <block id="9116d248ecfb6241ae0ac82e933291a7" category="cell">支持的磁盘类型 ^6^</block>
+  <block id="70ed196a226ad517ee4fecdca325036d" category="inline-link">Azure （ HA 对）</block>
+  <block id="129a14de9bbb8e2dc343a37a19f5ea3d" category="list-text">有关 HA 部署（单可用区和多可用区）支持的磁盘类型的信息，请参阅<block ref="f48956bad241329abf5e1ff5123459dd" category="inline-link-rx"></block> 。</block>
+  <block id="7ec816bcf3858e037c57a46bfa8643ba" category="paragraph">有关特定机器类型的更多信息，请参阅 Google Cloud 文档：</block>
+  <block id="7f53645b2b3a6e77999ceeea01208792" category="inline-link">n1系列通用机型</block>
+  <block id="b10cf18ba66c2ae046931259e614fe81" category="list-text"><block ref="b10cf18ba66c2ae046931259e614fe81" category="inline-link-rx"></block></block>
+  <block id="d59a55e5a766d0a45a73ef03504c6b5b" category="inline-link">N2系列通用机型</block>
+  <block id="0ab6f9218085a410dabf81dbe7da1b1a" category="list-text"><block ref="0ab6f9218085a410dabf81dbe7da1b1a" category="inline-link-rx"></block></block>
 </blocks>

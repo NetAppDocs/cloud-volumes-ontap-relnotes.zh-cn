@@ -26,6 +26,8 @@ Cloud Volumes ONTAP 在 Azure 中可作为单节点系统和高可用性（ HA �
 
 Cloud Volumes ONTAP 可以在云提供商提供的预留或按需 VM 实例上运行。不支持使用其他 VM 实例类型的解决方案。
 
+有关支持的实例规格，请参阅 https://learn.microsoft.com/en-us/azure/virtual-machines/sizes/overview["Microsoft Azure文档"^] 。
+
 
 
 === 单节点系统
@@ -131,7 +133,7 @@ Cloud Volumes ONTAP 可以在云提供商提供的预留或按需 VM 实例上�
 +
 相反，如果您使用任何其他 VM 类型部署 Cloud Volumes ONTAP ，则无法更改为使用适用于 VNVRAM 的超高 SSD 的 VM 类型。例如，您不能从 E8s_v3 更改为 E8ds_v4 。
 
-. ^4^使用单节点系统时、所有实例类型均支持高写入速度。您可以在部署期间或部署后的任何时间从BlueXP  启用高速写入。 https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-write-speed.html["了解有关选择写入速度的更多信息"^](英文)。使用 SSD 时会启用增强的写入性能。
+. ^4^ 有关单节点部署中支持的磁盘类型的信息，请参阅 https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/reference-default-configs.html#azure-single-node["Azure （单节点）"^] 。使用单节点系统时，所有实例类型均支持高写入速度。您可以在部署期间或部署后的任何时间从BlueXP  启用高速写入。 https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-write-speed.html["了解有关选择写入速度的更多信息"^](英文)。使用 SSD 时会启用增强的写入性能。
 
 
 --
@@ -424,7 +426,7 @@ NOTE: 任何新部署都不支持Azure页面Blobs。
 
 
 
-| 支持的磁盘类型 3+| 标准HDD托管磁盘、标准SSD托管磁盘、高级SSD托管磁盘和高级SSD v2托管磁盘。 
+| 支持的磁盘类型 ^6^ 3+| 标准HDD托管磁盘、标准SSD托管磁盘、高级SSD托管磁盘和高级SSD v2托管磁盘。 
 |===
 注释：
 
@@ -433,6 +435,7 @@ NOTE: 任何新部署都不支持Azure页面Blobs。
 . 从ONTAP 9.13.1.版开始支持多可用性区域。
 . 从ONTAP 9.14.1 RC1版开始支持多可用性区域。
 . 此 VM 类型包括本地 NVMe 存储， Cloud Volumes ONTAP 使用此存储作为 _Flash Cache_ 。Flash Cache 通过实时智能缓存最近读取的用户数据和 NetApp 元数据来加快数据访问速度。它适用于随机读取密集型工作负载，包括数据库，电子邮件和文件服务。 https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-flash-cache.html["了解更多信息。"^]。
+. 有关 HA 部署（单可用区和多可用区）支持的磁盘类型的信息，请参阅 https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/reference-default-configs.html#azure-ha-pair["Azure （ HA 对）"^] 。
 
 
 --

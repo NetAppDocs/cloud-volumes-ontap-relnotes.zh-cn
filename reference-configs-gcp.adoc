@@ -164,6 +164,12 @@ NOTE: _Flash cache"、"高写入"模式和8、896的MTU与功能相关、不能�
 
 --
 ====
+有关特定机器类型的更多信息，请参阅 Google Cloud 文档：
+
+* https://cloud.google.com/compute/docs/general-purpose-machines#n1_machines["n1系列通用机型"^]
+* https://cloud.google.com/compute/docs/general-purpose-machines#n2_series["N2系列通用机型"^]
+
+
 
 
 == 支持的磁盘大小

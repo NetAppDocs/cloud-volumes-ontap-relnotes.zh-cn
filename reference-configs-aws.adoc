@@ -72,7 +72,7 @@ supported
 . 对于某些配置，磁盘限制会阻止您单独使用磁盘来达到容量限制。在这些情况下，您可以通过达到容量限制 https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-data-tiering.html["将非活动数据分层到对象存储"^]。有关磁盘限制的信息，请参见 link:reference-limits-aws.html["存储限制"]。
 . 如果在所有Cloud Volumes ONTAP配置中使用SSD、则会提高写入性能。
 . 使用吞吐量优化型 HDD （ st1 ）时，不建议将数据分层到对象存储。
-. AWS本地区域中的Cloud Volumes ONTAP配置仅支持通用SSD (GP2)磁盘类型。
+. AWS本地区域中的Cloud Volumes ONTAP配置仅支持通用SSD (GP2)磁盘类型。AWS 本地区域中的 Cloud Volumes ONTAP 不支持其他磁盘类型。
 
 
 --
@@ -250,6 +250,21 @@ Cloud Volumes ONTAP 可以在预留或按需 EC2 实例上运行。不支持使�
 +
 在AWS本地区域中、这些实例类型不支持高写入速度。
 
+
+
+
+
+=== 不再支持c4、m4和r4实例
+
+Cloud Volumes ONTAP 不再支持 AWS 中的 c4、m4 和 r4 EC2 实例类型。如果您的系统在 c4、m4 或 r4 实例上运行，请更改为 c5、m5 或 r5 实例。只有在更改实例类型后才能升级到此版本。
+
+link:https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-change-ec2-instance.html["了解如何更改Cloud Volumes ONTAP 的EC2实例类型"^]。
+
+有关详细信息、请参见：
+
+* https://kb.netapp.com/Cloud/Cloud_Volumes_ONTAP/Converting_an_AWS_Xen_CVO_instance_to_Nitro_KVM["知识库 (KB) 文章：将 AWS Xen CVO 实例转换为 Nitro KVM"^]
+* https://kb.netapp.com/Cloud/Cloud_Volumes_ONTAP/Unable_to_change_the_instance_type_from_r4_to_r5_with_disk_count_error["知识库文章：无法将实例类型从 r4 更改为 r5，并且出现磁盘数量错误"^]
+* link:https://mysupport.netapp.com/info/communications/ECMLP2880231.html["详细了解这些实例类型的可用性和支持终止情况"^]
 
 
 
