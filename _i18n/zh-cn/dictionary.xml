@@ -815,5 +815,6 @@
   <block id="4e2d7e12a50a6543c1e295c672343668" category="cell">已优化^4^</block>
   <block id="dd47c5ffc608943bbe951c1bc249e4a3" category="inline-link">Cloud Volumes ONTAP 中的新增功能</block>
   <block id="6d0094db764c8adadbabb02e37cfc44d" category="admonition">_Flash cache"、"高写入"模式和8、896的MTU与功能相关、不能在已配置的实例中单独禁用。。^4^ 从 2025 年 7 月 1 日起， Cloud Volumes ONTAP Optimized 许可证将被弃用，并且将不再可在 Google Cloud 市场中购买或续订以进行即用即付 (PAYGO) 订阅。有关信息，请参见<block ref="1080c8772df7208f65fb600e0d40b155" category="inline-link-rx"></block>。</block>
-  <block id="3cf421bc57be614ba02e4f59f34859a2" category="paragraph">Cloud Volumes ONTAP不支持 Azure 虚拟机 (VM) 扩展，因为它们会延迟操作。部署Cloud Volumes ONTAP后， BlueXP会定期禁用 VM 扩展。如果您已在工作环境中安装了这些扩展，请联系 Microsoft Azure 支持以禁用或删除它们。</block>
+  <block id="1eb96c178e7f735868c3e0db46da5177" category="paragraph">Cloud Volumes ONTAP不支持 Azure 虚拟机 (VM) 扩展，因为它们会影响BlueXP管理操作。在部署期间， BlueXP会阻止在您的虚拟机上安装任何扩展。如果您现有的Cloud Volumes ONTAP虚拟机上已安装扩展， NetApp强烈建议您联系 Microsoft Azure 支持部门将其删除。</block>
+  <block id="816bcc0866a6fd49370b7a416001b4e9" category="paragraph">从 2025 年 7 月 14 日开始，如果在您的Cloud Volumes ONTAP VM 上检测到 VM 扩展， NetApp将在BlueXP中通知您并发送电子邮件。</block>
 </blocks>
