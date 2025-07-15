@@ -32,7 +32,7 @@ Cloud Volumes ONTAP 可以在云提供商提供的预留或按需 VM 实例上�
 --
 [cols="h,d,d,d"]
 |===
-|  | 免费 | 已优化 | 基于容量的许可证(Essentials和Professional) 
+|  | 免费 | 已优化^4^ | 基于容量的许可证(Essentials和Professional) 
 
 
 | 最大系统容量（磁盘 + 对象存储） | 500 GiB | 2 个 PIB | 2 个 PIB 
@@ -91,7 +91,7 @@ link:reference-limits-gcp.html["详细了解 Google Cloud 中的磁盘限制"]�
 在部署符合条件的实例类型时、您可以启用_Flash Cache_和高写入速度。要启用8、896字节的最大传输单元、必须在部署中选择VPC-1、VPC-2或VPC-3。MTU越高、网络吞吐量就越高。有关启动其中一种部署的详细信息、请参见 https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-deploying-gcp.html#launching-an-ha-pair-in-google-cloud["在Google Cloud中启动HA对"]。
 
 
-NOTE: _Flash cache"、"高写入"模式和8、896的MTU与功能相关、不能在已配置的实例中单独禁用。
+NOTE: _Flash cache"、"高写入"模式和8、896的MTU与功能相关、不能在已配置的实例中单独禁用。。^4^ 从 2025 年 7 月 1 日起， Cloud Volumes ONTAP Optimized 许可证将被弃用，并且将不再可在 Google Cloud 市场中购买或续订以进行即用即付 (PAYGO) 订阅。有关信息，请参见 https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/whats-new.html["Cloud Volumes ONTAP 中的新增功能"^]。
 
 --
 .基于节点的许可证
