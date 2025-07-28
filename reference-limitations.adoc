@@ -44,6 +44,10 @@ Cloud Volumes ONTAP 不支持以下功能：
 * SnapLock 合规性和企业模式（仅支持 Cloud WORM ）
 * SnapMirror 同步
 * VLAN
+* SMB 持续可用性 (CA)
++
+https://kb.netapp.com/on-prem/ontap/da/NAS/NAS-KBs/What_are_SMB_Continuous_Availability_CA_Shares["持续可用的 SMB 共享"^]不支持无中断运行。
+
 
 
 

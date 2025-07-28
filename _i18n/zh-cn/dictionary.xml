@@ -310,7 +310,6 @@
   <block id="eb43b40e67fff3351b74b6f875e497b9" category="paragraph">Microsoft 在其 Azure 虚拟机（ VM ）基础架构上计划并以编程方式宣布可能影响 Cloud Volumes ONTAP VM 的维护事件。这些事件会在维护窗口的 15 分钟前公布。</block>
   <block id="5e486cb2e38fc7f03f038af21eb3cdb9" category="paragraph">Cloud Volumes ONTAP 高可用性（ HA ）对支持特殊处理维护事件。为了保持应用程序运行状况，我们会执行预防性接管以确定稳定性的优先级，因为任何连接断开超过 15 秒将禁用故障转移功能。</block>
   <block id="1222cf807490df82fd7e0146eb6798c1" category="paragraph">宣布维护窗口后，目标节点的配对节点将执行接管。维护完成后，将启动交还。交还后， HA 对应恢复为运行状况良好的状态。如果未发生这种情况，请联系 NetApp 支持部门以获得帮助。请注意，维护事件一次针对 HA 对中的一个虚拟机，通常这两个节点都是在相对较短的时间内针对的。</block>
-  <block id="1355c3042f61af06b4a61506de6e8ad1" category="paragraph">使用 Cloud Volumes ONTAP 非持续可用的 CIFS 共享的 CIFS/SMB 客户端将在发生接管时以及将会话所使用的聚合交还给聚合的主节点时丢失会话。这是 CIFS/SMB 协议本身施加的限制。客户可能希望使用第三方产品来避免因接管和交还而可能出现的问题。要获得更多帮助，请联系 NetApp 支持部门。</block>
   <block id="e9c44bbfd795a5d63d74c6a77afee70d" category="summary">法律声明提供对版权声明、商标、专利等的访问。</block>
   <block id="30d965eef5ba25c6b9998ae38270b43e" category="doc">法律声明</block>
   <block id="6016a2b341113bf496b719905398ecd2" category="section-title">版权</block>
@@ -817,4 +816,9 @@
   <block id="6d0094db764c8adadbabb02e37cfc44d" category="admonition">_Flash cache"、"高写入"模式和8、896的MTU与功能相关、不能在已配置的实例中单独禁用。。^4^ 从 2025 年 7 月 1 日起， Cloud Volumes ONTAP Optimized 许可证将被弃用，并且将不再可在 Google Cloud 市场中购买或续订以进行即用即付 (PAYGO) 订阅。有关信息，请参见<block ref="1080c8772df7208f65fb600e0d40b155" category="inline-link-rx"></block>。</block>
   <block id="1eb96c178e7f735868c3e0db46da5177" category="paragraph">Cloud Volumes ONTAP不支持 Azure 虚拟机 (VM) 扩展，因为它们会影响BlueXP管理操作。在部署期间， BlueXP会阻止在您的虚拟机上安装任何扩展。如果您现有的Cloud Volumes ONTAP虚拟机上已安装扩展， NetApp强烈建议您联系 Microsoft Azure 支持部门将其删除。</block>
   <block id="816bcc0866a6fd49370b7a416001b4e9" category="paragraph">从 2025 年 7 月 14 日开始，如果在您的Cloud Volumes ONTAP VM 上检测到 VM 扩展， NetApp将在BlueXP中通知您并发送电子邮件。</block>
+  <block id="48a1881670db273e8743aa5bc3c47be1" category="list-text">SMB 持续可用性 (CA)</block>
+  <block id="66f1432987337e84ca83c5bdf6848b9e" category="inline-link">持续可用的 SMB 共享</block>
+  <block id="b469f24f7b40dd39d564f20b26834f51" category="paragraph"><block ref="8c32a537fad73fe139f927507d338c47" category="inline-link-rx"></block>不支持无中断运行。</block>
+  <block id="a658c03927efcbcb7170fb429c8a9408" category="paragraph">使用Cloud Volumes ONTAP非连续可用 CIFS 共享的 CIFS/SMB 客户端在发生接管时以及会话所使用的聚合交还给聚合的主节点时，都会遇到会话丢失的情况。这是 CIFS/SMB 协议本身的限制。您可以使用经批准的第三方产品来避免接管和交还导致的问题。如需进一步帮助，请联系NetApp支持。</block>
+  <block id="c04ba4ba4463685b70d448688626a589" category="admonition"><block ref="8c32a537fad73fe139f927507d338c47" category="inline-link-rx"></block> Cloud Volumes ONTAP不支持无中断操作。</block>
 </blocks>
