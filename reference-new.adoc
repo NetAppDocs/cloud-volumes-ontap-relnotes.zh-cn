@@ -20,6 +20,14 @@ Cloud Volumes ONTAP 9.161提供了一些新的增强功能。
 
 
 
+== 9.16.1 P5（2025 年 7 月 28 日）
+
+9.16.1 P5 补丁现已可在 Azure 和 Google Cloud 中为Cloud Volumes ONTAP部署和升级。但此版本暂不支持在 AWS 中部署和升级。BlueXPBlueXP提示您将现有系统升级到此补丁版本。
+
+link:https://mysupport.netapp.com/site/products/all/details/cloud-volumes-ontap/downloads-tab/download/62632/9.16.1P5["查看 P5 补丁修复的错误列表"^] （需要登录NetApp支持站点）。
+
+
+
 == 9.16.1 P4（2025 年 7 月 8 日）
 
 现在、可以在Azure和Google Cloud中为Cloud Volumes ONTAP部署和升级9.16.1 P4修补程序。但是、无法在AWS中部署和升级此版本。BlueXP将提示您将现有系统升级到此修补程序版本。
