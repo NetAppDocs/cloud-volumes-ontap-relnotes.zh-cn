@@ -42,7 +42,7 @@ Cloud Volumes ONTAP 可以在云提供商提供的预留或按需 VM 实例上�
 --
 [cols="h,d,d,d"]
 |===
-|  | 免费 | 已优化 | 基于容量的许可证(Essentials和Professional) 
+|  | 免费 | 已优化^5^ | 基于容量的许可证(Essentials和Professional) 
 
 
 | 最大系统容量（磁盘 + 对象存储） | 500 GiB | 2 个 PIB | 2 个 PIB 
@@ -134,6 +134,7 @@ Cloud Volumes ONTAP 可以在云提供商提供的预留或按需 VM 实例上�
 相反，如果您使用任何其他 VM 类型部署 Cloud Volumes ONTAP ，则无法更改为使用适用于 VNVRAM 的超高 SSD 的 VM 类型。例如，您不能从 E8s_v3 更改为 E8ds_v4 。
 
 . ^4^ 有关单节点部署中支持的磁盘类型的信息，请参阅 https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/reference-default-configs.html#azure-single-node["Azure （单节点）"^] 。使用单节点系统时，所有实例类型均支持高写入速度。您可以在部署期间或部署后的任何时间从BlueXP  启用高速写入。 https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-write-speed.html["了解有关选择写入速度的更多信息"^](英文)。使用 SSD 时会启用增强的写入性能。
+. ^5^ 从 2025 年 8 月 11 日开始， Cloud Volumes ONTAP优化许可证将被弃用，并且将不再可在 Azure 市场中购买或续订以进行即用即付 (PAYGO) 订阅。有关更多信息，请参阅 https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/whats-new.html#11-august-2025["优化许可证的可用性终止"^] 。
 
 
 --
@@ -246,7 +247,7 @@ NOTE: 任何新部署都不支持Azure页面Blobs。
 --
 [cols="h,d,d,d"]
 |===
-|  | 免费 | 已优化 | 基于容量的许可证(Essentials和Professional) 
+|  | 免费 | 已优化^4^ | 基于容量的许可证(Essentials和Professional) 
 
 
 | 最大系统容量（磁盘 + 对象存储） | 500 GiB | 2 个 PIB | 2 个 PIB 
@@ -305,6 +306,7 @@ NOTE: 任何新部署都不支持Azure页面Blobs。
 . ^1^ 使用 HA 对时， Cloud Volumes ONTAP支持这些 VM 类型的高写入速度。您可以在部署期间或部署后的任何时间从BlueXP  启用高速写入。 https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/concept-write-speed.html["了解有关选择写入速度的更多信息"^](英文)。
 . ^2^ 仅当需要 Azure 维护控制时才建议使用此 VM。由于定价较高，因此不建议用于任何其他使用情形。
 . ^3^ 这些虚拟机仅在Cloud Volumes ONTAP 9.11.1 或更早版本的部署中受支持。对于这些VM类型、您可以将现有页面Blob部署从Cloud Volumes ONTAP 9.11.1升级到9.12.1.您不能使用Cloud Volumes ONTAP 9.12.1或更高版本执行新页面Blob部署。
+. ^4^ 从 2025 年 8 月 11 日开始， Cloud Volumes ONTAP优化许可证将被弃用，并且将不再可在 Azure 市场中以即用即付 (PAYGO) 订阅的方式购买或续订。有关更多信息，请参阅 https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/whats-new.html#11-august-2025["优化许可证的可用性终止"^] 。
 
 
 --
@@ -383,7 +385,7 @@ NOTE: 任何新部署都不支持Azure页面Blobs。
 --
 [cols="h,d,d,d"]
 |===
-|  | 免费 | 已优化 | 基于容量的许可证(Essentials和Professional) 
+|  | 免费 | 已优化^7^ | 基于容量的许可证(Essentials和Professional) 
 
 
 | 最大系统容量（磁盘 + 对象存储） | 500 GiB | 2 个 PIB | 2 个 PIB 
@@ -438,6 +440,7 @@ NOTE: 任何新部署都不支持Azure页面Blobs。
 . ^4^ 从ONTAP版本 9.14.1 RC1 开始支持多个可用区域。
 . ^5^ 此 VM 类型包括本地 NVMe 存储， Cloud Volumes ONTAP将其用作_Flash Cache_。Flash Cache 通过实时智能缓存最近读取的用户数据和 NetApp 元数据来加快数据访问速度。它适用于随机读取密集型工作负载、包括数据库、电子邮件和文件服务。 https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-flash-cache.html["了解更多信息。"^](英文)。
 . ^6^ 有关 HA 部署单可用区和多可用区支持的磁盘类型的信息，请参阅 https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/reference-default-configs.html#azure-ha-pair["Azure （ HA 对）"^] 。
+. ^7^ 自 2025 年 8 月 11 日起， Cloud Volumes ONTAP优化许可证将被弃用，并且将不再可在 Azure 市场中以即用即付 (PAYGO) 订阅的方式购买或续订。有关更多信息，请参阅 https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/whats-new.html["Cloud Volumes ONTAP 中的新增功能"^] 。
 
 
 --

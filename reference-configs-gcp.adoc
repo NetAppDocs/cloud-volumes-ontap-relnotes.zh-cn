@@ -78,20 +78,25 @@ Cloud Volumes ONTAP 可以在云提供商提供的预留或按需 VM 实例上�
 link:reference-limits-gcp.html["详细了解 Google Cloud 中的磁盘限制"]。
 
 . ^3^使用平衡持久磁盘和性能(SSD)持久磁盘时、会启用增强的写入性能。
-
-
++
 从Cloud Volumes ONTAP 9.13.0开始、可以为以下HA对部署实例提供_Flash Cache _、高写入速度以及8、896字节的更高最大传输单元(MTU)：
 
-* n2-standard-16
-* n2-standard-32
-* n2-standard-48
-* n2-standard-64
-
-
++
+** n2-standard-16
+** n2-standard-32
+** n2-standard-48
+** n2-standard-64
++
 在部署符合条件的实例类型时、您可以启用_Flash Cache_和高写入速度。要启用8、896字节的最大传输单元、必须在部署中选择VPC-1、VPC-2或VPC-3。MTU越高、网络吞吐量就越高。有关启动其中一种部署的详细信息、请参见 https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-deploying-gcp.html#launching-an-ha-pair-in-google-cloud["在Google Cloud中启动HA对"]。
 
++
 
-NOTE: _Flash cache"、"高写入"模式和8、896的MTU与功能相关、不能在已配置的实例中单独禁用。。^4^ 从 2025 年 7 月 1 日起， Cloud Volumes ONTAP Optimized 许可证将被弃用，并且将不再可在 Google Cloud 市场中购买或续订以进行即用即付 (PAYGO) 订阅。有关信息，请参见 https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/whats-new.html["Cloud Volumes ONTAP 中的新增功能"^]。
+NOTE: _Flash cache"、"高写入"模式和8、896的MTU与功能相关、不能在已配置的实例中单独禁用。
+
+
+
+. ^4^ 自 2025 年 8 月 11 日起， Cloud Volumes ONTAP Optimized 许可证将被弃用，并且将不再可在 Google Cloud 市场中以即用即付 (PAYGO) 订阅的方式购买或续订。有关信息，请参阅 https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/whats-new.html["Cloud Volumes ONTAP 中的新增功能"^]。
+
 
 --
 .基于节点的许可证
