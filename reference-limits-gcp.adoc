@@ -26,6 +26,12 @@ NetApp 不支持超过系统容量限制。如果您达到许可的容量限制�
 
 对于某些配置，磁盘限制会阻止您单独使用磁盘来达到容量限制。您可以通过达到容量限制 https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-data-tiering.html["将非活动数据分层到对象存储"^]。有关详细信息，请参见以下磁盘限制。
 
+.基于容量的许可证的容量限制
+通过基于容量的许可，每个Cloud Volumes ONTAP系统都支持分层到对象存储。总分层容量可以扩展到云提供商的存储桶限制。虽然许可证没有施加容量限制，但您应该遵循 https://www.netapp.com/pdf.html?item=/media/17239-tr-4598.pdf["FabricPool最佳实践"^]确保在配置和管理分层时实现最佳性能、可靠性和成本效率。请参阅 https://cloud.google.com/storage/docs/buckets["Google Cloud 文档"^]了解更多信息。
+
+其他许可证类型的容量限制::
+
+
 [cols="25,75"]
 |===
 | 许可证 | 最大系统容量（磁盘 + 对象存储） 
@@ -44,15 +50,12 @@ NetApp 不支持超过系统容量限制。如果您达到许可的容量限制�
 
 
 | 基于节点的许可证 | 2 PIB (需要多个许可证) 
-
-
-| 基于容量的许可证 | 2 个 PIB 
 |===
 .对于 HA 对，是每个节点的许可容量限制还是整个 HA 对的许可容量限制？
 容量限制适用于整个 HA 对。不是每个节点。例如，如果使用高级版许可证，则两个节点之间的容量最多可达 368 TB 。
 
 .对于 HA 对，镜像数据是否计入许可的容量限制？
-不可以。HA 对中的数据会在节点之间同步镜像，以便在 Google Cloud 发生故障时可以使用这些数据。例如、如果您在节点A上购买了8 TB磁盘、则BlueXP还会在节点B上分配一个8 TB磁盘、用于镜像数据。虽然配置了 16 TB 的容量，但许可证限制仅会计入 8 TB 的容量。
+不，不是这样的。 HA 对中的数据在节点之间同步镜像，以便在 Google Cloud 发生故障时数据可用。例如，如果您在节点 A 上购买了 8 TB 磁盘， BlueXP还会在节点 B 上分配一个 8 TB 磁盘用于镜像数据。虽然设置了 16 TB 的容量，但只有 8 TB 计入许可证限制。
 
 
 
@@ -83,7 +86,7 @@ Cloud Volumes ONTAP 将 Google 云平台磁盘分组为 _aggreges_ 。聚合可�
 注释：
 
 . 数据聚合的最大数量不包括根聚合。
-. 聚合容量限制基于构成聚合的磁盘。此限制不包括用于数据分层的对象存储。
+. 组成聚合的磁盘决定了聚合容量限制。此限制不包括用于数据分层的对象存储。
 . 聚合中的所有磁盘大小必须相同。
 
 
@@ -121,7 +124,7 @@ Cloud Volumes ONTAP 将 Google 云平台磁盘分组为 _aggreges_ 。聚合可�
 
 在某些配置中，您可以为 Cloud Volumes ONTAP 创建其他 Storage VM （ SVM ）。
 
-这些是经过测试的限制。虽然理论上可以配置其他 Storage VM ，但不支持。
+这些是经过测试的极限。不支持配置更多存储虚拟机。
 
 https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-managing-svms-gcp.html["了解如何创建其他 Storage VM"^]。
 
@@ -153,7 +156,7 @@ https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-managing-svms-gcp.
 |===
 . 这 24 个 Storage VM 可以提供数据或配置为灾难恢复（ Disaster Recovery ， DR ）。
 . 对于基于容量的许可，额外的 Storage VM 不会产生额外的许可成本，但每个 Storage VM 的最低容量费用为 4 TiB 。例如，如果您创建了两个 Storage VM ，并且每个 VM 都有 2 TiB 的已配置容量，则总共需要支付 8 TiB 的费用。
-. 对于基于节点的 BYOL ，除了默认情况下随 Cloud Volumes ONTAP 提供的第一个 Storage VM 之外，每个额外的 _data-fouring 存储 VM 都需要一个附加许可证。请联系您的客户团队以获取 Storage VM 附加许可证。
+. 对于基于节点的 BYOL，除了默认随Cloud Volumes ONTAP附带的第一个存储虚拟机之外，每个额外的_数据服务_存储虚拟机都需要附加许可证。联系您的客户团队以获取存储 VM 附加许可证。
 +
 您为灾难恢复（ DR ）配置的 Storage VM 不需要附加许可证（它们是免费的），但它们会计入 Storage VM 限制。例如，如果为灾难恢复配置了 12 个提供数据的 Storage VM 和 12 个 Storage VM ，则表示已达到此限制，无法再创建任何 Storage VM 。
 

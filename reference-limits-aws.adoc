@@ -20,11 +20,17 @@ Cloud Volumes ONTAP 具有存储配置限制，可提供可靠的操作。为获
 
 == 按许可证计算的最大系统容量
 
-Cloud Volumes ONTAP 系统的最大系统容量取决于其许可证。最大系统容量包括基于磁盘的存储以及用于数据分层的对象存储。
+最大系统容量包括基于磁盘的存储以及用于数据分层的对象存储。
 
 NetApp 不支持超过系统容量限制。如果您达到许可的容量限制、BlueXP将显示一条需要执行操作消息、并且不再允许您添加其他磁盘。
 
 对于某些配置，磁盘限制会阻止您单独使用磁盘来达到容量限制。在这些情况下，您可以通过达到容量限制 https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-data-tiering.html["将非活动数据分层到对象存储"^]。有关详细信息，请参见以下容量和磁盘限制。
+
+.基于容量的许可证的容量限制
+通过基于容量的许可，每个Cloud Volumes ONTAP系统都支持分层到对象存储。总分层容量可以扩展到云提供商的存储桶限制。虽然许可证没有施加容量限制，但您应该遵循 https://www.netapp.com/pdf.html?item=/media/17239-tr-4598.pdf["FabricPool最佳实践"^]确保在配置和管理分层时实现最佳性能、可靠性和成本效率。请参阅 https://docs.aws.amazon.com/AmazonS3/latest/userguide/BucketRestrictions.html["AWS 文档"^]了解更多信息。
+
+其他许可证类型的容量限制::
+
 
 [cols="25,75"]
 |===
@@ -44,12 +50,9 @@ NetApp 不支持超过系统容量限制。如果您达到许可的容量限制�
 
 
 | 基于节点的许可证 | 2 PIB (需要多个许可证) 
-
-
-| 基于容量的许可证 | 2 个 PIB 
 |===
 .对于 HA ，是每个节点的许可证容量限制还是整个 HA 对的许可证容量限制？
-容量限制适用于整个 HA 对。不是每个节点。例如，如果使用高级版许可证，则两个节点之间的容量最多可达 368 TiB 。
+容量限制针对的是整个 HA 对。它不是每个节点的。例如，Premium 许可证允许两个节点最多使用 368 TiB。
 
 .对于 AWS 中的 HA 系统，镜像数据是否计入容量限制？
 不可以。AWS HA 对中的数据会在节点之间同步镜像，以便在发生故障时可以使用这些数据。例如、如果您在节点A上购买了8 TiB磁盘、则BlueXP还会在节点B上分配一个8 TiB磁盘、用于镜像数据。虽然配置了 16 TiB 的容量，但许可证限制仅会计入 8 TiB 的容量。
@@ -86,9 +89,9 @@ Cloud Volumes ONTAP 使用EBS卷作为磁盘并将其分组到_aggregodes_中。
 |===
 注释：
 
-. 无法在 HA 对中的两个节点上创建 18 个聚合，因为这样做会超出数据磁盘限制。
-. 最大聚合大小取决于构成聚合的磁盘。此限制不包括用于数据分层的对象存储。
-. 如果您的配置支持Amazon EBS弹性卷功能、则聚合最多可以包含8个磁盘、从而提供高达128 TiB的容量。使用GP3或IO1磁盘时、_new_ Cloud Volumes ONTAP 9.11.0或更高版本的系统默认启用Amazon EBS弹性卷功能。 https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-aws-elastic-volumes.html["了解有关支持弹性卷的更多信息"^]
+. 您无法在 HA 对中的两个节点上创建 18 个聚合，因为这会超出数据磁盘限制。
+. 最大聚合大小取决于其磁盘，不包括用于数据分层的对象存储。
+. 如果您的配置支持 Amazon EBS 弹性卷功能，则聚合最多可包含 8 个磁盘，从而提供最多 128 TiB 的容量。默认情况下，当您使用 gp3 或 io1 磁盘时， Cloud Volumes ONTAP 9.11.0 及更高版本的系统会启用 Amazon EBS Elastic Volumes。 https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-aws-elastic-volumes.html["了解有关支持弹性卷的更多信息"^]
 . 聚合中的所有磁盘大小必须相同。
 
 
@@ -110,27 +113,32 @@ Cloud Volumes ONTAP 使用EBS卷作为磁盘并将其分组到_aggregodes_中。
 
 
 
-=== 基于容量的许可限制
+=== 基于容量的许可不同部署模式的限制
 
 以下磁盘限制适用于使用基于容量的许可包的Cloud Volumes ONTAP 系统。 https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-licensing.html["了解Cloud Volumes ONTAP 许可选项"^]
+
+
+NOTE: 有关单节点和 HA 配置的最大系统容量和数据分层容量限制，请参阅<<cap-license-aws>>。
 
 
 
 ==== 单个节点
 
-[cols="18,18,32,32"]
+[cols="18,18,32,width=100%,options="]
 |===
-| 实例 | 每个节点的最大磁盘数 | 单独使用磁盘时的最大系统容量 | 使用磁盘和数据分层的最大系统容量 
 
 
-| c5 ， m5 和 R5 实例 | 21 | 336 TiB | 2 个 PIB 
+| 实例 | 每个节点的最大磁盘数 | 单独使用磁盘时的最大系统容量 
+
+
+| c5 ， m5 和 R5 实例 | 21 | 336 TiB 
 
 
  a| 
 * m5dn.24xlarge
 * m6id.32xlarge
 
-| 19 ^1^ | 304 TiB | 2 个 PIB 
+| 19 ^1^ | 304 TiB 
 |===
 . 与其他实例类型相比，此实例类型具有更多的本地 NVMe 磁盘，这意味着支持的数据磁盘数量较少。
 
@@ -139,26 +147,28 @@ Cloud Volumes ONTAP 使用EBS卷作为磁盘并将其分组到_aggregodes_中。
 
 ==== HA 对
 
-[cols="18,18,32,32"]
+[cols="18,18,32,width=100%,options="]
 |===
-| 实例 | 每个节点的最大磁盘数 | 单独使用磁盘时的最大系统容量 | 使用磁盘和数据分层的最大系统容量 
 
 
-| c5 ， m5 和 R5 实例 | 18 | 288 TiB | 2 个 PIB 
+| 实例 | 每个节点的最大磁盘数 | 单独使用磁盘时的最大系统容量 
+
+
+| c5 ， m5 和 R5 实例 | 18 | 288 TiB 
 
 
  a| 
 * m5dn.24xlarge
 * m6id.32xlarge
 
-| 16 ^1^ | 256 TiB | 2 个 PIB 
+| 16 ^1^ | 256 TiB 
 |===
 . 与其他实例类型相比，此实例类型具有更多的本地 NVMe 磁盘，这意味着支持的数据磁盘数量较少。
 
 
 
 
-=== 基于节点的许可限制
+=== 基于节点的许可的不同部署模式的限制
 
 以下磁盘限制适用于使用基于节点的许可的Cloud Volumes ONTAP 系统、此许可模式是上一代许可模式、可用于按节点许可Cloud Volumes ONTAP。基于节点的许可仍可供现有客户使用。
 

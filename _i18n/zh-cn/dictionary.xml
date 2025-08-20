@@ -78,7 +78,6 @@
   <block id="4ab1bc7e6fe6c19a70cc9470efcb6c1e" category="cell">每个聚合的最大 RAID 组数</block>
   <block id="c4ca4238a0b923820dcc509a6f75849b" category="cell">1.</block>
   <block id="2a01d572b1447155c310cabafac3fae9" category="paragraph">注释：</block>
-  <block id="fa1fa971d1018dcdfc6e158b981c33cb" category="list-text">无法在 HA 对中的两个节点上创建 18 个聚合，因为这样做会超出数据磁盘限制。</block>
   <block id="a870388a8127cdf99988ab2766dc4972" category="list-text">聚合容量限制基于构成聚合的磁盘。此限制不包括用于数据分层的对象存储。</block>
   <block id="a40e4d3ab198f5d9c9e23e409e7abae3" category="list-text">聚合中的所有磁盘大小必须相同。</block>
   <block id="a95e3bd264855a83a2c90be11b509673" category="section-title">Storage VM 限制</block>
@@ -220,7 +219,6 @@
   <block id="7916f32f06eaabdf61df576419c0c138" category="cell">2 TiB</block>
   <block id="705c8901d15869a7116491b156af6fbe" category="cell">368 TiB ^2^</block>
   <block id="6e9a8a2df40afea5890a6ea81b2df2b2" category="cell">每个许可证 368 TiB ^2^</block>
-  <block id="71235138fc0c3fda4c8fc946f34c4367" category="cell">2 个 PIB ^2 个^</block>
   <block id="3e7433721426ddc5bb6007a1f480b7e0" category="cell">支持的磁盘类型</block>
   <block id="6cd4ae2aba2a092cf2052266e4fcdc94" category="list-text">已配置 IOPS SSD （ IO1 ） ^3^</block>
   <block id="320a1bc96a642b93ac47eb0838fbf1ff" category="list-text">吞吐量优化型 HDD （ st1 ） ^4^</block>
@@ -421,7 +419,6 @@
   <block id="40b796d47ecd5587aabc0ea65d661911" category="cell">最大聚合大小 ^1^</block>
   <block id="fd09e7b7125ae29e623561a2b5d68449" category="cell">1-12 ^3^</block>
   <block id="e2f4de94176ab48a70e3d04c548660fd" category="list-text">如果使用基于节点的许可，则需要两个 BYOL 许可证才能达到 384 TiB 。</block>
-  <block id="73cbcc5508ae5bff313fecfcc6e16834" category="paragraph">这些是经过测试的限制。虽然理论上可以配置其他 Storage VM ，但不支持。</block>
   <block id="f732decff3cb02f88745e152cc078819" category="list-text">每个 Storage VM 最多可以有三个 LIF ，其中两个是数据 LIF ，一个是 SVM 管理 LIF 。</block>
   <block id="e70747c71702cdc100bd5f592ed452be" category="summary">Cloud Volumes ONTAP 提供了多种许可选项。每个选项都可用于选择满足您需求的配置。</block>
   <block id="8efc36afc2e7202a9c9bda00b8e8a75d" category="section-title">许可概述</block>
@@ -465,7 +462,6 @@
   <block id="b7d71850fd138e6cd477a1887cc244f3" category="cell">每个聚合的磁盘数^4^</block>
   <block id="449daf85c71a9f8eb7c666134b1d9b95" category="list-text">1 至 6</block>
   <block id="734bf70b1c522fd659b58c67d2c015e9" category="list-text">1-8、弹性卷^3^</block>
-  <block id="4d7bfec0bd52de6919125094b75ca0d4" category="list-text">最大聚合大小取决于构成聚合的磁盘。此限制不包括用于数据分层的对象存储。</block>
   <block id="70fb554e00e352dd7da6941d99b53751" category="inline-link">了解有关支持弹性卷的更多信息</block>
   <block id="dc2065e297a9790d182a555ba250dbda" category="cell">基于节点的 BYOL</block>
   <block id="75b66e0b3cef735ea985bd79ab9601e2" category="cell">m5dn.4xlarge</block>
@@ -481,17 +477,13 @@
   <block id="e7caa46d6e70a5b96752b4644b9f1527" category="paragraph">这些限制不包括启动磁盘和根磁盘。</block>
   <block id="e8ea7579109541b8654ac77df6ec5b21" category="list-text">仅使用磁盘以及使用磁盘以及将冷数据分层到对象存储时、将列出最大系统容量。</block>
   <block id="dd81441aed81dac4d773ef1291a64e00" category="list-text">Cloud Volumes ONTAP 使用 EBS 卷作为磁盘，最大磁盘大小为 16 TiB 。</block>
-  <block id="6f55661d86c0b385d8b362ed90701d0d" category="section-title">基于容量的许可限制</block>
   <block id="54fe37b73954e37cae21db9bbd66c952" category="inline-link">了解Cloud Volumes ONTAP 许可选项</block>
   <block id="5aabc9069557be7e4aeff466605cbc75" category="section-title">单个节点</block>
-  <block id="6c3b49ddb811c2d88edee86163680009" category="section-title">基于节点的许可限制</block>
   <block id="d017aa906544a3348ee35d75ebb10b72" category="paragraph">以下磁盘限制适用于使用基于节点的许可的Cloud Volumes ONTAP 系统、此许可模式是上一代许可模式、可用于按节点许可Cloud Volumes ONTAP。基于节点的许可仍可供现有客户使用。</block>
   <block id="fff4bb20e652c529e2e22e76e56ed9b5" category="section-title">采用PAYGO Premium的单节点</block>
   <block id="a9698a2172c5fcc72b7ecd7910403955" category="section-title">具有BYOL的单个节点</block>
   <block id="9dbb7f356b08de585f6ddbe523e4a8d8" category="section-title">采用PAYGO Premium的HA对</block>
   <block id="1bc398eeb632d3ea2f565d86881775d8" category="section-title">具有BYOL的HA对</block>
-  <block id="8839c374fd950d105b5836c5400c37e3" category="paragraph">根据所使用的虚拟机大小以及所使用的是单节点系统还是HA对、容量限制会有所不同。</block>
-  <block id="10e6e33e8d7a64d70c731d40ea252ed8" category="paragraph">以下注释提供了有关您将在下表中看到的数字的详细信息：</block>
   <block id="bbeef84c33f1676ea87c5c7f476795e6" category="paragraph">限制不包括根磁盘，核心磁盘和 VNVRAM 。</block>
   <block id="0d5277886c056c697a81cb7ba46178fc" category="list-text">对于具有特定VM大小的单节点系统、列出的基于磁盘的896 TiB限制为_TESTESTESTEST_限制。</block>
   <block id="8a11b7df22322ab2814174e7745c863f" category="inline-link">ONTAP 注意事项</block>
@@ -509,7 +501,6 @@
   <block id="30749b02bc62d931d770e6c719254e7b" category="list-text">BlueXP界面显示了Standard和BYOL支持的另一种计算机类型：N1-HIGHMEM-4。但是，此计算机类型并不适用于生产环境。我们已将其仅用于特定实验室环境。</block>
   <block id="9889b7a9df56580016f59ccd942fb1d1" category="inline-link">《BlueXP发行说明》</block>
   <block id="fde45fa5cd70a93e88151b83aa348f12" category="inline-link">BlueXP API端点</block>
-  <block id="40aa449308d0af16355f19e61ffe344b" category="paragraph">不可以。HA 对中的数据会在节点之间同步镜像，以便在 Google Cloud 发生故障时可以使用这些数据。例如、如果您在节点A上购买了8 TB磁盘、则BlueXP还会在节点B上分配一个8 TB磁盘、用于镜像数据。虽然配置了 16 TB 的容量，但许可证限制仅会计入 8 TB 的容量。</block>
   <block id="2819feead2b07762a4465189ab8b2f52" category="paragraph-title">对于 HA 对，是每个节点的许可容量限制还是整个 HA 对的许可容量限制？</block>
   <block id="7093c2c9844cf46dcd5d50c6d596d244" category="paragraph-title">对于 HA 对，镜像数据是否计入许可的容量限制？</block>
   <block id="9d123a356c832621891a3328c128b78b" category="list-text">L8s_v3 ^2^</block>
@@ -576,7 +567,6 @@
   <block id="81a074db33c6f62838933c92142f16d6" category="paragraph"><block ref="f969ecf664fae2f86e88c525c7dd7acf" category="inline-link-rx"></block>。</block>
   <block id="70a8e1fb7e815dcae7d43566ab0db1e7" category="paragraph"><block ref="45c029924054162202773bd86e09b271" category="inline-link-rx"></block>。</block>
   <block id="a990fdc46668be8e7f963c8df127bbe8" category="paragraph">对于某些配置，磁盘限制会阻止您单独使用磁盘来达到容量限制。在这些情况下，您可以通过达到容量限制<block ref="aea0958203307daa433f894622f3e640" category="inline-link-rx"></block>。有关详细信息，请参见以下容量和磁盘限制。</block>
-  <block id="100e0e5b58741c034dadba013998e8b8" category="list-text">如果您的配置支持Amazon EBS弹性卷功能、则聚合最多可以包含8个磁盘、从而提供高达128 TiB的容量。使用GP3或IO1磁盘时、_new_ Cloud Volumes ONTAP 9.11.0或更高版本的系统默认启用Amazon EBS弹性卷功能。<block ref="d6d48ea3644fd45f9f7ff8f4c8d4ae57" category="inline-link-rx"></block></block>
   <block id="c0ad13124302d4d047c0f916a6418182" category="paragraph"><block ref="cc3941262f254d1055804ecddca39dec" category="inline-link-rx"></block>。</block>
   <block id="4bdb15bfe1bad472d818dc31e8f53185" category="paragraph">最新版本的BlueXP还引入了其他功能和增强功能。请参见<block ref="c7887e85c6060ae2594d873a0f2ae025" category="inline-link-rx"></block> 了解详细信息。</block>
   <block id="a92c2d98e174fb58a9af451a8c3413f9" category="paragraph"><block ref="8271d50d033781f1596acf863334de58" category="inline-link-macro-rx"></block>。</block>
@@ -812,8 +802,6 @@
   <block id="549504876cb29a5866aca5cf3802fe6d" category="list-text">^4^ 这些 VM 类型支持在共享托管磁盘上运行的单可用区和多可用区配置中的 HA 对。对于LS_v3虚拟机类型、从ONTAP 9.13.1开始支持多可用性区域。对于Eds_v5 VM类型、从ONTAP 9.14.1 RC1版开始支持多可用性区域。</block>
   <block id="4e2d7e12a50a6543c1e295c672343668" category="cell">已优化^4^</block>
   <block id="dd47c5ffc608943bbe951c1bc249e4a3" category="inline-link">Cloud Volumes ONTAP 中的新增功能</block>
-  <block id="1eb96c178e7f735868c3e0db46da5177" category="paragraph">Cloud Volumes ONTAP不支持 Azure 虚拟机 (VM) 扩展，因为它们会影响BlueXP管理操作。在部署期间， BlueXP会阻止在您的虚拟机上安装任何扩展。如果您现有的Cloud Volumes ONTAP虚拟机上已安装扩展， NetApp强烈建议您联系 Microsoft Azure 支持部门将其删除。</block>
-  <block id="816bcc0866a6fd49370b7a416001b4e9" category="paragraph">从 2025 年 7 月 14 日开始，如果在您的Cloud Volumes ONTAP VM 上检测到 VM 扩展， NetApp将在BlueXP中通知您并发送电子邮件。</block>
   <block id="48a1881670db273e8743aa5bc3c47be1" category="list-text">SMB 持续可用性 (CA)</block>
   <block id="66f1432987337e84ca83c5bdf6848b9e" category="inline-link">持续可用的 SMB 共享</block>
   <block id="b469f24f7b40dd39d564f20b26834f51" category="paragraph"><block ref="8c32a537fad73fe139f927507d338c47" category="inline-link-rx"></block>不支持无中断运行。</block>
@@ -830,4 +818,41 @@
   <block id="004557d03a688223801f3c9351c02ee9" category="cell">已优化^7^</block>
   <block id="8642a53dd7d0662eb87089fce9268665" category="list-text">^7^ 自 2025 年 8 月 11 日起， Cloud Volumes ONTAP优化许可证将被弃用，并且将不再可在 Azure 市场中以即用即付 (PAYGO) 订阅的方式购买或续订。有关更多信息，请参阅<block ref="1080c8772df7208f65fb600e0d40b155" category="inline-link-rx"></block> 。</block>
   <block id="a11297aa85d33243a4a5a316eb075590" category="list-text">^4^ 自 2025 年 8 月 11 日起， Cloud Volumes ONTAP Optimized 许可证将被弃用，并且将不再可在 Google Cloud 市场中以即用即付 (PAYGO) 订阅的方式购买或续订。有关信息，请参阅<block ref="1080c8772df7208f65fb600e0d40b155" category="inline-link-rx"></block>。</block>
+  <block id="8d051a62e2d203f6829d7d7282bfaad2" category="inline-link">FabricPool最佳实践</block>
+  <block id="1fa61fc2f5b77b2d0fa94849b6af3dbb" category="paragraph">通过基于容量的许可，每个Cloud Volumes ONTAP系统都支持分层到对象存储。总分层容量可以扩展到云提供商的存储桶限制。虽然许可证没有施加容量限制，但您应该遵循<block ref="c6ca22161b60218024eaf899637cc82e" category="inline-link-rx"></block>确保在配置和管理分层时实现最佳性能、可靠性和成本效率。</block>
+  <block id="847e3ee04fb8abbb4d0d1afa56101a04" category="cell">灵活^2^</block>
+  <block id="fe70a2c1423d8dc6d93d9ed56139eace" category="inline-link">Azure VM 管理扩展可以安装到 Cloud Volume ONTAP中吗？</block>
+  <block id="9afd5f64e8e4dee128f7ec6ba0028fe0" category="paragraph">Cloud Volumes ONTAP不支持 Azure 虚拟机 (VM) 扩展，因为它们会影响BlueXP管理操作。在部署期间， BlueXP会阻止在您的虚拟机上安装任何扩展。如果您现有的Cloud Volumes ONTAP VM 上已安装扩展，请联系 Microsoft Azure 支持将其删除。如需指导，请参阅知识库 (KB) 文章<block ref="6d01312163294b91508e568dd491d345" category="inline-link-rx"></block></block>
+  <block id="18a9f864fef2d6af1e02766d38585370" category="paragraph">从 2025 年 7 月 14 日开始，如果在您的Cloud Volumes ONTAP VM 上检测到 VM 扩展， NetApp将发送电子邮件并在BlueXP中通知您。</block>
+  <block id="3c95fa05a59cc1bbea5cd04255c3878b" category="paragraph">最大系统容量包括基于磁盘的存储以及用于数据分层的对象存储。</block>
+  <block id="11df62ebd9af6aec3766ffa2d277d960" category="paragraph-title">基于容量的许可证的容量限制</block>
+  <block id="df710f89ebb9e663bd3d66607a0bf413" category="inline-link">AWS 文档</block>
+  <block id="42118bfa7201ec0bae6a7c55dc56387e" category="paragraph">通过基于容量的许可，每个Cloud Volumes ONTAP系统都支持分层到对象存储。总分层容量可以扩展到云提供商的存储桶限制。虽然许可证没有施加容量限制，但您应该遵循<block ref="c6ca22161b60218024eaf899637cc82e" category="inline-link-rx"></block>确保在配置和管理分层时实现最佳性能、可靠性和成本效率。请参阅<block ref="699cd23bd03b9a62b6e7a9fe25109bb3" category="inline-link-rx"></block>了解更多信息。</block>
+  <block id="e292aa024fbf164ca3da18861c8d1fed" category="list-text">其他许可证类型的容量限制</block>
+  <block id="22827129a19cf89772bdcf4690c2a33d" category="paragraph">容量限制针对的是整个 HA 对。它不是每个节点的。例如，Premium 许可证允许两个节点最多使用 368 TiB。</block>
+  <block id="776260409d15e3bf4b8b6b05b0472c1c" category="list-text">您无法在 HA 对中的两个节点上创建 18 个聚合，因为这会超出数据磁盘限制。</block>
+  <block id="967a34cae0dcd075fa74b42dcc7efab4" category="list-text">最大聚合大小取决于其磁盘，不包括用于数据分层的对象存储。</block>
+  <block id="7fa1f86184c7f330217fb3596f2aa10a" category="list-text">如果您的配置支持 Amazon EBS 弹性卷功能，则聚合最多可包含 8 个磁盘，从而提供最多 128 TiB 的容量。默认情况下，当您使用 gp3 或 io1 磁盘时， Cloud Volumes ONTAP 9.11.0 及更高版本的系统会启用 Amazon EBS Elastic Volumes。<block ref="d6d48ea3644fd45f9f7ff8f4c8d4ae57" category="inline-link-rx"></block></block>
+  <block id="1c5d4d5b3df2ab67b0a0577f6853b0fe" category="section-title">基于容量的许可不同部署模式的限制</block>
+  <block id="34076b805502c0cfbcd6caea2f061842" category="admonition">有关单节点和 HA 配置的最大系统容量和数据分层容量限制，请参阅<block ref="23480a14d285390e1b7e1d67acd7bce6" category="inline-xref-macro-rx"></block>。</block>
+  <block id="323a2487b0d5c474f2b87eb189cd77eb" category="section-title">基于节点的许可的不同部署模式的限制</block>
+  <block id="b1b103b3711ab75fd78baf8544303a02" category="paragraph">NetApp不支持超出系统容量限制。如果达到许可容量限制， BlueXP将显示需要采取行动的消息并阻止您添加更多磁盘。</block>
+  <block id="6b209360b200c08a554735be2c77d1ca" category="inline-link">托管磁盘的 Azure 文档</block>
+  <block id="531b133840ee35cf5193230121ea7443" category="inline-link">Azure Blob 存储文档</block>
+  <block id="0277f6faf50443f930d676caf5df530b" category="paragraph">通过基于容量的许可，每个Cloud Volumes ONTAP系统都支持分层到对象存储。总分层容量可以扩展到云提供商的存储桶限制。虽然许可证没有施加容量限制，但您应该遵循<block ref="c6ca22161b60218024eaf899637cc82e" category="inline-link-rx"></block>确保在配置和管理分层时实现最佳性能、可靠性和成本效率。请参阅<block ref="c5c853b91015c45f4e626225eb89092f" category="inline-link-rx"></block>和<block ref="6782e281e8536503245f524b6778618f" category="inline-link-rx"></block>。</block>
+  <block id="9e1048f957212fa3c5348c90108fadb2" category="paragraph">容量限制因虚拟机大小和系统类型（单节点或 HA 对）而异。</block>
+  <block id="27ec94bf72bfeade6e3be4da773bf774" category="paragraph">以下注释解释了表格中的数字：</block>
+  <block id="b0e0c6760d9a4298c0d0582142ffe301" category="list-text">您可以看到单独使用磁盘时以及使用磁盘和冷数据分层到对象存储时的最大系统容量。</block>
+  <block id="b4a5fb3f789f6d08047f81ea8e4e92e9" category="paragraph">以下磁盘限制适用于使用基于容量的许可包的Cloud Volumes ONTAP系统。<block ref="360eefdcdd22adda63e8597e9466029a" category="inline-link-rx"></block> 。</block>
+  <block id="d29b6be74fc4db7d655ea399e5f3cac6" category="admonition">有关单节点、单个可用区域中具有页 blob 的 HA 对以及单个和多个可用区域中具有共享托管磁盘的 HA 对的最大系统容量和数据分层容量限制，请参阅<block ref="7184709fc91b33a5dc1db3aa29bb38fb" category="inline-xref-macro-rx"></block>。</block>
+  <block id="9cb96726e4839703596eada3cf290aef" category="paragraph">以下磁盘限制适用于使用基于节点的许可的Cloud Volumes ONTAP系统。基于节点的许可是上一代模型，允许您按节点许可Cloud Volumes ONTAP 。现有客户仍可获得基于节点的许可。</block>
+  <block id="224fd3d6c6aee1a82004220bae5e00cd" category="paragraph">您可以为Cloud Volumes ONTAP BYOL 单节点或 HA 对系统购买多个基于节点的许可证，以分配超过 368 TiB 的容量，最高可达经过测试和支持的最大系统容量限制 2 PiB。请注意，磁盘限制可能会阻止您仅使用磁盘就达到容量限制。您可以通过以下方式超越磁盘限制<block ref="aea0958203307daa433f894622f3e640" category="inline-link-rx"></block>。<block ref="ca37ce4dde5616ef242d545490c7e6ee" category="inline-link-rx"></block> 。  Cloud Volumes ONTAP支持的最大测试和支持系统容量为 2 PiB，超过 2 PiB 限制将导致系统配置不受支持。</block>
+  <block id="ca27ff02499591810bfa3b09a74798e4" category="paragraph">这些是经过测试的极限。不支持设置更多存储虚拟机。</block>
+  <block id="c2011c8b617d4ddd742579058df5db85" category="paragraph">用于灾难恢复 (DR) 的存储虚拟机不需要附加许可证，但它们会计入存储虚拟机限制。例如，如果您有 12 个数据服务和 12 个 DR 存储虚拟机，则您已达到限制并且无法创建更多虚拟机。</block>
+  <block id="b0cd7667098b2a3439c52ba1f9334faa" category="inline-link">Google Cloud 文档</block>
+  <block id="414b69410d05f51016375822b14c44e4" category="paragraph">通过基于容量的许可，每个Cloud Volumes ONTAP系统都支持分层到对象存储。总分层容量可以扩展到云提供商的存储桶限制。虽然许可证没有施加容量限制，但您应该遵循<block ref="c6ca22161b60218024eaf899637cc82e" category="inline-link-rx"></block>确保在配置和管理分层时实现最佳性能、可靠性和成本效率。请参阅<block ref="2e0002153e48bc718fd2af4b8dbc37d1" category="inline-link-rx"></block>了解更多信息。</block>
+  <block id="39e993539dff7e47f9e560fd13c210ca" category="paragraph">不，不是这样的。 HA 对中的数据在节点之间同步镜像，以便在 Google Cloud 发生故障时数据可用。例如，如果您在节点 A 上购买了 8 TB 磁盘， BlueXP还会在节点 B 上分配一个 8 TB 磁盘用于镜像数据。虽然设置了 16 TB 的容量，但只有 8 TB 计入许可证限制。</block>
+  <block id="8d9a423778ca04c9c66a4f1fa8312b7e" category="list-text">组成聚合的磁盘决定了聚合容量限制。此限制不包括用于数据分层的对象存储。</block>
+  <block id="821ffb366b34e93755978fef81bc940d" category="paragraph">这些是经过测试的极限。不支持配置更多存储虚拟机。</block>
+  <block id="16283ebc943b0f7f5ee08013f7f4e52c" category="list-text">对于基于节点的 BYOL，除了默认随Cloud Volumes ONTAP附带的第一个存储虚拟机之外，每个额外的_数据服务_存储虚拟机都需要附加许可证。联系您的客户团队以获取存储 VM 附加许可证。</block>
 </blocks>
