@@ -499,7 +499,6 @@
   <block id="59f715c959b1702bb88d03230a637982" category="paragraph">不可以。AWS HA 对中的数据会在节点之间同步镜像，以便在发生故障时可以使用这些数据。例如、如果您在节点A上购买了8 TiB磁盘、则BlueXP还会在节点B上分配一个8 TiB磁盘、用于镜像数据。虽然配置了 16 TiB 的容量，但许可证限制仅会计入 8 TiB 的容量。</block>
   <block id="846a4ecea919427b6111365c125ada6f" category="list-text">这些列中列出的数字包括BlueXP默认创建的初始Storage VM。例如，如果此列中列出 24 个，则表示您可以再创建 23 个 Storage VM ，总共可以创建 24 个。</block>
   <block id="30749b02bc62d931d770e6c719254e7b" category="list-text">BlueXP界面显示了Standard和BYOL支持的另一种计算机类型：N1-HIGHMEM-4。但是，此计算机类型并不适用于生产环境。我们已将其仅用于特定实验室环境。</block>
-  <block id="9889b7a9df56580016f59ccd942fb1d1" category="inline-link">《BlueXP发行说明》</block>
   <block id="fde45fa5cd70a93e88151b83aa348f12" category="inline-link">BlueXP API端点</block>
   <block id="2819feead2b07762a4465189ab8b2f52" category="paragraph-title">对于 HA 对，是每个节点的许可容量限制还是整个 HA 对的许可容量限制？</block>
   <block id="7093c2c9844cf46dcd5d50c6d596d244" category="paragraph-title">对于 HA 对，镜像数据是否计入许可的容量限制？</block>
@@ -568,7 +567,6 @@
   <block id="70a8e1fb7e815dcae7d43566ab0db1e7" category="paragraph"><block ref="45c029924054162202773bd86e09b271" category="inline-link-rx"></block>。</block>
   <block id="a990fdc46668be8e7f963c8df127bbe8" category="paragraph">对于某些配置，磁盘限制会阻止您单独使用磁盘来达到容量限制。在这些情况下，您可以通过达到容量限制<block ref="aea0958203307daa433f894622f3e640" category="inline-link-rx"></block>。有关详细信息，请参见以下容量和磁盘限制。</block>
   <block id="c0ad13124302d4d047c0f916a6418182" category="paragraph"><block ref="cc3941262f254d1055804ecddca39dec" category="inline-link-rx"></block>。</block>
-  <block id="4bdb15bfe1bad472d818dc31e8f53185" category="paragraph">最新版本的BlueXP还引入了其他功能和增强功能。请参见<block ref="c7887e85c6060ae2594d873a0f2ae025" category="inline-link-rx"></block> 了解详细信息。</block>
   <block id="a92c2d98e174fb58a9af451a8c3413f9" category="paragraph"><block ref="8271d50d033781f1596acf863334de58" category="inline-link-macro-rx"></block>。</block>
   <block id="34b2f4eab827285a262b1781e672e882" category="paragraph"><block ref="3f0e03f473a215943c109dc7746cdb60" category="inline-link-macro-rx"></block>。</block>
   <block id="5f47eaf30741e1b189cb3927920a050e" category="list-text">L48s_v3 ^2^</block>
@@ -718,19 +716,7 @@
   <block id="f0de068c81c765820aca0fa8fe017396" category="paragraph">有关Azure区域支持，请参见<block ref="e55b14db85f4d4837890e415926626e0" category="inline-link-rx"></block>。</block>
   <block id="9b986795dc6a434c7339bfecbd5e5c8b" category="paragraph">有关Google Cloud区域支持，请参见<block ref="e55b14db85f4d4837890e415926626e0" category="inline-link-rx"></block>。</block>
   <block id="d798d4963d0ac509a1bda5483d9b9a52" category="paragraph"><block ref="5a94f18247116693735ff13d8eeaa964" category="inline-link-rx"></block>(英文)</block>
-  <block id="1c182fc8eafc7e652c5e3a7cea77ae91" category="inline-link-macro">Cloud Volumes ONTAP 9.16.1.</block>
-  <block id="f7087a9aa590270aa7eb0bf5d5eda74b" category="list-text"><block ref="f7087a9aa590270aa7eb0bf5d5eda74b" category="inline-link-macro-rx"></block></block>
-  <block id="6000586891d4341a74a8eb5979a68d8a" category="summary">Cloud Volumes ONTAP 9.16.1提供了一项新的增强功能。</block>
-  <block id="0d90329231a911346776f18bdb9fe1d9" category="doc">Cloud Volumes ONTAP 9.16.1.中的新增功能</block>
-  <block id="401876f2194826845d51d17f3f6e4236" category="paragraph">Cloud Volumes ONTAP 9.161提供了一些新的增强功能。</block>
-  <block id="5c34e70965e9144b3d44955edb1b5d5e" category="section-title">9.16.1大会(2025年3月6日)</block>
-  <block id="2bb6251babdc5f589145b9c5611ca36d" category="paragraph">现在、您可以使用Cloud Volumes ONTAP 9.161正式发布版在Azure和Google Cloud中进行部署和升级。但是、无法在AWS中部署和升级此版本。</block>
-  <block id="25e5ddb54eebfa8e5f1383c46695e645" category="paragraph">您可以从Azure和Google Cloud中的9.15.1版本升级到Cloud Volumes ONTAP 9.161 GA。BlueXP将提示您将符合条件的Cloud Volumes ONTAP 系统升级到此版本。</block>
-  <block id="0966109eb7f93cf95b69fc9bfb21fb7f" category="admonition">对于AWS、系统不会提示您进行此升级。AWS不支持升级到Cloud Volumes ONTAP 9.161 GA。</block>
   <block id="2dc71138ad7976e187566f7ce79883cc" category="list-text">升级HA对不会造成中断、I/O不会中断。在此无中断升级过程中、每个节点会同步升级、以便继续为客户端提供I/O。</block>
-  <block id="2da6ea8a8da761338b986437b7c763e3" category="sidebar">本发行说明介绍了Cloud Volumes ONTAP 9.16.1的新增功能、限制和已知问题。</block>
-  <block id="5be79231089884d51ddb2bec45163e7f" category="sidebar">Cloud Volumes ONTAP 9.16.1发行说明</block>
-  <block id="adf61d35044cf1717f8515aac5ebf98f" category="sidebar">Cloud Volumes ONTAP 9.16.1发行说明</block>
   <block id="071315f659ff3eed03e994aa4f772449" category="doc">Cloud Volumes ONTAP许可概述</block>
   <block id="d4f1750ecbae7aeb8e4608c6adadf1b3" category="doc">AWS中支持的Cloud Volumes ONTAP配置</block>
   <block id="906e9645769246d4a98e725adf188964" category="list-text">AWS本地区域中的Cloud Volumes ONTAP配置仅支持通用SSD (GP2)磁盘类型。</block>
@@ -746,24 +732,12 @@
   <block id="f2642484d82ac71ab617437045e56b35" category="doc">Cloud Volumes ONTAP在Google Cloud中的存储限制</block>
   <block id="0d965f3057c75408feddc192acd12da8" category="doc">与Cloud Volumes ONTAP云提供商协作</block>
   <block id="6e9c766eb64d674ed321c13842973979" category="paragraph">了解NetApp如何与云提供商合作解决潜在问题。</block>
-  <block id="26207601cd717bed61f9a69941108f87" category="section-title">9.16.1 P2 (2025年4月17日)</block>
-  <block id="c4792f112f7f491e5d7e61fba2f33329" category="paragraph">现在、您可以在Azure和Google Cloud中为Cloud Volumes ONTAP部署和升级9.16.1 P2修补程序。但是、无法在AWS中部署和升级此版本。BlueXP将提示您将现有系统升级到此修补程序版本。</block>
-  <block id="ce5d0c77f167b881391469fc27895727" category="inline-link-macro">查看P2修补程序中已修复的错误列表</block>
-  <block id="448f9263b6e5828ecbede3a8f78d17eb" category="paragraph"><block ref="6454149a5f999950d701a0bf861b958d" category="inline-link-macro-rx"></block> (需要登录NetApp支持站点)。</block>
-  <block id="008c5c510153b3136387ddcd33bc112c" category="section-title">9.16.1 P1 (2025年4月17日)</block>
-  <block id="3b3592b54b76bb5d60a585ffacea4e61" category="paragraph">现在、可以在Azure和Google Cloud中为Cloud Volumes ONTAP部署和升级9.16.1 P1修补程序。但是、无法在AWS中部署和升级此版本。BlueXP将提示您将现有系统升级到此修补程序版本。</block>
-  <block id="a9380d77cd3c45a5f15f09b231323443" category="inline-link-macro">查看P1修补程序中已修复的错误列表</block>
-  <block id="664e6349e84880f6407173721fad810a" category="paragraph"><block ref="e1914bcb543b75972205a0cc76dbb433" category="inline-link-macro-rx"></block> (需要登录NetApp支持站点)。</block>
   <block id="77d9dd558dce394d624e008a5015c43e" category="section-title">高可用性部署的限制</block>
   <block id="47e6c824f3fe7a0a707fd6f94c2b0d5e" category="paragraph">某些地区不支持高可用性(HA)对。</block>
   <block id="e62fa1e447749b7b88523431cfe1cb23" category="section-title">在单个可用性区域中进行HA部署的限制</block>
   <block id="76d43d0c7a6d0d101562acb873375c45" category="inline-link">在Azure的单个可用性区域中部署HA对</block>
   <block id="d8bb5ee8ceb2ff0c0fd5de1a5d8db6ea" category="paragraph">从Cloud Volumes ONTAP 9.15.1开始、您可以在Azure的单可用性区域(Single Availability Zones、AZs)中以HA模式部署虚拟机(VM)实例。有关支持此功能的标准的信息，请参见<block ref="70422bd689a7303399dff3dd5e571c65" category="inline-link-rx"></block>。</block>
   <block id="4ed7f8d6ce44fa053592b73fcd8be5e3" category="paragraph">如果Cloud Volumes ONTAP版本为早期版本的9.15.1、或者不满足其中任何一个条件、则使用可用性集的先前部署模式将生效。这仅适用于HA配置。</block>
-  <block id="2b0112a3fe8db72b28cea3e10ddba401" category="section-title">9.16.1 P3（2025 年 5 月 29 日）</block>
-  <block id="79d2490a076742db13fbcc8f0776a458" category="paragraph">现在、可以在Azure和Google Cloud中为Cloud Volumes ONTAP部署和升级9.16.1 P3修补程序。但是、无法在AWS中部署和升级此版本。BlueXP将提示您将现有系统升级到此修补程序版本。</block>
-  <block id="4c7cf73669136d536c96ca7317eb5ceb" category="inline-link-macro">查看P3修补程序中已修复的错误列表</block>
-  <block id="4beb9f52d4c281cb89fd47e4aaa780cf" category="paragraph"><block ref="77df283c529cda018d08e767dda3eebd" category="inline-link-macro-rx"></block> (需要登录NetApp支持站点)。</block>
   <block id="fbb17e3b93a1070f3de5e45b66842d95" category="list-text">AWS本地区域中的Cloud Volumes ONTAP配置仅支持通用SSD (GP2)磁盘类型。AWS 本地区域中的 Cloud Volumes ONTAP 不支持其他磁盘类型。</block>
   <block id="f051f95f393c93123644b448ca3165c0" category="paragraph">Cloud Volumes ONTAP 不再支持 AWS 中的 c4、m4 和 r4 EC2 实例类型。如果您的系统在 c4、m4 或 r4 实例上运行，请更改为 c5、m5 或 r5 实例。只有在更改实例类型后才能升级到此版本。</block>
   <block id="2f8299f876158db323c08455b12b585a" category="paragraph">有关详细信息、请参见：</block>
@@ -784,10 +758,6 @@
   <block id="b10cf18ba66c2ae046931259e614fe81" category="list-text"><block ref="b10cf18ba66c2ae046931259e614fe81" category="inline-link-rx"></block></block>
   <block id="d59a55e5a766d0a45a73ef03504c6b5b" category="inline-link">N2系列通用机型</block>
   <block id="0ab6f9218085a410dabf81dbe7da1b1a" category="list-text"><block ref="0ab6f9218085a410dabf81dbe7da1b1a" category="inline-link-rx"></block></block>
-  <block id="63b64193e993dd2f6062619d953aeb95" category="section-title">9.16.1 P4（2025 年 7 月 8 日）</block>
-  <block id="c40872b813fc8acca04c5e909c600b0c" category="paragraph">现在、可以在Azure和Google Cloud中为Cloud Volumes ONTAP部署和升级9.16.1 P4修补程序。但是、无法在AWS中部署和升级此版本。BlueXP将提示您将现有系统升级到此修补程序版本。</block>
-  <block id="cae74b75cb879fa6011c4bc1e9acafed" category="inline-link-macro">查看P4修补程序中已修复的错误列表</block>
-  <block id="0a8093de16aa3f6ac64c7b6c07e3a0e9" category="paragraph"><block ref="4287819b7b6c3d729049717a25b7809c" category="inline-link-macro-rx"></block> (需要登录NetApp支持站点)。</block>
   <block id="313e5c6346ba30bdb749b42654c60b9e" category="list-text">^1^ 使用 HA 对时， Cloud Volumes ONTAP支持这些 VM 类型的高写入速度。您可以在部署期间或部署后的任何时间从BlueXP  启用高速写入。<block ref="18805b87db41583a67ecc2414d022f2b" category="inline-link-rx"></block>(英文)。</block>
   <block id="7a44fe38188ff958cad09ce844759662" category="list-text">^2^ 仅当需要 Azure 维护控制时才建议使用此 VM。由于定价较高，因此不建议用于任何其他使用情形。</block>
   <block id="7b78f11572d7f890feb55bd86cdbee51" category="list-text">^3^ 这些虚拟机仅在Cloud Volumes ONTAP 9.11.1 或更早版本的部署中受支持。对于这些VM类型、您可以将现有页面Blob部署从Cloud Volumes ONTAP 9.11.1升级到9.12.1.您不能使用Cloud Volumes ONTAP 9.12.1或更高版本执行新页面Blob部署。</block>
@@ -806,10 +776,6 @@
   <block id="b469f24f7b40dd39d564f20b26834f51" category="paragraph"><block ref="8c32a537fad73fe139f927507d338c47" category="inline-link-rx"></block>不支持无中断运行。</block>
   <block id="a658c03927efcbcb7170fb429c8a9408" category="paragraph">使用Cloud Volumes ONTAP非连续可用 CIFS 共享的 CIFS/SMB 客户端在发生接管时以及会话所使用的聚合交还给聚合的主节点时，都会遇到会话丢失的情况。这是 CIFS/SMB 协议本身的限制。您可以使用经批准的第三方产品来避免接管和交还导致的问题。如需进一步帮助，请联系NetApp支持。</block>
   <block id="c04ba4ba4463685b70d448688626a589" category="admonition"><block ref="8c32a537fad73fe139f927507d338c47" category="inline-link-rx"></block> Cloud Volumes ONTAP不支持无中断操作。</block>
-  <block id="804568356abbd917c2b16399c1d74469" category="section-title">9.16.1 P5（2025 年 7 月 28 日）</block>
-  <block id="b18cddec63bbac4d331412b33193f19d" category="paragraph">9.16.1 P5 补丁现已可在 Azure 和 Google Cloud 中为Cloud Volumes ONTAP部署和升级。但此版本暂不支持在 AWS 中部署和升级。BlueXPBlueXP提示您将现有系统升级到此补丁版本。</block>
-  <block id="e890150484086859b9a5078abe9c6f20" category="inline-link-macro">查看 P5 补丁修复的错误列表</block>
-  <block id="594276b7568f8909a2e4145873978b46" category="paragraph"><block ref="be3338d2845a087c634560014a857fc0" category="inline-link-macro-rx"></block> （需要登录NetApp支持站点）。</block>
   <block id="849836109f5a7c7779b41aa322a0b75f" category="cell">已优化^5^</block>
   <block id="9def883103b7b964dcbb0993e3f8a065" category="inline-link">优化许可证的可用性终止</block>
   <block id="84f2cfe539c789603fba39917f99f628" category="list-text">^5^ 从 2025 年 8 月 11 日开始， Cloud Volumes ONTAP优化许可证将被弃用，并且将不再可在 Azure 市场中购买或续订以进行即用即付 (PAYGO) 订阅。有关更多信息，请参阅<block ref="43fcd9c2498ef205b9218293a558faae" category="inline-link-rx"></block> 。</block>
@@ -857,4 +823,16 @@
   <block id="d894dfdb1bbb11ae0641d7c6e97d92e2" category="cell">高级 SSD 托管磁盘或高级 SSD v2 托管磁盘。</block>
   <block id="09c6a071fdfa0f65318d9e3e960e825e" category="list-text">^6^ 有关 HA 部署单可用区和多可用区系统数据的内部磁盘的信息，请参阅<block ref="f48956bad241329abf5e1ff5123459dd" category="inline-link-rx"></block>。</block>
   <block id="42762fecca2ab07cc92a3d950f2052c9" category="list-text">^7^ 自 2025 年 8 月 11 日起， Cloud Volumes ONTAP优化许可证将被弃用，并且将不再可在 Azure 市场中以即用即付 (PAYGO) 订阅的方式购买或续订。<block ref="43fcd9c2498ef205b9218293a558faae" category="inline-link-rx"></block> 。</block>
+  <block id="be666ea41d284101ddfda886424c2d07" category="inline-link-macro">Cloud Volumes ONTAP 9.17.1 公告</block>
+  <block id="5d400a6226e85167dbd60b61421128ef" category="list-text"><block ref="5d400a6226e85167dbd60b61421128ef" category="inline-link-macro-rx"></block></block>
+  <block id="6076bde119ef4c539333767fd60b037b" category="summary">Cloud Volumes ONTAP 9.17.1 包含一项新的增强功能。</block>
+  <block id="35e59ce342eaf6b146f59a2ec17b5019" category="doc">Cloud Volumes ONTAP 9.17.1 中的新功能</block>
+  <block id="c9636b1359c39d947689e7d7030a3876" category="paragraph">Cloud Volumes ONTAP 9.17.1 可在 Azure 和 Google Cloud 中部署和升级。</block>
+  <block id="db3cc6b5ebbff132de6d6986ec232460" category="section-title">9.17.1 RC1（2025 年 9 月 4 日）</block>
+  <block id="8d9a14656b6d91eecabf8d5f9a39888c" category="paragraph">您现在可以使用Cloud Volumes ONTAP 9.17.1 的候选版本 1 在 Azure 和 Google Cloud 中进行部署和升级。但此版本暂不支持在 AWS 中部署和升级。BlueXP</block>
+  <block id="1dc5d2150ca63e1eb180153cd4fd3848" category="paragraph">您可以从 Azure 和 Google Cloud 中的 9.16.1 版本升级到Cloud Volumes ONTAP 9.17.1 RC1。  BlueXP将提示您将符合条件的Cloud Volumes ONTAP系统升级到此版本。</block>
+  <block id="a925267cf1e3f473e26af9a1c7e069bd" category="admonition">对于 AWS，系统不会提示您进行此升级。  AWS 不支持升级到Cloud Volumes ONTAP 9.17.1 RC1。</block>
+  <block id="1be92e36c3e9ca47e988acc51bde4499" category="sidebar">这些发行说明描述了Cloud Volumes ONTAP 9.17.1 的新功能、限制和已知问题。</block>
+  <block id="4cf5c8db7f505fa308225ecc9355e4d5" category="sidebar">Cloud Volumes ONTAP 9.17.1 发行说明</block>
+  <block id="003bdd8b041b75252a40e81df0fa7067" category="sidebar">Cloud Volumes ONTAP 9.17.1 发行说明</block>
 </blocks>
