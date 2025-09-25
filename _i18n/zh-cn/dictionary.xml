@@ -732,11 +732,8 @@
   <block id="f2642484d82ac71ab617437045e56b35" category="doc">Cloud Volumes ONTAP在Google Cloud中的存储限制</block>
   <block id="0d965f3057c75408feddc192acd12da8" category="doc">与Cloud Volumes ONTAP云提供商协作</block>
   <block id="6e9c766eb64d674ed321c13842973979" category="paragraph">了解NetApp如何与云提供商合作解决潜在问题。</block>
-  <block id="77d9dd558dce394d624e008a5015c43e" category="section-title">高可用性部署的限制</block>
-  <block id="47e6c824f3fe7a0a707fd6f94c2b0d5e" category="paragraph">某些地区不支持高可用性(HA)对。</block>
   <block id="e62fa1e447749b7b88523431cfe1cb23" category="section-title">在单个可用性区域中进行HA部署的限制</block>
   <block id="76d43d0c7a6d0d101562acb873375c45" category="inline-link">在Azure的单个可用性区域中部署HA对</block>
-  <block id="d8bb5ee8ceb2ff0c0fd5de1a5d8db6ea" category="paragraph">从Cloud Volumes ONTAP 9.15.1开始、您可以在Azure的单可用性区域(Single Availability Zones、AZs)中以HA模式部署虚拟机(VM)实例。有关支持此功能的标准的信息，请参见<block ref="70422bd689a7303399dff3dd5e571c65" category="inline-link-rx"></block>。</block>
   <block id="4ed7f8d6ce44fa053592b73fcd8be5e3" category="paragraph">如果Cloud Volumes ONTAP版本为早期版本的9.15.1、或者不满足其中任何一个条件、则使用可用性集的先前部署模式将生效。这仅适用于HA配置。</block>
   <block id="fbb17e3b93a1070f3de5e45b66842d95" category="list-text">AWS本地区域中的Cloud Volumes ONTAP配置仅支持通用SSD (GP2)磁盘类型。AWS 本地区域中的 Cloud Volumes ONTAP 不支持其他磁盘类型。</block>
   <block id="f051f95f393c93123644b448ca3165c0" category="paragraph">Cloud Volumes ONTAP 不再支持 AWS 中的 c4、m4 和 r4 EC2 实例类型。如果您的系统在 c4、m4 或 r4 实例上运行，请更改为 c5、m5 或 r5 实例。只有在更改实例类型后才能升级到此版本。</block>
@@ -835,4 +832,19 @@
   <block id="1be92e36c3e9ca47e988acc51bde4499" category="sidebar">这些发行说明描述了Cloud Volumes ONTAP 9.17.1 的新功能、限制和已知问题。</block>
   <block id="4cf5c8db7f505fa308225ecc9355e4d5" category="sidebar">Cloud Volumes ONTAP 9.17.1 发行说明</block>
   <block id="003bdd8b041b75252a40e81df0fa7067" category="sidebar">Cloud Volumes ONTAP 9.17.1 发行说明</block>
+  <block id="7662ffdf9f88ef8d3503c5a47332d185" category="section-title">HA 配置的高级 SSD v2 磁盘限制</block>
+  <block id="628be05f52730d9bc1ff4a25a8803b9f" category="paragraph">高级 SSD v2 托管磁盘对于 Azure 中的高可用性 (HA) 部署具有以下限制：</block>
+  <block id="c393fdd1e5323cfc775d4d2f67c6ee3c" category="list-text">非区域性区域的 HA 部署不受支持。</block>
+  <block id="a1a6ff52f4f044bbb48a8b6e32faefee" category="list-text">不支持跨多个可用区域的 HA 部署。</block>
+  <block id="57deebd91c1b4f79fe1ace5075015908" category="list-text">仅在单个可用区域内部署的 HA 配置中受支持。</block>
+  <block id="026daacd5fe0a67d4cbbccda5dc168d4" category="paragraph">要将 Premium SSD v2 托管磁盘与Cloud Volumes ONTAP HA 配置一起使用，请确保满足以下要求：</block>
+  <block id="6a1350d029dd7fa7f1741f50e36f86ab" category="list-text">Cloud Volumes ONTAP版本为 9.15.1 或更高版本。</block>
+  <block id="ceb986bf3d3490c0ed01497de9d5d2be" category="list-text">HA 部署位于 Azure 单一可用区域。</block>
+  <block id="840f8de5c9f54f772062c77429778e38" category="inline-link">Microsoft Azure 网站：按地区提供的产品</block>
+  <block id="b6a84b78c406cfef42bd6862aa774c74" category="list-text">所选区域和区域支持高级 SSD v2 托管磁盘。有关受支持区域的信息，请参阅<block ref="4cad7f2a2d9c49229b747bad0a9e56da" category="inline-link-rx"></block>。</block>
+  <block id="0dc254fad1832eb1cdccc5261264b7ef" category="inline-link">Azure 中对高级 SSD v2 托管磁盘的支持</block>
+  <block id="59e0d21b78c6b5234e43ce7e3f97f417" category="paragraph">有关更多信息，请参阅<block ref="8eeec6c9a71de31b434ae927dfa55f28" category="inline-link-rx"></block> 。</block>
+  <block id="17f65eba8f584b7ce968f1741f49a63d" category="paragraph">从Cloud Volumes ONTAP 9.15.1 开始，您可以在 Azure 中的单个可用区域 (AZ) 中以 HA 模式部署虚拟机 (VM) 实例。有关支持此功能的标准的信息，请参阅<block ref="49b9d02c37364ae9681ce7a59d4d9548" category="inline-link-rx"></block>。</block>
+  <block id="ed5b1d9ebcc8b8d189007ac8c9494846" category="section-title">HA 部署的限制</block>
+  <block id="b1969fa9ebe4dd2003618adb77082978" category="paragraph">某些区域不支持 HA 对。</block>
 </blocks>
