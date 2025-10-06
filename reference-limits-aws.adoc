@@ -22,7 +22,7 @@ Cloud Volumes ONTAP 具有存储配置限制，可提供可靠的操作。为获
 
 最大系统容量包括基于磁盘的存储以及用于数据分层的对象存储。
 
-NetApp 不支持超过系统容量限制。如果您达到许可的容量限制、BlueXP将显示一条需要执行操作消息、并且不再允许您添加其他磁盘。
+NetApp不支持超出系统容量限制。如果达到许可容量限制， NetApp控制台将显示“需要操作”消息，并且不再允许您添加其他磁盘。
 
 对于某些配置，磁盘限制会阻止您单独使用磁盘来达到容量限制。在这些情况下，您可以通过达到容量限制 https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-data-tiering.html["将非活动数据分层到对象存储"^]。有关详细信息，请参见以下容量和磁盘限制。
 
@@ -55,7 +55,7 @@ NetApp 不支持超过系统容量限制。如果您达到许可的容量限制�
 容量限制针对的是整个 HA 对。它不是每个节点的。例如，Premium 许可证允许两个节点最多使用 368 TiB。
 
 .对于 AWS 中的 HA 系统，镜像数据是否计入容量限制？
-不可以。AWS HA 对中的数据会在节点之间同步镜像，以便在发生故障时可以使用这些数据。例如、如果您在节点A上购买了8 TiB磁盘、则BlueXP还会在节点B上分配一个8 TiB磁盘、用于镜像数据。虽然配置了 16 TiB 的容量，但许可证限制仅会计入 8 TiB 的容量。
+不，不是这样的。AWS HA 对中的数据在节点之间同步镜像，以便在发生故障时数据可用。例如，如果您在节点 A 上购买了一个 8 TiB 磁盘，控制台还会在节点 B 上分配一个 8 TiB 磁盘用于镜像数据。虽然预置了 16 TiB 的容量，但只有 8 TiB 计入许可证限制。
 
 
 
@@ -408,7 +408,7 @@ https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-managing-svms-aws.
 | * 。 24xlarge | 50 | 44 | 24 | 12 
 |===
 . 此数字表示部署和设置 Cloud Volumes ONTAP 后端口 e0a 上有多少个 _realfates_ 专用 IP 地址可用。例如，一个 * 。 2xlarge 系统最多支持每个网络接口 15 个 IP 地址。在一个 AZ 中部署 HA 对时，会将 5 个专用 IP 地址分配给端口 e0a 。因此，使用 * 。 2xlarge 实例类型的 HA 对还有 10 个专用 IP 地址可用于其他 Storage VM 。
-. 这些列中列出的数字包括BlueXP默认创建的初始Storage VM。例如，如果此列中列出 24 个，则表示您可以再创建 23 个 Storage VM ，总共可以创建 24 个。
+. 这些列中列出的数字包括控制台默认创建的初始存储虚拟机。例如，如果此列列出 24，则表示您可以创建 23 个额外的存储虚拟机，总共 24 个。
 . Storage VM 的管理 LIF 是可选的。管理 LIF 可连接到 SnapCenter 等管理工具。
 +
 由于它需要专用 IP 地址，因此会限制您可以创建的其他 Storage VM 的数量。唯一的例外是多个 AZS 中的 HA 对。在这种情况下，管理 LIF 的 IP 地址为 _float_ IP 地址，因此不计入 _private_ IP 限制。
@@ -452,7 +452,7 @@ https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-managing-svms-aws.
 . 支持使用以下工具和最低版本创建最大大小为300 TiB的FlexVol卷：
 +
 ** Cloud Volumes ONTAP 9.12.1 P2和9.13.0 P2开始的System Manager和ONTAP命令行界面
-** 从Cloud Volumes ONTAP 9.13.1.开始的BlueXP
+** 从Cloud Volumes ONTAP 9.13.1 开始
 
 
 

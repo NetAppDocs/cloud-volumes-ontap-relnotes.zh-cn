@@ -22,7 +22,7 @@ Cloud Volumes ONTAP 具有存储配置限制，可提供可靠的操作。为获
 
 Cloud Volumes ONTAP 系统的最大系统容量取决于其许可证。最大系统容量包括基于磁盘的存储以及用于数据分层的对象存储。
 
-NetApp 不支持超过系统容量限制。如果您达到许可的容量限制、BlueXP将显示一条需要执行操作消息、并且不再允许您添加其他磁盘。
+NetApp不支持超出系统容量限制。如果达到许可容量限制， NetApp控制台将显示“需要操作”消息，并且不再允许您添加其他磁盘。
 
 对于某些配置，磁盘限制会阻止您单独使用磁盘来达到容量限制。您可以通过达到容量限制 https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-data-tiering.html["将非活动数据分层到对象存储"^]。有关详细信息，请参见以下磁盘限制。
 
@@ -55,7 +55,7 @@ NetApp 不支持超过系统容量限制。如果您达到许可的容量限制�
 容量限制适用于整个 HA 对。不是每个节点。例如，如果使用高级版许可证，则两个节点之间的容量最多可达 368 TB 。
 
 .对于 HA 对，镜像数据是否计入许可的容量限制？
-不，不是这样的。 HA 对中的数据在节点之间同步镜像，以便在 Google Cloud 发生故障时数据可用。例如，如果您在节点 A 上购买了 8 TB 磁盘， BlueXP还会在节点 B 上分配一个 8 TB 磁盘用于镜像数据。虽然设置了 16 TB 的容量，但只有 8 TB 计入许可证限制。
+不，不是这样的。HA 对中的数据在节点之间同步镜像，以便在 Google Cloud 发生故障时数据可用。例如，如果您在节点 A 上购买了一个 8 TB 磁盘，控制台还会在节点 B 上分配一个 8 TB 磁盘用于镜像数据。虽然设置了 16 TB 的容量，但只有 8 TB 计入许可证限制。
 
 
 
@@ -198,8 +198,8 @@ https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-managing-svms-gcp.
 . 从ONTAP 9.12.1P2开始、此限制为128 TB。在ONTAP 9.11.1及更早版本中、此限制为16 TB。
 . 支持使用以下工具和最低版本创建最大大小为300 TiB的FlexVol卷：
 +
-** Cloud Volumes ONTAP 9.12.1 P2和9.13.0 P2开始的System Manager和ONTAP命令行界面
-** 从Cloud Volumes ONTAP 9.13.1.开始的BlueXP
+** 从Cloud Volumes ONTAP 9.12.1 P2 和 9.13.0 P2 开始的系统管理器和ONTAP CLI
+** 从Cloud Volumes ONTAP 9.13.1 开始
 
 
 

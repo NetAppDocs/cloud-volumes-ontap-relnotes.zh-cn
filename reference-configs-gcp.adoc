@@ -71,7 +71,7 @@ Cloud Volumes ONTAP 可以在云提供商提供的预留或按需 VM 实例上�
 |===
 注释：
 
-. ^1^在Google Cloud中部署新的Cloud Volumes ONTAP实例时、n1系列计算机不再可在BlueXP  上选择。n1系列机器将保留下来、并且仅在旧的现有系统中受支持。只有从9.8版开始、Google Cloud才支持全新部署Cloud Volumes ONTAP。建议您切换到与Cloud Volumes ONTAP 9.8及更高版本兼容的n2系列机器。但是、n1系列计算机将可用于通过API进行的新部署。
+. ^1^ 在 Google Cloud 中部署Cloud Volumes ONTAP的新实例时， NetApp控制台上不再可选择 n1 系列机器。n1 系列机器将保留，并且仅在较旧的现有系统中得到支持。从 9.8 版本开始，Google Cloud 才支持Cloud Volumes ONTAP的新部署。我们建议您切换到与Cloud Volumes ONTAP 9.8 及更高版本兼容的 n2 系列机器。不过，n1 系列机器将可用于通过 API 进行的新部署。
 +
 新的 Cloud Volumes ONTAP 系统不再支持 custom-4-16384 计算机类型。如果您的现有系统在此计算机类型上运行，则可以继续使用它，但我们建议切换到 n2-standard-4 计算机类型。
 
@@ -147,14 +147,14 @@ NOTE: _Flash cache"、"高写入"模式和8、896的MTU与功能相关、不能�
 link:reference-limits-gcp.html["详细了解 Google Cloud 中的磁盘限制"]。
 
 . ^2^ PAYGO Explore不支持将数据分层到Google Cloud Storage。
-. ^3^在Google Cloud中部署新的Cloud Volumes ONTAP实例时、n1系列计算机不再可在BlueXP  上选择。n1系列机器将保留下来、并且仅在旧的现有系统中受支持。只有从9.8版开始、Google Cloud才支持全新部署Cloud Volumes ONTAP。建议您切换到与Cloud Volumes ONTAP 9.8及更高版本兼容的n2系列机器。但是、n1系列计算机将可用于通过API执行的新部署。
+. ^3^ 在 Google Cloud 中部署Cloud Volumes ONTAP的新实例时，控制台上不再可选择 n1 系列机器。n1 系列机器将保留，并且仅在较旧的现有系统中得到支持。从 9.8 版本开始，Google Cloud 才支持Cloud Volumes ONTAP的新部署。我们建议您切换到与Cloud Volumes ONTAP 9.8 及更高版本兼容的 n2 系列机器。然而，n1 系列机器将可用于通过 API 执行的新部署。
 +
 新的 Cloud Volumes ONTAP 系统不再支持 custom-4-16384 计算机类型。如果您的现有系统在此计算机类型上运行，则可以继续使用它，但我们建议切换到 n2-standard-4 计算机类型。
 
 . ^4^使用平衡持久磁盘和性能(SSD)持久磁盘时、会启用增强的写入性能。
 
 
-BlueXP界面显示了Standard和BYOL支持的另一种计算机类型：N1-HIGHMEM-4。但是，此计算机类型并不适用于生产环境。我们已将其仅用于特定实验室环境。
+控制台显示了标准和 BYOL 支持的额外机器类型：n1-highmem-4。然而，这种机器类型并不适合生产环境。我们仅将其用于特定的实验室环境。
 
 从Cloud Volumes ONTAP 软件9.13.0版开始、可以为以下HA对部署实例提供_Flash Cache"高写入速度"和更高的最大传输单元(MTU) 8、896字节：
 

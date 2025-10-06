@@ -62,7 +62,7 @@ https://kb.netapp.com/on-prem/ontap/da/NAS/NAS-KBs/What_are_SMB_Continuous_Avail
 
 您不应在 Cloud Volumes ONTAP 数据的备份和恢复计划中使用云提供商的快照。您应始终使用 ONTAP Snapshot 副本或第三方备份解决方案备份和还原 Cloud Volumes ONTAP 上托管的数据。
 
-https://docs.netapp.com/us-en/bluexp-backup-recovery/concept-backup-to-cloud.html["了解如何使用BlueXP备份和恢复来备份和还原ONTAP 数据"^]。
+https://docs.netapp.com/us-en/bluexp-backup-recovery/concept-backup-to-cloud.html["了解如何使用NetApp Backup and Recovery 备份和恢复ONTAP数据"^] 。
 
 
 NOTE: WAFL 文件系统中的 ONTAP 一致性点决定了数据一致性。只有 ONTAP 可以暂停 WAFL 文件系统以进行崩溃状态一致的备份。
@@ -81,24 +81,24 @@ Cloud Volumes ONTAP 可以在云提供商提供的预留或按需 VM 实例上�
 
 
 
-== 软件更新必须由BlueXP完成
+== 软件更新必须通过NetApp控制台完成
 
-必须从BlueXP完成Cloud Volumes ONTAP 升级。您不应使用 System Manager 或命令行界面升级 Cloud Volumes ONTAP 。这样做可能会影响系统稳定性。
+必须从NetApp控制台完成Cloud Volumes ONTAP的升级。您不应使用系统管理器或 CLI 升级Cloud Volumes ONTAP 。这样做会影响系统稳定性。
 
 
 
 == 不得从云提供商的控制台修改 Cloud Volumes ONTAP 部署
 
-通过云提供商的控制台更改 Cloud Volumes ONTAP 配置会导致配置不受支持。如果对Cloud Volumes ONTAP 资源进行任何更改、由BlueXP创建和管理、可能会影响系统稳定性以及BlueXP管理系统的能力。
+从云提供商的控制台更改Cloud Volumes ONTAP配置会导致配置不受支持。对控制台创建和管理的Cloud Volumes ONTAP资源的任何更改都可能影响系统稳定性和控制台管理系统的能力。
 
 
 NOTE: 初始部署后、支持修改用于Cloud Volumes ONTAP资源的Azure订阅名称。
 
 
 
-== 磁盘和聚合必须通过BlueXP进行管理
+== 必须从控制台管理磁盘和聚合
 
-必须直接从BlueXP创建和删除所有磁盘和聚合。不应从其他管理工具执行这些操作。这样做可能会影响系统稳定性、妨碍将来添加磁盘的能力、并可能产生冗余云提供商费用。
+必须直接从控制台创建和删除所有磁盘和聚合。您不应从其他管理工具执行这些操作。这样做会影响系统稳定性，妨碍将来添加磁盘的能力，并可能产生冗余的云提供商费用。
 
 
 

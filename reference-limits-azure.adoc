@@ -22,7 +22,7 @@ Cloud Volumes ONTAP 具有存储配置限制，可提供可靠的操作。为获
 
 Cloud Volumes ONTAP 系统的最大系统容量取决于其许可证。最大系统容量包括基于磁盘的存储以及用于数据分层的对象存储。
 
-NetApp不支持超出系统容量限制。如果达到许可容量限制， BlueXP将显示需要采取行动的消息并阻止您添加更多磁盘。
+NetApp不支持超出系统容量限制。如果达到许可容量限制， NetApp控制台将显示“需要采取措施”消息并阻止您添加更多磁盘。
 
 .基于容量的许可证的容量限制
 通过基于容量的许可，每个Cloud Volumes ONTAP系统都支持分层到对象存储。总分层容量可以扩展到云提供商的存储桶限制。虽然许可证没有施加容量限制，但您应该遵循 https://www.netapp.com/pdf.html?item=/media/17239-tr-4598.pdf["FabricPool最佳实践"^]确保在配置和管理分层时实现最佳性能、可靠性和成本效率。请参阅 https://learn.microsoft.com/en-us/azure/storage/common/scalability-targets-standard-account["托管磁盘的 Azure 文档"^]和 https://learn.microsoft.com/en-us/azure/storage/blobs/scalability-targets["Azure Blob 存储文档"^]。
@@ -697,8 +697,8 @@ https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-managing-svms-azur
 . 从ONTAP 9.12.1P2开始、此限制为128 TB。在ONTAP 9.11.1及更早版本中、此限制为16 TB。
 . 支持使用以下工具和最低版本创建最大大小为300 TiB的FlexVol卷：
 +
-** Cloud Volumes ONTAP 9.12.1 P2和9.13.0 P2开始的System Manager和ONTAP命令行界面
-** 从Cloud Volumes ONTAP 9.13.1.开始的BlueXP
+** 从Cloud Volumes ONTAP 9.12.1 P2 和 9.13.0 P2 开始的系统管理器和ONTAP CLI
+** 从Cloud Volumes ONTAP 9.13.1 开始
 
 
 

@@ -20,7 +20,7 @@ summary: 这些已知限制特定于 Amazon Web Services 中的 Cloud Volumes ON
 
 == AWS 前站限制
 
-如果您有 AWS 前台，则可以通过在 " 工作环境 " 向导中选择前台 VPC 来在该前台部署 Cloud Volumes ONTAP 。体验与 AWS 中的任何其他 VPC 相同。请注意，您需要先在 AWS 前台部署 Connector 。
+如果您有 AWS Outpost，则可以通过在部署期间选择 Outpost VPC 在该 Outpost 中部署Cloud Volumes ONTAP 。体验与驻留在 AWS 中的任何其他 VPC 相同。请注意，您需要首先在 AWS Outpost 中部署控制台代理。
 
 需要指出的限制如下：
 
@@ -37,7 +37,7 @@ C5D 和 R5D 实例类型包括本地 NVMe 存储， Cloud Volumes ONTAP 将其�
 
 * 必须在所有卷上禁用数据压缩、才能利用Cloud Volumes ONTAP 9.12.0之前的Flash Cache性能改进功能。在部署或升级到Cloud Volumes ONTAP 9.12.1时、无需禁用数据压缩。
 +
-您可以在从BlueXP创建卷时选择无存储效率、也可以先创建卷、然后再创建卷 http://docs.netapp.com/ontap-9/topic/com.netapp.doc.dot-cm-vsmg/GUID-8508A4CB-DB43-4D0D-97EB-859F58B29054.html["使用命令行界面禁用数据压缩"^]。
+您可以在从NetApp控制台创建卷时选择无存储效率，也可以创建卷然后 http://docs.netapp.com/ontap-9/topic/com.netapp.doc.dot-cm-vsmg/GUID-8508A4CB-DB43-4D0D-97EB-859F58B29054.html["使用命令行界面禁用数据压缩"^]。
 
 * Cloud Volumes ONTAP 不支持在重新启动后重新恢复缓存。
 

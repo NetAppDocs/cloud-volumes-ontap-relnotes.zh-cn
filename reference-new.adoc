@@ -32,15 +32,15 @@ Cloud Volumes ONTAP 9.17.1 可在 Azure 和 Google Cloud 中部署和升级。
 
 === 如何升级
 
-必须从BlueXP完成Cloud Volumes ONTAP 升级。您不应使用 System Manager 或命令行界面升级 Cloud Volumes ONTAP 。这样做可能会影响系统稳定性。
+必须从NetApp控制台完成Cloud Volumes ONTAP的升级。您不应使用系统管理器或 CLI 升级Cloud Volumes ONTAP 。这样做会影响系统稳定性。
 
-link:http://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-updating-ontap-cloud.html["了解在收到BlueXP通知时如何升级"^]。
+link:http://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-updating-ontap-cloud.html["了解控制台通知您时如何升级"^] 。
 
 
 
 === 支持的升级路径
 
-您可以从 Azure 和 Google Cloud 中的 9.16.1 版本升级到Cloud Volumes ONTAP 9.17.1 RC1。  BlueXP将提示您将符合条件的Cloud Volumes ONTAP系统升级到此版本。
+您可以从 Azure 和 Google Cloud 中的 9.16.1 版本升级到Cloud Volumes ONTAP 9.17.1 RC1。控制台将提示您将符合条件的Cloud Volumes ONTAP系统升级到此版本。
 
 
 NOTE: 对于 AWS，系统不会提示您进行此升级。  AWS 不支持升级到Cloud Volumes ONTAP 9.17.1 RC1。
