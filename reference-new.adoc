@@ -16,6 +16,16 @@ summary: Cloud Volumes ONTAP 9.17.1 包含一项新的增强功能。
 [role="lead"]
 Cloud Volumes ONTAP 9.17.1 可在 Azure 和 Google Cloud 中部署和升级。
 
+最新版本的NetApp Console还引入了其他功能和增强功能。欲了解更多信息，请参阅 https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/whats-new.html["Cloud Volumes ONTAP"^] 在控制台中管理。
+
+
+
+== 9.17.1 P1（2025年11月4日）
+
+Cloud Volumes ONTAP 9.17.1 P1 补丁现已可在 Azure 和 Google Cloud 中部署和升级。但此版本暂不支持在 AWS 中部署和升级。BlueXP控制台将提示您将现有系统升级到此补丁版本。
+
+link:https://mysupport.netapp.com/site/products/all/details/cloud-volumes-ontap/downloads-tab/download/62632/9.17.1P1["查看 P1 补丁修复的错误列表"^]（需要登录NetApp支持站点）。
+
 
 
 == 9.17.1 RC1（2025 年 9 月 4 日）
