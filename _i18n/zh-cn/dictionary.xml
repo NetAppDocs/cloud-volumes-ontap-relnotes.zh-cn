@@ -607,8 +607,6 @@
   <block id="f52ead6bbf1fb1c871d206603e5a2347" category="open-title">基于容量的许可证</block>
   <block id="d56bf07ec8cd4e9f29339d605ffef95c" category="open-title">基于节点的许可证</block>
   <block id="bde67b5966889851166e3f5c7b09ff05" category="paragraph">在Azure中将Cloud Volumes ONTAP部署为单节点系统时、您可以从以下基于容量或基于节点的许可配置中进行选择。</block>
-  <block id="d2f103c82b43ca5f2da33f93d94bde64" category="paragraph">如果您在部署新的 Cloud Volumes ONTAP 系统时选择了其中任何一种 VM 类型，则不能更改为使用适用于 VNVRAM 的超高 SSD 的其他 VM 类型。例如，您不能从 E8ds_v4 更改为 E8s_v3 ，但可以从 E8ds_v4 更改为 E32ds_v4 ，因为这两种虚拟机类型都使用超 SSD 。</block>
-  <block id="c0f95d0d2e06eba7eb0522dabf1c9d76" category="paragraph">相反，如果您使用任何其他 VM 类型部署 Cloud Volumes ONTAP ，则无法更改为使用适用于 VNVRAM 的超高 SSD 的 VM 类型。例如，您不能从 E8s_v3 更改为 E8ds_v4 。</block>
   <block id="fa399104e53f295813fa209a617a3bfe" category="list-text">E20ds_v5 ^3^</block>
   <block id="c077185ce5ae625437649ce1dbad7a15" category="section-title">Cloud Volumes ONTAP仅支持预留和按需VM实例</block>
   <block id="876f1172cd6d0607aa7ef915b2e202b5" category="section-title">第三方代理和分机的限制</block>
@@ -648,8 +646,6 @@
   <block id="0ef515bdf91048074b68adb0d7ce587e" category="paragraph">在某些虚拟机类型中、Cloud Volumes ONTAP会将本地NVMe存储用作_Flash Cache _。请注意以下限制：</block>
   <block id="7616922b4f9b85f327fb9c04518fc90f" category="list-text">不支持在重新启动后重新恢复缓存。</block>
   <block id="3feaeead4352aa22a5e23895ca44ad6f" category="cell">标准HDD托管磁盘、标准SSD托管磁盘、高级SSD托管磁盘和高级SSD v2托管磁盘。</block>
-  <block id="28440751cbe2a16368822f02f298a2f4" category="inline-link">使用共享受管磁盘的HA单可用性区域配置</block>
-  <block id="e2a0553d4c47017042ca1689993f9c8b" category="paragraph">如果您在部署新的 Cloud Volumes ONTAP 系统时选择了其中任何一种 VM 类型，则不能更改为使用适用于 VNVRAM 的超高 SSD 的其他 VM 类型。例如，您不能从 E8ds_v4 更改为 E8s_v3 ，但可以从 E8ds_v4 更改为 E32ds_v4 ，因为这两种虚拟机类型都使用超 SSD 。同样、在部署新的Cloud Volumes ONTAP系统时、不能将虚拟机类型更改为"不支持高级SSD v2托管磁盘"。要详细了解高级SSD v2托管磁盘支持的配置，请参阅<block ref="6fd1548aedf3667cd5a4b1b43bc16181" category="inline-link-rx"></block>。</block>
   <block id="e1e1effee5380369716ff955c2de6215" category="cell">支持的计算机类型 ^1^</block>
   <block id="1ea028151d07abb047b4e2f17d215216" category="cell">均衡持久磁盘^3^、性能(SSD)持久磁盘^3^和标准(HDD)持久磁盘。</block>
   <block id="6b145cfa91f7c68c4c0c6f2bf60bcf9d" category="paragraph">新的 Cloud Volumes ONTAP 系统不再支持 custom-4-16384 计算机类型。如果您的现有系统在此计算机类型上运行，则可以继续使用它，但我们建议切换到 n2-standard-4 计算机类型。</block>
@@ -786,7 +782,6 @@
   <block id="16283ebc943b0f7f5ee08013f7f4e52c" category="list-text">对于基于节点的 BYOL，除了默认随Cloud Volumes ONTAP附带的第一个存储虚拟机之外，每个额外的_数据服务_存储虚拟机都需要附加许可证。联系您的客户团队以获取存储 VM 附加许可证。</block>
   <block id="acdea6c80f3845eb2767234fb04788c2" category="cell">支持的数据盘类型</block>
   <block id="d894dfdb1bbb11ae0641d7c6e97d92e2" category="cell">高级 SSD 托管磁盘或高级 SSD v2 托管磁盘。</block>
-  <block id="09c6a071fdfa0f65318d9e3e960e825e" category="list-text">^6^ 有关 HA 部署单可用区和多可用区系统数据的内部磁盘的信息，请参阅<block ref="f48956bad241329abf5e1ff5123459dd" category="inline-link-rx"></block>。</block>
   <block id="42762fecca2ab07cc92a3d950f2052c9" category="list-text">^7^ 自 2025 年 8 月 11 日起， Cloud Volumes ONTAP优化许可证将被弃用，并且将不再可在 Azure 市场中以即用即付 (PAYGO) 订阅的方式购买或续订。<block ref="43fcd9c2498ef205b9218293a558faae" category="inline-link-rx"></block> 。</block>
   <block id="be666ea41d284101ddfda886424c2d07" category="inline-link-macro">Cloud Volumes ONTAP 9.17.1 公告</block>
   <block id="5d400a6226e85167dbd60b61421128ef" category="list-text"><block ref="5d400a6226e85167dbd60b61421128ef" category="inline-link-macro-rx"></block></block>
@@ -857,4 +852,8 @@
   <block id="8690f53f07f007360e78dc29e5309562" category="admonition">此版本无法在 AWS 中部署和升级。</block>
   <block id="57a0ba977b3ce94f8d770dc7f07f0621" category="paragraph">Cloud Volumes ONTAP的升级必须通过控制台完成。您不应使用系统管理器或 CLI 升级Cloud Volumes ONTAP 。这样做会影响系统稳定性。</block>
   <block id="39c7d7fdae3f61f4fd797ff61941cf21" category="paragraph">您可以在 AWS、Azure 和 Google Cloud 中从 9.16.1 版本升级到Cloud Volumes ONTAP 9.17.1。对于 AWS，您可以升级到Cloud Volumes ONTAP 9.17.1 P1 及更高版本。控制台将提示您将符合条件的Cloud Volumes ONTAP系统升级到此版本。</block>
+  <block id="2f3a829bc17b59e7781cb4c84d7fdaac" category="paragraph">如果在部署新的Cloud Volumes ONTAP系统时选择其中任何一种 VM 类型，则无法更改为不使用 Ultra SSD 作为 VNVRAM 的另一种 VM 类型。例如，您不能从 E8ds_v4 更改为 E8s_v3，但可以从 E8ds_v4 更改为 E32ds_v4，因为这两种 VM 类型都使用 Ultra SSD。反之，如果您使用任何其他虚拟机类型部署了Cloud Volumes ONTAP ，则无法更改为使用 Ultra SSD 作为 VNVRAM 的虚拟机类型。例如，你不能将不使用 Ultra SSD 作为 VNVRAM 的 E8s_v3 更改为使用 Ultra SSD 作为 VNVRAM 的 E8ds_v4。</block>
+  <block id="15c46c6e8cc3bc71a1f7ac25fd043a38" category="inline-link">标准</block>
+  <block id="b21dfdf1c7842fb2345e529943fe3797" category="paragraph">同样，如果您选择高级 SSD 管理磁盘来满足以下环境要求：<block ref="15bd670ffefc5e29ca2fb072751f55bb" category="inline-link-rx"></block> 对于 Premium SSD v2 管理磁盘，控制台会自动部署 Premium SSD v2 管理磁盘。您无法切换到高级 SSD v1 管理磁盘。</block>
+  <block id="ea848964069f461947feaaafed2ce380" category="list-text">^6^ 如果您选择高级 SSD 管理磁盘来满足以下环境要求：<block ref="15bd670ffefc5e29ca2fb072751f55bb" category="inline-link-rx"></block> 对于 Premium SSD v2 管理磁盘，控制台会自动部署 Premium SSD v2 管理磁盘。您无法切换到高级 SSD v1 管理磁盘。有关高可用性部署（包括单可用区和多可用区）的系统数据内部磁盘的信息，请参阅：<block ref="f48956bad241329abf5e1ff5123459dd" category="inline-link-rx"></block>。</block>
 </blocks>
