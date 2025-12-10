@@ -490,7 +490,6 @@
   <block id="2819feead2b07762a4465189ab8b2f52" category="paragraph-title">对于 HA 对，是每个节点的许可容量限制还是整个 HA 对的许可容量限制？</block>
   <block id="7093c2c9844cf46dcd5d50c6d596d244" category="paragraph-title">对于 HA 对，镜像数据是否计入许可的容量限制？</block>
   <block id="9d123a356c832621891a3328c128b78b" category="list-text">L8s_v3 ^2^</block>
-  <block id="b869cbdadaa9844d32c24de3f4db3242" category="cell">受管磁盘</block>
   <block id="dbe94f36417009d827f76ccf107bd90c" category="section-title">不应使用自动应用程序资源管理解决方案</block>
   <block id="2f9882645b2c32820ad085240bacb763" category="paragraph-title">对于 HA ，是每个节点的许可证容量限制还是整个 HA 对的许可证容量限制？</block>
   <block id="2d7789be6e6e477491f790d5a3ea60b3" category="cell">单节点384 TiB原始容量^对于具有PAYGO 96 TiB原始容量的单节点、2^ 352 TiB原始容量对于具有受管磁盘的HA对、页面blob 384 TiB原始容量</block>
@@ -860,4 +859,16 @@
   <block id="ef472153bbc56318dce19177ac3fa1b4" category="paragraph">Cloud Volumes ONTAP 9.17.1 P2 补丁现已可在 AWS、Azure 和 Google Cloud 中进行升级。控制台将提示您将现有系统升级到此补丁版本。</block>
   <block id="ce5d0c77f167b881391469fc27895727" category="inline-link-macro">查看 P2 补丁修复的错误列表</block>
   <block id="a40be2bf2d5d6d88cd3370cec7aad194" category="paragraph"><block ref="ac39adedf16f862832f2e839cb1736f3" category="inline-link-macro-rx"></block>（需要登录NetApp支持站点）。</block>
+  <block id="02fab2cadf45bea30480ac0cf50e7203" category="list-text">E4ds_v6 ^6^</block>
+  <block id="06413994c4aa1a93ecf2981f24ff2396" category="list-text">E20ds_v6 ^6^</block>
+  <block id="10dc072def6ec7e5386a9f5dd3ab2c8a" category="list-text">E32ds_v6 ^6^</block>
+  <block id="2ae3c16964ee90fd940bb8328b5a3663" category="list-text">E48ds_v6 ^6^</block>
+  <block id="92d6fd9aadcde9f296b1479b74c1cf7f" category="list-text">E64ds_v6 ^6^</block>
+  <block id="4bdfb2bd07bacb86cc6544fcf6ff0886" category="inline-link">Azure 文档：Edsv6 尺寸系列</block>
+  <block id="92ad9c31e57427cf475ee8d5349fc4b9" category="list-text">^6^ Edsv6 VM 类型支持Cloud Volumes ONTAP 9.17.1 及更高版本的全新部署。您无法将现有部署切换为任何其他 VM 类型，例如从 Edsv5 切换到 Edsv6；仅支持 Edsv6 变体之间的大小更改（例如 E20ds_v6 → E32ds_v6）。有关此虚拟机类型的信息，请参阅<block ref="45ec24eb73012d89f19225059116e005" category="inline-link-rx"></block>。</block>
+  <block id="56ca123545ff7cba565948f4938058fb" category="list-text">E20ds_v6 ^8^</block>
+  <block id="e697f2679cf554cf428572d7d2257b81" category="list-text">E32ds_v6 ^8^</block>
+  <block id="6fca818cb2b74d72dd8849c2a4e34d2b" category="list-text">E48ds_v6 ^8^</block>
+  <block id="bbc7e0e0269760cbd08e32205763eede" category="list-text">E64ds_v6 ^8^</block>
+  <block id="312c1718d8151f9dd3f53ad516f59210" category="list-text">^8^ Edsv6 VM 类型支持Cloud Volumes ONTAP 9.17.1 及更高版本的全新部署。您无法将现有部署切换为任何其他 VM 类型，例如从 Edsv5 切换到 Edsv6；仅支持 Edsv6 变体之间的大小更改（例如 E20ds_v6 → E32ds_v6）。有关此虚拟机类型的信息，请参阅<block ref="45ec24eb73012d89f19225059116e005" category="inline-link-rx"></block>。</block>
 </blocks>
