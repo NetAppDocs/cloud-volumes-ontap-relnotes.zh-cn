@@ -871,4 +871,8 @@
   <block id="6fca818cb2b74d72dd8849c2a4e34d2b" category="list-text">E48ds_v6 ^8^</block>
   <block id="bbc7e0e0269760cbd08e32205763eede" category="list-text">E64ds_v6 ^8^</block>
   <block id="312c1718d8151f9dd3f53ad516f59210" category="list-text">^8^ Edsv6 VM 类型支持Cloud Volumes ONTAP 9.17.1 及更高版本的全新部署。您无法将现有部署切换为任何其他 VM 类型，例如从 Edsv5 切换到 Edsv6；仅支持 Edsv6 变体之间的大小更改（例如 E20ds_v6 → E32ds_v6）。有关此虚拟机类型的信息，请参阅<block ref="45ec24eb73012d89f19225059116e005" category="inline-link-rx"></block>。</block>
+  <block id="78ca1e9b4071731d926af62548edb6ec" category="section-title">9.17.1 P3（2025年12月22日）</block>
+  <block id="052ffa7a1e7c8dd40078c40c114b4029" category="paragraph">Cloud Volumes ONTAP 9.17.1 P3 补丁现已可在 AWS、Azure 和 Google Cloud 中进行升级。控制台将提示您将现有系统升级到此补丁版本。</block>
+  <block id="4c7cf73669136d536c96ca7317eb5ceb" category="inline-link-macro">查看 P3 补丁修复的错误列表</block>
+  <block id="d0805c87e6349186d93041afd3764619" category="paragraph"><block ref="d209673dd7156618bec41c386164b39f" category="inline-link-macro-rx"></block>（需要登录NetApp支持站点）。</block>
 </blocks>
