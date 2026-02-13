@@ -20,9 +20,9 @@ Google Cloud 支持多种 Cloud Volumes ONTAP 配置。
 
 == 按许可证支持的配置
 
-Cloud Volumes ONTAP可作为单节点系统和高可用性(HA)节点对在Google Cloud中使用、以实现容错和无中断运行。
+Cloud Volumes ONTAP 在 Google Cloud 中作为单节点系统和高可用性 (HA) 节点对提供，用于容错和无中断操作。
 
-不支持将单节点系统升级到 HA 对。如果要在单节点系统和 HA 对之间切换，则需要部署新系统并将现有系统中的数据复制到新系统。
+不支持将单节点系统升级到 HA 对。如果要在单节点系统和 HA 对之间切换，则需要部署新系统并将数据从现有系统复制到新系统。
 
 Cloud Volumes ONTAP 可以在云提供商提供的预留或按需 VM 实例上运行。不支持使用其他 VM 实例类型的解决方案。
 
