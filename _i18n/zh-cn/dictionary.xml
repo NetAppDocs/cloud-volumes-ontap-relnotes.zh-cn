@@ -908,4 +908,8 @@
   <block id="ed861c7159dd25edfdb3756b850c62c0" category="cell">c3-standard-88</block>
   <block id="95ff4bf55c71eae9f06c5b072249ba20" category="paragraph">Cloud Volumes ONTAP 9.18.1 通用版本现在可用于在 Amazon Web Services (AWS)、Microsoft Azure 和 Google Cloud 中部署和升级。</block>
   <block id="83462a4045d14d58d15d9f74015dd308" category="paragraph">您可以从 AWS、Azure 和 Google Cloud 中的 9.17.1 P1 及更高版本修补程序升级到 Cloud Volumes ONTAP 9.18.1。控制台将提示您将符合条件的 Cloud Volumes ONTAP 系统升级到此版本。</block>
+  <block id="e819c4410e5eb8f68db481717f672a21" category="section-title">9.18.1 P1 (2026 年 3 月 31 日)</block>
+  <block id="66b93dcdc5716dedd5e7fcf8a6f2c744" category="paragraph">Cloud Volumes ONTAP 9.18.1 P1 补丁现在可用于在 AWS、Azure 和 Google Cloud 中进行部署和升级。Console 将提示您将现有系统升级到此补丁版本。</block>
+  <block id="a9380d77cd3c45a5f15f09b231323443" category="inline-link-macro">查看 P1 补丁中修复的错误列表</block>
+  <block id="d4e91a63e862afe5d30e173965c6c4a1" category="paragraph"><block ref="eb1c958143bf6120158dde219a58c506" category="inline-link-macro-rx"></block> （需要登录 NetApp 支持站点）。</block>
 </blocks>
