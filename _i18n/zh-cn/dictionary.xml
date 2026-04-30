@@ -922,4 +922,8 @@
   <block id="e4dc6128b719feb8c40c1a651d390050" category="admonition">Flash Cache、高写入模式和 8,896 的 MTU 依赖于功能，并且不能在配置的实例中单独禁用。</block>
   <block id="c538e24ff658f3f0f3239b6f8d51e48f" category="paragraph">在单节点部署中，从 Cloud Volumes ONTAP 9.18.1 开始，如果您选择 C3 虚拟机的本地 SSD (LSSD) 变体，默认情况下会启用 Flash Cache。您无法在 Cloud Volumes ONTAP 部署中的 C3 LSSD 虚拟机变体之间切换，即使目标变体支持 Flash Cache。</block>
   <block id="bbbc2c55d76f069b82eb0de6bf28057d" category="paragraph">查看下表，了解 VM 变体及其支持的 LSSD 数量：</block>
+  <block id="27f7ce2af3afe3ff869adedcf68e85cc" category="section-title">9.18.1 P2 (2026 年 4 月 30 日)</block>
+  <block id="3cbfcd6492053f416bf02c99b23b7630" category="paragraph">Cloud Volumes ONTAP 9.18.1 P2 补丁现在可用于在 AWS、Azure 和 Google Cloud 中进行部署和升级。Console 将提示您将现有系统升级到此补丁版本。</block>
+  <block id="ce5d0c77f167b881391469fc27895727" category="inline-link-macro">查看 P2 补丁中修复的错误列表</block>
+  <block id="e4005bbac6c9dcfff8a33e8e077a64c7" category="paragraph"><block ref="4f7e8d39f7d7dbd55e211b03ab5cff07" category="inline-link-macro-rx"></block> （需要登录 NetApp 支持站点）。</block>
 </blocks>
