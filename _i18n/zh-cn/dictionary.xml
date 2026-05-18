@@ -352,7 +352,6 @@
   <block id="4d2719ea5599a5bf1a9973d3b247f959" category="section-title">SnapManager 许可限制</block>
   <block id="c91bb6f1740b2a7b3e274deca5e32b94" category="paragraph">Cloud Volumes ONTAP 支持 SnapManager 每服务器许可证。不支持每存储系统（ SnapManager 套件）许可证。</block>
   <block id="c3f5fdee9b6adb6eccff2d4c189ead12" category="section-title">不支持的 ONTAP 功能</block>
-  <block id="534cab245a3cc0ececa966044bad6ba2" category="paragraph">Cloud Volumes ONTAP 不支持以下功能：</block>
   <block id="a031ea731cd3c4992b7f33bad9f72a00" category="list-text">聚合级实时重复数据删除</block>
   <block id="98e2e51de88bd2dae78a66fdad91936c" category="list-text">聚合级后台重复数据删除</block>
   <block id="5873635ff256383dcb0b47a0e49f71b1" category="list-text">磁盘维护中心</block>
@@ -926,4 +925,6 @@
   <block id="3cbfcd6492053f416bf02c99b23b7630" category="paragraph">Cloud Volumes ONTAP 9.18.1 P2 补丁现在可用于在 AWS、Azure 和 Google Cloud 中进行部署和升级。Console 将提示您将现有系统升级到此补丁版本。</block>
   <block id="ce5d0c77f167b881391469fc27895727" category="inline-link-macro">查看 P2 补丁中修复的错误列表</block>
   <block id="e4005bbac6c9dcfff8a33e8e077a64c7" category="paragraph"><block ref="4f7e8d39f7d7dbd55e211b03ab5cff07" category="inline-link-macro-rx"></block> （需要登录 NetApp 支持站点）。</block>
+  <block id="2f8a4700ca3941a576474070acbc2005" category="paragraph">Cloud Volumes ONTAP 不支持某些 ONTAP 功能，包括但不限于：</block>
+  <block id="a2733b935845e428d2910b4aedaf426b" category="list-text">用于加密的板载密钥管理器 (OKM)</block>
 </blocks>
