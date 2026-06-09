@@ -35,7 +35,6 @@
   <block id="61dcfaac24363a16e4b318c1317f0309" category="cell">368 TiB</block>
   <block id="c88983af55424e5528378f20e3ec805a" category="cell">基于节点的许可证</block>
   <block id="7751129b8546a0da65fb379b1cc9c243" category="cell">每个许可证 368 TiB</block>
-  <block id="376c581ebe9ec9aa8853377f8538ebbd" category="cell">基于容量的许可证</block>
   <block id="9010e525ec80d0fdea3d56191f64ce39" category="cell">2 个 PIB</block>
   <block id="44007958b04e5e15a25a3ca1ee98abeb" category="paragraph">容量限制适用于整个 HA 对。不是每个节点。例如，如果使用高级版许可证，则两个节点之间的容量最多可达 368 TiB 。</block>
   <block id="c029ebf0cab0f40812ebec7c644fef41" category="section-title">EC2 实例的磁盘和分层限制</block>
@@ -221,10 +220,8 @@
   <block id="1f742543feb3ee22b577a40afbb960a2" category="cell">将冷数据分层到 S3</block>
   <block id="eaa4dc5078017a5c5bebf383ab6f5124" category="cell">supported</block>
   <block id="aa7f77e663b832d5b0e544c5511e680c" category="cell">不支持</block>
-  <block id="b13356b20cd05f0312d51b60b5736e0f" category="list-text">对于 HA 对，容量限制适用于整个 HA 对。这不是每个节点的。例如，如果使用高级版许可证，则两个节点之间的容量最多可达 368 TiB 。</block>
   <block id="9cb3b0db1f5a7a0032a165789bcde1dd" category="inline-link-macro">存储限制</block>
   <block id="714ff467ced5dd4ad0cd34ca2d29d911" category="list-text">在对所有 Cloud Volumes ONTAP 配置使用 SSD 时，系统会启用增强的写入性能，但 PAYGO Explore 除外。</block>
-  <block id="907c78338365697be8fd8d4a130503c8" category="list-text">使用吞吐量优化型 HDD （ st1 ）时，不建议将数据分层到对象存储。</block>
   <block id="36e4aa065725aff22926f2fed53bc3c7" category="section-title">支持的磁盘大小</block>
   <block id="afb82c4f80baa4ecca2a2e4e97df3ada" category="cell">通用 SSD （ GP3 和 GP2 ）</block>
   <block id="c50feb3c9ed89b38a1757f8a63ccd0a6" category="cell">已配置 IOPS SSD （ IO1 ）</block>
@@ -234,60 +231,26 @@
   <block id="09db5cf9dee1953ac746dd636e0db3e0" category="list-text">4 TiB</block>
   <block id="b23de6890dfc4a44067a64513c3d5411" category="list-text">6 TiB</block>
   <block id="094077c0211aa5522341d3db94bc6419" category="list-text">8 TiB</block>
-  <block id="789f7b372f32412febae7a678005ae71" category="section-title">支持的 EC2 计算</block>
-  <block id="a1834fbcd2847d469ef79f5526dcee65" category="inline-link">有关 EC2 实例类型的最新完整详细信息，请参见 AWS</block>
-  <block id="98ade5346ada08656e0c7b517b695d0f" category="paragraph">每个 Cloud Volumes ONTAP 许可证支持不同的 EC2 实例类型。为方便起见，下表显示了每个受支持实例类型的 vCPU ， RAM 和带宽。<block ref="7fe5ce03f92ccda8dcb0aa0fab836a1f" category="inline-link-rx"></block>。</block>
-  <block id="c7d741925ef81824617c6a2975104e27" category="inline-link">NetApp 技术报告 4383 ：使用应用程序工作负载在 Amazon Web Services 中对 Cloud Volumes ONTAP 进行性能特征描述</block>
   <block id="4a7243646d30fc1e81eca2df9826cc03" category="cell">支持的实例</block>
-  <block id="5d56dbd20d9ee1ab8a722ff12e331953" category="cell">vCPU</block>
-  <block id="e53619c1fe611a51eeeb8d148ba6e532" category="cell">RAM</block>
-  <block id="5a4320e0d1d7864b4d60f96e40d68e02" category="cell">Flash Cache ^1^</block>
-  <block id="e1a9836eca39e3ec1e898f9b217094d4" category="cell">网络带宽（ Gbps ）</block>
-  <block id="f851d5567887464712f1cbde0c7c70db" category="cell">EBS 带宽（ MBps ）</block>
-  <block id="885c7ba30dea785406ff04e1995c0cef" category="cell">高写入速度 ^2^</block>
-  <block id="4144774af30f71c8fc794c50d0a2a85e" category="cell">* 浏览或任何其他许可证 *</block>
   <block id="a87ff679a2f3e71d9181a67b7542122c" category="cell">4.</block>
   <block id="c74d97b01eae257e44aa9d5bade97baf" category="cell">16.</block>
-  <block id="940d46ce8af31c99727566b6b6529db7" category="cell">最多 10 个</block>
-  <block id="3b1fce8d4128e9484676e12056c94fd7" category="cell">最多 4 ， 750 个</block>
   <block id="24fd5ed21b125319b3c7c4825a764b66" category="cell">支持（仅限单节点）</block>
-  <block id="b47f486130ec0322b29fe8cf873eda99" category="cell">* 标准版或任何其他许可证 *</block>
   <block id="1ffd24563a8ba078752a34d474e1f403" category="cell">m5a.2xlarge</block>
   <block id="c9f0f895fb98ab9159f51fd0297e236d" category="cell">8.</block>
-  <block id="c82994e8dd530a69b81d79cb4e505f09" category="cell">最多 2 ， 880 个</block>
-  <block id="ed0336aa4dbbeed8e48332f1f7a834b6" category="cell">* 高级版或任何其他许可证 *</block>
   <block id="3755b8d0a0506aff1de991cab29e9205" category="cell">m5n.2xlarge</block>
-  <block id="a21bb08ff7c4cfeeef06cb3b4bcbc0a1" category="cell">最多 25 个</block>
-  <block id="ea5d2f1c4608232e07d3aa3d998e5135" category="cell">64</block>
   <block id="779e6562c3768b528bec3198ecdd790e" category="cell">r5d.2xlarge</block>
-  <block id="97a5ba2ab2869def9595028833dfa605" category="cell">4,570</block>
-  <block id="f778f69b84929a5c80bb4590373a7119" category="cell">4,750</block>
   <block id="3bf5113b1c70942177a6ee64a8200ded" category="cell">m5d.8xlarge</block>
-  <block id="28a48803c3f0a20888e6791904e3baa8" category="cell">6,800</block>
   <block id="240c30af8e0d147ae84043d1fc9d1776" category="cell">r5.8xlarge</block>
   <block id="bccfea3b653422d5fd8560cff3483d5b" category="cell">c5.9xlarge</block>
-  <block id="19ca14e7ea6328a42e0eb13d585e4c22" category="cell">36</block>
-  <block id="32bb90e8976aab5298d5da10fe66f21d" category="cell">72.</block>
-  <block id="93ebb09c93a802d9a872e5cedf9ba399" category="cell">9,500</block>
   <block id="7f9623c09f1541aea407df05491c9ac4" category="cell">c5d.9x 大型</block>
   <block id="a59ad4f9735c6c90fea48ef6e88441ac" category="cell">c5n.9x 大型</block>
-  <block id="26657d5ff9020d2abefe558796b99584" category="cell">96</block>
   <block id="2d3e51e89d3f05d2abe99df631cb0b4c" category="cell">C5a.12 x 大型</block>
   <block id="c5349a9d783e985390617543cf910af4" category="cell">c5.18 x 大型</block>
-  <block id="0a09c8844ba8f0936c20bd791130d6b6" category="cell">144.</block>
-  <block id="99a85ba98f759e2af5b37706147521a4" category="cell">19,000</block>
   <block id="754828c9b88626872a73b65943afe305" category="cell">c5d.18x 大型</block>
   <block id="3953e14134095c5c41a5bdde5d817581" category="cell">m5d.12 x 大型</block>
-  <block id="642e92efb79421734881b53e1e1b18b6" category="cell">48</block>
-  <block id="58a2fc6ed39fd083f55d4182bf88826d" category="cell">192.</block>
   <block id="8bfc3cdc1d0308d0df3f444e6a54e5c0" category="cell">c5n.18x 大型</block>
-  <block id="f899139df5e1059396431415e770c6dd" category="cell">100</block>
   <block id="f5efe0addbdd614da5490e8dfe6205cc" category="cell">m5a.16 x 大型</block>
   <block id="36339cdd29b164bf6617e204878be132" category="cell">m5.16 x 大型</block>
-  <block id="98f13708210194c475687be6106a3b84" category="cell">20</block>
-  <block id="4a09e412cafbab3b737f40385783c222" category="cell">13,600</block>
-  <block id="0ac094105593f2223af0fadea2d4e6d0" category="cell">r5.12 x 大型 ^3^</block>
-  <block id="0584ce565c824b7b7f50282d9a19945b" category="cell">384</block>
   <block id="dfeeabb8d703f59f841c2a6e2ed8d240" category="inline-link">了解有关 Flash Cache 的更多信息</block>
   <block id="18ca3c89ae9e8edbe217f2c9b7c6107d" category="inline-link">了解有关选择写入速度的更多信息</block>
   <block id="9de28fbf6817cd511eb799f9575b611d" category="list-text">选择 EC2 实例类型时，您可以指定它是共享实例还是专用实例。</block>
@@ -503,7 +466,6 @@
   <block id="b78b1188c7979365981f7c88049f9366" category="section-title">如何升级</block>
   <block id="75026846c1403e202a52bdb027762fbb" category="section-title">停机</block>
   <block id="618671ce849d1a8ff524b77c314fe4e2" category="section-title">不再支持c4、m4和r4实例</block>
-  <block id="e19784a5420512b2876c7b24680652b5" category="cell">40,000</block>
   <block id="4237e167da34ce4cc54b7915a9ee779a" category="list-text">必须在所有卷上禁用数据压缩、才能利用Cloud Volumes ONTAP 9.12.0之前的Flash Cache性能改进功能。在部署或升级到Cloud Volumes ONTAP 9.12.1时、无需禁用数据压缩。</block>
   <block id="8c41a0d9e980d7223b4ad7585ce70fa2" category="section-title">具有共享受管磁盘的HA对</block>
   <block id="678bba9079ce79c3806a40a1b6306799" category="list-text">E8ds_v4 ^4^</block>
@@ -517,12 +479,9 @@
   <block id="7b9e5415e02ff7ad5eaae61345740517" category="inline-link">了解存储如何在Google Cloud中运行的Cloud Volumes ONTAP HA对中工作</block>
   <block id="1b604734bf53595ed7c7d204bb25e549" category="list-text">L16s_v3 ^2^</block>
   <block id="645c4fc55b2cf93995a9e487870102f5" category="list-text">L32s_v3 ^2^</block>
-  <block id="f5d86d667fcde1b9fc5b1c45e55d135e" category="cell">64 ^4^</block>
-  <block id="5ce58b1e3bfddca3ae7d5a13676224ff" category="list-text">虽然这些EC2实例类型支持64个以上的vCPU、但Cloud Volumes ONTAP 仅支持多达64个vCPU。</block>
   <block id="c46270a9bdf069bd0e015f7953e02355" category="paragraph"><block ref="c46270a9bdf069bd0e015f7953e02355" category="inline-link-rx"></block></block>
   <block id="79d3c4941fdb49ae08cc30405f716cce" category="list-text">对于某些配置，磁盘限制会阻止您单独使用磁盘来达到容量限制。在这些情况下，您可以通过达到容量限制<block ref="aea0958203307daa433f894622f3e640" category="inline-link-rx"></block>。有关磁盘限制的信息，请参见 <block ref="71ccaacc6f6c8feca068c7ff1a7b2eb5" category="inline-link-macro-rx"></block>。</block>
   <block id="ca40429b1b07555a35de829b976a6961" category="paragraph">在 AWS 中，一个聚合最多可以包含 6 个大小相同的磁盘。但是、如果您的配置支持Amazon EBS弹性卷功能、则聚合最多可以包含8个磁盘。<block ref="d6d48ea3644fd45f9f7ff8f4c8d4ae57" category="inline-link-rx"></block></block>
-  <block id="9df4ca2adcfbf390d35edbeb52928a78" category="list-text">某些实例类型包括本地 NVMe 存储， Cloud Volumes ONTAP 将其用作 _Flash Cache_ 。Flash Cache 通过实时智能缓存最近读取的用户数据和 NetApp 元数据来加快数据访问速度。它适用于随机读取密集型工作负载，包括数据库，电子邮件和文件服务。必须在所有卷上禁用数据压缩，才能利用 Flash Cache 性能改进功能。<block ref="da56a164195bbdee72f1dfc4ea53669d" category="inline-link-rx"></block>。</block>
   <block id="f6dcc1a079544e36390b698b6f59bf4e" category="paragraph">以下磁盘限制适用于使用基于容量的许可包的Cloud Volumes ONTAP 系统。<block ref="360eefdcdd22adda63e8597e9466029a" category="inline-link-rx"></block></block>
   <block id="fc8746b925f8923889b77841242bf054" category="paragraph"><block ref="771bd01d5b66ba0bcb76d734267dc8bb" category="inline-link-rx"></block>。</block>
   <block id="ae90a2e4532cb9b615489b63c36e2383" category="paragraph"><block ref="dca5658ae26fff987979f5de0a83e9fd" category="inline-link-rx"></block>。</block>
@@ -610,16 +569,9 @@
   <block id="6074c6f3226593d830e2700ab7f3f365" category="list-text">L48s_v3 ^1、3、5^</block>
   <block id="1da7ab1581b8dde8d8bbb3d70c613cd5" category="list-text">L64s_v3 ^1、3、5^</block>
   <block id="219b3478863d340e2f74f743c7d41011" category="list-text">通用SSD (GP3和GP2)^3^、^5^</block>
-  <block id="5f5ab830f312b366e90a01041e1aedca" category="cell">M5.x大^6^</block>
-  <block id="6bfe086862809cf64cd507fa55b90a47" category="cell">R5.x大^6^</block>
-  <block id="39bce1e4c62e073845823cfaa75353ee" category="cell">m5.2 x大^6^</block>
-  <block id="1daf8852093393eddb2a0375368cd424" category="cell">r5.2 x大^6^</block>
-  <block id="112890879693861f10abb1dff5a8168e" category="cell">c5d.4x大^6^</block>
-  <block id="db71cf30c589b91cc71cbd78dda531cb" category="cell">m5.4x大^6^</block>
   <block id="5eaba9c26c7009842affe7562eb137d3" category="inline-link-macro">有关本地区域中受支持的EC2实例类型的最新完整详细信息、请参见AWS</block>
   <block id="0b1bcd721d49fbe0a3ff4bd80dfcd83f" category="list-text">以下EC2实例类型系列(大小为x大 到4x大)支持AWS本地区域：M5、c5、c5d、R5和R5d。 <block ref="3d9029b658475a88eed4e09e15fa8cce" category="inline-link-macro-rx"></block>。</block>
   <block id="4133f4256c016927cb270503c43adeb6" category="paragraph">在AWS本地区域中、这些实例类型不支持高写入速度。</block>
-  <block id="b710bbf07a9ba1fa06f2e6f4e77a42db" category="paragraph">下表中显示的带宽与每个实例类型的 AWS 限制一致。这些限制与 Cloud Volumes ONTAP 所能提供的功能不完全一致。有关预期性能，请参见<block ref="c23654021de34c23e6d408104aa3bf49" category="inline-link-rx"></block>。</block>
   <block id="32d6fe93ba69b4395a45277c1885f29f" category="cell">基于容量的许可证(Essentials和Professional)</block>
   <block id="7ac4ad805c5f62c422ac040e484787d7" category="paragraph">在Azure上配置Flash Cache所需的最低ONTAP版本为9.13.1GA。</block>
   <block id="0ef515bdf91048074b68adb0d7ce587e" category="paragraph">在某些虚拟机类型中、Cloud Volumes ONTAP会将本地NVMe存储用作_Flash Cache _。请注意以下限制：</block>
@@ -628,10 +580,8 @@
   <block id="e1e1effee5380369716ff955c2de6215" category="cell">支持的计算机类型 ^1^</block>
   <block id="1ea028151d07abb047b4e2f17d215216" category="cell">均衡持久磁盘^3^、性能(SSD)持久磁盘^3^和标准(HDD)持久磁盘。</block>
   <block id="6b145cfa91f7c68c4c0c6f2bf60bcf9d" category="paragraph">新的 Cloud Volumes ONTAP 系统不再支持 custom-4-16384 计算机类型。如果您的现有系统在此计算机类型上运行，则可以继续使用它，但我们建议切换到 n2-standard-4 计算机类型。</block>
-  <block id="29aaeb333a41db01888c537148053c70" category="paragraph">*最大系统容量*(磁盘+对象存储)^1^</block>
   <block id="06cf24f6f7b06cb3d2778a1a70e9ff2f" category="paragraph">*支持的磁盘类型*</block>
   <block id="17943cfde2a5e23c7925dc95a8dde6a4" category="paragraph">*冷数据分层到S3*</block>
-  <block id="640897782baa10cc7d259d38d703b275" category="list-text">如果在所有Cloud Volumes ONTAP配置中使用SSD、则会提高写入性能。</block>
   <block id="b5cb41a6703cf18b4cecd5a0817f91cf" category="section-title">升级说明</block>
   <block id="6b32e99bddf60938239aabe092cb4c16" category="paragraph">Cloud Volumes ONTAP 提供了多种许可选项。每个选项都允许您选择一种满足您需求的消费模式。</block>
   <block id="27fe4eb3edbaff8f250e2d51f7462681" category="inline-link">软件包</block>
@@ -669,7 +619,6 @@
   <block id="2dc71138ad7976e187566f7ce79883cc" category="list-text">升级HA对不会造成中断、I/O不会中断。在此无中断升级过程中、每个节点会同步升级、以便继续为客户端提供I/O。</block>
   <block id="071315f659ff3eed03e994aa4f772449" category="doc">Cloud Volumes ONTAP许可概述</block>
   <block id="d4f1750ecbae7aeb8e4608c6adadf1b3" category="doc">AWS中支持的Cloud Volumes ONTAP配置</block>
-  <block id="906e9645769246d4a98e725adf188964" category="list-text">AWS本地区域中的Cloud Volumes ONTAP配置仅支持通用SSD (GP2)磁盘类型。</block>
   <block id="a09c3a7be8e7dc42776a7b03793d536c" category="doc">支持 Azure 中 Cloud Volumes ONTAP 的配置</block>
   <block id="8f4e28604a8893d6adb6f9b81569d19b" category="doc">Google Cloud中支持的Cloud Volumes ONTAP配置</block>
   <block id="581f6b5312764acdc88160c41a391898" category="doc">Cloud Volumes ONTAP的已知问题</block>
@@ -685,9 +634,6 @@
   <block id="e62fa1e447749b7b88523431cfe1cb23" category="section-title">在单个可用性区域中进行HA部署的限制</block>
   <block id="76d43d0c7a6d0d101562acb873375c45" category="inline-link">在Azure的单个可用性区域中部署HA对</block>
   <block id="4ed7f8d6ce44fa053592b73fcd8be5e3" category="paragraph">如果Cloud Volumes ONTAP版本为早期版本的9.15.1、或者不满足其中任何一个条件、则使用可用性集的先前部署模式将生效。这仅适用于HA配置。</block>
-  <block id="fbb17e3b93a1070f3de5e45b66842d95" category="list-text">AWS本地区域中的Cloud Volumes ONTAP配置仅支持通用SSD (GP2)磁盘类型。AWS 本地区域中的 Cloud Volumes ONTAP 不支持其他磁盘类型。</block>
-  <block id="f051f95f393c93123644b448ca3165c0" category="paragraph">Cloud Volumes ONTAP 不再支持 AWS 中的 c4、m4 和 r4 EC2 实例类型。如果您的系统在 c4、m4 或 r4 实例上运行，请更改为 c5、m5 或 r5 实例。只有在更改实例类型后才能升级到此版本。</block>
-  <block id="2f8299f876158db323c08455b12b585a" category="paragraph">有关详细信息、请参见：</block>
   <block id="304f5226697d03123fa4611d02bf8546" category="inline-link">知识库 (KB) 文章：将 AWS Xen CVO 实例转换为 Nitro KVM</block>
   <block id="0dc3c417fc362585e0e7b3798f00b8bb" category="list-text"><block ref="0dc3c417fc362585e0e7b3798f00b8bb" category="inline-link-rx"></block></block>
   <block id="b5dc3ce37b75c52be2427ecee207d24f" category="inline-link">知识库文章：无法将实例类型从 r4 更改为 r5，并且出现磁盘数量错误</block>
@@ -840,7 +786,6 @@
   <block id="9cb5231fae0fa398b4997a3404e75449" category="paragraph">Cloud Volumes ONTAP 在 AWS 中可用作单节点系统和高可用性 (HA) 节点对，用于容错和无中断操作。</block>
   <block id="ef4986bf1cd31453df648c0c88caab37" category="paragraph">不支持将单节点系统升级到 HA 对。如果要在单节点系统和 HA 对之间切换，则需要部署新系统并将数据从现有系统复制到新系统。</block>
   <block id="231fd9de718f42c1c9e89368821092dd" category="open-title">其他许可证</block>
-  <block id="eedc677bbd07d9095251c43bc5a4b33d" category="list-text">使用 HA 对时，Cloud Volumes ONTAP 支持大多数实例类型的高写入速度。使用单节点系统时，所有实例类型均支持高写入速度<block ref="721fe5ee3bbc3d8295d8615ed77ff9be" category="inline-link-rx"></block>。</block>
   <block id="d79ae3bafac04fb5a94c065465345b1c" category="list-text">r5.12xlarge 实例类型具有已知的可支持性限制。如果节点因死机而意外重新启动，系统可能无法收集用于排除故障和根本原因分析的核心文件。如果出现这种情况，客户接受风险和有限支持条款，并承担所有支持责任。此限制影响新部署的 HA 对和从 9.8 升级的 HA 对。该限制不影响新部署的单节点系统。</block>
   <block id="4b40cbab0027c4d9d78baf0e5d6fda5d" category="paragraph">Cloud Volumes ONTAP 在 Azure 中可用作单节点系统和高可用性 (HA) 节点对，以实现容错和无中断操作。</block>
   <block id="1df33292a2fca2da6ee337f54fc40930" category="section-title">单节点系统</block>
@@ -927,4 +872,90 @@
   <block id="e4005bbac6c9dcfff8a33e8e077a64c7" category="paragraph"><block ref="4f7e8d39f7d7dbd55e211b03ab5cff07" category="inline-link-macro-rx"></block> （需要登录 NetApp 支持站点）。</block>
   <block id="2f8a4700ca3941a576474070acbc2005" category="paragraph">Cloud Volumes ONTAP 不支持某些 ONTAP 功能，包括但不限于：</block>
   <block id="a2733b935845e428d2910b4aedaf426b" category="list-text">用于加密的板载密钥管理器 (OKM)</block>
+  <block id="81fd9aedd2fba0299b8a468e7058717a" category="inline-link">Amazon EC2 实例类型</block>
+  <block id="ee4fdec5b1bb1b7bc6f3f136f70bb6fa" category="paragraph">下表列出了每个许可证支持的存储和 EC2 机器类型组合。有关最新 EC2 实例规格，包括 vCPU、内存、网络带宽和 Amazon EBS 带宽，请参阅<block ref="226f24838b262a0eae3391fa5fddf137" category="inline-link-rx"></block>。</block>
+  <block id="3eac5cbe998f674de343ab193660c26e" category="paragraph">*最大系统容量* ^1^（磁盘 + 对象存储）</block>
+  <block id="2374c35a1fc87e3bf7446df7d5ec3dc1" category="paragraph">*支持的机器类型*</block>
+  <block id="4ad3110a60e3a029d7be7c8f4d6f2d81" category="example-title">C5 系列</block>
+  <block id="df74b1a95a7c717abe70faa6c9ce6a34" category="list-text">c5.18xlarge ^7^</block>
+  <block id="d437fb4d444786977fee27414fa5a9d2" category="example-title">C5a 系列</block>
+  <block id="61cb037d7b847a5f4d73d7064b172778" category="example-title">C5d 系列</block>
+  <block id="89446c1a6641092bc1895d9de77cb54a" category="list-text">c5d.4xlarge ^8^</block>
+  <block id="cf32f28f729ea6aa7448abbcd6c65f04" category="list-text">c5d.18xlarge ^7^</block>
+  <block id="22261aaef8bdc324122610c4bead00a4" category="example-title">C5n 系列</block>
+  <block id="af376cda8164386f8cf8ef6b557b7408" category="list-text">c5n.18xlarge ^7^</block>
+  <block id="4d54652767c6eddebf292e236334cca3" category="example-title">M5 系列</block>
+  <block id="a6b42cd4343c8182a94d4f37a5eb35eb" category="list-text">m5.xlarge ^8^</block>
+  <block id="ded3a7f3156bd2e6e104325e1c52c6ac" category="list-text">m5.2xlarge ^8^</block>
+  <block id="8c22291f40406b86823f832fd8a0ffbc" category="list-text">m5.4xlarge ^8^</block>
+  <block id="d9682ac8bd1648333d6c342be3a903eb" category="example-title">M5a 系列</block>
+  <block id="e96ddbffafe22cc7cee70974d6673382" category="example-title">M5d 系列</block>
+  <block id="9f38396b394e38135d8e96dcfef18ad5" category="example-title">M5dn 系列</block>
+  <block id="95a8f9fe0c977bc18244e46dc873f75e" category="list-text">m5dn.24xlarge ^7^</block>
+  <block id="910fe540353bfa7fd90349b4de4fe09a" category="example-title">M5n 系列</block>
+  <block id="622f9975164565a0db26aa39b7ed872a" category="example-title">M6id 系列</block>
+  <block id="3316cf447f298770890b342eaffca3fb" category="list-text">m6id.xlarge ^9^</block>
+  <block id="1ab6a5de00c638ce58ed9bd765dd0b5c" category="list-text">m6id.2xlarge ^9^</block>
+  <block id="ac6db1a6fec1559e67bb0edb9025dd52" category="list-text">m6id.4xlarge ^9^</block>
+  <block id="9bf1c46f0703ccb148327435b949d9ce" category="list-text">m6id.8xlarge ^9^</block>
+  <block id="e1de38c1b8c807783b266fe4983af618" category="list-text">m6id.16xlarge ^7,9^</block>
+  <block id="348ee253b148bf2e4e7ef63270ab9ebd" category="list-text">m6id.32xlarge ^7,9^</block>
+  <block id="0a62b1b3d2ab1420b41183ad1be01d72" category="example-title">M6idn 系列</block>
+  <block id="be1498be17b8c2939a7d32b2acd07282" category="list-text">m6idn.xlarge ^9^</block>
+  <block id="383abc9d7c1bdb7684e87048763c06bb" category="list-text">m6idn.2xlarge ^9^</block>
+  <block id="e47033db626186ad0d167b4eb175205d" category="list-text">m6idn.4xlarge ^9^</block>
+  <block id="734fa71557674751ea333cfcc73a2de8" category="list-text">m6idn.8xlarge ^9^</block>
+  <block id="4918297550202aa848796a53309a63b0" category="list-text">m6idn.16xlarge ^7,9^</block>
+  <block id="d4ce3985ead5205a19b8b3a3f871159f" category="list-text">m6idn.32xlarge ^9^</block>
+  <block id="e2d1c24325802fe2559a93248380d0c0" category="example-title">R5 系列</block>
+  <block id="4e1657b9f47145bbe1465ac877f4a43b" category="list-text">r5.xlarge ^8^</block>
+  <block id="82c13d422fd41922fca03fba5ed8b424" category="list-text">r5.2xlarge ^8^</block>
+  <block id="c843fb1322ca6ec353b8f076ab9c5068" category="list-text">r5.12xlarge ^6^</block>
+  <block id="3642b44406a6e54bbb9204bdceea0c63" category="example-title">R5d 系列</block>
+  <block id="dc731aa5a0f3d80dfe6ca0a835e769be" category="list-text">对于 HA 对，容量限制是针对整个 HA 对的。不是针对每个节点的。例如，如果您使用 PAYGO Premium 许可证，两个节点之间的容量最多可达 368 TiB。</block>
+  <block id="34f2ac75114e099ddfd4614a3c3590e1" category="list-text">使用吞吐量优化 HDD (st1) 时，不建议将数据分层至对象存储。</block>
+  <block id="56dfb490d8ac568bcf0cbe0ff5ac0e50" category="list-text">AWS Local Zones 中的 Cloud Volumes ONTAP 配置仅支持通用 SSD (gp2) 磁盘类型。AWS Local Zones 不支持其他磁盘类型。</block>
+  <block id="df2afd870740ec05f8f69fac589d0e46" category="list-text">虽然这些 EC2 实例类型支持超过 64 个 vCPU，但 Cloud Volumes ONTAP 最多支持 64 个 vCPU。</block>
+  <block id="17401787703e038e2e9f91b3a9297ad4" category="list-text">这些实例类型需要 ONTAP 9.16.1 GA 或更高版本。</block>
+  <block id="bdffec98e6d23168e67ec60edb566516" category="cell">支持的机器类型</block>
+  <block id="d20df58753fbc9c52414524392db7da4" category="section-title">支持 Flash Cache 和高写入速度</block>
+  <block id="f9beb51fa441c2950ee01b34400048ee" category="paragraph">下表标识了哪些支持的 EC2 实例类型支持 Flash Cache 和高写入速度。</block>
+  <block id="5fbc523d8d2ad241522a15100f23bef2" category="cell">Flash Cache</block>
+  <block id="c7d199adcfee4046f5f5b3e5bd396a3e" category="cell">高写入速度</block>
+  <block id="55b122095d7b69d814bc6849b383e4df" category="cell">c5d.4xlarge</block>
+  <block id="af5930828f5a5fb8d4c21928b5ccdd0d" category="cell">m5.xlarge</block>
+  <block id="fdb9b168c2139e67e282db861cf21967" category="cell">m5.2xlarge</block>
+  <block id="6124944413e19a98a7cefa988e91f90e" category="cell">m5.4xlarge</block>
+  <block id="6ea6f3b204b2dff8f0976ff9e2b5ccbe" category="cell">m6id.xlarge</block>
+  <block id="787f0409c3db5385b203630c013a9014" category="cell">支持 ^*^</block>
+  <block id="4040d2074406c56786605eb0cabb286f" category="cell">m6id.2xlarge</block>
+  <block id="6dec6db76b4597dec6197b4e512ef5f1" category="cell">m6id.4xlarge</block>
+  <block id="63eb9c5c511b3bec71fa252db49120e3" category="cell">m6id.8xlarge</block>
+  <block id="7e297a6b9bf6316e972a013d22a9fb33" category="cell">m6id.16xlarge</block>
+  <block id="7cb437b5120b3a23edafe4917b4a840e" category="cell">m6idn.xlarge</block>
+  <block id="023ed24892281ff61a48cc442038c3a6" category="cell">m6idn.2xlarge</block>
+  <block id="4967b147e0aef27d43fd878fc99d85f7" category="cell">m6idn.4xlarge</block>
+  <block id="3dc2978d3bf77a8f5655a75c2b4da0b6" category="cell">m6idn.8xlarge</block>
+  <block id="a1ac5f0e90ef55247038b6b57bbefd54" category="cell">m6idn.16xlarge</block>
+  <block id="dd930bd4176145c6159837468ab13dde" category="cell">m6idn.32xlarge</block>
+  <block id="e1369dc9aee5f7165363f55d10884546" category="cell">r5.xlarge</block>
+  <block id="859e8cd8d7a83d36983b0e9860a11e84" category="cell">r5.2xlarge</block>
+  <block id="4a6116f629595cfeff4104820f93ab85" category="cell">r5.12xlarge</block>
+  <block id="351a266866c8a648d5dc30495f392196" category="paragraph">pass:[*] Flash Cache 在 m6id.xlarge、m6id.2xlarge、m6idn.xlarge 和 m6idn.2xlarge 上受支持。但是，这些实例类型的核心处理器少于 16 个，不建议用于高性能或内存密集型工作负载。在重负载下，由于内存限制，它们可能会重新启动。为避免这种情况，请使用具有较高核心计数和较大内存的实例类型。</block>
+  <block id="fe2d8cb96f939a1bb432056954a763b8" category="paragraph">以下说明提供了有关支持的实例行为和部署选项的一般指导。</block>
+  <block id="6f6137d0b20b902942af04d90a52ff7e" category="list-text">某些实例类型包括本地 NVMe 存储，Cloud Volumes ONTAP 将其用作 Flash Cache。Flash Cache 通过对最近读取的用户数据和 NetApp 元数据进行实时智能缓存，加快了对数据的访问速度。它适用于随机读取密集型工作负载，包括数据库、电子邮件和文件服务。必须在所有卷上禁用压缩，才能利用 Flash Cache 性能改进<block ref="da56a164195bbdee72f1dfc4ea53669d" category="inline-link-rx"></block>。</block>
+  <block id="45188ca1f19d6bde820ffb0c36a87bb9" category="list-text">使用单节点系统时，Cloud Volumes ONTAP 支持所有受支持的实例类型的高写入速度。使用 HA 对时，只有受支持的实例类型才支持高写入速度<block ref="721fe5ee3bbc3d8295d8615ed77ff9be" category="inline-link-rx"></block>。</block>
+  <block id="fca44ab5df0d2d05c08e1218a248ebb9" category="paragraph">Cloud Volumes ONTAP 不再支持 AWS 中的 c4、m4 和 r4 EC2 实例类型。</block>
+  <block id="befcc93fb12ae5e86952e4037dfbba7c" category="paragraph">如果您的系统在 c4、m4 或 r4 实例上运行，请将其更改为 c5、m5 或 r5 实例，然后再升级到此版本。</block>
+  <block id="857017ab8aeb5fac4c965258ba0894a6" category="paragraph">有关详细信息，请参阅以下资源：</block>
+  <block id="30f60d67f457bb040dffde52197a54da" category="section-title">相关信息</block>
+  <block id="74524c6f5a9f872f5f4089bf0491c318" category="list-text"><block ref="74524c6f5a9f872f5f4089bf0491c318" category="inline-link-rx"></block></block>
+  <block id="8f54b4aa5c8b6ebbbd7b9d377d2916da" category="inline-link">Amazon EC2 M5 实例</block>
+  <block id="642182eaa61146f63105c836930249fa" category="list-text"><block ref="642182eaa61146f63105c836930249fa" category="inline-link-rx"></block></block>
+  <block id="96cfe021a3263d9ffd40df885aa82381" category="inline-link">Amazon EC2 M6i 实例</block>
+  <block id="6592e083b44fb0e105f5011dbcf66cb6" category="list-text"><block ref="6592e083b44fb0e105f5011dbcf66cb6" category="inline-link-rx"></block></block>
+  <block id="cf4e29ea0777598593e5fcb57a63c365" category="inline-link">Amazon EC2 C5 实例</block>
+  <block id="1b976ec3c5a29cc801abf14a5b73d976" category="list-text"><block ref="1b976ec3c5a29cc801abf14a5b73d976" category="inline-link-rx"></block></block>
+  <block id="511ad3b8ad49da139e74e84deac5f108" category="inline-link">Amazon EC2 R5 实例</block>
+  <block id="fc58e772b0e187c9acd0ead80273cfa3" category="list-text"><block ref="fc58e772b0e187c9acd0ead80273cfa3" category="inline-link-rx"></block></block>
 </blocks>
