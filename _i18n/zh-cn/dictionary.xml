@@ -958,4 +958,5 @@
   <block id="1b976ec3c5a29cc801abf14a5b73d976" category="list-text"><block ref="1b976ec3c5a29cc801abf14a5b73d976" category="inline-link-rx"></block></block>
   <block id="511ad3b8ad49da139e74e84deac5f108" category="inline-link">Amazon EC2 R5 实例</block>
   <block id="fc58e772b0e187c9acd0ead80273cfa3" category="list-text"><block ref="fc58e772b0e187c9acd0ead80273cfa3" category="inline-link-rx"></block></block>
+  <block id="d725a8f993233f84880bb4bfdd79e966" category="list-text">^2^ 仅在需要 Azure 维护控制时使用此 VM。由于定价较高，不建议将其用于其他用例。在使用隔离实例类型进行 Azure 维护控制时，请确保 HA 对中的每个 VM 在 Azure 中都有自己的维护配置，并具有交错的计划，以便两个 VM 不会同时脱机。</block>
 </blocks>
