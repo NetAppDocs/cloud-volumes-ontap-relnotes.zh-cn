@@ -846,10 +846,8 @@
   <block id="3b7cc07efa81c4ceb17419c4584c144f" category="cell">c3-standard-22</block>
   <block id="578ae146a454ae8eb958e84ae9263447" category="cell">c3-standard-44</block>
   <block id="ed861c7159dd25edfdb3756b850c62c0" category="cell">c3-standard-88</block>
-  <block id="95ff4bf55c71eae9f06c5b072249ba20" category="paragraph">Cloud Volumes ONTAP 9.18.1 通用版本现在可用于在 Amazon Web Services (AWS)、Microsoft Azure 和 Google Cloud 中部署和升级。</block>
   <block id="83462a4045d14d58d15d9f74015dd308" category="paragraph">您可以从 AWS、Azure 和 Google Cloud 中的 9.17.1 P1 及更高版本修补程序升级到 Cloud Volumes ONTAP 9.18.1。控制台将提示您将符合条件的 Cloud Volumes ONTAP 系统升级到此版本。</block>
   <block id="e819c4410e5eb8f68db481717f672a21" category="section-title">9.18.1 P1 (2026 年 3 月 31 日)</block>
-  <block id="66b93dcdc5716dedd5e7fcf8a6f2c744" category="paragraph">Cloud Volumes ONTAP 9.18.1 P1 补丁现在可用于在 AWS、Azure 和 Google Cloud 中进行部署和升级。Console 将提示您将现有系统升级到此补丁版本。</block>
   <block id="a9380d77cd3c45a5f15f09b231323443" category="inline-link-macro">查看 P1 补丁中修复的错误列表</block>
   <block id="d4e91a63e862afe5d30e173965c6c4a1" category="paragraph"><block ref="eb1c958143bf6120158dde219a58c506" category="inline-link-macro-rx"></block> （需要登录 NetApp 支持站点）。</block>
   <block id="180b53d09539df4cd298ca82cb98c8bb" category="example-title">DSv2 系列</block>
@@ -959,4 +957,9 @@
   <block id="511ad3b8ad49da139e74e84deac5f108" category="inline-link">Amazon EC2 R5 实例</block>
   <block id="fc58e772b0e187c9acd0ead80273cfa3" category="list-text"><block ref="fc58e772b0e187c9acd0ead80273cfa3" category="inline-link-rx"></block></block>
   <block id="d725a8f993233f84880bb4bfdd79e966" category="list-text">^2^ 仅在需要 Azure 维护控制时使用此 VM。由于定价较高，不建议将其用于其他用例。在使用隔离实例类型进行 Azure 维护控制时，请确保 HA 对中的每个 VM 在 Azure 中都有自己的维护配置，并具有交错的计划，以便两个 VM 不会同时脱机。</block>
+  <block id="e4050cfabb278e71586e11c10cffa6af" category="admonition">对于 AWS，Cloud Volumes ONTAP 9.18.1 P2 是部署和升级的标准版本。不支持 9.18.1 的任何较低版本或修补程序。</block>
+  <block id="8f43580fc31dbb2410e11fce972a5f32" category="paragraph">Cloud Volumes ONTAP 9.18.1 P1 补丁现在可用于在 Azure 和 Google Cloud 中进行部署和升级。控制台将提示您将现有系统升级到此补丁版本。</block>
+  <block id="548040f8ba001121a2a79ff7a79c6fec" category="admonition">此版本无法在AWS中进行部署和升级。</block>
+  <block id="4784f30782ad7a581149233cf75620d5" category="paragraph">Cloud Volumes ONTAP 9.18.1 正式发布版本现已可在 Microsoft Azure 和 Google Cloud 中部署和升级。</block>
+  <block id="2744e632b0c00bba17d3f5ded4a007b0" category="admonition">此版本无法在Amazon Web Services (AWS)中进行部署和升级。</block>
 </blocks>
