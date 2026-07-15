@@ -18,6 +18,7 @@ Cloud Volumes ONTAP 具有存储配置限制，可提供可靠的操作。为获
 
 
 
+[[maximum-system-capacity-by-license]]
 == 按许可证计算的最大系统容量
 
 最大系统容量包括基于磁盘的存储以及用于数据分层的对象存储。
@@ -26,6 +27,7 @@ NetApp不支持超出系统容量限制。如果达到许可容量限制， NetA
 
 对于某些配置，磁盘限制会阻止您单独使用磁盘来达到容量限制。在这些情况下，您可以通过达到容量限制 https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-data-tiering.html["将非活动数据分层到对象存储"^]。有关详细信息，请参见以下容量和磁盘限制。
 
+[[cap-license-aws]]
 .基于容量的许可证的容量限制
 通过基于容量的许可，每个Cloud Volumes ONTAP系统都支持分层到对象存储。总分层容量可以扩展到云提供商的存储桶限制。虽然许可证没有施加容量限制，但您应该遵循 https://www.netapp.com/pdf.html?item=/media/17239-tr-4598.pdf["FabricPool最佳实践"^]确保在配置和管理分层时实现最佳性能、可靠性和成本效率。请参阅 https://docs.aws.amazon.com/AmazonS3/latest/userguide/BucketRestrictions.html["AWS 文档"^]了解更多信息。
 
@@ -59,6 +61,7 @@ NetApp不支持超出系统容量限制。如果达到许可容量限制， NetA
 
 
 
+[[aggregate-limits]]
 == 聚合限制
 
 Cloud Volumes ONTAP 使用EBS卷作为磁盘并将其分组到_aggregodes_中。聚合可为卷提供存储。
@@ -97,6 +100,7 @@ Cloud Volumes ONTAP 使用EBS卷作为磁盘并将其分组到_aggregodes_中。
 
 
 
+[[disk-and-tiering-limits-by-ec2-instance]]
 == EC2 实例的磁盘和分层限制
 
 容量限制因使用的 EC2 实例类型系列以及使用的是单节点系统还是 HA 对而异。
@@ -113,6 +117,7 @@ Cloud Volumes ONTAP 使用EBS卷作为磁盘并将其分组到_aggregodes_中。
 
 
 
+[[limits-for-different-deployment-modes-of-capacity-based-licensing]]
 === 基于容量的许可不同部署模式的限制
 
 以下磁盘限制适用于使用基于容量的许可包的Cloud Volumes ONTAP 系统。 https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-licensing.html["了解Cloud Volumes ONTAP 许可选项"^]
@@ -168,6 +173,7 @@ NOTE: 有关单节点和 HA 配置的最大系统容量和数据分层容量限�
 
 
 
+[[limits-for-different-deployment-modes-of-node-based-licensing]]
 === 基于节点的许可的不同部署模式的限制
 
 以下磁盘限制适用于使用基于节点的许可的Cloud Volumes ONTAP 系统、此许可模式是上一代许可模式、可用于按节点许可Cloud Volumes ONTAP。基于节点的许可仍可供现有客户使用。
@@ -272,6 +278,7 @@ NOTE: 有关单节点和 HA 配置的最大系统容量和数据分层容量限�
 
 
 
+[[storage-vm-limits]]
 == Storage VM 限制
 
 在某些配置中，您可以为 Cloud Volumes ONTAP 创建其他 Storage VM （ SVM ）。
@@ -316,6 +323,7 @@ https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-managing-svms-aws.
 
 
 
+[[storage-vm-limit-by-ec2-instance-type]]
 === 按 EC2 实例类型指定的 Storage VM 限制
 
 创建其他 Storage VM 时，需要将专用 IP 地址分配给端口 e0a 。下表列出了每个接口的最大专用 IP 数，以及部署 Cloud Volumes ONTAP 后端口 e0a 上可用的 IP 地址数。可用 IP 地址的数量直接影响该配置中的最大 Storage VM 数。
@@ -417,6 +425,7 @@ https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-managing-svms-aws.
 
 
 
+[[file-and-volume-limits]]
 == 文件和卷限制
 
 [cols="22,22,56"]
@@ -459,6 +468,7 @@ https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-managing-svms-aws.
 
 
 
+[[iscsi-storage-limits]]
 == iSCSI 存储限制
 
 [cols="3*"]

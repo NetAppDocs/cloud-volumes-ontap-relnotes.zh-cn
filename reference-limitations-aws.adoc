@@ -18,6 +18,7 @@ summary: 这些已知限制特定于 Amazon Web Services 中的 Cloud Volumes ON
 
 
 
+[[aws-outpost-limitations]]
 == AWS 前站限制
 
 如果您有 AWS Outpost，则可以通过在部署期间选择 Outpost VPC 在该 Outpost 中部署Cloud Volumes ONTAP 。体验与驻留在 AWS 中的任何其他 VPC 相同。请注意，您需要首先在 AWS Outpost 中部署控制台代理。
@@ -31,6 +32,7 @@ summary: 这些已知限制特定于 Amazon Web Services 中的 Cloud Volumes ON
 
 
 
+[[flash-cache-limitations]]
 == Flash Cache 限制
 
 C5D 和 R5D 实例类型包括本地 NVMe 存储， Cloud Volumes ONTAP 将其用作 _Flash Cache_ 。请注意以下限制：
@@ -44,12 +46,14 @@ C5D 和 R5D 实例类型包括本地 NVMe 存储， Cloud Volumes ONTAP 将其�
 
 
 
+[[false-alarms-reported-by-amazon-cloudwatch]]
 == Amazon CloudWatch 报告错误警报
 
 Cloud Volumes ONTAP 不会在空闲时释放 CPU ，因此 https://aws.amazon.com/cloudwatch/["Amazon CloudWatch"^] 可以为 EC2 实例报告 CPU 使用率较高的警告，因为它会看到 100% 的使用率。您可以忽略此警报。ONTAP statistics 命令可显示 CPU 的实际使用情况。
 
 
 
+[[cloud-volumes-ontap-ha-pairs-do-not-support-immediate-storage-giveback]]
 == Cloud Volumes ONTAP HA 对不支持即时存储交还
 
 节点重新启动后，配对节点必须先同步数据，然后才能返回存储。重新同步数据所需的时间取决于节点关闭时客户端写入的数据量以及交还期间的数据写入速度。

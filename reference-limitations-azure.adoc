@@ -18,6 +18,7 @@ summary: 这些已知限制特定于 Microsoft Azure 中的 Cloud Volumes ONTAP 
 
 
 
+[[limitations-with-using-azure-vm-extensions]]
 == 使用Azure VM扩展的限制
 
 Cloud Volumes ONTAP不支持 Azure 虚拟机 (VM) 扩展，因为它们会影响NetApp控制台中的管理操作。在部署期间，控制台会阻止在您的虚拟机上安装任何扩展。如果您现有的Cloud Volumes ONTAP VM 上已安装扩展，请联系 Microsoft Azure 支持将其删除。如需指导，请参阅知识库 (KB) 文章 https://kb.netapp.com/Cloud/Cloud_Volumes_ONTAP/Can_Azure_VM_Management_Extensions_be_installed_into_Cloud_Volume_ONTAP["Azure VM 管理扩展可以安装到 Cloud Volume ONTAP中吗？"^]
@@ -26,6 +27,7 @@ Cloud Volumes ONTAP不支持 Azure 虚拟机 (VM) 扩展，因为它们会影响
 
 
 
+[[premium-ssd-v2-disks-limitations-for-ha-configurations]]
 == HA 配置的高级 SSD v2 磁盘限制
 
 高级 SSD v2 托管磁盘对于 Azure 中的高可用性 (HA) 部署具有以下限制：
@@ -46,6 +48,7 @@ Cloud Volumes ONTAP不支持 Azure 虚拟机 (VM) 扩展，因为它们会影响
 
 
 
+[[limitations-with-ha-deployments-in-single-availability-zones]]
 == 在单个可用性区域中进行HA部署的限制
 
 从Cloud Volumes ONTAP 9.15.1 开始，您可以在 Azure 中的单个可用区域 (AZ) 中以 HA 模式部署虚拟机 (VM) 实例。有关支持此功能的标准的信息，请参阅 https://docs.netapp.com/us-en/cloud-volumes-ontap-9151-relnotes/reference-new.html#deploy-ha-pairs-in-single-availability-zones-in-azure["在Azure的单个可用性区域中部署HA对"^]。
@@ -54,6 +57,7 @@ Cloud Volumes ONTAP不支持 Azure 虚拟机 (VM) 扩展，因为它们会影响
 
 
 
+[[flash-cache-limitations]]
 == Flash Cache 限制
 
 在某些虚拟机类型中、Cloud Volumes ONTAP会将本地NVMe存储用作_Flash Cache _。请注意以下限制：
@@ -63,6 +67,7 @@ Cloud Volumes ONTAP不支持 Azure 虚拟机 (VM) 扩展，因为它们会影响
 
 
 
+[[limitations-with-ha-deployments]]
 == HA 部署的限制
 
 某些区域不支持 HA 对。
