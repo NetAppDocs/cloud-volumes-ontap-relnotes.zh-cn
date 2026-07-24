@@ -62,38 +62,6 @@ sidebar:
     url: "/index.html"
   - title: 新增功能
     url: "/reference-new.html"
-  - title: 许可概述
-    url: "/concept-licensing.html"
-  - title: 支持的配置
-    entries:
-    - title: AWS
-      url: "/reference-configs-aws.html"
-    - title: Azure 酒店
-      url: "/reference-configs-azure.html"
-    - title: Google Cloud
-      url: "/reference-configs-gcp.html"
-  - title: 存储限制
-    entries:
-    - title: AWS
-      url: "/reference-limits-aws.html"
-    - title: Azure 酒店
-      url: "/reference-limits-azure.html"
-    - title: Google Cloud
-      url: "/reference-limits-gcp.html"
-  - title: 已知问题
-    url: "/reference-issues.html"
-  - title: 已知限制
-    entries:
-    - title: 常见限制
-      url: "/reference-limitations.html"
-    - title: AWS 中的限制
-      url: "/reference-limitations-aws.html"
-    - title: Azure 中的限制
-      url: "/reference-limitations-azure.html"
-    - title: Google Cloud 中的限制
-      url: "/reference-limitations-gcp.html"
-  - title: 云提供商集成
-    url: "/reference-provider-integrations.html"
   - title: 法律声明
     url: "/legal-notices.html"
 product-family:
